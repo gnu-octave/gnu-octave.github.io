@@ -1,0 +1,29 @@
+<div class="fixed contain-to-grid">
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1>
+          <a href="{{ site.baseurl }}/" >
+            <img src="{{ "/img/logo.png" | prepend: site.baseurl }}" style="width: 32px; height: auto"/>
+            {{ site.title }}
+            </a>
+        </h1>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+    </ul>
+  
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        {% for page in site.pages %}
+          {% if page.title %}
+          <li>
+            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+  </nav>
+</div>

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="row collapse">
+  <div class="columns small-12">
+    {% assign latest_post = site.posts.first %}
+    {% if latest_post %}
+      <div class="panel callout radius">
+        <a class="right" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+          <span class="label warning">
+            RSS
+          </span>
+        </a>
+        <h3 class="entry-title">
+          <a href="{{ root_url }}{{ latest_post.url }}">{{ latest_post.title }}</a>
+        </h3>
+        <p class="post-meta">{{ latest_post.date | date: "%b %-d, %Y" }}</p>
+        <div class="entry-content">{{ latest_post.content }}</div>
+      </div>
+    {% endif %}
+  </div>
+</div>
