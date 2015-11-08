@@ -1,4 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
 .page-content {
 	margin-top: 4rem;
 }
 
+section {
+	padding-bottom: 1rem;
+}
+
+.home-title {
+	color: #0790c0;
+	font-weight: 700;
+	margin: 0 0 1rem 0;
+}
+
+body {
+	font-family: 'PT Sans';
+	color: '#333';
+}
+
+p {
+	color: "#333";
+}
+
+li {
+	color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'PT Sans'; 
+	color: #333;
+}
