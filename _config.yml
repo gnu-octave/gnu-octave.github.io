@@ -10,7 +10,7 @@ title: Octave
 email: maintainers@octave.org
 description: > # this means to ignore newlines until "baseurl:"
   Octave is a programming language for scientific computing.
-baseurl: "/gh-pages" # the subpath of your site, e.g. /blog
+baseurl: "/octave-web" # the subpath of your site, e.g. /blog
 url: "//www.octave.org" # the base hostname & protocol for your site
 wiki_url: "//wiki.octave.org"
 faq_url: "//wiki.octave.org/faq"
