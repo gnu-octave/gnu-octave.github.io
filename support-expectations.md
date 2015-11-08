@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Support Expectations
-permalink: /support-expectations
+permalink: /support-expectations/
 menu: false
 ---
 
