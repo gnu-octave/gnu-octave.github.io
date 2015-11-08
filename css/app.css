@@ -4,7 +4,7 @@
 	margin-top: 2rem;
 }
 
-section {
+.page-content section {
 	padding-top: 2.5rem; /* This is for anchor links with the fixed header */
 	margin-top: -2.5rem;
 	padding-bottom: 2rem;
