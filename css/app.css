@@ -1,17 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
 
 .page-content {
-	margin-top: 4rem;
+	margin-top: 2rem;
 }
 
 section {
-	padding-bottom: 1rem;
+	padding-top: 2.5rem; /* This is for anchor links with the fixed header */
+	margin-top: -2.5rem;
+	padding-bottom: 2rem;
 }
 
 .home-title {
 	color: #0790c0;
 	font-weight: 700;
 	margin: 0 0 1rem 0;
+	font-size: 2.33rem;
 }
 
 body {
@@ -30,4 +33,41 @@ li {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'PT Sans'; 
 	color: #333;
+	/*font-weight: bold;*/
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.66rem;
+}
+
+/**
+* Font overrides (do this using SASS when that gets pulled in)
+*/
+
+.button, li, p, .alert, .label, .top-bar-section ul li>a {
+	font-family: inherit;
+}
+
+.highlight code {
+	border: inherit;
+	background-color: inherit;
+	line-height: 1;
+	padding: 0;
+}
+
+.highlight {
+	margin: 0 0 1.5rem 0;
+	border: 1px solid #ccc;
+	padding: 0.5em;
+	border-radius: 3px;
+	font-size: 90%;
+	width: 100%;
+}
+
+.highlight table {
+	border: none;
 }

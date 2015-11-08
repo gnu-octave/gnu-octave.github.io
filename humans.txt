@@ -1,0 +1,13 @@
+About GNU Octave
+----------------
+Octave is a free programming language for scientific computation.
+
+
+Documentation
+-------------
+Copyright (c) 1998-2015 John W. Eaton. Verbatim copying and distribution is permitted in any medium, provided this notice is preserved. 
+
+
+Website Design
+--------------
+Copyright (c) 2015 Alex Krolick. Verbatim copying and distribution is permitted in any medium.

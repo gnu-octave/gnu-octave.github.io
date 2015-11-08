@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+menu: true
 ---
 
 GNU Octave is a high-level language, primarily intended for numerical computations. It provides a convenient command line interface for solving linear and nonlinear problems numerically, and for performing other numerical experiments using a language that is mostly compatible with Matlab. It may also be used as a batch-oriented language.
@@ -12,7 +13,7 @@ GNU Octave is also freely redistributable software. You may redistribute it and/
 
 Octave was written by John W. Eaton and many others. Because Octave is free software you are encouraged to help make Octave more useful by writing and contributing additional functions for it, and by reporting any problems you may have.
 
-## History
+### History
 
 Octave was originally conceived (in about 1988) to be companion software for an undergraduate-level textbook on chemical reactor design being written by James B. Rawlings of the University of Wisconsin-Madison and John G. Ekerdt of the University of Texas. We originally envisioned some very specialized tools for the solution of chemical reactor design problems. Later, after seeing the limitations of that approach, we opted to attempt to build a much more flexible tool.
 

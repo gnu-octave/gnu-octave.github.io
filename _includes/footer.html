@@ -1,3 +1,60 @@
-<footer>
-
+<footer class="row">
+  <section id="support">
+	<h3>Support</h3>
+	<div class="row">
+		<div class="columns small-12">
+		</div>
+		<div class="medium-9 columns">
+		<dl>
+			<div class="row collapse">
+			<div class="columns  medium-3">
+				<dt>Wiki</dt>
+				<dd><a href="{{site.wiki_url}}">wiki.octave.org</a></dd>
+			</div>
+			<div class="columns medium-3">
+				<dt>Support Mailing List</dt>
+				<dd><a href="https://lists.gnu.org/mailman/listinfo/help-octave">help@octave.org</a></dd>
+			</div>
+			<div class="columns medium-3">
+				<dt>IRC Channel</dt>
+				<dd><a href="http://webchat.freenode.net/?channels=octave&uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda">{{site.irc_channel}}</a> on {{site.irc_network}}</dd>
+			</div>
+			<div class="columns medium-3">
+				<dt><a href="{{ "/bugs" | prepend: site.base_url }}">Reporting Bugs</a></dt>        
+				<dt><a href="{{ "/support-expectations" | prepend: site.base_url }}">Support Expectations</a></dt> 
+				<dt><a href="{{ "/commercial-support" | prepend: site.base_url }}">Commercial Support</a></dt>  
+				<dt><a href="{{ "/donate" | prepend: site.base_url }}">Donate</a></dt>      
+			</div>
+			</div>
+		</dl>
+		</div>
+		<div class="columns medium-3">
+		<a class="button expand" href="{{site.docs_url}}">Documentation</a>
+		</div>
+	</div>
+	<div class="row ">
+		<div class="columns small-9">
+			<div class="panel callout">
+				Octave development takes a lot of time and expertise. Your contributions help to ensure that Octave will continue to improve.
+			</div>
+		</div>
+		<div class="columns small-3">
+			{% include donate.html %}
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns small-12">
+			<div class="text-center">
+				<p>Octave is free software under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License.</a></p>
+				<small>
+					Copyright © 1998-2015 John W. Eaton. Verbatim copying and distribution is permitted in any medium, provided this notice is preserved. 
+				</small>
+			</div>
+		</div>
+	</div>
+  </section>
 </footer>
+
+<script>
+	$(document).foundation();
+</script>

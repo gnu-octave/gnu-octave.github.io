@@ -9,15 +9,15 @@
   <link rel="stylesheet" href="{{ "/css/foundation.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/normalize.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/app.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/syntax-paraiso.css" | prepend: site.baseurl }}">
   
   <script src="{{ "/js/vendor/modernizr.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/js/vendor/jquery.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/js/foundation/foundation.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/js/foundation/foundation.reveal.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/js/foundation/foundation.topbar.js" | prepend: site.baseurl }}"></script>
-
-  <script>
-    $(document).foundation();
-  </script>
+  <script src="{{ "/js/foundation/foundation.tab.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/js/foundation/foundation.dropdown.js" | prepend: site.baseurl }}"></script>
   
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">

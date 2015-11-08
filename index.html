@@ -1,12 +1,12 @@
 ---
 layout: default
+menu: true
 ---
 
 <section>
   <div class="row">
     <div class="columns medium-6">
-      <a href="https://en.wikipedia.org/wiki/File:Octave-4.0.0-rc1-Qt5.4-Linux.png#/media/File:Octave-4.0.0-rc1-Qt5.4-Linux.png">
-        <!--<img src="https://upload.wikimedia.org/wikipedia/en/4/48/Octave-4.0.0-rc1-Qt5.4-Linux.png" />-->
+      <a href="#">
         <img src="{{ "/img/mesh.png" | prepend: site.baseurl }}" />
       </a>
     </div>
@@ -19,17 +19,93 @@ layout: default
       <ul>
         <li>Powerful mathematics-oriented syntax with built-in plotting and visualization tools</li>
         <li>Free, open source software runs on Linux, Mac, BSD, and Linux</li>
-        <li>Drop-in compatible with many Matlab&trade; scripts</li>
+        <li>Drop-in compatible with many <a href="#syntax">Matlab&trade;</a> scripts</li>
       </ul>
+      <div class="">
+        <a class="button expand" href="{{ "/#install" | prepend: site.baseurl }}">
+          Download
+        </a>
+      </div>
     </div>
   </div>
 </section>
-<section>
+
+<section id="syntax">
+  <h3>Syntax Examples</h3>
+  
+  <div class="row">
+    <div class="columns medium-12">
+      <p>
+        The Octave syntax is derived from <a href="http://www.mathworks.com/matlab">Matlab</a> and maintains compatability with many commands. 
+      </p>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="columns medium-4" >
+      <p>Solve systems of equations with linear algebra operations on <strong>vectors</strong> and <strong>matrices</strong></p>
+    </div>
+    <div class="columns medium-8">
+{% highlight matlab%}
+b = [4 9 2]' % Transposed row vector
+A = [ 1 3 1;
+      3 5 9 ]
+x = A \ b    % Solve the system by inverting A
+{% endhighlight %}
+     </div>
+  </div>
+  
+  <div class="row">
+     <div class="columns medium-4">
+        <p>Visualize data with <strong>high-level plot commands</strong> in 2D and 3D</p>
+     </div>
+     <div class="columns medium-8">     
+{% highlight matlab %}
+x = -10:0.1:10 % Create an evenly-spaced vector from -10..10
+y = sin(x)     % y is also a vector
+plot(x,y)
+{% endhighlight %}
+      <div class="text-left">
+        <a href="#" data-reveal-id="plotModal">
+          <img src="{{ "img/plot.png" | prepend: site.baseurl }}" style="height: 12rem; width: auto;"/>
+          <span class="label">Expand</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="install">
+  <h3>Install</h3>
+  <div class="row">
+    <div class="columns medium-8">
+    {% include install.html %}
+    </div>
+    <div class="columns medium-4">
+      <a href="#" data-reveal-id="guiModal">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/48/Octave-4.0.0-rc1-Qt5.4-Linux.png" title="Octave-4.0.0-rc1-Qt5.4-Linux by Qtguy00 - Own work. Licensed under CC BY-SA 3.0 via Wikipedia"/>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="develop">
+  <h3>Development</h3>
+  <p>
+    Octave is free software licensed under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License (GPL)</a>.  Assuming you have Mercurial and git installed on your machine you may obtain the latest development version of Octave sources with the following command:
+  </p>
+  <p style="margin-left:1rem"><code>hg clone http://www.octave.org/hg/octave</code></p>
+  <p>
+    If you want to participate in Octave development, join the <a href="https://lists.gnu.org/mailman/listinfo/octave-maintainers">maintainers@octave.org</a> mailing list.
+  </p>
+</section>
+
+<section id="latest">
   <div class="row">
     <div class="columns small-12">
       {% assign latest_post = site.posts.first %}
       {% if latest_post %}
-        <div class="panel callout radius">
+        <div class="panel callout">
           <a class="right" href="{{ "/feed.xml" | prepend: site.baseurl }}">
             <span class="label warning">
               RSS
@@ -45,3 +121,13 @@ layout: default
     </div>
   </div>
 </section>
+
+<div id="plotModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+  <img src="{{ "img/plot.png" | prepend: site.baseurl }}" />
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<div id="guiModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+  <img src="https://upload.wikimedia.org/wikipedia/en/4/48/Octave-4.0.0-rc1-Qt5.4-Linux.png" title="Octave-4.0.0-rc1-Qt5.4-Linux by Qtguy00 - Own work. Licensed under CC BY-SA 3.0 via Wikipedia"/>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
