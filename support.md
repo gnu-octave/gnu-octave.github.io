@@ -9,13 +9,13 @@ If you need help using Octave, you have many options, from reading the Octave ma
 
 <div class="panel callout">
 
-The Octave community is a loosely organized association of volunteers. Your interactions with the community will be better if you have the right expectations about the support options available to you. Please read the <a href="{{ "/support-expectations" | prepend: site.base_url }}">Support Expectations</a> page.
+The Octave community is a loosely organized association of volunteers. Your interactions with the community will be better if you have the right expectations about the support options available to you. Please read the <a href="{{ "/support-expectations/" | prepend: site.baseurl }}">Support Expectations</a> page.
 
 </div>
 
 #### Commercial Support
 
-Community support can be great, and with the Octave community it often is, but sometimes you need to know that your question will be answered. We maintain a [list of people and organizations](commercial-support) who offer commercial support contracts for Octave. This list is available as a service to the community and the support providers. The Octave project does not provide endorsements or recommendations.
+Community support can be great, and with the Octave community it often is, but sometimes you need to know that your question will be answered. We maintain a [list of people and organizations]({{/commercial-support/ | prepend: site.baseurl}}) who offer commercial support contracts for Octave. This list is available as a service to the community and the support providers. The Octave project does not provide endorsements or recommendations.
 
 #### User Community
 

@@ -20,7 +20,7 @@ If you are already an Octave user and would like to see it improve more rapidly,
 
 If your company has a budget for numerical computing tools, consider spending 10% (or more!) of that on Octave. Do you expect Octave to improve on a $0 budget while the proprietary tools are well-funded by your license fees?
 
-Consider [hiring someone](/commercial-support/) to implement the specific features you need.
+Consider [hiring someone]({{/commercial-support/ | prepend: site.baseurl}}) to implement the specific features you need.
 
 Bitcoin donations also accepted at this address: [1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF](bitcoin:1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF) 
 
