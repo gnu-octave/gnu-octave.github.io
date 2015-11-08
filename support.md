@@ -81,4 +81,4 @@ Too impatient for email? You can find Octave developers and users on the [#octav
 
 ### Reporting Bugs
 
-If you think you've found a bug, you are encouraged to [report it](http://www.gnu.org/software/octave/bugs.html).
+If you think you've found a bug, you are encouraged to [report it]({{ "/bugs/" | prepend: site.baseurl }}).
