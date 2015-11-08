@@ -15,7 +15,7 @@ The Octave community is a loosely organized association of volunteers. Your inte
 
 #### Commercial Support
 
-Community support can be great, and with the Octave community it often is, but sometimes you need to know that your question will be answered. We maintain a [list of people and organizations]({{/commercial-support/ | prepend: site.baseurl}}) who offer commercial support contracts for Octave. This list is available as a service to the community and the support providers. The Octave project does not provide endorsements or recommendations.
+Community support can be great, and with the Octave community it often is, but sometimes you need to know that your question will be answered. We maintain a [list of people and organizations]({{"/commercial-support/" | prepend: site.baseurl}}) who offer commercial support contracts for Octave. This list is available as a service to the community and the support providers. The Octave project does not provide endorsements or recommendations.
 
 #### User Community
 

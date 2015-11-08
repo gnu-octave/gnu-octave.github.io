@@ -15,7 +15,7 @@ If you have an idea on what to contribute, then join the maintainers mailing lis
 
 ### Contacting developers
 
-If you want to participate in Octave development, you should join the [maintainers@octave.org](https://lists.gnu.org/mailman/listinfo/octave-maintainers) mailing list. Please use this list only if you are participating in Octave's development. If you are looking for help in using Octave, please use the [help@octave.org](https://lists.gnu.org/mailman/listinfo/help-octave) list instead, or check out other [support options]({{/support-options/ | prepend: site.baseurl}}).
+If you want to participate in Octave development, you should join the [maintainers@octave.org](https://lists.gnu.org/mailman/listinfo/octave-maintainers) mailing list. Please use this list only if you are participating in Octave's development. If you are looking for help in using Octave, please use the [help@octave.org](https://lists.gnu.org/mailman/listinfo/help-octave) list instead, or check out other [support options]({{"/support-options/" | prepend: site.baseurl}}).
 
 For sometimes faster communication, you can also chat in IRC in #octave in Freenode. Note, however, that the primary medium for development talk is the mailing list.
 
