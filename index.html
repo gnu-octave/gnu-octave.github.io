@@ -20,10 +20,11 @@ layout: default
         <li>Free software, runs on GNU/Linux, Mac, BSD, and Windows</li>
         <li>Drop-in compatible with many Matlab scripts</li>
       </ul>
-      <div class="">
-        <a class="button expand" href="{{ "/#install" | prepend: site.baseurl }}">
-          Download
-        </a>
+      <div>
+        <ul class="button-group stack-for-small even-2">
+          <li><a href="#install" class="button">Download</a></li>
+          <li><a href="{{site.docs_url}}" class="button">Docs</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -89,27 +90,33 @@ plot(x,y)
   </div>
 </section>
 
-<section id="develop">
-  <h3>Development</h3>
-  <p>
-    Octave is free software licensed under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License (GPL)</a>.  Assuming you have Mercurial and git installed on your machine you may obtain the latest development version of Octave sources with the following command:
-  </p>
-  <p style="margin-left:1rem"><code>hg clone http://www.octave.org/hg/octave</code></p>
-  <p>
-    If you want to participate in Octave development, join the <a href="https://lists.gnu.org/mailman/listinfo/octave-maintainers">maintainers@octave.org</a> mailing list.
-  </p>
-  <h4>Octave Forge</h4>
+<section id="forge">
+  <h3>Octave Forge</h3>
   <div class="row">
     <div class="columns medium-9">
       <p>
-        <a href="http://octave.sourceforge.net/">Octave Forge</a> is a central location for development of packages for GNU Octave. To install a package, use the pkg command from the Octave prompt by typing:
+        <a href="http://octave.sourceforge.net/">Octave Forge</a> is a central location for development of packages for GNU Octave, similar to Matlab's toolboxes. To install a package, use the pkg command from the Octave prompt by typing:
       </p>
-      <p style="margin-left:1rem"><code>pkg install -forge package_name</code></p>
+{% highlight text %}
+pkg install -forge package_name
+pkg load package_name
+{% endhighlight %}
     </div>
     <div class="columns large-3">
       <a href="http://octave.sourceforge.net/packages.php" class="button expand">Browse Packages</a>
     </div>
   </div>
+</section>
+
+<section id="develop">
+  <h3>Development</h3>
+  <p>
+    Octave is free software licensed under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License (GPL)</a>.  Assuming you have Mercurial installed on your machine you may obtain the latest development version of Octave sources with the following command:
+  </p>
+  <p style="margin-left:1rem"><code>hg clone http://www.octave.org/hg/octave</code></p>
+  <p>
+    If you want to participate in Octave development, join the <a href="https://lists.gnu.org/mailman/listinfo/octave-maintainers">maintainers@octave.org</a> mailing list.
+  </p>
 </section>
 
 <section id="latest">
