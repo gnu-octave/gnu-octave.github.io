@@ -44,6 +44,14 @@ h3 {
 	font-size: 1.66rem;
 }
 
+h4 {
+	font-size: 1.33rem;
+}
+
+h4, h5, h6 {
+	font-weight: bold;
+}
+
 /**
 * Font overrides (do this using SASS when that gets pulled in)
 */
