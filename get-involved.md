@@ -42,14 +42,5 @@ The `-v` (verbose) option is not required but provides extra information about w
 
 The community-developed [Octave-Forge][forge] packages expand Octave's core functionality by providing field specific features via Octave's package system. For example, image and signal processing, fuzzy logic, instrument control, and statistics packages are examples of individual Octave-Forge packages.
 
-#### Installing packages
-
-You can find the list of packages [here][forge-packages]. To install a package, use the pkg command from the Octave prompt by typing:
-
-    pkg install -forge package_name
-
-where package_name is the name of the package you want to install.
-
-
 [forge]: http://octave.sourceforge.net/
 [forge-packages]: http://octave.sourceforge.net/packages.php
