@@ -188,7 +188,7 @@ doc plot
 
 ###### [Packages]({{site.docs_url}}Packages.html)
 
-Community-developed packages can be added from the [Octave Forge](http://octave.sourceforge.net/index.html) to extend the functionality of Octave's core library. The `pkg` command is used to manage these packages. For example, to use the image processing library from the Forge, use:
+Community-developed packages can be added from the [Octave Forge](http://octave.sourceforge.net/index.html) to extend the functionality of Octave's core library. (Matlab users: Forge packages act similarly to Matlab's toolboxes.) The `pkg` command is used to manage these packages. For example, to use the image processing library from the Forge, use:
 
 {% highlight matlab %}
 pkg install -forge image % install package
