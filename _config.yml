@@ -14,7 +14,7 @@ baseurl: "/octave-web" # the subpath of your site, e.g. /blog
 url: "//www.octave.org" # the base hostname & protocol for your site
 wiki_url: "//wiki.octave.org"
 faq_url: "//wiki.octave.org/faq"
-docs_url: "//www.gnu.org/software/octave/doc/interpreter/index.html"
+docs_url: "//www.gnu.org/software/octave/doc/interpreter/"
 maintainers_email: "maintainers@octave.org"
 help_email: "help@octave.org"
 irc_channel: "#octave"
