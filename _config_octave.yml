@@ -1,0 +1,6 @@
+# Site settings for deployment under https://www.gnu.org/software/octave
+# build with
+#
+# > jekyll build --config _config.yml,_config_octave.yml
+#
+baseurl: "/software/octave/new" # the subpath of your site, e.g. /blog
