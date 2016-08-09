@@ -10,11 +10,11 @@ title: GNU Octave
 email: maintainers@octave.org
 description: > # this means to ignore newlines until "baseurl:"
   GNU Octave is a programming language for scientific computing.
-baseurl: "/software/octave/new" # the subpath of your site, e.g. /blog
-url: "https://www.gnu.org" # the base hostname & protocol for your site
-wiki_url: "http://wiki.octave.org"
-faq_url: "http://wiki.octave.org/faq"
-docs_url: "https://www.gnu.org/software/octave/doc/interpreter/"
+baseurl: "/octave-web" # the subpath of your site, e.g. /blog
+url: "//www.gnu.org" # the base hostname & protocol for your site
+wiki_url: "//wiki.octave.org"
+faq_url: "//wiki.octave.org/faq"
+docs_url: "//www.gnu.org/software/octave/doc/interpreter/"
 maintainers_email: "maintainers@octave.org"
 help_email: "help@octave.org"
 irc_channel: "#octave"

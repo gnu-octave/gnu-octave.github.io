@@ -1,17 +1,25 @@
 ---
 layout: post
-title:  "Octave 4.0.0 Released"
+title:  "GNU Octave 4.0.0 Released"
 date:   2015-05-29
 categories: releases
 ---
 
-Version 4.0.0 has been released and is now available for download. Octave 4.0 is a major new release with many new features, including a graphical user interface, support for classdef object-oriented programming, better compatibility with Matlab, and many new and improved functions.
+Version 4.0.0 has been released and is now available for download.
+Octave 4.0 is a major new release with many new features:
 
-An official Windows binary installer is also available from [ftp://ftp.gnu.org/gnu/octave/windows/octave-4.0.0_0-installer.exe][installer]
+- including a graphical user interface,
+- support for classdef object-oriented programming,
+- better compatibility with Matlab, and
+- many new and improved functions.
 
-A list of important user-visible changes is available [here][news], by selecting the Release Notes item in the News menu of the GUI, or by typing news at the Octave command prompt.
+An official [Windows binary installer][] is available.
 
-Thanks to the many people who contributed to this release! 
+A list of important user-visible changes is available [here][news],
+by selecting the Release Notes item in the News menu of the GUI,
+or by typing `news` at the Octave command prompt.
+
+Thanks to the many people who contributed to this release!
 
 [news]: http://octave.org/NEWS-4.0.html
-[installer]: ftp://ftp.gnu.org/gnu/octave/windows/octave-4.0.0_0-installer.exe
+[Windows binary installer]: ftp://ftp.gnu.org/gnu/octave/windows/octave-4.0.0_0-installer.exe
