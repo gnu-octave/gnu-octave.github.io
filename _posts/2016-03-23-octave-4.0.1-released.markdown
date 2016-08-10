@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "GNU Octave 4.0.1 Released"
+date:   2016-03-23
+categories: releases
+---
+
+Version 4.0.1 has been released and is now available for [download][].
+Octave 4.0.1 is a [bug fixing release][].
+
+Octave 4.0, released in May 2015,
+was a major new version with many new features,
+including a graphical user interface,
+support for classdef object-oriented programming,
+better compatibility with Matlab,
+and many new and improved functions.
+
+[download]: http://www.octave.org/download.html
+[bug fixing release]: http://www.octave.org/fixes-4-0-1.html

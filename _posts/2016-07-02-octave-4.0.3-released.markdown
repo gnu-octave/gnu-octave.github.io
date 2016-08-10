@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "GNU Octave 4.0.3 Released"
+date:   2016-07-02
+categories: releases
+---
+
+Octave Version 4.0.3 has been released and is now available for [download][].
+This version is another [bug fixing release][].
+
+An official [Windows binary installer][] is also available.
+
+[download]: http://www.octave.org/download.html
+[bug fixing release]: http://www.octave.org/fixes-4-0-3.html
+[Windows binary installer]: ftp://ftp.gnu.org/gnu/octave/windows/octave-4.0.3-installer.exe
