@@ -36,7 +36,7 @@ layout: default
   <div class="row">
     <div class="columns medium-12">
       <p>
-        The Octave syntax is largely compatible with <a href="http://www.mathworks.com/matlab">Matlab</a>. The Octave interpreter can be run in GUI mode, as a console, or invoked as part of a shell script.
+        The Octave syntax is largely compatible with <a href="https://www.mathworks.com/matlab">Matlab</a>. The Octave interpreter can be run in GUI mode, as a console, or invoked as part of a shell script.
       </p>
     </div>
   </div>
@@ -85,7 +85,7 @@ plot(x,y)
     </div>
     <div class="columns medium-4">
       <a href="#" data-reveal-id="guiModal">
-        <img src="https://www.gnu.org/software/octave/images/screenshot-2016-small.png" title="GNU Octave 4.0.3 - Licensed under CC BY-SA 3.0"/>
+        <img src="{{ "/img/screenshot-2016-small.png" | prepend: site.baseurl }}" title="GNU Octave 4.0.3 - Licensed under CC BY-SA 3.0"/>
       </a>
     </div>
   </div>
@@ -121,23 +121,23 @@ pkg load package_name
 </section>
 
 <section id="latest">
+  <a class="right" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+    <span class="label warning">
+      RSS
+    </span>
+  </a>
+  <h3>News</h3>
   <div class="row">
     <div class="columns small-12">
-      {% assign latest_post = site.posts.first %}
-      {% if latest_post %}
+      {% for post in site.posts limit:3 %}
         <div class="panel callout">
-          <a class="right" href="{{ "/feed.xml" | prepend: site.baseurl }}">
-            <span class="label warning">
-              RSS
-            </span>
-          </a>
           <h3 class="entry-title">
-            <a href="{{ root_url }}{{ latest_post.url }}">{{ latest_post.title }}</a>
+            <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
           </h3>
-          <p class="post-meta">{{ latest_post.date | date: "%b %-d, %Y" }}</p>
-          <div class="entry-content">{{ latest_post.content }}</div>
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+          <div class="entry-content">{{ post.content }}</div>
         </div>
-      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -148,6 +148,6 @@ pkg load package_name
 </div>
 
 <div id="guiModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
-  <img src="https://upload.wikimedia.org/wikipedia/en/4/48/Octave-4.0.0-rc1-Qt5.4-Linux.png" title="Octave-4.0.0-rc1-Qt5.4-Linux by Qtguy00 - Own work. Licensed under CC BY-SA 3.0 via Wikipedia"/>
+  <img src="{{ "/img/screenshot-2016.png" | prepend: site.baseurl }}" title="GNU Octave 4.0.3 - Licensed under CC BY-SA 3.0"/>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
