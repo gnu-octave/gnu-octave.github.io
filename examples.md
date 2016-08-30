@@ -5,7 +5,7 @@ permalink: /examples/
 menu: true
 ---
 
-### Using Octave 
+### Using Octave
 
 First, follow the [installation guide]({{ site.baseurl/install/ }}) to install Octave on your system. Then, launch the interactive prompt by typing `octave` in a terminal or by clicking the icon in the programs menu. For further guidance, see the manual page on [Running Octave]({{site.docs_url}}Running-Octave.html).
 
@@ -35,7 +35,8 @@ disp(t);
 
 ###### [Math]({{site.docs_url}}Arithmetic.html)
 
-Many mathematical operators are available in addition to the standard arithmetic. Operations are floating-point.
+Many mathematical operators are available in addition to the standard arithmetic.
+Operations are floating-point.
 {% highlight matlab %}
 x = 3/4*pi;
 y = sin(x)
@@ -44,7 +45,9 @@ y = sin(x)
 
 ###### [Matrices]({{site.docs_url}}Matrices.html)
 
-Arrays in Octave are called matrices. One-dimensional matrices are referred to as vectors. Use `space` or `,` to separate elements and `;` to start a new row.
+Arrays in Octave are called matrices.
+One-dimensional matrices are referred to as vectors.
+Use `space` or `,` to separate elements and `;` to start a new row.
 
 {% highlight matlab %}
 rowVec = [8 6 4]
@@ -107,7 +110,9 @@ end
 
 ###### [Vectorization]({{site.docs_url}}Vectorization-and-Faster-Code-Execution.html)
 
-For-loops can often be replaced or simplified using vector syntax. The operators `*`,`/`,`^`,`%` all support element-wise operations using `.`. Many other functions operate element-wise by default (`sin`,`+`,`-`, etc.).
+For-loops can often be replaced or simplified using vector syntax.
+The operators `*`,`/`,`^`,`%` all support element-wise operations using `.`.
+Many other functions operate element-wise by default (`sin`,`+`,`-`, etc.).
 
 {% highlight matlab %}
 i = 1:2:100;   % create a 50-element array
@@ -133,7 +138,8 @@ ylabel('w');
 
 ###### [Strings]({{site.docs_url}}Strings.html)
 
-Strings are simply arrays of characters. Strings can be composed using `printf`-style formatting with `sprintf` and `fprintf`.
+Strings are simply arrays of characters.
+Strings can be composed using `printf`-style formatting with `sprintf` and `fprintf`.
 {% highlight matlab %}
 firstString = 'hello world';
 secondString = '!';
@@ -161,7 +167,7 @@ for (i = 1:1:100)
     outputString = [outputString, 'Buzz'];
   elseif (rem(i,7) == 0)
     outputString = 'Foo';
-  else 
+  else
     outputString = outputString;
   end
   fprintf('i=%g: %s \n',i,outputString);
@@ -188,12 +194,17 @@ doc plot
 
 ###### [Packages]({{site.docs_url}}Packages.html)
 
-Community-developed packages can be added from the [Octave Forge](http://octave.sourceforge.net/index.html) to extend the functionality of Octave's core library. (Matlab users: Forge packages act similarly to Matlab's toolboxes.) The `pkg` command is used to manage these packages. For example, to use the image processing library from the Forge, use:
+Community-developed packages can be added from the
+[Octave Forge](http://octave.sourceforge.net/index.html)
+to extend the functionality of Octave's core library.
+(Matlab users: Forge packages act similarly to Matlab's toolboxes.)
+The `pkg` command is used to manage these packages.
+For example, to use the image processing library from the Forge, use:
 
 {% highlight matlab %}
 pkg install -forge image % install package
 pkg load image           % load new functions into workspace
-{% endhighlight %} 
+{% endhighlight %}
 
 <div id="assignmentModal" class="reveal-modal tiny" data-reveal aria-hidden="true" role="dialog">
 {% highlight matlab %}
