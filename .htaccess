@@ -1,0 +1,25 @@
+<FilesMatch "\.(in|m4)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+<FilesMatch "Makefile$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+<FilesMatch "CVS">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+RewriteEngine on
+
+RewriteBase /software/octave/
+
+RewriteRule ^octave.pdf doc/octave-4.0.3.pdf [L]
+RewriteRule ^NEWS.html NEWS-4.0.html [L]
+RewriteRule ^contribute.html get-involved.html [L]
+
+RewriteRule ^doc/interpreter$ doc/interpreter/ [R,L]
+RewriteRule ^doc/interpreter/(.*) doc/v4.0.3/$1 [L]

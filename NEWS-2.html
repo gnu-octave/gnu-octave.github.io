@@ -1,0 +1,1274 @@
+<!doctype html public "-//IETF//DTD HTML Strict//EN">
+<html>
+<head>
+<title> Changes in Octave version 2 </title>
+</head>
+
+<body>
+<h1> News for Octave Version 2 </h1>
+<hr>
+
+<h2>Summary of changes for version 2.0.17</h2>
+
+<p>This will probably be the last release in the 2.0.x series.  There are
+a few bug fixes, but the major change is to print a message saying
+that Octave 2.0.x cannot be compiled with gcc 3.0.x or gcc 2.96.  If
+you want to build Octave 2.0.x, you will need to use gcc 2.95.x.  If
+you want to use gcc 3.0.x or some later version, you should be using
+the Octave 2.1.35 sources or a more recent version.</p>
+
+<h2>Summary of changes for version 2.0.16</h2>
+
+<p>This is primarily a bug-fixing release.</p>
+
+<h2>Summary of changes for version 2.0.15</h2>
+
+<p>This is primarily a bug-fixing release.</p>
+
+<ul>
+<li>If you are using GNU Emacs 19.34 or earlier, you will need to add
+    the following code to your ~/.emacs file in order to use Emacs
+    Octave mode:
+<pre>
+      ;; Set up the custom library.
+      ;; taken from http://www.dina.kvl.dk/~abraham/custom/
+      (eval-and-compile
+	(condition-case ()
+	    (require 'custom)
+	  (error nil))
+	(if (and (featurep 'custom) (fboundp 'custom-declare-variable))
+	    nil ;; We've got what we needed
+	  ;; We have the old custom-library, hack around it!
+	  (defmacro defgroup (&rest args)
+	    nil)
+	  (defmacro defcustom (var value doc &rest args) 
+	    (` (defvar (, var) (, value) (, doc))))))
+</pre></li>
+</ul>
+
+<h2>Summary of changes for version 2.0.14</h2>
+
+This release fixes numerous bugs and adds the following new features:
+
+<ul>
+<li>argv is now padded with blanks instead of ASCII NUL.</li>
+
+<li>New functions:
+<dl>
+<dt><b>besselh</b></dt>
+Hankel functions of the first and second kind
+<dt><b>airy</b></dt>
+Airy functions of the first and second kind, and
+                  their derivatives
+</dl></li>
+
+<li>The Bessel functions now accept complex values for the argument
+    and any real value for the order.</li>
+
+<li>The value of LOADPATH set by the environment variable
+    OCTAVE_PATH, the -p or --path command line options, or on the
+    command line is no longer modified to include the default path.
+    Instead it is left as specified.  Its default value is now ":",
+    which tells Octave to search the default path, and the new
+    built-in variable DEFAULT_LOADPATH contains the default list of
+    directories to search.  </li>
+
+<li>The function file_in_path no longer does any special processing of
+    its PATH argument.  To search LOADPATH for files, it is now
+    generally better to use the new function file_in_loadpath.</li>
+
+<li>If fread is given a skip parameter, the skip is performed after
+    the read instead of before (for compatibility with Matlab).</li>
+
+<li>The new built-in variable `crash_dumps_octave_core' controls
+    whether Octave writes user variables to the file `octave-core'
+    when it crashes or is killed by a signal.  The default value is 1
+    (0 if you use --traditional).</li>
+
+<li>If LOADPATH contains a doubled colon, the default path is inserted
+    in its place.  This is similar to the substitution that also takes
+    place for leading or trailing colons in the LOADPATH.</li>
+
+<li>Loops of the form `for i = STRING ... endfor' are now allowed.</li>
+
+<li>It is now possible to set the iteration limit for lsode using
+    lsode_options ("step limit", N).</li>
+
+<li>New functions:
+<dl>
+<dt><b>is_complex</b></dt>
+tell whether a value is complex
+<dt><b>isnumeric</b></dt>
+tell whether a value is a numeric object
+<dt><b>isfinite</b></dt>
+find finite elements of a matrix object
+<dt><b>rehash</b></dt>
+re-initialize the cache of directories in LOADPATH
+<dt><b>graw</b></dt>
+send a string to the gnuplot subprocess
+</dl></li>
+
+<li>New functions from Kurt Hornik's Octave-ci package:
+<ul>
+<li>In finance (new directory):
+<dl>
+<dt><b>fv</b></dt>
+<dd>future value of an investment</dd>
+<dt><b>fvl</b></dt>
+<dd>future value of an initial lump sum investment</dd>
+<dt><b>irr</b></dt>
+<dd>internal rate of return of an investment</dd>
+<dt><b>nper</b></dt>
+<dd>number of payments needed for amortizing a loan</dd>
+<dt><b>npv</b></dt>
+<dd>net present value of a series of payments</dd>
+<dt><b>pmt</b></dt>
+<dd>amount of periodic payment needed to amortize a loan</dd>
+<dt><b>pv</b></dt>
+<dd>present value of an investment</dd>
+<dt><b>pvl</b></dt>
+<dd>present value of an investment that pays off at the end</dd>
+<dt><b>rate</b></dt>
+<dd>rate of return of an investment</dd>
+<dt><b>vol</b></dt>
+<dd>volatility of financial time series data</dd>
+</dl></li>
+
+<li>In linear-algebra:
+<dl>
+<dt><b>dmult</b></dt>
+<dd>rescale the rows of a matrix</dd>
+</dl></li>
+
+<li>In signal:
+<dl>
+<dt><b>arch_fit</b></dt>
+<dd>fit an ARCH regression model</dd>
+<dt><b>arch_rnd</b></dt>
+<dd>simulate an ARCH process</dd>
+<dt><b>arch_test</b></dt>
+<dd>test for conditional heteroscedascity</dd>
+<dt><b>arma_rnd</b></dt>
+<dd>simulate an ARMA process</dd>
+<dt><b>autocor</b></dt>
+<dd>compute autocorrelations</dd>
+<dt><b>autocov</b></dt>
+<dd>compute autocovariances</dd>
+<dt><b>autoreg_matrix</b></dt>
+<dd>design matrix for autoregressions</dd>
+<dt><b>bartlett</b></dt>
+<dd>coefficients of the Bartlett (triangular) window</dd>
+<dt><b>blackman</b></dt>
+<dd>coefficients of the Blackman window</dd>
+<dt><b>diffpara</b></dt>
+<dd>estimate the fractional differencing parameter</dd>
+<dt><b>durbinlevinson</b></dt>
+<dd>perform one step of the Durbin-Levinson algorithm</dd>
+<dt><b>fractdiff</b></dt>
+<dd>compute fractional differences</dd>
+<dt><b>hamming</b></dt>
+<dd>coefficients of the Hamming window</dd>
+<dt><b>hanning</b></dt>
+<dd>coefficients of the Hanning window</dd>
+<dt><b>hurst</b></dt>
+<dd>estimate the Hurst parameter</dd>
+<dt><b>periodogram</b></dt>
+<dd>compute the periodogram</dd>
+<dt><b>rectangle_lw</b></dt>
+<dd>rectangular lag window</dd>
+<dt><b>rectangle_sw</b></dt>
+<dd>rectangular spectral window</dd>
+<dt><b>sinetone</b></dt>
+<dd>compute a sine tone</dd>
+<dt><b>sinewave</b></dt>
+<dd>compute a sine wave</dd>
+<dt><b>spectral_adf</b></dt>
+<dd>spectral density estimation</dd>
+<dt><b>spectral_xdf</b></dt>
+<dd>spectral density estimation</dd>
+<dt><b>spencer</b></dt>
+<dd>apply Spencer's 15-point MA filter</dd>
+<dt><b>stft</b></dt>
+<dd>short-term Fourier transform</dd>
+<dt><b>synthesis</b></dt>
+<dd>recover a signal from its short-term Fourier transform</dd>
+<dt><b>triangle_lw</b></dt>
+<dd>triangular lag window</dd>
+<dt><b>triangle_sw</b></dt>
+<dd>triangular spectral window</dd>
+<dt><b>yulewalker</b></dt>
+<dd>fit AR model by Yule-Walker method</dd>
+</dl></li>
+
+<li>In statistics/base (new directory):
+<dl>
+<dt><b>center</b></dt>
+<dd>center by subtracting means</dd>
+<dt><b>cloglog</b></dt>
+<dd>complementary log-log function</dd>
+<dt><b>cor</b></dt>
+<dd>compute correlations</dd>
+<dt><b>cov</b></dt>
+<dd>compute covariances</dd>
+<dt><b>cut</b></dt>
+<dd>cut data into intervals</dd>
+<dt><b>iqr</b></dt>
+<dd>interquartile range</dd>
+<dt><b>kendall</b></dt>
+<dd>kendall's rank correlation tau</dd>
+<dt><b>logit</b></dt>
+<dd>logit transformation</dd>
+<dt><b>mean</b></dt>
+<dd>compute arithmetic, geometric, and harmonic mean</dd>
+<dt><b>meansq</b></dt>
+<dd>compute mean square</dd>
+<dt><b>moment</b></dt>
+<dd>compute moments</dd>
+<dt><b>ppplot</b></dt>
+<dd>perform a PP-plot (probability plot)</dd>
+<dt><b>probit</b></dt>
+<dd>probit transformation</dd>
+<dt><b>qqplot</b></dt>
+<dd>perform a QQ-plot (quantile plot)</dd>
+<dt><b>range</b></dt>
+<dd>compute range</dd>
+<dt><b>ranks</b></dt>
+<dd>compute ranks</dd>
+<dt><b>run_count</b></dt>
+<dd>count upward runs</dd>
+<dt><b>spearman</b></dt>
+<dd>spearman's rank correlation rho</dd>
+<dt><b>statistics</b></dt>
+<dd>compute basic statistics</dd>
+<dt><b>studentize</b></dt>
+<dd>subtract mean and divide by standard deviation</dd>
+<dt><b>table</b></dt>
+<dd>cross tabulation</dd>
+<dt><b>values</b></dt>
+<dd>extract unique elements</dd>
+<dt><b>var</b></dt>
+<dd>compute variance</dd>
+</dl></li>
+
+<li>In statistics/distributions (new directory):
+<dl>
+<dt><b>beta_cdf</b></dt>
+<dd>CDF of the Beta distribution</dd>
+<dt><b>beta_inv</b></dt>
+<dd>Quantile function of the Beta distribution</dd>
+<dt><b>beta_pdf</b></dt>
+<dd>PDF of the Beta distribution</dd>
+<dt><b>beta_rnd</b></dt>
+<dd>Random deviates from the Beta distribution
+</dd>
+<dt><b>binomial_cdf</b></dt>
+<dd>CDF of the binomial distribution</dd>
+<dt><b>binomial_inv</b></dt>
+<dd>Quantile function of the binomial distribution</dd>
+<dt><b>binomial_pdf</b></dt>
+<dd>PDF of the binomial distribution</dd>
+<dt><b>binomial_rnd</b></dt>
+<dd>Random deviates from the binomial distribution
+</dd>
+<dt><b>cauchy_cdf</b></dt>
+<dd>CDF of the Cauchy distribution</dd>
+<dt><b>cauchy_inv</b></dt>
+<dd>Quantile function of the Cauchy distribution</dd>
+<dt><b>cauchy_pdf</b></dt>
+<dd>PDF of the Cauchy distribution</dd>
+<dt><b>cauchy_rnd</b></dt>
+<dd>Random deviates from the Cauchy distribution
+</dd>
+<dt><b>chisquare_cdf</b></dt>
+<dd>CDF of the chi-square distribution</dd>
+<dt><b>chisquare_inv</b></dt>
+<dd>Quantile function of the chi-square distribution</dd>
+<dt><b>chisquare_pdf</b></dt>
+<dd>PDF of the chi-sqaure distribution</dd>
+<dt><b>chisquare_rnd</b></dt>
+<dd>Random deviates from the chi-square distribution
+</dd>
+<dt><b>discrete_cdf</b></dt>
+<dd>CDF of a discrete distribution</dd>
+<dt><b>discrete_inv</b></dt>
+<dd>Quantile function of a discrete distribution</dd>
+<dt><b>discrete_pdf</b></dt>
+<dd>PDF of a discrete distribution</dd>
+<dt><b>discrete_rnd</b></dt>
+<dd>Random deviates from a discrete distribution
+</dd>
+<dt><b>empirical_cdf</b></dt>
+<dd>CDF of the empirical distribution</dd>
+<dt><b>empirical_inv</b></dt>
+<dd>Quantile function of the empirical distribution</dd>
+<dt><b>empirical_pdf</b></dt>
+<dd>PDF of the empirical distribution</dd>
+<dt><b>empirical_rnd</b></dt>
+<dd>Bootstrap samples from the empirical distribution
+</dd>
+<dt><b>exponential_cdf</b></dt>
+<dd>CDF of the exponential distribution</dd>
+<dt><b>exponential_inv</b></dt>
+<dd>Quantile function of the exponential distribution</dd>
+<dt><b>exponential_pdf</b></dt>
+<dd>PDF of the exponential distribution</dd>
+<dt><b>exponential_rnd</b></dt>
+<dd>Random deviates from the exponential distribution
+</dd>
+<dt><b>f_cdf</b></dt>
+<dd>CDF of the F distribution</dd>
+<dt><b>f_inv</b></dt>
+<dd>Quantile function of the F distribution</dd>
+<dt><b>f_pdf</b></dt>
+<dd>PDF of the F distribution</dd>
+<dt><b>f_rnd</b></dt>
+<dd>Random deviates from the F distribution
+</dd>
+<dt><b>gamma_cdf</b></dt>
+<dd>CDF of the Gamma distribution</dd>
+<dt><b>gamma_inv</b></dt>
+<dd>Quantile function of the Gamma distribution</dd>
+<dt><b>gamma_pdf</b></dt>
+<dd>PDF of the Gamma distribution</dd>
+<dt><b>gamma_rnd</b></dt>
+<dd>Random deviates from the Gamma distribution
+</dd>
+<dt><b>geometric_cdf</b></dt>
+<dd>CDF of the geometric distribution</dd>
+<dt><b>geometric_inv</b></dt>
+<dd>Quantile function of the geometric distribution</dd>
+<dt><b>geometric_pdf</b></dt>
+<dd>PDF of the geometric distribution</dd>
+<dt><b>geometric_rnd</b></dt>
+<dd>Random deviates from the geometric distribution
+</dd>
+<dt><b>hypergeometric_cdf</b></dt>
+<dd>CDF of the hypergeometric distribution</dd>
+<dt><b>hypergeometric_inv</b></dt>
+<dd>Random deviates from hypergeometric distribution</dd>
+<dt><b>hypergeometric_pdf</b></dt>
+<dd>PDF of the hypergeometric distribution</dd>
+<dt><b>hypergeometric_rnd</b></dt>
+<dd>Random deviates from hypergeometric distribution
+</dd>
+<dt><b>kolmogorov_smirnov_cdf</b></dt>
+<dd>CDF of the Kolmogorov-Smirnov distribution
+</dd>
+<dt><b>laplace_cdf</b></dt>
+<dd>CDF of the Laplace distribution</dd>
+<dt><b>laplace_inv</b></dt>
+<dd>Quantile function of the Laplace distribution</dd>
+<dt><b>laplace_pdf</b></dt>
+<dd>PDF of the Laplace distribution</dd>
+<dt><b>laplace_rnd</b></dt>
+<dd>Random deviates from the Laplace distribution
+</dd>
+<dt><b>logistic_cdf</b></dt>
+<dd>CDF of the logistic distribution</dd>
+<dt><b>logistic_inv</b></dt>
+<dd>Quantile function of the logistic distribution</dd>
+<dt><b>logistic_pdf</b></dt>
+<dd>PDF of the logistic distribution</dd>
+<dt><b>logistic_rnd</b></dt>
+<dd>Random deviates from the logistic distribution
+</dd>
+<dt><b>lognormal_cdf</b></dt>
+<dd>CDF of the log normal distribution</dd>
+<dt><b>lognormal_inv</b></dt>
+<dd>Quantile function of the log normal distribution</dd>
+<dt><b>lognormal_pdf</b></dt>
+<dd>PDF of the log normal distribution</dd>
+<dt><b>lognormal_rnd</b></dt>
+<dd>Random deviates from the log normal distribution
+</dd>
+<dt><b>normal_cdf</b></dt>
+<dd>CDF of the normal distribution</dd>
+<dt><b>normal_inv</b></dt>
+<dd>Quantile function of the normal distribution</dd>
+<dt><b>normal_pdf</b></dt>
+<dd>PDF of the normal distribution</dd>
+<dt><b>normal_rnd</b></dt>
+<dd>Random deviates from the normal distribution
+</dd>
+<dt><b>pascal_cdf</b></dt>
+<dd>CDF of the Pascal (negative binomial) distribution</dd>
+<dt><b>pascal_inv</b></dt>
+<dd>Quantile function of the Pascal distribution</dd>
+<dt><b>pascal_pdf</b></dt>
+<dd>PDF of the Pascal (negative binomial) distribution</dd>
+<dt><b>pascal_rnd</b></dt>
+<dd>Random deviates from the Pascal distribution
+</dd>
+<dt><b>poisson_cdf</b></dt>
+<dd>CDF of the Poisson distribution</dd>
+<dt><b>poisson_inv</b></dt>
+<dd>Quantile function of the Poisson distribution</dd>
+<dt><b>poisson_pdf</b></dt>
+<dd>PDF of the Poisson distribution</dd>
+<dt><b>poisson_rnd</b></dt>
+<dd>Random deviates from the Poisson distribution
+</dd>
+<dt><b>stdnormal_cdf</b></dt>
+<dd>CDF of the standard normal distribution</dd>
+<dt><b>stdnormal_inv</b></dt>
+<dd>Quantile function of standard normal distribution</dd>
+<dt><b>stdnormal_pdf</b></dt>
+<dd>PDF of the standard normal distribution</dd>
+<dt><b>stdnormal_rnd</b></dt>
+<dd>Random deviates from standard normal distribution
+</dd>
+<dt><b>t_cdf</b></dt>
+<dd>CDF of the t distribution</dd>
+<dt><b>t_inv</b></dt>
+<dd>Quantile function of the t distribution</dd>
+<dt><b>t_pdf</b></dt>
+<dd>PDF of the t distribution</dd>
+<dt><b>t_rnd</b></dt>
+<dd>Random deviates from the t distribution
+</dd>
+<dt><b>uniform_cdf</b></dt>
+<dd>CDF of the uniform distribution</dd>
+<dt><b>uniform_inv</b></dt>
+<dd>Quantile function of the uniform distribution</dd>
+<dt><b>uniform_pdf</b></dt>
+<dd>PDF of the uniform distribution</dd>
+<dt><b>uniform_rnd</b></dt>
+<dd>Random deviates from the uniform distribution
+</dd>
+<dt><b>weibull_cdf</b></dt>
+<dd>CDF of the Weibull distribution</dd>
+<dt><b>weibull_inv</b></dt>
+<dd>Quantile function of the Weibull distribution</dd>
+<dt><b>weibull_pdf</b></dt>
+<dd>PDF of the Weibull distribution</dd>
+<dt><b>weibull_rnd</b></dt>
+<dd>Random deviates from the Weibull distribution
+</dd>
+<dt><b>wiener_rnd</b></dt>
+<dd>Simulate a Wiener process</dd>
+</dl></li>
+
+<li>In statistics/models (new directory):
+<dl>
+<dt><b>logistic_regression</b></dt>
+<dd>ordinal logistic regression</dd>
+<dt><b>logistic_regression_derivatives</b></dt>
+<dd>derivates of log-likelihood
+                                         in logistic regression</dd>
+<dt><b>logistic_regression_likelihood</b></dt>
+<dd>likelihood in logistic regression</dd>
+</dl></li>
+
+<li>In statistics/tests (new directory):
+<dl>
+<dt><b>anova</b></dt>
+<dd>one-way analysis of variance</dd>
+<dt><b>bartlett_test</b></dt>
+<dd>bartlett test for homogeneity of variances</dd>
+<dt><b>chisquare_test_homogeneity</b></dt>
+<dd>chi-square test for homogeneity</dd>
+<dt><b>chisquare_test_independence</b></dt>
+<dd>chi-square test for independence</dd>
+<dt><b>cor_test</b></dt>
+<dd>test for zero correlation</dd>
+<dt><b>f_test_regression</b></dt>
+<dd>test linear hypotheses in linear
+                                     regression model</dd>
+<dt><b>hotelling_test</b></dt>
+<dd>test for mean of a multivariate normal</dd>
+<dt><b>hotelling_test_2</b></dt>
+<dd>compare means of two multivariate normals</dd>
+<dt><b>kolmogorov_smirnov_test</b></dt>
+<dd>one-sample Kolmogorov-Smirnov test</dd>
+<dt><b>kolmogorov_smirnov_test_2</b></dt>
+<dd>two-sample Kolmogorov-Smirnov test</dd>
+<dt><b>kruskal_wallis_test</b></dt>
+<dd>kruskal-Wallis test</dd>
+<dt><b>manova</b></dt>
+<dd>one-way multivariate analysis of variance</dd>
+<dt><b>mcnemar_test</b></dt>
+<dd>mcnemar's test for symmetry</dd>
+<dt><b>prop_test_2</b></dt>
+<dd>compare two proportions</dd>
+<dt><b>run_test</b></dt>
+<dd>run test for independence</dd>
+<dt><b>sign_test</b></dt>
+<dd>sign test</dd>
+<dt><b>t_test</b></dt>
+<dd>student's one-sample t test </dd>
+<dt><b>t_test_2</b></dt>
+<dd>student's two-sample t test</dd>
+<dt><b>t_test_regression</b></dt>
+<dd>test one linear hypothesis in linear
+                                     regression model</dd>
+<dt><b>u_test</b></dt>
+<dd>mann-Whitney U-test</dd>
+<dt><b>var_test</b></dt>
+<dd>f test to compare two variances</dd>
+<dt><b>welch_test</b></dt>
+<dd>welch two-sample t test</dd>
+<dt><b>wilcoxon_test</b></dt>
+<dd>wilcoxon signed-rank test</dd>
+<dt><b>z_test</b></dt>
+<dd>test for mean of a normal sample with
+                                     known variance</dd>
+<dt><b>z_test_2</b></dt>
+<dd>compare means of two normal samples with
+                                     known variances</dd>
+</dl></li>
+</ul></li>
+
+<li>The save command now accepts the option -append to save the
+    variables at the end of the file, leaving the existing contents.</li>
+
+<li>New command-line option --no-history (also available using the
+    single character option -H) inhibits saving command history.</li>
+
+<li>The mkoctfile script now accepts -DDEF options and passes them on
+    to the C and C++ compilers.</li>
+</ul
+>
+<h2>Summary of changes for version 2.0.13</h2>
+
+<p>This is a bug-fixing release.  There are no new user-visible features.</p>
+
+<h2>Summary of changes for version 2.0.12</h2>
+
+<ul>
+<li>Tilde expansion is once again performed on the directories listed
+    in the LOADPATH variable.</li>
+
+<li>gplot now supports the `axes' qualifier that is new with gnuplot
+    3.6beta.</li>
+
+<li>Timestamps on .m and .oct files are now only checked if a prompt
+    has been printed since the last timestamp check.</li>
+
+<li>Octave now prints a warning if a .m or .oct file has a time stamp
+    in the future.</li>
+
+<li>For matrices, x(:) now works no matter what the value of
+    do_fortran_indexing is.</li>
+
+<li>New keywords __FILE__ and __LINE__ expand to the name of the file
+    that is being read and the current input line number, respectively.</li>
+
+<li>The GNU Info reader is no longer distributed with Octave because
+    current releases of GNU Info now support all the features needed
+    by Octave.  If your copy of GNU Info doesn't support the
+    --index-search option, you should install a newer version of GNU
+    Info, which is distributed as part of the GNU Texinfo package.</li>
+
+<li>Running `make check' should work now before you run `make install', 
+    even if you build a copy of Octave that depends on shared versions
+    of the Octave libraries.</li>
+
+<li>Octave now uses kpathsea 3.2.</li>
+
+<li>The new built-in variable `kluge_procbuf_delay' specifies the number
+    of microseconds to delay in the parent process after forking.  By
+    default on gnu-win32 systems, it's set to 500000 (1/2 second).  On
+    other systems, the default value is 0.  Delaying for a short time
+    in the parent after forking seems to avoid problems in which
+    communicating with subprocesses via pipes would sometimes cause
+    Octave to hang.  I doubt that the delay is really the right
+    solution.  If anyone has a better idea, I'd love to hear it.</li>
+</ul>
+
+<h2>Summary of changes for version 2.0.11</h2>
+
+<ul>
+<li>There are two new built-in variables that control how global
+    variables are initialized.  If `initialize_global_variables' is
+    nonzero, global variables are initialized to the value of the
+    variable `default_global_variable_value'.  The default value of
+    `initialize_global_variables' is 0 (1 if you use --traditional)
+    and `default_global_variable_value' is undefined (the empty matrix
+    if you use --traditional).  The default settings are compatible
+    with versions of Octave before 2.0.10.</li>
+</ul>
+
+<h2>Summary of changes for version 2.0.10</h2>
+
+<ul>
+<li>The built-in variable `PWD' has been removed.  If you need to get
+    the value of the current working directory, use the pwd() function
+    instead.</li>
+<li>For compatibility with Matlab, Octave's lyap function now solves
+<pre>
+      A*X + X*A' + C = 0
+</pre>
+    instead of
+<pre>
+      A'*X + X*A + C = 0
+</pre>
+    To try to avoid confusion for people who are used to the way
+    Octave behaved in previous versions, a warning is printed the
+    first time lyap is called in a given session.  To completely
+    disable the warning, simply add
+<pre>
+      global __disable_lyap_interface_change_warning__;
+</pre>
+    to your ~/.octaverc file.  The warning will eventually disappear
+    for good in some future version of Octave.</li>
+<li>New built-in functions for computing Bessel functions:
+    besseli, besselj, besselk, and bessely.</li>
+<li>The gammai and betai functions are now implemented as built-in
+    functions rather than function files.</li>
+<li>The new built-in variable `implicit_num_to_str_ok' controls
+    whether Octave converts expressions like `[97, 98, 99, "123"]' to
+    strings.  The default value is 0 unless you use --traditional.</li>
+<li>The new built-in variable `fixed_point_format' controls whether
+    Octave uses a scaled fixed-point format for displaying matrices.
+    The default value is 0 unless you use --traditional.</li>
+<li>The function sumsq now computes sum (x .* conj (x)) for complex values.</li>
+<li>Dynamically linked functions can be cleared.</li>
+<li>If a .oct file has a time stamp more recent than the time that it
+    was loaded, it is automatically reloaded.  Reloading a .oct file
+    may cause several functions to be cleared automatically.  By
+    default, a warning is printed that lists the names of the
+    functions that will be cleared.  You can suppress the message by
+    setting the new built-in variable `warn_reload_forces_clear' to 0.</li>
+<li>Global variables are now initialized to the empty matrix, for
+    compatibility with Matlab.</li>
+<li>Explicit initialization of global variables only happens once.
+    For example, after the following statements are evaluated, g still
+    has the value 1.
+<pre>
+      global g = 1
+      global g = 2
+</pre>
+    This is useful for initializing global variables that are used to
+    maintain state information that is shared among several functions.</li>
+<li>The new built-in variable max_recursion_depth allows you to
+    prevent Octave from attempting infinite recursion.  The default
+    value is 256.</li>
+<li>Octave now uses readline version 2.1 and kpathsea 3.0.</li>
+<li>The libreadline and libkpathsea libraries are no longer installed.</li>
+<li>The libcruft, liboctave, and liboctinterp libraries are now
+    installed in $libdir/octave instead of just $libdir.</li>
+<li>It's no longer necessary to have libg++, but you do need to have
+    the GNU implementation of libstdc++.  If you are using gcc 2.7.2,
+    libstdc++ is distributed as part of libg++ 2.7.2.  For later
+    versions, libstdc++ is distributed separately.  For egcs,
+    libstdc++ is included with the compiler distribution.</li>
+</ul>
+
+<h2>Summary of changes for version 2.0.9</h2>
+
+<p>This is a bug-fixing release, but there is one new user-visible
+feature:</p>
+
+<ul>
+<li>It is now possible to specify a label for lines in the plot key
+    when using the plot function.  For example,
+<pre>
+      plot (x, y, "-*;sin(x);")
+</pre>
+    plots y vs. x using the linespoints style and sets the title of
+    the line in the key to be `sin(x)'</li>
+</ul>
+
+<h2>Summary of changes for version 2.0.8</h2>
+
+<p>This is a bug-fixing release.  There are only a few new user-visible
+features.</p>
+
+<ul>
+<li>If the argument to eig() is symmetric, Octave uses the specialized
+    Lapack subroutine for symmetric matrices for a significant
+    increase in performance.</li>
+<li>It is now possible to use the mkoctfile script to create .oct
+    files from multiple source and object files.</li>
+</ul>
+
+<h2>Summary of changes for version 2.0.7</h2>
+
+<p>This is a bug-fixing release.  There are no new user-visible features.</p>
+
+<h2>Summary of changes for version 2.0.6</h2>
+
+<p>This is primarily a bug-fixing release.  There are only a few new
+user-visilbe features.</p>
+
+<ul>
+<li>The new built-in variable default_eval_print_flag controls whether
+    Octave prints the results of commands executed by eval() that do
+    not end with semicolons.  The default is 1.</li>
+<li>The new built-in constant OCTAVE_HOME specifies the top-level
+    directory where Octave is installed.</li>
+<li>Octave no longer includes functions to work with NPSOL or QPSOL,
+    because they are not free software.</li>
+</ul>
+
+<h2>Summary of changes for version 2.0.5</h2>
+
+<ul>
+<li>A `switch' statement is now available.  See the Statements chapter
+    in the manual for details.</li>
+<li>Commands like ls, save, and cd may now also be used as formal
+    parameters for functions.</li>
+<li>More tests.</li>
+</ul>
+
+<h2>Summary of changes for version 2.0.4</h2>
+
+<ul>
+<li>It is now possible to use commands like ls, save, and cd as simple
+    variable names.  They still cannot be used as formal parameters
+    for functions, or as the names of structure variables.  Failed
+    assignments leave them undefined (you can recover the orginal
+    function definition using clear).</li>
+<li>Is is now possible to invoke commands like ls, save, and cd as
+    normal functions (for example, load ("foo", "x", "y", "z")).</li>
+</ul>
+
+<h2>Summary of changes for version 2.0.3</h2>
+
+<ul>
+<li>The manual has been completely revised and now corresponds much
+    more closely to the features of the current version.</li>
+<li>The return value for assignment expressions is now the RHS since
+    that is more consistent with the way other programming languages
+    work.  However, Octave still prints the entire LHS value so that
+<pre>
+      x = zeros (1, 2);
+      x(2) = 1
+</pre>
+    still prints
+<pre>
+      x =
+
+        0  1
+
+</pre>
+    but an assignment like
+<pre>
+      z = x(2) = 1
+</pre>
+    sets z to 1 (not [ 0, 1 ] as in previous versions of Octave).</li>
+<li>It is now much easier to make binary distributions.  See the
+    Binary Distributions section of the manual for more details.</li>
+</ul>
+
+<h2>Summary of changes for version 2.0.2</h2>
+
+<ul></li>
+<li>Octave now stops executing commands from a script file if an error
+    is encountered.</li>
+<li>The return, and break commands now cause Octave to quit executing
+    commands from script files.  When used in invalid contexts, the
+    break, continue, and return commands are now simply ignored
+    instead of producing parse errors.</li>
+<li>size ("") is now [0, 0].</li>
+<li>New functions:
+<dl>
+<dt><b>sleep</b></dt>
+<dd>pause execution for a specified number of seconds</dd>
+<dt><b>usleep</b></dt>
+<dd>pause execution for a specified number of microseconds</dd>
+</dl></li>
+</ul>
+</pre>
+
+<h2>Summary of changes for version 2.0.1</h2>
+
+<p>Other than bug fixes, there were no user-visible changes in version
+2.0.1.
+
+<h2>Summary of changes for version 2.0</h2>
+
+<p><ul>
+<li>The set and show commands for setting and displaying gnuplot
+    parameters have been replaced by gset and gshow.  This change will
+    probably break lots of things, but it is necessary to allow for
+    compatibility with the Matlab graphics and GUI commands in a
+    future version of Octave.  (For now, the old set and show commands
+    do work, but they print an annoying warning message to try to get
+    people to switch to using gset.)</li>
+<li>Octave has been mostly ported to Windows NT and Windows 95 using
+    the beta 17 release of the Cygnus GNU-WIN32 tools.  Not everything
+    works, but it is usable.  See the file README.WINDOWS for more
+    information.</li>
+<li>Dynamic linking works on more systems using dlopen() and friends
+    (most modern Unix systems) or shl_load() and friends (HP/UX
+    systems).  A simple example is provided in examples/hello.cc.
+    For this feature to work, you must configure Octave with
+    --enable-shared.  You may also need to have a shared-library
+    version of libg++ and libstdc++.</li>
+<li>New data types can be added to Octave by writing a C++ class.  On
+    systems that support dynamic linking, new data types can be added
+    to an already running Octave binary.  A simple example appears in
+    the file examples/make_int.cc.  Other examples are the standard
+    Octave data types defined in the files src/ov*.{h,cc} and
+    src/op-*.cc.</li>
+<li>The configure option --enable-bounds-check turns on bounds
+    checking on element references for Octave's internal array and
+    matrix classes.  It's enabled by default.  To disable this
+    feature, configure Octave with --disable-bounds-check.</li>
+<li>The C-style I/O functions (fopen, fprintf, etc.) have been
+    rewritten to be more compatible with Matlab.  The fputs function
+    has also been added.  Usage of the *printf functions that was
+    allowed in previous versions of Octave should still work.
+    However, there is no way to make the new versions of the *scanf
+    functions compatible with Matlab *and* previous versions of
+    Octave.  An optional argument to the *scanf functions is now
+    available to make them behave in a way that is compatible with
+    previous versions of Octave.</li>
+<li>Octave can now read files that contain columns of numbers only,
+    with no header information.  The name of the loaded variable is
+    constructed from the file name.  Each line in the file must have
+    the same number of elements.</li>
+<li>The interface to the pager has changed.  The new built-in variable
+    `page_output_immediately' controls when Octave sends output to the
+    pager.  If it is nonzero, Octave sends output to the pager as soon
+    as it is available.  Otherwise, Octave buffers its output and
+    waits until just before the prompt is printed to flush it to the
+    pager.</li>
+<li>Expressions of the form
+<pre>
+      A(i,j) = x
+</pre>
+    where X is a scalar and the indices i and j define a matrix of
+    elements now work as you would expect rather than giving an error.
+    I am told that this is how Matlab 5.0 will behave when it is
+    released.</li>
+<li>Indexing of character strings now works.</li>
+<li>The echo command has been implemented.</li>
+<li>The document command is now a regular function.</li>
+<li>New method for handling errors:
+<pre>
+      try
+        BODY
+      catch
+        CLEANUP
+      end_try_catch
+</pre>
+    Where BODY and CLEANUP are both optional and may contain any
+    Octave expressions or commands.  The statements in CLEANUP are
+    only executed if an error occurs in BODY.
+
+<p> No warnings or error messages are printed while BODY is
+    executing.  If an error does occur during the execution of BODY,
+    CLEANUP can access the text of the message that would have been
+    printed in the builtin constant __error_text__.  This is the same
+    as eval (TRY, CATCH) (which may now also use __error_text__) but
+    it is more efficient since the commands do not need to be parsed
+    each time the TRY and CATCH statements are evaluated.</li>
+<li>Octave no longer parses the help command by grabbing everything
+    after the keyword `help' until a newline character is read.  To
+    get help for `;' or `,', now, you need to use the command
+    `help semicolon' or `help comma'.</li>
+<li>Octave's parser now does some simple constant folding.  This means
+    that expressions like 3*i are now evaluated only once, when a
+    function is compiled, and the right hand side of expressions like
+    a = [1,2;3,4] are treated as true matrix constants rather than
+    lists of elements which must be evaluated each time they are
+    needed.</li>
+<li>Built-in variables that can take values of "true" and "false" can
+    now also be set to any nonzero scalar value to indicate "true",
+    and 0 to indicate "false".</li>
+<li>New built-in variables `history_file', `history_size', and
+    `saving_history'.</li>
+<li>New built-in variable `string_fill_char' specifies the character
+    to fill with when creating arrays of strings.</li>
+<li>If the new built-in variable `gnuplot_has_frames' is nonzero,
+    Octave assumes that your copy of gnuplot includes support for
+    multiple plot windows when using X11.
+
+    If the new built-in variable `gnuplot_has_multiplot' is nonzero,
+    Octave assumes that your copy of gnuplot has the multiplot support
+    that is included in recent 3.6beta releases.
+
+    The initial values of these variables are determined by configure,
+    but can be changed in your startup script or at the command line
+    in case configure got it wrong, or if you upgrade your gnuplot
+    installation.</li>
+<li>The new plot function `figure' allows multiple plot windows when
+    using newer versions of gnuplot with X11.</li>
+<li>Octave now notices when the plotter has exited unexpectedly.</li>
+<li>New built-in variable `warn_missing_semicolon'.  If nonzero, Octave
+    will warn when statements in function definitions don't end in
+    semicolons.  The default value is 0.</li>
+<li>Octave now attempts to continue after floating point exceptions
+    or out-of-memory errors.</li>
+<li>If Octave crashes, it now attempts to save all user-defined
+    variables in a file named `octave-core' in the current directory
+    before exiting.</li>
+<li>It is now possible to get the values of individual option settings
+    for the dassl, fsolve, lsode, npsol, qpsol, and quad functions
+    using commands like
+<pre>
+      dassl_reltol = dassl_options ("relative tolerance");
+</pre></li>
+<li>The svd() function no longer computes the left and right singular
+    matrices unnecessarily.  This can significantly improve
+    performance for large matrices if you are just looking for the  
+    singular values.</li>
+<li>The filter() function is now a built-in function.</li>
+<li>New function randn() returns a pseudo-random number from a normal
+    distribution.  The rand() and randn() functions have separate
+    seeds and generators.</li>
+<li>Octave's command-line arguments are now available in the built-in
+    variable `argv'.  The program name is also available in the
+    variables `program_invocation_name' and `program_name'.  If
+    executing a script from the command line (e.g., octave foo.m) or
+    using the `#! /bin/octave' hack, the program name is set to the
+    name of the script.</li>
+<li>New built-in variable `completion_append_char' used as the
+    character to append to successful command-line completion
+    attempts.  The default is " " (a single space).</li>
+<li>Octave now uses a modified copy of the readline library from
+    version 1.14.5 of GNU bash.</li>
+<li>In prompt strings, `\H' expands to the whole host name.</li>
+<li>New built-in variable `beep_on_error'.  If nonzero, Octave will try
+    to ring your terminal's bell before printing an error message.
+    The default value is 0.</li>
+<li>For functions defined from files, the type command now prints the
+    text of the file.  You can still get the text reconstructed from
+    the parse tree by using the new option -t (-transformed).</li>
+<li>New command-line argument --traditional sets the following
+    preference variables for compatibility with Matlab:
+<pre>
+      PS1                           = ">> "
+      PS2                           = ""
+      beep_on_error                 = 1
+      default_save_format           = "mat-binary"
+      define_all_return_values      = 1
+      do_fortran_indexing           = 1
+      empty_list_elements_ok        = 1
+      implicit_str_to_num_ok        = 1
+      ok_to_lose_imaginary_part     = 1
+      page_screen_output            = 0
+      prefer_column_vectors         = 0
+      prefer_zero_one_indexing      = 1
+      print_empty_dimensions        = 0
+      treat_neg_dim_as_zero         = 1
+      warn_function_name_clash      = 0
+      whitespace_in_literal_matrix  = "traditional"
+</pre></li>
+<li>New functions:
+<dl>
+<dt><b>readdir</b></dt>
+<dd>returns names of files in directory as array of strings</dd>
+<dt><b>mkdir</b></dt>
+<dd>create a directory</dd>
+<dt><b>rmdir</b></dt>
+<dd>remove a directory</dd>
+<dt><b>rename</b></dt>
+<dd>rename a file</dd>
+<dt><b>unlink</b></dt>
+<dd>delete a file</dd>
+<dt><b>umask</b></dt>
+<dd>set permission mask for file creation</dd>
+<dt><b>stat</b></dt>
+<dd>get information about a file</dd>
+<dt><b>lstat</b></dt>
+<dd>get information about a symbolic link</dd>
+<dt><b>glob</b></dt>
+<dd>perform filename globbing</dd>
+<dt><b>fnmatch</b></dt>
+<dd>match strings with filename globbing patterns</dd>
+<dt><b>more</b></dt>
+<dd>turn the pager on or off</dd>
+<dt><b>gammaln</b></dt>
+<dd>alias for lgamma</dd>
+</dl></li>
+<li>New audio functions from Andreas Weingessel:
+<dl>
+<dt><b>lin2mu</b></dt>
+<dd>linear to mu-law encoding</dd>
+<dt><b>loadaudio</b></dt>
+<dd>load an audio file to a vector</dd>
+<dt><b>mu2lin</b></dt>
+<dd>mu-law to linear encoding</dd>
+<dt><b>playaudio</b></dt>
+<dd>play an audio file</dd>
+<dt><b>record</b></dt>
+<dd>record sound and store in vector</dd>
+<dt><b>saveaudio</b></dt>
+<dd>save a vector as an audio file</dd>
+<dt><b>setaudio</b></dt>
+<dd>executes mixer shell command</dd>
+</dl></li>
+<li>New plotting functions from Vinayak Dutt.  Ones dealing with
+    multiple plots on one page require features from gnuplot 3.6beta
+    (or later).
+<dl>
+<dt><b>bottom_title</b></dt>
+<dd>put title at the bottom of the plot</dd>
+<dt><b>mplot</b></dt>
+<dd>multiplot version of plot</dd>
+<dt><b>multiplot</b></dt>
+<dd>switch multiple-plot mode on or off</dd>
+<dt><b>oneplot</b></dt>
+<dd>return to one plot per page</dd>
+<dt><b>plot_border</b></dt>
+<dd>put a border around plots</dd>
+<dt><b>subplot</b></dt>
+<dd>position multiple plots on a single page</dd>
+<dt><b>subwindow</b></dt>
+<dd>set subwindow position for next plot</dd>
+<dt><b>top_title</b></dt>
+<dd>put title at the top of the plot</dd>
+<dt><b>zlabel</b></dt>
+<dd>put a label on the z-axis</dd>
+</dl></li>
+<li>New string functions
+<dl>
+<dt><b>bin2dec</b></dt>
+<dd>convert a string of ones and zeros to an integer</dd>
+<dt><b>blanks</b></dt>
+<dd>create a string of blanks</dd>
+<dt><b>deblank</b></dt>
+<dd>delete trailing blanks</dd>
+<dt><b>dec2bin</b></dt>
+<dd>convert an integer to a string of ones and zeros</dd>
+<dt><b>dec2hex</b></dt>
+<dd>convert an integer to a hexadecimal string</dd>
+<dt><b>findstr</b></dt>
+<dd>locate occurrences of one string in another</dd>
+<dt><b>hex2dec</b></dt>
+<dd>convert a hexadecimal string to an integer</dd>
+<dt><b>index</b></dt>
+<dd>return position of first occurrence a string in another</dd>
+<dt><b>rindex</b></dt>
+<dd>return position of last occurrence a string in another</dd>
+<dt><b>split</b></dt>
+<dd>divide one string into pieces separated by another</dd>
+<dt><b>str2mat</b></dt>
+<dd>create a string matrix from a list of strings</dd>
+<dt><b>strrep</b></dt>
+<dd>replace substrings in a string</dd>
+<dt><b>substr</b></dt>
+<dd>extract a substring</dd>
+</dl>
+<p>    The following functions return a matrix of ones and zeros.
+    Elements that are nonzero indicate that the condition was true for
+    the corresponding character in the string array.
+<dl>
+<dt><b>isalnum</b></dt>
+<dd>letter or a digit</dd>
+<dt><b>isalpha</b></dt>
+<dd>letter</dd>
+<dt><b>isascii</b></dt>
+<dd>ascii</dd>
+<dt><b>iscntrl</b></dt>
+<dd>control character</dd>
+<dt><b>isdigit</b></dt>
+<dd>digit</dd>
+<dt><b>isgraph</b></dt>
+<dd>printable (but not space character)</dd>
+<dt><b>islower</b></dt>
+<dd>lower case</dd>
+<dt><b>isprint</b></dt>
+<dd>printable (including space character)</dd>
+<dt><b>ispunct</b></dt>
+<dd>punctuation</dd>
+<dt><b>isspace</b></dt>
+<dd>whitespace</dd>
+<dt><b>isupper</b></dt>
+<dd>upper case</dd>
+<dt><b>isxdigit</b></dt>
+<dd>hexadecimal digit</dd>
+</dl>
+<p>    These functions return new strings.
+<dl>
+<dt><b>tolower</b></dt>
+<dd>convert to lower case</dd>
+<dt><b>toupper</b></dt>
+<dd>convert to upper case</dd>
+</dl></li>
+<li>New function, fgetl.  Both fgetl and fgets accept an optional
+    second argument that specifies a maximum number of characters to
+    read, and the function fgets is now compatible with Matlab.</li>
+<li>Printing in hexadecimal format now works (format hex).  It is also
+    possible to print the internal bit representation of a value
+    (format bit).  Note that these formats are only implemented for
+    numeric values.</li>
+<li>Additional structure features:
+<ul>
+<li>Name completion now works for structures.</li>
+<li>Values and names of structure elements are now printed by
+    default.  The new built-in variable `struct_levels_to_print'
+    controls the depth of nested structures to print.  The default
+    value is 2.</li>
+<li>New functions:
+<dl>
+<dt><b>struct_contains (S, NAME)</b></dt>
+<dd>returns 1 if S is a structure with element NAME; otherwise returns 0.</dd> 
+<dt><b>struct_elements (S)</b></dt>
+<dd>returns the names of all elements of structure S in an array of
+    strings.</dd>
+</dl></li>
+</ul></li>
+<li>New io/subprocess functions:
+<dl>
+<dt><b>fputs</b></dt>
+<dd>write a string to a file with no formatting</dd>
+<dt><b>popen2</b></dt>
+<dd>start a subprocess with 2-way communication</dd>
+<dt><b>mkfifo</b></dt>
+<dd>create a FIFO special file</dd>
+<dt><b>popen</b></dt>
+<dd>open a pipe to a subprocess</dd>
+<dt><b>pclose</b></dt>
+<dd>close a pipe from a subprocess</dd>
+<dt><b>waitpid</b></dt>
+<dd>check the status of or wait for subprocesses</dd>
+</dl></li>
+<li>New time functions:
+<dl>
+<dt><b>asctime</b></dt>
+<dd>format time structure according to local format</dd>
+<dt><b>ctime</b></dt>
+<dd>equivalent to `asctime (localtime (TMSTRUCT))'</dd>
+<dt><b>gmtime</b></dt>
+<dd>return time structure corresponding to UTC</dd>
+<dt><b>localtime</b></dt>
+<dd>return time structure corresponding to local time zone</dd>
+<dt><b>strftime</b></dt>
+<dd>print given time structure using specified format</dd>
+<dt><b>time</b></dt>
+<dd>return current time</dd>
+</dl>
+<p>    The `clock' and `date' functions are now implemented in M-files
+    using these basic functions.</li>
+<li>Access to additional Unix system calls:
+<dl>
+<dt><b>dup2</b></dt>
+<dd>duplicate a file descriptor</dd>
+<dt><b>exec</b></dt>
+<dd>replace current process with a new process</dd>
+<dt><b>fcntl</b></dt>
+<dd>control open file descriptors</dd>
+<dt><b>fork</b></dt>
+<dd>create a copy of the current process</dd>
+<dt><b>getpgrp</b></dt>
+<dd>return the process group id of the current process</dd>
+<dt><b>getpid</b></dt>
+<dd>return the process id of the current process</dd>
+<dt><b>getppid</b></dt>
+<dd>return the process id of the parent process</dd>
+<dt><b>getuid</b></dt>
+<dd>return the real user id of the current process</dd>
+<dt><b>getgid</b></dt>
+<dd>return the real group id of the current process</dd>
+<dt><b>geteuid</b></dt>
+<dd>return the effective user id of the current process</dd>
+<dt><b>getegid</b></dt>
+<dd>return the effective group id of the current process</dd>
+<dt><b>pipe</b></dt>
+<dd>create an interprocess channel</dd>
+</dl></li>
+<li>Other new functions:
+<dl>
+<dt><b>commutation_matrix</b></dt>
+<dd>compute special matrix form</dd>
+<dt><b>duplication_matrix</b></dt>
+<dd>compute special matrix form</dd>
+<dt><b>common_size.m</b></dt>
+<dd>bring arguments to a common size</dd>
+<dt><b>completion_matches</b></dt>
+<dd>perform command completion on string</dd>
+<dt><b>tilde_expand</b></dt>
+<dd>perform tilde expansion on string</dd>
+<dt><b>meshgrid</b></dt>
+<dd>compatible with Matlab's meshgrid function</dd>
+<dt><b>tmpnam</b></dt>
+<dd>replaces octave_tmp_file_name</dd>
+<dt><b>atexit</b></dt>
+<dd>register functions to be called when Octave exits</dd>
+<dt><b>putenv</b></dt>
+<dd>define an environment variable</dd>
+<dt><b>bincoeff</b></dt>
+<dd>compute binomial coefficients</dd>
+<dt><b>nextpow2</b></dt>
+<dd>compute the next power of 2 greater than a number</dd>
+<dt><b>detrend</b></dt>
+<dd>remove a best fit polynomial from data</dd>
+<dt><b>erfinv</b></dt>
+<dd>inverse error function</dd>
+<dt><b>shift</b></dt>
+<dd>perform a circular shift on the elements of a matrix</dd>
+<dt><b>pow2</b></dt>
+<dd>compute 2 .^ x</dd>
+<dt><b>log2</b></dt>
+<dd>compute base 2 logarithms</dd>
+<dt><b>diff</b></dt>
+<dd>compute differences of matrix elements</dd>
+<dt><b>vech</b></dt>
+<dd>stack columns of a matrix below the diagonal</dd>
+<dt><b>vec</b></dt>
+<dd>stack columns of a matrix to form a vector</dd>
+<dt><b>xor</b></dt>
+<dd>compute exclusive or</dd>
+</dl></li>
+<li>Functions for getting info from the password database on Unix systems:
+<dl>
+<dt><b>getpwent</b></dt>
+<dd>read entry from password-file stream, opening if necessary</dd>
+<dt><b>getpwuid</b></dt>
+<dd>search for password entry with matching user ID</dd>
+<dt><b>getpwnam</b></dt>
+<dd>search for password entry with matching username</dd>
+<dt><b>setpwent</b></dt>
+<dd>rewind the password-file stream</dd>
+<dt><b>endpwent</b></dt>
+<dd>close the password-file stream</dd>
+</dl></li>
+<li>Functions for getting info from the group database on Unix systems:
+<dl>
+<dt><b>getgrent</b></dt>
+<dd>read entry from group-file stream, opening if necessary</dd>
+<dt><b>getgrgid</b></dt>
+<dd>search for group entry with matching group ID</dd>
+<dt><b>getgrnam</b></dt>
+<dd>search for group entry with matching group name</dd>
+<dt><b>setgrent</b></dt>
+<dd>rewind the pgroup-file stream</dd>
+<dt><b>endgrent</b></dt>
+<dd>close the group-file stream</dd>
+</dl></li>
+<li>The New function octave_config_info returns a structure containing
+    information about how Octave was configured and compiled.</li>
+<li>New function getrusage returns a structure containing system
+    resource usage statistics.  The `cputime' function is now defined
+    in an M-file using getrusage.</li>
+<li>The info reader is now a separate binary that runs as a
+    subprocess.  You still need the info reader distributed with
+    Octave though, because there are some new command-line arguments
+    that are not yet available in the public release of Info.</li>
+<li>There is a new built-in variable, INFO_PROGRAM, which is used as
+    the name of the info program to run.  Its initial value is
+    $OCTAVE_HOME/lib/octave/VERSION/exec/ARCH/info, but that value can
+    be overridden by the environment variable OCTAVE_INFO_PROGRAM, or
+    the command line argument --info-program NAME, or by setting the
+    value of INFO_PROGRAM in a startup script.</li>
+<li>There is a new built-in variable, EXEC_PATH, which is used as
+    the list of directories to search when executing subprograms.  Its
+    initial value is taken from the environment variable
+    OCTAVE_EXEC_PATH (if it exists) or PATH, but that value can be
+    overridden by the the command line argument --exec-path PATH, or
+    by setting the value of EXEC_PATH in a startup script.  If the
+    EXEC_PATH begins (ends) with a colon, the directories
+    $OCTAVE_HOME/lib/octave/VERSION/exec/ARCH and $OCTAVE_HOME/bin are
+    prepended (appended) to EXEC_PATH (if you don't specify a value
+    for EXEC_PATH explicitly, these special directories are prepended
+    to your PATH).</li>
+<li>If it is present, Octave will now use an `ls-R' database file to
+    speed up recursive path searching.  Octave looks for a file called
+    ls-R in the directory specified by the environment variable
+    OCTAVE_DB_DIR.  If that is not set but the environment variable
+    OCTAVE_HOME is set, Octave looks in $OCTAVE_HOME/lib/octave.
+    Otherwise, Octave looks in the directory $datadir/octave (normally
+    /usr/local/lib/octave).</li>
+<li>New examples directory.</li>
+<li>There is a new script, mkoctfile, that can be used to create .oct
+    files suitable for dynamic linking.</li>
+<li>Many more bug fixes.</li>
+<li>ChangeLogs are now kept in each subdirectory.</li></li>
+</ul>
+
+</body>
+</html>

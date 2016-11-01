@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "GNU Octave 3.8.1 Released"
+date:   2014-03-04
+categories: news
+---
+
+Version 3.8.1 has been released and is now available for [download][1].
+Octave 3.8.1 is a major new release.
+See the [NEWS][2] file for a list of user-visible changes.
+
+[1]: {{ "download.html" | absolute_url }}
+[2]: {{ "NEWS-3.8.html" | absolute_url }}

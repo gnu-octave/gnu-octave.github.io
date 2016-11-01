@@ -3,8 +3,8 @@
     <ul class="title-area">
       <li class="name">
         <h1>
-          <a href="{{ site.baseurl }}/" style="height:100%">
-            <img src="{{ "/img/logo.png" | prepend: site.baseurl }}" style="width: 32px; height: auto"/>
+          <a href="{{ "/" | relative_url }}" style="height:100%">
+            <img src="{{ "/img/logo.png" | relative_url }}" style="width: 32px; height: auto"/>
             {{ site.title }}
           </a>
         </h1>
@@ -19,7 +19,7 @@
         {% for page in site.pages %}
           {% if page.menu %}
             <li>
-              <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+              <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
             </li>
           {% endif %}
         {% endfor %}

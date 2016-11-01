@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "GNU Octave 3.6.4 Released"
+date:   2013-02-21
+categories: news
+---
+
+Version 3.6.4 has been released and is now available for [download][1].
+Octave 3.6.4 is a minor bug-fixing release.
+See the [NEWS][2] file for a list of user-visible changes since 3.4.
+
+[1]: {{ "download.html" | absolute_url }}
+[2]: {{ "NEWS-3.6.html" | absolute_url }}

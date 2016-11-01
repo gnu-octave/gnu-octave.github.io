@@ -2,14 +2,53 @@
 layout: post
 title:  "GNU Octave 4.0.3 Released"
 date:   2016-07-02
-categories: releases
+categories: news
 ---
 
-Octave Version 4.0.3 has been released and is now available for [download][].
-This version is another [bug fixing release][].
+Octave Version 4.0.3 has been released and is now available for [download][1].
+An official [Windows binary installer][2] is also available.
 
-An official [Windows binary installer][] is also available.
+This version is another bug fixing release:
 
-[download]: http://www.octave.org/download.html
-[bug fixing release]: http://www.octave.org/fixes-4-0-3.html
-[Windows binary installer]: ftp://ftp.gnu.org/gnu/octave/windows/octave-4.0.3-installer.exe
+- doc: clarify differences between atan and atan2 ([bug #48178](https://savannah.gnu.org/bugs/?48178))
+- doc: delete mention of unsupported syntax for looping over structs ([bug #48064](https://savannah.gnu.org/bugs/?48064))
+- ver.m: return empty struct for unknown package ([bug #48235](https://savannah.gnu.org/bugs/?48235)).
+- Update gnulib subrepo for texinfo formatting fixes ([bug #48001](https://savannah.gnu.org/bugs/?48001))
+- Fix typos in Java conversion of 32 and 64 bit integers ([bug #48107](https://savannah.gnu.org/bugs/?48107))
+- Create valid gnuplot commands even for single-entry colormaps ([bug #48083](https://savannah.gnu.org/bugs/?48083)).
+- orderfields.m: Remove trailing bracket in docstring ([bug #48063](https://savannah.gnu.org/bugs/?48063)).
+- Don't overly restrict options passed to Java jvm ([bug #39063](https://savannah.gnu.org/bugs/?39063)).
+- Write integers with correct byte order on big-endian systems ([bug #47434](https://savannah.gnu.org/bugs/?47434))
+- doc: Document syntax for specifying color when using Tex interpreter ([bug #47907](https://savannah.gnu.org/bugs/?47907)).
+- Round quantized pixel values before writing uintN images ([bug #47746](https://savannah.gnu.org/bugs/?47746))
+- Fix popen2 error on Windows when child writes to stderr ([bug #43036](https://savannah.gnu.org/bugs/?43036))
+- it_IT.ts: Correct Italian translation of "col:" ([bug #47857](https://savannah.gnu.org/bugs/?47857)).
+- avoid crash in audiowrite argument processing ([bug #47875](https://savannah.gnu.org/bugs/?47875))
+- make `__magick_read__` a built-in function ([bug #41699](https://savannah.gnu.org/bugs/?41699))
+- sortrows.m: Improve docstring ([bug #47844](https://savannah.gnu.org/bugs/?47844)).
+- doc: Fix typo in exec docstring.
+- Use correct URL for Online Documentation ([bug #47835](https://savannah.gnu.org/bugs/?47835)).
+- Fix autoscale affecting legend axes objects ([bug #47765](https://savannah.gnu.org/bugs/?47765)).
+- configure.ac: Remove AC_CHECK_FUNC for pipe now that gnulib::pipe used.
+- doc: fix on manual the syntax to empty elements from cell array.
+- octave.texi: Set document encoding to UTF-8.
+- Enable the pipe function on Windows ([bug #47614](https://savannah.gnu.org/bugs/?47614))
+- avoid mulitple definitions of static function-scope vars ([bug #47372](https://savannah.gnu.org/bugs/?47372))
+- Array-sym.cc: Delete obsolete file.
+- Initialize variable to stop unstable results for lgamma ([bug #47524](https://savannah.gnu.org/bugs/?47524)).
+- call openmp function at initialization ([bug #47372](https://savannah.gnu.org/bugs/?47372))
+- macros.texi: Colorized links for PDF files with Texinfo 6.x.
+
+The above list was generated using the following command and very little
+manual post-processing:
+
+{% highlight bash %}
+hg log -r "release-4-0-1:release-4-0-3" -b stable \
+| grep "summary:" | nl | sort -rn | cut -f 2- \
+| sed 's/summary:\s*/- /' \
+| sed 's/\(bug #\)\([0-9]*\)/[\1\2](https:\/\/savannah.gnu.org\/bugs\/?\2)/' \
+| sed 's/\(patch #\)\([0-9]*\)/[\1\2](https:\/\/savannah.gnu.org\/patch\/?\2)/'
+{% endhighlight %}
+
+[1]: {{ "download.html" | absolute_url }}
+[2]: ftp://ftp.gnu.org/gnu/octave/windows/octave-4.0.3-installer.exe

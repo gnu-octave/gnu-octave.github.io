@@ -2,11 +2,10 @@
 layout: post
 title:  "GNU Octave 4.0.1 Released"
 date:   2016-03-23
-categories: releases
+categories: news
 ---
 
-Version 4.0.1 has been released and is now available for [download][].
-Octave 4.0.1 is a [bug fixing release][].
+Octave version 4.0.1 has been released and is now available for [download][1].
 
 Octave 4.0, released in May 2015,
 was a major new version with many new features,
@@ -15,5 +14,150 @@ support for classdef object-oriented programming,
 better compatibility with Matlab,
 and many new and improved functions.
 
-[download]: http://www.octave.org/download.html
-[bug fixing release]: http://www.octave.org/fixes-4-0-1.html
+This is a bug fixing release:
+
+- Allow strsplit to use '+' as a delimiter ([bug #47403](https://savannah.gnu.org/bugs/?47403)).
+- svds.m: Special handling for case of sigma=0 ([bug #46683](https://savannah.gnu.org/bugs/?46683)).
+- patch.m: Fix typo in docstring.
+- Fix splines and remove unnecessary calculations ([bug #47013](https://savannah.gnu.org/bugs/?47013))
+- doc: Use consistent spacing for memory/storage sizes
+- fix printf regression ([bug #47192](https://savannah.gnu.org/bugs/?47192))
+- Invoke correct version of octave-cli from main driver program
+- For gnuplot 5.x, add the "color" option to the postscript terminal.
+- Avoid overflow while reshaping large sparse matrices ([bug #42850](https://savannah.gnu.org/bugs/?42850)).
+- Fix memory corruption allocating to sparse arrays ([bug #42825](https://savannah.gnu.org/bugs/?42825)).
+- `__osmesa_print__.cc`: Include system headers with <file.h> syntax.
+- Fix compilation error when building with OSMesa on Mac platforms ([patch #8761](https://savannah.gnu.org/patch/?8761))
+- Disable char/int8_t function overloads where not permitted ([bug #45411](https://savannah.gnu.org/bugs/?45411))
+- Fix cut/paste error in rande documentation ([bug #47097](https://savannah.gnu.org/bugs/?47097)).
+- Fix regressions caused by ismatrix definition change (partial fix [bug #47036](https://savannah.gnu.org/bugs/?47036)).
+- doc: Update copyright date in octave.texi (partial fix [bug #47058](https://savannah.gnu.org/bugs/?47058)).
+- Fix regressions caused by ismatrix definition change (partial fix [bug #47036](https://savannah.gnu.org/bugs/?47036)).
+- Fix regression for coordinate transforms on 3-D arrays (partial fix [bug #47036](https://savannah.gnu.org/bugs/?47036)).
+- Fix regressions caused by ismatrix definition change (partial fix [bug #47036](https://savannah.gnu.org/bugs/?47036)).
+- doc: Correct example errobar code and plot ([bug #46972](https://savannah.gnu.org/bugs/?46972)).
+- `__getlegenddata__.m`: fix handling of multiple child elements ([bug #46835](https://savannah.gnu.org/bugs/?46835))
+- doc: fix spelling of "unknown".
+- svds.m: Modify BIST test for sigma=0 to reliably pass.
+- fzero.m: Correctly choose tolerance (eps) based on class of fun and X0 ([bug #46658](https://savannah.gnu.org/bugs/?46658)).
+- maint: Add @SizeTester files to build system.
+- etc/icons/octave.desktop.in: Add Keywords entry and field code to Exec.
+- doc: fix spelling of "occurred".
+- Remove spurious tick labels occuring when setting ticks and removing tick labels.
+- Fix behavior of warning ("error") call ([bug #45753](https://savannah.gnu.org/bugs/?45753)).
+- doc: Start help text with " -- ", not " -- : ".
+- Fixed isequal for comparison of objects with overridden size ([bug #44334](https://savannah.gnu.org/bugs/?44334))
+- Fix compilation of classdef with the clang compiler ([bug #41178](https://savannah.gnu.org/bugs/?41178))
+- Added tag rc-4-0-1-1 for changeset 20b17dda0e0c
+- doc: Fix incorrect description of Hessenberg decomposition ([bug #46622](https://savannah.gnu.org/bugs/?46622)).
+- Rewrite a8ee668e7fd7 to use #if defined rather than #ifdef.
+- Fix kbhit and pause on Windows systems.
+- set all lexical_feedback variables in init function ([bug #46522](https://savannah.gnu.org/bugs/?46522))
+- randi.m: Clean up function.
+- randi.m: corrected warning policy for int and single ranges.
+- Tweak GUI ToolTip strings for consistency.
+- Update German translation file de_DE.ts.
+- Stop segfault when find() called with 6 outputs ([bug #42424](https://savannah.gnu.org/bugs/?42424)).
+- lscov.m: Increase tolerance of BIST test to 2*eps.
+- doc: Clarify how if statement determines true or false for a matrix input.
+- textread.m, textscan.m: properly process single-quoted endofline parameter ([bug #46477](https://savannah.gnu.org/bugs/?46477))
+- Fix rotated graphics when printing through ghostscript ([bug #46435](https://savannah.gnu.org/bugs/?46435)).
+- drawnow: add a delay to let the GUI thread lock the mutex when printing ([bug #44463](https://savannah.gnu.org/bugs/?44463))
+- check whether filter is active or not when history widget becomes visible
+- fix hanging of gui when focusing the editor (regression from cset 802dc52d4d46)
+- quadv.m: Clarify that tolerance is absolute in docstring.
+- Fix segfault with 'dbclear all' ([bug #41843](https://savannah.gnu.org/bugs/?41843)).
+- intro.txi change a to A to match the previous comments
+- Force left-to-right alignment for the whole GUI ([bug #46204](https://savannah.gnu.org/bugs/?46204))
+- validateattributes.m: fix typo on documentation ([bug #46328](https://savannah.gnu.org/bugs/?46328))
+- doc: Fix typo in short-circuit operators documentation ([bug #46280](https://savannah.gnu.org/bugs/?46280)).
+- datevec.m: Properly handle FFF millisecond code ([bug #46171](https://savannah.gnu.org/bugs/?46171)).
+- build: Add check for sys/stropts.h system header file
+- libinterp/dldfcn/module-files: Sort the list of loadable module files.
+- Fix issue with gnuplot, subplot, and 2 y-axes ([bug #45822](https://savannah.gnu.org/bugs/?45822)).
+- plot.m: use actual property names in the description FMT argument ([bug #46240](https://savannah.gnu.org/bugs/?46240))
+- normrnd.m: Return correct result for vector case when std = 0 ([bug #46238](https://savannah.gnu.org/bugs/?46238)).
+- prevent doc browser from searching for an empty string (bug 46227)
+- improve focus detection of gui ([bug #45306](https://savannah.gnu.org/bugs/?45306))
+- Fix segfault when complex double matrix calls ZGETRF ([bug #45577](https://savannah.gnu.org/bugs/?45577)).
+- Add uiXXXX documentation ([bug #46076](https://savannah.gnu.org/bugs/?46076))
+- quantile.m: Fix operation along a singleton dimension ([bug #45455](https://savannah.gnu.org/bugs/?45455)).
+- doc: Add explanation of ':' optional input to numel().
+- doc: Cuddle parentheses in example code of for loop.
+- data.cc: Add @w{} around @code segments in docstrings to prevent line breaks.
+- `__gnuplot_drawnow__.m`: Use "screenpixelsperinch" instead of constant value ([bug #46122](https://savannah.gnu.org/bugs/?46122)).
+- methods.m: try Java class names if getMethods fails on Java objects ([bug #46010](https://savannah.gnu.org/bugs/?46010))
+- textread.m, textscan.m: always remove headerlines args before invoking strread ([bug #46080](https://savannah.gnu.org/bugs/?46080))
+- Include stdint.h in mex.h file (Bug #46062)
+- Handle hggroup objects "buttondownfcn" when children are clicked ([bug #45621](https://savannah.gnu.org/bugs/?45621))
+- Fix selection of one pixel high(wide) images ([bug #46049](https://savannah.gnu.org/bugs/?46049))
+- annotation.m: document the "string" property of textbox and textarrow annotations ([bug #46036](https://savannah.gnu.org/bugs/?46036))
+- mkoctfile: Apply default C++ compiler flags when linking oct-file ([bug #45280](https://savannah.gnu.org/bugs/?45280))
+- Use backslash as windows file separator for canonicalize_file_name ([bug #45816](https://savannah.gnu.org/bugs/?45816)).
+- maint: Complete deprecation of gmap40 colormap.
+- Generate correct ezplot for 2-input functions ([bug #46004](https://savannah.gnu.org/bugs/?46004)).
+- Fix regression in displayed error message for nargin and nargout.
+- Fix typo in str2func docstring.
+- doc: Make excplicit that asctime and ctime values end in a newline ([bug #45976](https://savannah.gnu.org/bugs/?45976))
+- doc: remove section about broadcasting warnings which no longer exists.
+- Initialize interpreter correctly with script and --traditional ([bug #45921](https://savannah.gnu.org/bugs/?45921))
+- do not leave debug modus when entering a command at debug prompt ([bug #45737](https://savannah.gnu.org/bugs/?45737))
+- `__finish__.m`: Change from function to script to stay in base workspace ([bug #45869](https://savannah.gnu.org/bugs/?45869)).
+- Don't put default xtick vector size in documentation ([bug #45725](https://savannah.gnu.org/bugs/?45725)).
+- range.tst: Add tests for [bug #45739](https://savannah.gnu.org/bugs/?45739).
+- Fix 'descending' sort of Range objects ([bug #45739](https://savannah.gnu.org/bugs/?45739)).
+- strread.m: clarify delimiter and whitespace usage ([bug #45712](https://savannah.gnu.org/bugs/?45712))
+- GUI-Find: keep focus on Find What and select all text when dialog opens
+- strread.m: properly preprocess all forms of string format specifier ([bug #45712](https://savannah.gnu.org/bugs/?45712))
+- doc: Clarify that ARCH argument to fread overrides ARCH arg to fopen.
+- strfunc: Document function does not accept anonymous functions (partial fix [bug #45682](https://savannah.gnu.org/bugs/?45682)).
+- doc: Add info about single letter codes for fread, fopen IEEE format.
+- doc: Change docstrings to use 'IEEE 754' rather than 'IEEE-754'.
+- Fix hang when using errorbar with empty dataset ([bug #45554](https://savannah.gnu.org/bugs/?45554)).
+- doc: Clarify behavior of length() function ([bug #45611](https://savannah.gnu.org/bugs/?45611)).
+- show history context menu only for clicks on entries
+- Fix missing sorting of the workspace view directly after start-up
+- Allow sorting columns in workspace view ([bug #45448](https://savannah.gnu.org/bugs/?45448))
+- Pass all fields in face/vertex structure through to patch() ([bug #45593](https://savannah.gnu.org/bugs/?45593)).
+- polar.m: Display plot titles on polar plots ([bug #45514](https://savannah.gnu.org/bugs/?45514)).
+- ellipke.m: Use correct definition of elliptic integral in documentation ([bug #45522](https://savannah.gnu.org/bugs/?45522)).
+- build: Sort generated PKG_ADD contents consistently
+- build: Use texinfo.tex from gnulib instead of manually imported version
+- doc: Fix backslash characters in docstrings
+- install.txi: Add warning about incorrect behavior of reference BLAS library.
+- unpack.m: Stop hang when unpacking on to existing filename ([bug #45331](https://savannah.gnu.org/bugs/?45331)).
+- Allow NEWS to be displayed properly in QTextBrowser ([bug #45396](https://savannah.gnu.org/bugs/?45396))
+- Fix segfault when '[]' used for row_vector_property.
+- fix crash when selecting an image ([bug #45372](https://savannah.gnu.org/bugs/?45372))
+- qt toolkit: set keyboard focus in canvas ([bug #44832](https://savannah.gnu.org/bugs/?44832))
+- Clean up MEX example code.
+- Change mxCreateNumericArray to be Matlab compatible for ndims < 2 ([bug #45319](https://savannah.gnu.org/bugs/?45319)).
+- Fix conversion from string cell array into java's String[] ([bug #45290](https://savannah.gnu.org/bugs/?45290))
+- Don't run wizard in --no-gui mode (see http://octave.1599824.n4.nabble.com/Octave-wants-to-run-startup-configuration-wizard-in-no-gui-mode-tp4670884.html)
+- Fix load/save of integers with -hdf5 ([bug #45225](https://savannah.gnu.org/bugs/?45225))
+- io.tst: Add tests for printf hex or octal conversion on string inputs
+- ellipke.m: Modify to accept row vectors ([bug #45283](https://savannah.gnu.org/bugs/?45283)).
+- Return correct hex value for printf when used with string inputs ([bug #45263](https://savannah.gnu.org/bugs/?45263)).
+- run.m: Return to original directory on Windows ([bug #45231](https://savannah.gnu.org/bugs/?45231)).
+- Convert double Octave vectors to double Java vectors ([bug #45264](https://savannah.gnu.org/bugs/?45264)).
+- Also load settings and translations in --no-gui mode ([bug #44222](https://savannah.gnu.org/bugs/?44222) and [bug #45199](https://savannah.gnu.org/bugs/?45199))
+- Avoid crash when trying to annotate an empty figure ([bug #45241](https://savannah.gnu.org/bugs/?45241))
+- Allow interactive annotations in other figures than the currentfigure.
+- Allow copying a figure to clipboard even in --no-gui mode ([bug #44886](https://savannah.gnu.org/bugs/?44886))
+- Allow saving/copying other figures than the currentfigure ([bug #45226](https://savannah.gnu.org/bugs/?45226))
+- linsolve.m: Fix regression when calling linsolve with 2 arguments ([bug #45212](https://savannah.gnu.org/bugs/?45212))
+- fftshift.m, ifftshift.m: Restore support for N-dimensional arrays ([bug #45207](https://savannah.gnu.org/bugs/?45207))
+
+
+The above list was generated using the following command and very little
+manual post-processing:
+
+{% highlight bash %}
+hg log -r "release-4-0-0:release-4-0-1" -b stable \
+| grep "summary:" | nl | sort -rn | cut -f 2- \
+| sed 's/summary:\s*/- /' \
+| sed 's/\(bug #\)\([0-9]*\)/[\1\2](https:\/\/savannah.gnu.org\/bugs\/?\2)/' \
+| sed 's/\(patch #\)\([0-9]*\)/[\1\2](https:\/\/savannah.gnu.org\/patch\/?\2)/'
+{% endhighlight %}
+
+[1]: {{ "download.html" | absolute_url }}

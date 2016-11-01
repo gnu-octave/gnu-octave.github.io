@@ -1,84 +1,96 @@
 ---
 layout: page
-title: Support
-permalink: /support/
+title: Help/Support
 menu: true
 ---
 
-If you need help using Octave, you have many options, from reading the Octave manual, asking for help on the mailing lists, chatting online with other Octave users, or paying for commercial support.
+If you need help using Octave, you have many options, from reading
+the Octave manual, asking for help on the mailing lists, chatting
+online with other Octave users, or paying for [commercial support][1].
 
-<div class="panel callout">
+The Octave community is a loosely organized association of
+volunteers.  Your interactions with the community will be better
+if you have the [right expectations about the support options][2]
+available to you.
 
-The Octave community is a loosely organized association of volunteers. Your interactions with the community will be better if you have the right expectations about the support options available to you. Please read the <a href="{{ "/support-expectations/" | prepend: site.baseurl }}">Support Expectations</a> page.
+[1]: {{ "commercial-support.html" | relative_url }}
+[2]: {{ "support-expectations.html" | relative_url }}
 
-</div>
 
-#### Commercial Support
 
-Community support can be great, and with the Octave community it often is, but sometimes you need to know that your question will be answered. We maintain a [list of people and organizations]({{"/commercial-support/" | prepend: site.baseurl}}) who offer commercial support contracts for Octave. This list is available as a service to the community and the support providers. The Octave project does not provide endorsements or recommendations.
+# Documentation
 
-#### User Community
+There is an [{% octicon book class:"octicon-book-manual" %} Online Manual][3]
+and a [{% octicon file-pdf class:"octicon-pdf-manual" %} PDF Version][4] of
+the comprehensive ~800 page manual.  This full documentation of Octave is
+generated directly from the Texinfo source files that are distributed along
+with every copy of the Octave source code.  The complete text of the manual
+is also available at the Octave prompt using the `doc` command.
 
-There is an active user community centered around Octave. Please understand that the people answering your question on the mailing list or IRC channel, or helping to fix the bug you reported are doing so as volunteers.
+A printed version of the Octave manual may be ordered from
+[Network Theory, Ltd.][5].  Any money raised from the sale of this book
+will support the development of free software.  For each copy sold $1
+will be donated to the GNU Octave Development Fund.
 
-### Documentation
+[3]: {{ site.docs_url }}
+[4]: http://www.octave.org/octave.pdf
+[5]: http://www.network-theory.co.uk/octave/manual
 
-#### Reference Manual
 
-Octave is fully documented by a comprehensive 800 page [manual]({{site.docs_url}}).
+# Octave Wiki and FAQ
 
-The on-line [HTML](http://www.gnu.org/software/octave/doc/interpreter/index.html) and [PDF](http://www.gnu.org/software/octave/octave.pdf) versions of the manual are generated directly from the Texinfo source files that are distributed along with every copy of the Octave source code. The complete text of the manual is also available at the Octave prompt using the doc command.
+The [Octave Wiki][6] is a great place to look for information about
+things that are not covered in the manual, or other transient topics
+(Google Summer of Code, Octave Conferences, etc.).
 
-A printed version of the Octave manual may be ordered from [Network Theory, Ltd](http://www.network-theory.co.uk/octave/manual). Any money raised from the sale of this book will support the development of free software. For each copy sold $1 will be donated to the GNU Octave Development Fund.
+Additionally, the wiki contains a list of
+[frequently asked questions (FAQ)][7]
 
-#### Frequently Asked Questions
+[6]: {{ site.wiki_url }}
+[7]: {{ site.faq_url }}
 
-If you are new to Octave, you may have some questions that have been asked (and answered) a few times before. See the [FAQ](http://www.octave.org/wiki/FAQ) on the wiki.
 
-#### Wiki
+# Contacting the user community
 
-The Octave Wiki is a great place to look for information about things that are not covered in the manual, or other transient topics (Google Summer of Code, Octave Conferences, etc.).
+- **Mailing List**:
+  If your question isn't answered in the FAQ, the manual, or the Wiki,
+  the [**`{{ site.help_email }}`**][8] mailing list is a good resource.
 
-### Contacting Other Users for Help
+  You can also [subscribe][9] to `{{ site.help_email }}` or try to search in the
+  mailing list archive for an answer:
+  <form action="http://octave.1599824.n4.nabble.com/template/NamlServlet.jtp">
+  <input type="hidden" name="macro" value="search_page" />
+  <input type="hidden" name="node" value="1599825" />
+  <input id="query" name="query" size="25" />
+  <select name="days">
+    <option value="0" selected>all dates</option>
+    <option value="1">past 24 hours</option>
+    <option value="7">past week</option>
+    <option value="30">past month</option>
+    <option value="90">past 3 months</option>
+    <option value="180">past 6 months</option>
+    <option value="365">past year</option>
+  </select>
+  <input type="submit" value="Search" />
+  </form>
 
-#### Mailing List
 
-If your question isn't answered in the FAQ, the manual, or the Wiki, the [help@octave.org](https://lists.gnu.org/mailman/listinfo/help-octave) mailing list is a good resource.
+  <p>
+  <div class="alert">
+  {% octicon stop class:"octicon-stop-octave" %}
+  Please do <strong>not</strong> send any bug reports to the
+  <samp>{{ site.help_email }}</samp> mailing list.
+  Most Octave users do not want to receive bug reports.
+  </div>
+  </p>
 
-<div class="row">
-<div class="columns medium-8">
-<form action="http://octave.1599824.n4.nabble.com/template/NamlServlet.jtp"><input name="macro" value="search_page" type="hidden">
-<input name="node" value="1599825" type="hidden">
-<div class="row collapse">
-<div class="columns small-7">
-<input id="query" name="query" size="25">
-</div>
-<div class="columns small-3">
-<select name="days">
-<option value="0" selected="">all dates</option>
-<option value="1">past 24 hours</option>
-<option value="7">past week</option>
-<option value="30">past month</option>
-<option value="90">past 3 months</option>
-<option value="180">past 6 months</option>
-<option value="365">past year</option>
-</select>
-</div>
-<div class="columns small-2">
-<input class="button postfix" value="Search" type="submit">
-</div>
-</div>
+- **IRC Chat**:
+  Too impatient for email? You can find Octave developers and users on the
+  [`{{ site.irc_channel }}` channel][10] at [`{{ site.irc_network }}`][11].
+  The atmosphere is relaxed and chat isn't restricted to matters strictly
+  pertaining to Octave.
 
-</form>
-</div>
-</div>
-
-[Advanced Search](http://octave.1599824.n4.nabble.com/template/NamlServlet.jtp?macro=adv_search_page&node=1599825)
-
-#### Chat
-
-Too impatient for email? You can find Octave developers and users on the [#octave channel at irc.freenode.net](http://webchat.freenode.net/?channels=octave&uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda). The atmosphere is relaxed and chat isn't restricted to matters strictly pertaining to Octave.
-
-### Reporting Bugs
-
-If you think you've found a bug, you are encouraged to [report it]({{ "/bugs/" | prepend: site.baseurl }}).
+[8]: mailto:{{ site.help_email }}
+[9]: https://lists.gnu.org/mailman/listinfo/help-octave
+[10]: http://webchat.freenode.net/?channels=octave&amp;uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda
+[11]: http://freenode.net
