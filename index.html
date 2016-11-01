@@ -30,41 +30,53 @@ layout: default
   </div>
 </section>
 
-<section id="syntax">
+<section>
   <h3>Syntax Examples</h3>
 
   <div class="row">
     <div class="columns medium-12">
       <p>
-        The Octave syntax is largely compatible with <a href="http://www.mathworks.com/matlab">Matlab</a>. The Octave interpreter can be run in GUI mode, as a console, or invoked as part of a shell script.
+        The Octave syntax is largely compatible with
+        <a href="http://www.mathworks.com/matlab">Matlab</a>.
+        The Octave interpreter can be run in GUI mode, as a console,
+        or invoked as part of a shell script.
       </p>
     </div>
   </div>
 
   <div class="row">
     <div class="columns medium-4" >
-      <p>Solve systems of equations with linear algebra operations on <strong>vectors</strong> and <strong>matrices</strong></p>
+      <p>
+        Solve systems of equations with linear algebra operations on
+        <strong>vectors</strong> and <strong>matrices</strong>.
+      </p>
     </div>
     <div class="columns medium-8">
-{% highlight matlab%}
-b = [4; 9; 2] % Column vector
+{% highlight octave %}
+b = [4; 9; 2] # Column vector
 A = [ 3 4 5;
       1 3 1;
       3 5 9 ]
-x = A \ b     % Solve the system by inverting A
+x = A \ b     # Solve the system  Ax = b  by inverting A
 {% endhighlight %}
-     </div>
+    </div>
   </div>
 
   <div class="row">
      <div class="columns medium-4">
-        <p>Visualize data with <strong>high-level plot commands</strong> in 2D and 3D</p>
+        <p>
+          Visualize data with <strong>high-level plot commands</strong>
+          in 2D and 3D.
+        </p>
      </div>
      <div class="columns medium-8">
-{% highlight matlab %}
-x = -10:0.1:10 # Create an evenly-spaced vector from -10..10
-y = sin (x)    # y is also a vector
-plot (x, y)
+{% highlight octave %}
+x = -10:0.1:10; # Create an evenly-spaced vector from -10..10
+y = sin (x);    # y is also a vector
+plot (x, y);
+title ("Simple 2-D Plot");
+xlabel ("x");
+ylabel ("sin (x)");
 {% endhighlight %}
       <div class="text-left">
         <a href="#" data-reveal-id="plotModal">
@@ -90,12 +102,15 @@ plot (x, y)
   </div>
 </section>
 
-<section id="forge">
+<section>
   <h3>Octave Forge</h3>
   <div class="row">
     <div class="columns medium-9">
       <p>
-        <a href="http://octave.sourceforge.net/">Octave Forge</a> is a central location for development of packages for GNU Octave, similar to Matlab's toolboxes. To install a package, use the pkg command from the Octave prompt by typing:
+        <a href="http://octave.sourceforge.net/">Octave Forge</a>
+        is a central location for development of packages for GNU Octave,
+        similar to Matlab's toolboxes.  To install a package, use the
+        <code>pkg</code> command from the Octave prompt by typing:
       </p>
 {% highlight text %}
 pkg install -forge package_name
@@ -108,14 +123,22 @@ pkg load package_name
   </div>
 </section>
 
-<section id="develop">
+<section>
   <h3>Development</h3>
   <p>
-    Octave is free software licensed under the <a href="{{ "license.html" | relative_url }}">GNU General Public License (GPL)</a>.  Assuming you have Mercurial installed on your machine you may obtain the latest development version of Octave sources with the following command:
+    Octave is free software licensed under the
+    <a href="{{ "license.html" | relative_url }}">GNU General Public License (GPL)</a>.
+    Assuming you have Mercurial installed on your machine
+    you may obtain the latest development version of Octave sources
+    with the following command:
   </p>
-  <p style="margin-left:1rem"><code>hg clone http://www.octave.org/hg/octave</code></p>
+{% highlight text %}
+hg clone http://www.octave.org/hg/octave
+{% endhighlight %}
   <p>
-    If you want to participate in Octave development, join the <a href="https://lists.gnu.org/mailman/listinfo/octave-maintainers">maintainers@octave.org</a> mailing list.
+    If you want to participate in Octave development, join the
+    <a href="https://lists.gnu.org/mailman/listinfo/octave-maintainers">maintainers@octave.org</a>
+    mailing list.
   </p>
 </section>
 
@@ -147,6 +170,6 @@ pkg load package_name
 </div>
 
 <div id="guiModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
-  <img src="{{ "/img/screenshot-2016-small.png" | relative_url }}" title="GNU Octave 4.0.3 - Licensed under CC BY-SA 3.0"/>
+  <img src="{{ "/img/screenshot-2016.png" | relative_url }}" title="GNU Octave 4.0.3 - Licensed under CC BY-SA 3.0"/>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
