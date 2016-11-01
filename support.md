@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Help/Support
+title: Support/Help
 menu: true
 ---
 
@@ -57,21 +57,30 @@ Additionally, the wiki contains a list of
 
   You can also [subscribe][9] to `{{ site.help_email }}` or try to search in the
   mailing list archive for an answer:
+  <div class="row">
+  <div class="columns medium-8">
   <form action="http://octave.1599824.n4.nabble.com/template/NamlServlet.jtp">
-  <input type="hidden" name="macro" value="search_page" />
-  <input type="hidden" name="node" value="1599825" />
-  <input id="query" name="query" size="25" />
+  <input name="macro" value="search_page" type="hidden">
+  <input name="node" value="1599825" type="hidden">
+  <div class="row collapse">
+  <div class="columns small-7">
+  <input id="query" name="query" size="25">
+  </div>
+  <div class="columns small-3">
   <select name="days">
-    <option value="0" selected>all dates</option>
-    <option value="1">past 24 hours</option>
-    <option value="7">past week</option>
-    <option value="30">past month</option>
-    <option value="90">past 3 months</option>
-    <option value="180">past 6 months</option>
-    <option value="365">past year</option>
+  <option value="0" selected="">all dates</option>
+  <option value="1">past 24 hours</option>
+  <option value="7">past week</option>
+  <option value="30">past month</option>
+  <option value="90">past 3 months</option>
+  <option value="180">past 6 months</option>
+  <option value="365">past year</option>
   </select>
-  <input type="submit" value="Search" />
-  </form>
+  </div>
+  <div class="columns small-2">
+  <input class="button postfix" value="Search" type="submit">
+  </div>
+  </div>
 
   <div class="row ">
   <div class="columns small-11">
@@ -80,7 +89,8 @@ Additionally, the wiki contains a list of
   <samp>{{ site.help_email }}</samp> mailing list.
   Most Octave users do not want to receive bug reports.
   </div>
-  </p>
+  </div>
+  </div>
 
 - **IRC Chat**:
   Too impatient for email? You can find Octave developers and users on the

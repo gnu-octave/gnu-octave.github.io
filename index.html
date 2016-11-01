@@ -6,12 +6,12 @@ layout: default
   <div class="row">
     <div class="columns medium-6">
       <a href="#">
-        <img src="{{ "/img/mesh.png" | prepend: site.baseurl }}" />
+        <img src="{{ "/img/example-mesh.png" | relative_url }}" />
       </a>
     </div>
     <div class="columns medium-6">
       <h2 class="home-title">
-        <img src="{{ "/img/logo.png" | prepend: site.baseurl }}" style="float: left; height: 48px; width: auto; padding-right: 0.5rem" />
+        <img src="{{ "/img/octave-logo.svg" | relative_url }}" style="float: left; height: 48px; width: auto; padding-right: 0.5rem" />
         GNU Octave
       </h2>
       <h3>Scientific Programming Language</h3>
@@ -62,19 +62,18 @@ x = A \ b     % Solve the system by inverting A
      </div>
      <div class="columns medium-8">
 {% highlight matlab %}
-x = -10:0.1:10 % Create an evenly-spaced vector from -10..10
-y = sin(x)     % y is also a vector
-plot(x,y)
+x = -10:0.1:10 # Create an evenly-spaced vector from -10..10
+y = sin (x)    # y is also a vector
+plot (x, y)
 {% endhighlight %}
       <div class="text-left">
         <a href="#" data-reveal-id="plotModal">
-          <img src="{{ "/img/plot.png" | prepend: site.baseurl }}" style="height: 12rem; width: auto;"/>
+          <img src="{{ "/img/example-plot.png" | relative_url }}" style="height: 12rem; width: auto;"/>
           <span class="label">Expand</span>
         </a>
       </div>
     </div>
   </div>
-  <a class="button" href="{{site.baseurl}}/examples" >More Examples</a>
 </section>
 
 <section id="install">
@@ -85,7 +84,7 @@ plot(x,y)
     </div>
     <div class="columns medium-4">
       <a href="#" data-reveal-id="guiModal">
-        <img src="https://www.gnu.org/software/octave/images/screenshot-2016-small.png" title="GNU Octave 4.0.3 - Licensed under CC BY-SA 3.0"/>
+        <img src="{{ "/img/screenshot-2016-small.png" | relative_url }}" title="GNU Octave 4.0.3 - Licensed under CC BY-SA 3.0"/>
       </a>
     </div>
   </div>
@@ -112,7 +111,7 @@ pkg load package_name
 <section id="develop">
   <h3>Development</h3>
   <p>
-    Octave is free software licensed under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License (GPL)</a>.  Assuming you have Mercurial installed on your machine you may obtain the latest development version of Octave sources with the following command:
+    Octave is free software licensed under the <a href="{{ "license.html" | relative_url }}">GNU General Public License (GPL)</a>.  Assuming you have Mercurial installed on your machine you may obtain the latest development version of Octave sources with the following command:
   </p>
   <p style="margin-left:1rem"><code>hg clone http://www.octave.org/hg/octave</code></p>
   <p>
@@ -126,16 +125,16 @@ pkg load package_name
       {% assign latest_post = site.posts.first %}
       {% if latest_post %}
         <div class="panel callout">
-          <a class="right" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+          <a class="right" href="{{ "/feed.xml" | relative_url }}">
             <span class="label warning">
               RSS
             </span>
           </a>
           <h3 class="entry-title">
-            <a href="{{ root_url }}{{ latest_post.url }}">{{ latest_post.title }}</a>
+            <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
           </h3>
           <p class="post-meta">{{ latest_post.date | date: "%b %-d, %Y" }}</p>
-          <div class="entry-content">{{ latest_post.content }}</div>
+          <div class="entry-content">{{ latest_post.excerpt }}</div>
         </div>
       {% endif %}
     </div>
@@ -143,11 +142,11 @@ pkg load package_name
 </section>
 
 <div id="plotModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
-  <img src="{{ "/img/plot.png" | prepend: site.baseurl }}" />
+  <img src="{{ "/img/example-plot.png" | relative_url }}" />
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
 <div id="guiModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
-  <img src="https://upload.wikimedia.org/wikipedia/en/4/48/Octave-4.0.0-rc1-Qt5.4-Linux.png" title="Octave-4.0.0-rc1-Qt5.4-Linux by Qtguy00 - Own work. Licensed under CC BY-SA 3.0 via Wikipedia"/>
+  <img src="{{ "/img/screenshot-2016-small.png" | relative_url }}" title="GNU Octave 4.0.3 - Licensed under CC BY-SA 3.0"/>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>

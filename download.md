@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Install
+title: Download
 menu: true
 ---
 

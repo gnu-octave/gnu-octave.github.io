@@ -1,10 +1,14 @@
 ---
-layout: default
+layout: page
 title: News
-menu: false
+menu: true
 ---
 
-[**{% octicon rss class:"octicon-rss-octave" %} News feed**][Feed]
+<a class="right" href="{{ "/feed.xml" | relative_url }}">
+  <span class="label warning">
+    RSS
+  </span>
+</a>
 
 {% for post in site.posts %}
 {% if post.title == "News Archive" %}

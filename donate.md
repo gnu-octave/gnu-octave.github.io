@@ -16,8 +16,6 @@ Your contributions help to ensure that Octave will continue to improve.
 </div>
 </div>
 
-- **[Free Software Foundation donation page][1]**
-
 If you are already an Octave user and would like to see it improve more rapidly,
 then please donate so that we can spend more of our time working on Octave.
 If we could raise as little as $300,000/year,
@@ -31,10 +29,9 @@ consider spending 10% (or more!) of that on Octave.
 Do you expect Octave to improve on a $0 budget
 while the proprietary tools are well-funded by your license fees?
 
-Consider [hiring someone][2] to implement the specific features you need.
+Consider [hiring someone][1] to implement the specific features you need.
 
-Bitcoin donations also accepted at this address: [1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF][3] 
+Bitcoin donations also accepted at this address: [1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF][2]
 
-[1]: https://crm.fsf.org/civicrm/contribute/transact?reset=1&id=10
-[2]: {{ "commercial-support.html" | relative_url }}
-[3]: bitcoin:1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF
+[1]: {{ "commercial-support.html" | relative_url }}
+[2]: bitcoin:1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF

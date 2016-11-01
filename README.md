@@ -73,7 +73,7 @@ you should clone the repository using
 To build the static website, you need to install [Jekyll][6] and a few more
 tools from [Rubygems][7].  Just type
 
-    gem install jekyll jekyll-octicons pygments.rb
+    gem install jekyll pygments.rb
 
 [7]: https://rubygems.org/
 

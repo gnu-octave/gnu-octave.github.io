@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bugs
-menu: true
+menu: false
 ---
 
 GNU Octave uses the bug tracker at [Savannah][1].

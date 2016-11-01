@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Missing functions
 menu: false
 ---
