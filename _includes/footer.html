@@ -1,64 +1,51 @@
 <footer class="row">
-  <section id="support">
-	<h3>Support</h3>
-	<div class="row">
-		<div class="columns small-12">
-		</div>
-		<div class="medium-9 columns">
-		<dl>
-			<div class="row collapse">
-			<div class="columns  medium-3">
-				<dt>Wiki</dt>
-				<dd><a href="{{site.wiki_url}}">wiki.octave.org</a></dd>
-			</div>
-			<div class="columns medium-3">
-				<dt>Support Mailing List</dt>
-				<dd><a href="https://lists.gnu.org/mailman/listinfo/help-octave">help@octave.org</a></dd>
-			</div>
-			<div class="columns medium-3">
-				<dt>IRC Channel</dt>
-				<dd><a href="http://webchat.freenode.net/?channels=octave&uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda">{{site.irc_channel}}</a></dd>
-			</div>
-			<div class="columns medium-3">
-				<dt><a href="{{ "/bugs.html" | relative_url }}">Reporting Bugs</a></dt>
-				<dt><a href="{{ "/support-expectations.html" | relative_url }}">Support Expectations</a></dt>
-				<dt><a href="{{ "/commercial-support.html" | relative_url }}">Commercial Support</a></dt>
-				<dt><a href="{{ "/donate.html" | relative_url }}">Donate</a></dt>
-			</div>
-			</div>
-		</dl>
-		</div>
-		<div class="columns medium-3">
-		<a class="button expand" href="{{site.docs_url}}">Documentation</a>
-		</div>
-	</div>
-	<div class="row ">
-		<div class="columns small-9">
-			<div class="panel callout">
-				Octave development takes a lot of time and expertise. Your contributions help to ensure that Octave will continue to improve.
-			</div>
-		</div>
-		<div class="columns small-3">
-			{% include donate.html %}
-		</div>
-	</div>
-	<div class="row">
-		<div class="columns small-12">
-			<div class="text-center">
-				<p>Octave is free software under the <a href="{{ "license.html" | relative_url }}">GNU General Public License.</a></p>
-				<small>
-					Copyright © 1998-{{ site.time | date: "%Y" }} John W. Eaton.
+  <section>
+  <h3>Support</h3>
+  <div class="row">
+    <div class="medium-12 columns">
+    <dl>
+      <div class="row collapse">
+      <div class="columns medium-3">
+        <dt>Wiki</dt>
+        <dd><a href="{{site.wiki_url}}">wiki.octave.org</a></dd>
+        <dd><a href="{{site.faq_url}}">FAQs</a></dd>
+      </div>
+      <div class="columns medium-3">
+        <dt>Mailing List / IRC</dt>
+        <dd><a href="https://lists.gnu.org/mailman/listinfo/help-octave">help@octave.org</a></dd>
+        <dd><a href="http://webchat.freenode.net/?channels=octave&uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda">{{site.irc_channel}}</a></dd>
+      </div>
+      <div class="columns medium-3">
+        <dt>Documentation</dt>
+        <dd><a href="{{site.docs_url}}">Read online</a></dd>
+        <dd><a href="http://www.octave.org/octave.pdf">PDF</a></dd>
+      </div>
+      <div class="columns medium-3">
+        <dt><a href="{{ "/bugs.html" | relative_url }}">Reporting Bugs</a></dt>
+        <dt><a href="{{ "/commercial-support.html" | relative_url }}">Commercial Support</a></dt>
+        <dt><a href="{{ "/donate.html" | relative_url }}">Donate</a></dt>
+      </div>
+      </div>
+    </dl>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns small-12">
+      <div class="text-center">
+        <p>Octave is free software under the <a href="{{ "license.html" | relative_url }}">GNU General Public License.</a></p>
+        <small>
+          Copyright © 1998-{{ site.time | date: "%Y" }} John W. Eaton.
                                         This work is licensed under a
                                         <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">
                                         Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
                                         Get the <a href="http://hg.octave.org/web-octave/file/tip">page sources</a>.
-				</small>
-			</div>
-		</div>
-	</div>
+        </small>
+      </div>
+    </div>
+  </div>
   </section>
 </footer>
 
 <script>
-	$(document).foundation();
+  $(document).foundation();
 </script>
