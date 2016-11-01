@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "GNU Octave 4.2.0 Released"
+date:   2016-11-01
+categories: news
+---
+
+**WARNING - THIS IS JUST A DEMO POST!!!**
+GNU Octave version 4.2.0 has been released and is now available for
+[download][1].  An official [Windows binary installer][2] is available.
+For [MacOS X][3] see the installation instructions in the wiki.
+
+This major release improves compatibility with Matlab and contains many new
+and improved functions.  A list of important user-visible changes is available
+by selecting the [Release Notes][4] item in the News menu of the GUI or by
+typing `news` at the Octave command prompt.
+
+Thanks to the many people who contributed to this release!
+
+[1]: {{ "download.html" | absolute_url }}
+[2]: ftp://ftp.gnu.org/gnu/octave/windows/octave-4.2.0_0-installer.exe
+[3]: {{ site.wiki_url }}/Octave_for_MacOS_X
+[4]: {{ "NEWS-4.2.html" | absolute_url }}
