@@ -23,15 +23,16 @@ If you have an idea on what to contribute, then join the
 That way others can provide input early on, which makes your contribution more
 likely to get accepted.
 
-<p>
-<div class="alert">
-{% octicon stop class:"octicon-stop-octave" %}
+<div class="row ">
+<div class="columns small-11">
+<div class="panel callout">
 Please do <strong>not</strong> send help requests or bug reports to the
 <samp>{{ site.maintainers_email }}</samp> mailing list.  Refer to the
 <a href="{{ "bugs.html" | relative_url }}">bug tracker</a> or other
 <a href="{{ "support.html" | relative_url }}">support options</a> instead.
 </div>
-</p>
+</div>
+</div>
 
 [1]: http://www.octave.org/wiki/Projects
 [2]: https://lists.gnu.org/mailman/listinfo/octave-maintainers

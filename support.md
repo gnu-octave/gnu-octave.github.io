@@ -20,12 +20,11 @@ available to you.
 
 # Documentation
 
-There is an [{% octicon book class:"octicon-book-manual" %} Online Manual][3]
-and a [{% octicon file-pdf class:"octicon-pdf-manual" %} PDF Version][4] of
-the comprehensive ~800 page manual.  This full documentation of Octave is
-generated directly from the Texinfo source files that are distributed along
-with every copy of the Octave source code.  The complete text of the manual
-is also available at the Octave prompt using the `doc` command.
+There is an [Online Manual][3] and a [PDF Version][4] of the comprehensive
+~800 page manual.  This full documentation of Octave is generated directly
+from the Texinfo source files that are distributed along with every copy of
+the Octave source code.  The complete text of the manual is also available
+at the Octave prompt using the `doc` command.
 
 A printed version of the Octave manual may be ordered from
 [Network Theory, Ltd.][5].  Any money raised from the sale of this book
@@ -74,10 +73,9 @@ Additionally, the wiki contains a list of
   <input type="submit" value="Search" />
   </form>
 
-
-  <p>
-  <div class="alert">
-  {% octicon stop class:"octicon-stop-octave" %}
+  <div class="row ">
+  <div class="columns small-11">
+  <div class="panel callout">
   Please do <strong>not</strong> send any bug reports to the
   <samp>{{ site.help_email }}</samp> mailing list.
   Most Octave users do not want to receive bug reports.
