@@ -75,7 +75,12 @@ tools from [Rubygems][7].  Just type
 
     gem install jekyll pygments.rb
 
+For the responsive webpages, we internally use the [Foundation 5][8]
+framework.  All necessary files are already included inside the
+[hg development repository][2].
+
 [7]: https://rubygems.org/
+[8]: http://foundation.zurb.com/sites/docs/v/5.5.3/
 
 
 
@@ -116,8 +121,6 @@ To build the test page, that can be deployed at some subdirectory, e.g.
 
 
 
-
-
 ## Deploying
 
 After building the static website from [web-octave][2] into the
@@ -131,11 +134,11 @@ outside the [web-octave][2] directory, typing
     cvs -z3 -d:ext:<Savannah account>@cvs.savannah.gnu.org:/web/octave checkout -P octave
 
 Now the following steps are required for deployment
-(see [here][8] and [here][9] for some introduction to CVS):
+(see [here][9] and [here][10] for some introduction to CVS):
 
 1. Remove all previous files in the target directory,
    *but no directories at all or CVS related stuff*!
-   This is due to a [limitation of CVS][10].
+   This is due to a [limitation of CVS][11].
 
        find octave -type f -not -path "*/CVS/*" -exec rm -f '{}' \;
 
@@ -157,7 +160,7 @@ Now the following steps are required for deployment
 
           find . -type d -not -name "CVS" -exec cvs add '{}' \;
 
-   3. Add all potential new files to CVS (the [following command][11]
+   3. Add all potential new files to CVS (the [following command][12]
       proved to me fast)
 
           find . -type f | grep -v CVS | xargs cvs add
@@ -168,7 +171,7 @@ Now the following steps are required for deployment
 
 Now everything should be visible to the world.
 
-[8]: https://savannah.nongnu.org/projects/cvs
-[9]: http://www.cs.umb.edu/~srevilak/cvs.html
-[10]: https://web.archive.org/web/20140629054602/http://ximbiot.com/cvs/manual/cvs-1.11.23/cvs_7.html#SEC69
-[11]: http://stackoverflow.com/questions/5071/how-to-add-cvs-directories-recursively
+[9]: https://savannah.nongnu.org/projects/cvs
+[10]: http://www.cs.umb.edu/~srevilak/cvs.html
+[11]: https://web.archive.org/web/20140629054602/http://ximbiot.com/cvs/manual/cvs-1.11.23/cvs_7.html#SEC69
+[12]: http://stackoverflow.com/questions/5071/how-to-add-cvs-directories-recursively
