@@ -4,24 +4,33 @@ title: News
 menu: true
 ---
 
-<a class="right" href="{{ "/feed.xml" | relative_url }}">
-  <span class="label warning">
-    RSS
-  </span>
-</a>
-
-{% for post in site.posts %}
-{% if post.title == "News Archive" %}
-- [**{{ post.title }}**]({{ post.url | relative_url }})
-{% else %}
-- [**{{ post.title }}**]({{ post.url | relative_url }})
-  ({{ post.date | date: "%b %-d, %Y" }})
-
-
-  <div class="news-content">
-  {{ post.excerpt }}
+<section>
+  <div class="row">
+    <div class="columns small-12">
+      {% for post in site.posts %}
+      <div class="panel callout">
+        {% if post == site.posts.first %}
+        <a class="right" href="{{ "/feed.xml" | relative_url }}">
+          <span class="label warning">
+            RSS
+          </span>
+        </a>
+        {% endif %}
+        {% if post.title == "News Archive" %}
+        <h3 class="entry-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        {% else %}
+        <h3 class="entry-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+        <div class="entry-content">
+          {{ post.excerpt }}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
   </div>
-{% endif %}
-{% endfor %}
-
-[Feed]: {{ "feed.xml" | relative_url }}
+</section>
