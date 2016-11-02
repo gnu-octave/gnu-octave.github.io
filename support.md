@@ -57,30 +57,34 @@ Additionally, the wiki contains a list of
 
   You can also [subscribe][9] to `{{ site.help_email }}` or try to search in the
   mailing list archive for an answer:
-  <div class="row">
-  <div class="columns medium-8">
+
   <form action="http://octave.1599824.n4.nabble.com/template/NamlServlet.jtp">
-  <input name="macro" value="search_page" type="hidden">
-  <input name="node" value="1599825" type="hidden">
-  <div class="row collapse">
-  <div class="columns small-7">
-  <input id="query" name="query" size="25">
+  <div class="row">
+    <div class="columns medium-12">
+      <div class="row collapse">
+        <div class="columns medium-7">
+          <input name="macro" value="search_page" type="hidden">
+          <input name="node" value="1599825" type="hidden">
+          <input id="query" name="query" size="25" placeholder="Search in {{ site.help_email }} archive">
+        </div>
+        <div class="columns medium-3">
+          <select name="days">
+          <option value="0" selected="">all dates</option>
+          <option value="1">past 24 hours</option>
+          <option value="7">past week</option>
+          <option value="30">past month</option>
+          <option value="90">past 3 months</option>
+          <option value="180">past 6 months</option>
+          <option value="365">past year</option>
+          </select>
+        </div>
+        <div class="columns medium-2">
+          <input class="button postfix" value="Search" type="submit">
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="columns small-3">
-  <select name="days">
-  <option value="0" selected="">all dates</option>
-  <option value="1">past 24 hours</option>
-  <option value="7">past week</option>
-  <option value="30">past month</option>
-  <option value="90">past 3 months</option>
-  <option value="180">past 6 months</option>
-  <option value="365">past year</option>
-  </select>
-  </div>
-  <div class="columns small-2">
-  <input class="button postfix" value="Search" type="submit">
-  </div>
-  </div>
+  </form>
 
   <div class="row ">
     <div class="columns small-12">
