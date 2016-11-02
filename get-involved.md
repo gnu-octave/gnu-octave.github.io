@@ -23,8 +23,8 @@ If you have an idea on what to contribute, then join the
 That way others can provide input early on, which makes your contribution more
 likely to get accepted.
 
-<div class="row ">
-<div class="columns small-11">
+<div class="row">
+<div class="columns small-12">
 <div class="panel callout">
 Please do <strong>not</strong> send help requests or bug reports to the
 <samp>{{ site.maintainers_email }}</samp> mailing list.  Refer to the

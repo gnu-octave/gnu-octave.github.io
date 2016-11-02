@@ -12,22 +12,22 @@ or [search for bugs][3].
 [2]: {{ site.bugs_url }}&func=additem
 [3]: {{ site.bugs_url }}&func=search
 
-<div class="row ">
-<div class="columns small-11">
-<div class="panel callout">
-Please do <strong>not</strong> send any bug reports to the
-<samp>{{ site.help_email }}</samp> mailing list.
-Most Octave users do not want to receive bug reports.
-</div>
-</div>
+<div class="row">
+  <div class="columns small-12">
+    <div class="panel callout">
+    Please do <strong>not</strong> send any bug reports to the
+    <samp>{{ site.help_email }}</samp> mailing list.
+    Most Octave users do not want to receive bug reports.
+    </div>
+  </div>
 </div>
 
 <div class="row ">
-<div class="columns small-11">
-<div class="panel callout">
-<strong>Before</strong> reporting a new bug, please read the guidelines below.
-</div>
-</div>
+  <div class="columns small-12">
+    <div class="panel callout">
+    <strong>Before</strong> reporting a new bug, please read the guidelines below.
+    </div>
+  </div>
 </div>
 
 
