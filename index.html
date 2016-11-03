@@ -5,13 +5,16 @@ layout: default
 <section>
   <div class="row">
     <div class="columns medium-6">
-      <a href="#">
-        <img src="{{ "/img/example-mesh.png" | relative_url }}" />
+      <a href="#"  data-reveal-id="meshModal">
+        <img src="{{ "/img/example-mesh.svg" | relative_url }}"
+             style="height: 400px; width: auto;" alt="Example mesh">
       </a>
     </div>
     <div class="columns medium-6">
       <h2 class="home-title">
-        <img src="{{ "/img/octave-logo.svg" | relative_url }}" style="float: left; height: 48px; width: auto; padding-right: 0.5rem" />
+        <img src="{{ "/img/octave-logo.svg" | relative_url }}"
+             style="float: left; height: 48px; width: auto; padding-right: 0.5rem"
+             alt="GNU Octave logo">
         GNU Octave
       </h2>
       <h3>Scientific Programming Language</h3>
@@ -80,7 +83,8 @@ ylabel ("sin (x)");
 {% endhighlight %}
       <div class="text-left">
         <a href="#" data-reveal-id="plotModal">
-          <img src="{{ "/img/example-plot.png" | relative_url }}" style="height: 12rem; width: auto;"/>
+          <img src="{{ "/img/example-plot.svg" | relative_url }}"
+               style="height: 12rem; width: auto;" alt="Example plot">
           <span class="label">Expand</span>
         </a>
       </div>
@@ -96,7 +100,8 @@ ylabel ("sin (x)");
     </div>
     <div class="columns medium-4">
       <a href="#" data-reveal-id="guiModal">
-        <img src="{{ "/img/screenshot-2016-small.png" | relative_url }}" title="GNU Octave 4.0.3 - Licensed under CC BY-SA 3.0"/>
+        <img src="{{ "/img/screenshot-octave-4-2.png" | relative_url }}"
+             alt="GNU Octave screenshot">
       </a>
     </div>
   </div>
@@ -164,12 +169,17 @@ hg clone http://www.octave.org/hg/octave
   </div>
 </section>
 
+<div id="meshModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+  <img src="{{ "/img/example-mesh.svg" | relative_url }}" alt="Example mesh">
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
 <div id="plotModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
-  <img src="{{ "/img/example-plot.png" | relative_url }}" />
+  <img src="{{ "/img/example-plot.svg" | relative_url }}" alt="Example plot">
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
 <div id="guiModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
-  <img src="{{ "/img/screenshot-2016.png" | relative_url }}" title="GNU Octave 4.0.3 - Licensed under CC BY-SA 3.0"/>
+  <img src="{{ "/img/screenshot-octave-4-2.png" | relative_url }}" alt="GNU Octave GUI screenshot">
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>

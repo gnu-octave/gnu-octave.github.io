@@ -31,7 +31,7 @@ li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'PT Sans'; 
+	font-family: 'PT Sans';
 	color: #333;
 	/*font-weight: bold;*/
 }
@@ -50,6 +50,11 @@ h4 {
 
 h4, h5, h6 {
 	font-weight: bold;
+}
+
+div.reveal-modal img {
+	height: auto;
+	width: 100%;
 }
 
 /**
