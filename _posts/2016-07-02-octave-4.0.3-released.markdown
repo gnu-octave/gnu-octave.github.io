@@ -51,4 +51,4 @@ hg log -r "release-4-0-1:release-4-0-3" -b stable \
 {% endhighlight %}
 
 [1]: {{ "download.html" | absolute_url }}
-[2]: ftp://ftp.gnu.org/gnu/octave/windows/octave-4.0.3-installer.exe
+[2]: https://ftp.gnu.org/gnu/octave/windows/octave-4.0.3-installer.exe

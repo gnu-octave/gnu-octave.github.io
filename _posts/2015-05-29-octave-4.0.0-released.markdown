@@ -22,5 +22,5 @@ at the Octave command prompt.
 Thanks to the many people who contributed to this release!
 
 [1]: {{ "download.html" | absolute_url }}
-[2]: ftp://ftp.gnu.org/gnu/octave/windows/octave-4.0.0_0-installer.exe
+[2]: https://ftp.gnu.org/gnu/octave/windows/octave-4.0.0_0-installer.exe
 [3]: {{ "NEWS-4.0.html" | absolute_url }}
