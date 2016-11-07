@@ -1,12 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
 
-.page-content {
-	margin-top: 2rem;
-}
-
 .page-content section {
-	padding-top: 2.5rem; /* This is for anchor links with the fixed header */
-	margin-top: -2.5rem;
 	padding-bottom: 2rem;
 }
 
