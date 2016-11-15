@@ -136,14 +136,13 @@ outside the [web-octave][2] directory, typing
 Now the following steps are required for deployment
 (see [here][9] and [here][10] for some introduction to CVS):
 
-1. Remove all previous files in the target directory,
+1. **DO THIS CAREFULLY!!!** If unsure, start with 2.
+
+   Remove all previous files in the target directory,
    *but no directories at all or CVS related stuff*!
    This is due to a [limitation of CVS][11].
 
-       find octave -type f -not -path "*/CVS/*" -exec rm -f '{}' \;
-
-   *Note:* `octave` in the command above is the name of the checked out
-   [Savannah CVS][3] repository.
+       find <DIR> -type f -not -path "*/CVS/*" -exec rm -f '{}' \;
 
 2. Now copy the new content of [web-octave][2] subdirectory `_site` into the
    [Savannah CVS][3] repository.
