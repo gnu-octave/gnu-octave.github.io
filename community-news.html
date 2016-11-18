@@ -1,10 +1,16 @@
+---
+layout: null
+---
+
 <!--
 
 This is the community news page for Octave.  It is displayed in the
 "Community News" display area of the Octave GUI.  It should not have
 the usual page header that other pages on the Octave web site have.
 The following string must be present for Octave to recognize and
-display this page as the comunity news page:
+display this page as the comunity news page.  Don't forget to increment
+the `community-news-page-serial` number by one in order to show new
+entires in the GUI:
 
   this-is-the-gnu-octave-community-news-page
   community-news-page-serial=7
@@ -24,7 +30,15 @@ body {
 </head>
 <body>
 
-{{ content }}
+{% for post in site.categories.news limit:3 %}
+
+<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+
+{{ post.excerpt }}
+
+<small><em>&mdash; The Octave Developers, {{ post.date | date: "%b %-d, %Y" }}</em></small>
+
+{% endfor %}
 
 </body>
 </html>
