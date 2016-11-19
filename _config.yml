@@ -24,3 +24,5 @@ irc_network: "irc.freenode.net"
 # Build settings
 markdown: kramdown
 highlighter: pygments
+
+exclude: ["Makefile"]
