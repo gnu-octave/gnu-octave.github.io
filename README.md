@@ -1,4 +1,4 @@
-# octave-web
+# GNU Octave Website development
 
 This is the [http://www.octave.org][1] website development repository.
 
@@ -117,7 +117,13 @@ To build the test page, that can be deployed at some subdirectory, e.g.
 - **Add a new RSS post**
 
   Duplicate another post in the subdirectory `_posts` and
-  adjust the filename, especially the date
+  adjust the filename, especially the date.
+
+  **Be sure to choose the correct categories!!**
+
+  `categories: news` is reserved for release announcements, that are also
+  displayed inside the GUI.  Consider choosing another category like
+  `categories: other` or alike for less important news.
 
 
 
