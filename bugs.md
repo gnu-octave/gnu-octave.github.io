@@ -149,7 +149,7 @@ investigate the bug:
 
 If you have a suggested fix for a bug, please attach it to your report in
 the tracker.  Your patch is more likely to be reviewed if you follow the
-guidelines in the Octave manual about to [generate a changeset][5]
+guidelines from the Octave Wiki about the [creation of changesets][5]
 and submit patches for Octave.
 
-[5]: {{ site.docs_url }}/Basics-of-Generating-a-Changeset.html#Basics-of-Generating-a-Changeset
+[5]: {{ site.wiki_url }}/Mercurial#Submitting_patches
