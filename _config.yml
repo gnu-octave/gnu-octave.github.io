@@ -20,6 +20,7 @@ maintainers_email: "maintainers@octave.org"
 help_email: "help@octave.org"
 irc_channel: "#octave"
 irc_network: "irc.freenode.net"
+timezone: "UTC0"
 
 # Build settings
 markdown: kramdown
