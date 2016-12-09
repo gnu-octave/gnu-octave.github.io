@@ -20,37 +20,6 @@ The development and deployment workflow in short:
 
 ## Development
 
-### What makes this way of development better, than the prior?
-
-- **Official RSS feeds** are **easily** maintained now **at a single place**:
-  the `_posts` subdirectory, later accessible via
-  `https://www.gnu.org/software/octave/feed.xml` and automatically spread
-  to an arbitrary amount of readers, including almost all below mentioned.
-
-  The Octave News are currently very widespread
-  (and **individually maintained!**) at:
-  - https://www.gnu.org/software/octave/ (excerpt for the start page)
-  - https://www.gnu.org/software/octave/news.html (some archive)
-  - https://www.gnu.org/software/octave/community-news.html (excerpt for the
-    Octave GUI)
-  - https://www.gnu.org/software/octave/fixes-4.0.x.html (here are many more
-    to come!)
-  - http://wiki.octave.org/GNU_Octave_Wiki#News (some excerpt, anyone can edit)
-
-- **Content is content**: Page content is primary written in [Markdown][5],
-  a lightweight Markup language, thus no nasty forgotten HTML tags, that
-  make content look ugly for any author of a HTML page.
-  [Jekyll][6] makes valid HTML from [Markdown][5] content.
-
-- **Easy maintenance**: Just a single command (see below), and [Jekyll][6]
-  builds a consistent, up-to-date static page.  The only maintenance burden,
-  as it is today anyway: The [Savannah CVS][3] repository.
-
-[5]: https://daringfireball.net/projects/markdown/syntax
-[6]: https://jekyllrb.com/
-
-
-
 ### Getting the sources
 
 Anyone is free to clone this development repository, simply type
@@ -75,16 +44,21 @@ tools from [Rubygems][7].  Just type
 
     gem install jekyll pygments.rb
 
+A small prerequisite check is performed, by Typing
+
+    make check_prerequisites
+
 For the responsive webpages, we internally use the [Foundation 5][8]
 framework.  All necessary files are already included inside the
 [hg development repository][2].
 
+[6]: https://jekyllrb.com/
 [7]: https://rubygems.org/
 [8]: http://foundation.zurb.com/sites/docs/v/5.5.3/
 
 
 
-### Building the static website
+### Building the static website locally
 
 All relevant information for Jekyll to build the static website is located
 in the file `_config.yml`.
@@ -112,71 +86,25 @@ To build the test page, that can be deployed at some subdirectory, e.g.
 
 
 
-### Typical development tasks
+### Add a new RSS post
 
-- **Add a new RSS post**
+Duplicate another post in the subdirectory `_posts` and adjust the filename,
+especially the date.
 
-  Duplicate another post in the subdirectory `_posts` and
-  adjust the filename, especially the date.
+**Be sure to choose the correct categories!!**
 
-  **Be sure to choose the correct categories!!**
-
-  `categories: news` is reserved for release announcements, that are also
-  displayed inside the GUI.  Consider choosing another category like
-  `categories: other` or alike for less important news.
+`categories: news` is reserved for release announcements, that are also
+displayed inside the GUI.  Consider choosing another category like
+`categories: other` or alike for less important news.
 
 
 
-## Deploying
+### Deploying the static website online
 
-After building the static website from [web-octave][2] into the
-the subdirectory `_site` using Jekyll it can be deployed at the
-[Savannah CVS][3] repository to become visible to the world.
+For this step you need to have writing permissions to the [Savannah CVS][3]
+repository.  Usually, it should suffice to type
 
-Therefore, checkout the [Savannah CVS][3] repository somewhere
-outside the [web-octave][2] directory, typing
+    make deploy
 
-    export CVS_RSH=ssh
-    cvs -z3 -d:ext:<Savannah account>@cvs.savannah.gnu.org:/web/octave checkout -P octave
-
-Now the following steps are required for deployment
-(see [here][9] and [here][10] for some introduction to CVS):
-
-1. **DO THIS CAREFULLY!!!** If unsure, start with 2.
-
-   Remove all previous files in the target directory,
-   *but no directories at all or CVS related stuff*!
-   This is due to a [limitation of CVS][11].
-
-       find <DIR> -type f -not -path "*/CVS/*" -exec rm -f '{}' \;
-
-2. Now copy the new content of [web-octave][2] subdirectory `_site` into the
-   [Savannah CVS][3] repository.
-
-3. Then in the [Savannah CVS][3] repository:
-
-       cd octave
-
-   1. Remove all no longer existent files
-
-          cvs remove
-
-   2. Add all potential new directories to CVS
-
-          find . -type d -not -name "CVS" -exec cvs add '{}' \;
-
-   3. Add all potential new files to CVS (the [following command][12]
-      proved to me fast)
-
-          find . -type f | grep -v CVS | xargs cvs add
-
-   4. Commit the chages to get online
-
-          cvs commit
-
-Now everything should be visible to the world.
-
-[9]: https://savannah.nongnu.org/projects/cvs
-[10]: http://www.cs.umb.edu/~srevilak/cvs.html
-[11]: https://web.archive.org/web/20140629054602/http://ximbiot.com/cvs/manual/cvs-1.11.23/cvs_7.html#SEC69
-[12]: http://stackoverflow.com/questions/5071/how-to-add-cvs-directories-recursively
+if anything doesn't work as expected, look at the provided `Makefile` and
+perform the steps on your own manually, if necessary.
