@@ -75,7 +75,7 @@ information about [contributing to Octave's development][8].
 [5]: http://www.octave.org/hg/octave
 [6]: http://hg.savannah.gnu.org/hgweb/octave
 [7]: http://www.octave.org/hg/octave/file/tip/etc/HACKING
-[8]: {{ site.docs_url }}/Contributing-Guidelines.html#Contributing-Guidelines
+[8]: {{ site.wiki_url }}/Developers
 
 
 # Octave Forge
