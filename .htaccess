@@ -20,6 +20,7 @@ RewriteBase /software/octave/
 RewriteRule ^octave.pdf doc/octave-4.2.0.pdf [L]
 RewriteRule ^NEWS.html NEWS-4.2.html [L]
 RewriteRule ^contribute.html get-involved.html [L]
+RewriteRule ^img/screenshot.png img/screenshot-octave-4-2.png [L]
 
 RewriteRule ^doc/interpreter$ doc/interpreter/ [R,L]
 RewriteRule ^doc/interpreter/(.*) doc/v4.2.0/$1 [L]
