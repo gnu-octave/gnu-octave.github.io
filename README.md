@@ -93,9 +93,9 @@ especially the date.
 
 **Be sure to choose the correct categories!!**
 
-`categories: news` is reserved for release announcements, that are also
-displayed inside the GUI.  Consider choosing another category like
-`categories: other` or alike for less important news.
+`categories: news release` is reserved for release announcements, those posts
+are also displayed inside the GUI.  Consider choosing another category like
+`categories: news` or alike for less important news.
 
 
 

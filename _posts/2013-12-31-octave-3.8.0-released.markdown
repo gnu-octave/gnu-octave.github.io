@@ -2,7 +2,7 @@
 layout: post
 title:  "GNU Octave 3.8.0 Released"
 date:   2013-12-31
-categories: news
+categories: news release
 ---
 
 Version 3.8.0 has been released and is now available for [download][1].
