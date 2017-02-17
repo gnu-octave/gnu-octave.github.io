@@ -60,7 +60,7 @@ hg clone http://www.octave.org/hg/octave
 
 This will clone *two* repositories, one of which is subrepository of the
 main Octave repository. Once you have these, you can resync with the archive
-by doing
+by doing from within the cloned directory (`cd octave`):
 
 {% highlight text %}
 hg -v pull
