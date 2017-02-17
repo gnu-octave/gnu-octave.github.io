@@ -34,7 +34,7 @@ Please do <strong>not</strong> send help requests or bug reports to the
 </div>
 </div>
 
-[1]: http://www.octave.org/wiki/Projects
+[1]: {{ site.wiki_url }}/Projects
 [2]: https://lists.gnu.org/mailman/listinfo/octave-maintainers
 [3]: http://webchat.freenode.net/?channels=octave&amp;uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda
 
@@ -85,5 +85,5 @@ functionality by providing field specific features via Octave's package system.
 For example, image and signal processing, fuzzy logic, instrument control,
 and statistics packages are examples of individual [Octave-Forge packages][10].
 
-[9]: http://octave.sourceforge.net/
-[10]: http://octave.sourceforge.net/packages.php
+[9]: {{ site.sourceforge_url }}
+[10]: {{ site.sourceforge_url }}/packages.php

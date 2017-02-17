@@ -22,15 +22,15 @@ There can be several reasons for the given function not to exist in Octave:
   community simply does not know it exists.  Should this be the case,
   feel free to open a feature request in the [Octave bug tracker][3].
 
-The Octave community consists of volunteers working in their spare time.
-As a result, development might sometimes not be fast enough for your needs.
-If you have a feature request for Octave, the best way to ensure that your
-suggested improvement gets incorporated is either to implement the feature
-yourself or to pay somebody to do it for you.
-If you are interested in funding work on Octave, please check out
-the [resources for developers][4].
 
-[1]: http://octave.sourceforge.net
-[2]: http://octave.sourceforge.net/functions_by_alpha.php
+The Octave community is a loosely organized association of volunteers.
+Development might sometimes not be fast enough for your needs.
+If you have a feature request for Octave, the best way to ensure that your
+suggested improvement becomes a reality is either to [implement it yourself][4]
+or to [hire a developer do it for you][5].
+
+[1]: {{ site.sourceforge_url }}
+[2]: {{ site.sourceforge_url }}/functions_by_alpha.php
 [3]: {{ site.bugs_url }}
 [4]: {{ "get-involved.html" | relative_url }}
+[5]: {{ "commercial-support.html" | relative_url }}
