@@ -1,0 +1,116 @@
+---
+layout: post
+title:  "GNU Octave 4.2.1 Released"
+date:   2017-02-24
+categories: news release
+---
+
+Octave Version 4.2.1 has been released and is now available for [download][1].
+An official [Windows binary installer][2] is also available.
+
+This version is a bug fixing release:
+
+- doc: Fix differences between example code and run time results ([bug #50282](https://savannah.gnu.org/bugs/?50282)).
+- Fix opengl "invalid operation" when zooming ([bug #50317](https://savannah.gnu.org/bugs/?50317)).
+- doc: provide complete examples in plotting documentation ([bug #44263](https://savannah.gnu.org/bugs/?44263)).
+- doc: Overhaul Java interface description ([bug #50299](https://savannah.gnu.org/bugs/?50299)).
+- doc: Add documentation for hex and binary prefix and `_` separator([bug #50305](https://savannah.gnu.org/bugs/?50305) and [bug #50334](https://savannah.gnu.org/bugs/?50334)).
+- Fix incorrect handling of `0b` binary numbers in complex constants.
+- Guarantee returning `std::string` from tilde_expand functions ([bug #50234](https://savannah.gnu.org/bugs/?50234)).
+- Workaround segfault in `file_stat` ([bug #50234](https://savannah.gnu.org/bugs/?50234)).
+- Better documentation of `*fcn` properties.
+- genpropdoc.m: document more graphics properties ([bug #50337](https://savannah.gnu.org/bugs/?50337)).
+- doc: Fix build of docs broken in `sub2ind` ([bug #50348](https://savannah.gnu.org/bugs/?50348)).
+- always fork and exec when starting the gui ([bug #49609](https://savannah.gnu.org/bugs/?49609)).
+- maint: add classdef test files from cset 194481349d22 ([bug #49819](https://savannah.gnu.org/bugs/?49819)).
+- print.m: fix regression with `-append` option ([bug #50318](https://savannah.gnu.org/bugs/?50318)).
+- version.m: document that `-release` returns an empty string ([bug #50294](https://savannah.gnu.org/bugs/?50294)).
+- Don't display legend, colorbar, and annotation axes coordinates ([bug #50272](https://savannah.gnu.org/bugs/?50272)).
+- doc: Remove trailing `"\n\"` from `sleep` and `usleep` docstrings ([bug #50301](https://savannah.gnu.org/bugs/?50301)).
+- fix settings update for existing editor tabs (regression from b3ced5e3cebb).
+- acinclude.m4: Correct test for `SetPlaceHolderText`.
+- configure: use the correct flags when testing for the CXSparse library version.
+- `__run_test_suite__.m`: fix typo in return values.
+- qp.m: Fix regression with incorrect vector dimensions ([bug #50067](https://savannah.gnu.org/bugs/?50067)).
+- make editor save its widget settings again when octave quits
+- Prevent infinite loop in global documentation search ([bug #50177](https://savannah.gnu.org/bugs/?50177)).
+- connect execute command signal in editor constructor ([bug #50171](https://savannah.gnu.org/bugs/?50171))
+- connect editors execute command signal to the required slot ([bug #50171](https://savannah.gnu.org/bugs/?50171))
+- check if input is class method before declaring it unimplemented ([patch #9238](https://savannah.gnu.org/patch/?9238) and [bug #49694](https://savannah.gnu.org/bugs/?49694)).
+- doc: Expand documentation for `cast` ([bug #50201](https://savannah.gnu.org/bugs/?50201)).
+- doc: Correct two entries in Table 34.1 ([bug #50203](https://savannah.gnu.org/bugs/?50203)).
+- oop.txi: Improve table formatting ([bug #50203](https://savannah.gnu.org/bugs/?50203)).
+- Workaround segfault when an error occurs while printing ([bug #49779](https://savannah.gnu.org/bugs/?49779))
+- doc: Fix `##` in middle of docstring/comment lines ([bug #50145](https://savannah.gnu.org/bugs/?50145)).
+- doc: Reword documentation about subplots in 15.2.4 ([bug #50148](https://savannah.gnu.org/bugs/?50148)).
+- doc: Update unimplemented list of functions and where to find them ([bug #50098](https://savannah.gnu.org/bugs/?50098)).
+- axis.m: Do not set `plotboxaspectratio` to `0` ([bug #49755](https://savannah.gnu.org/bugs/?49755)).
+- help.m: Return valid list of keywords for `--list`.
+- don't rethrow exception in destructor ([bug #49304](https://savannah.gnu.org/bugs/?49304)).
+- rethrow `octave::exit_exception` ([bug #49304](https://savannah.gnu.org/bugs/?49304)).
+- doc: Don't use `@code` in `@deftypefn` because it expands badly in plain text format.
+- Update `appdata.xml` to follow conventions ([bug #49952](https://savannah.gnu.org/bugs/?49952)).
+- mexproto.h (`mxAssert`, `mxAssertS`): ensure operator precedence ([bug #50050](https://savannah.gnu.org/bugs/?50050)).
+- compare_plot_demos: fix spurious link to next page.
+- compare_plot_demos: fix HTML syntax, simplify output, remove external deps ([bug #49709](https://savannah.gnu.org/bugs/?49709)).
+- Calculate error in solution for ode solvers correctly ([bug #49950](https://savannah.gnu.org/bugs/?49950)).
+- doc: Add more depth to explanation of `~` function argument ([bug #49444](https://savannah.gnu.org/bugs/?49444)).
+- Use `GetModuleFileName` for getting octave path in windows ([bug #48671](https://savannah.gnu.org/bugs/?48671)).
+- Use C++ updaters for labels color ([bug #49980](https://savannah.gnu.org/bugs/?49980)).
+- distinguish elements vs. bytes in fread ([bug #49699](https://savannah.gnu.org/bugs/?49699)).
+- doc: Add more `seealso` links between docstrings.
+- use correct dimensions for liboctave `+=` and `-=` matrix operators.
+- fix cut and paste error in sparse matrix solver.
+- doc: Review Appendix A, External Code Interface, of manual.
+- fminsearch.m: Fix error in `guarded_eval`.
+- Move `frame2im` and `im2frame` to `image/` directory ([bug #49939](https://savannah.gnu.org/bugs/?49939)).
+- doc: Document `nargout=0` calling mode for `ode23`, `ode45`.
+- Fix undefined return argument for more than 2 outputs from ode solver ([bug #49890](https://savannah.gnu.org/bugs/?49890)).
+- CITATION: Use `and` instead of comma to separate author names.
+- CITATION: Fix accent for Søren in BibTeX entry.
+- Fix `inv` for hermitian matrices (bug introduced in 5ce959c55cc0) ([bug #49904](https://savannah.gnu.org/bugs/?49904)).
+- doc: Correct documentation for javaclasspath file ([bug #49873](https://savannah.gnu.org/bugs/?49873)).
+- Fix gzip for certain types of gzip files ([bug #49760](https://savannah.gnu.org/bugs/?49760)).
+- Fix typo in liboctave version info ([bug #49860](https://savannah.gnu.org/bugs/?49860)).
+- Initialize ODE Event function with start time ([bug #49846](https://savannah.gnu.org/bugs/?49846)).
+- languages/de_DE.ts: Fix spacing and punctuation ([patch #9188](https://savannah.gnu.org/patch/?9188)).
+- allow configure test to succeed without implicit fcn decls ([bug #49782](https://savannah.gnu.org/bugs/?49782)).
+- gnulib: import fix for link.m4.
+- allow external docstrings from .oct files to be found again ([bug #49687](https://savannah.gnu.org/bugs/?49687)).
+- don't require semicolon between property list elements ([bug #49819](https://savannah.gnu.org/bugs/?49819)).
+- Fall back to Octave's regular display method for class objects without a display method.
+- exit with non-zero status if parsing or evaluation of `--eval` code fails.
+- display.m: Correctly display output for non-class objects ([bug #49753](https://savannah.gnu.org/bugs/?49753) and [bug #49794](https://savannah.gnu.org/bugs/?49794)).
+- Don't run publish.tst unless OSMESA or gnuplot are available ([bug #49767](https://savannah.gnu.org/bugs/?49767)).
+- doc: Rewrite parts of Introduction chapter.
+- doc: Rewrite docstrings for `sub2ind` and `ind2sub`.
+- doc: Small fixes to docstrings ([bug #49733](https://savannah.gnu.org/bugs/?49733)).
+- doc: Update documentation for `norm`, `normest`, `normest1`, `condest`.
+- doc: Update docstring for `condest`.
+- find help for function aliases again ([bug #49687](https://savannah.gnu.org/bugs/?49687)).
+- legend.m: backport cset 7184b4516a68 ([bug #49675](https://savannah.gnu.org/bugs/?49675)).
+- doc: Add programming note to caxis docstring.
+- axis.m: Replace call to non-existent function `clim` with `caxis`.
+- doc: Update documentation for `axis`.
+- doc: Update documentation for `[xyz]lim.m`.
+- preserve `lasterror` info on rethrow ([bug #49642](https://savannah.gnu.org/bugs/?49642)).
+- light.m: Update docstring.
+- Change text describing demo plots to reflect new ColorOrder ([bug #49288](https://savannah.gnu.org/bugs/?49288)).
+- norm: fix input validation tests.
+- norm: fix error in input argument validation leading to segfault ([bug #49634](https://savannah.gnu.org/bugs/?49634)).
+- doc: Update month of TeX title page.
+- doc: Clarify inputs and outputs for `rgb2hsv`.
+
+The above list was generated using the following command and very little
+manual post-processing:
+
+{% highlight bash %}
+hg log -r "release-4-2-0:release-4-2-1" -b stable \
+| grep "summary:" | nl | sort -rn | cut -f 2- \
+| sed 's/summary:\s*/- /' \
+| sed 's/\(bug #\)\([0-9]*\)/[\1\2](https:\/\/savannah.gnu.org\/bugs\/?\2)/' \
+| sed 's/\(patch #\)\([0-9]*\)/[\1\2](https:\/\/savannah.gnu.org\/patch\/?\2)/'
+{% endhighlight %}
+
+[1]: {{ "download.html" | absolute_url }}
+[2]: https://ftp.gnu.org/gnu/octave/windows
