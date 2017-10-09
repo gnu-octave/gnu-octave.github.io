@@ -36,7 +36,7 @@ Please do <strong>not</strong> send help requests or bug reports to the
 
 [1]: {{ site.wiki_url }}/Projects
 [2]: https://lists.gnu.org/mailman/listinfo/octave-maintainers
-[3]: http://webchat.freenode.net/?channels=octave&amp;uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda
+[3]: https://webchat.freenode.net/?channels=octave&amp;uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda
 
 
 # Using the Development Sources
@@ -44,8 +44,8 @@ Please do <strong>not</strong> send help requests or bug reports to the
 The latest development sources of Octave are also available via
 [Mercurial][4] (hg) archive.
 
-The primary archive address is [http://www.octave.org/hg/octave][5],
-which currently redirects to [http://hg.savannah.gnu.org/hgweb/octave][6].
+The primary archive address is [https://www.octave.org/hg/octave][5],
+which currently redirects to [https://hg.savannah.gnu.org/hgweb/octave][6].
 
 If you decide to use the development sources from the Mercurial archive,
 please read the file [`etc/HACKING`][7] that is available with the source
@@ -55,7 +55,7 @@ Assuming you have Mercurial and git installed on your machine you may obtain
 the latest development version of Octave sources with the following command:
 
 {% highlight text %}
-hg clone http://www.octave.org/hg/octave
+hg clone https://www.octave.org/hg/octave
 {% endhighlight %}
 
 This will clone *two* repositories, one of which is subrepository of the
@@ -71,10 +71,10 @@ The `-v` option is not required but provides extra information
 about what was pulled and updated.  The Octave manual has more
 information about [contributing to Octave's development][8].
 
-[4]: http://www.selenic.com/mercurial/wiki
-[5]: http://www.octave.org/hg/octave
-[6]: http://hg.savannah.gnu.org/hgweb/octave
-[7]: http://www.octave.org/hg/octave/file/tip/etc/HACKING
+[4]: https://www.mercurial-scm.org/wiki/
+[5]: https://www.octave.org/hg/octave
+[6]: https://hg.savannah.gnu.org/hgweb/octave
+[7]: https://hg.savannah.gnu.org/hgweb/octave/file/tip/etc/HACKING
 [8]: {{ site.wiki_url }}/Developers
 
 

@@ -35,7 +35,7 @@ functions for it, and by reporting any problems you may have.
 [1]: https://www.gnu.org/copyleft/gpl.html
 [2]: https://www.gnu.org/
 [3]: mailto:jwe@octave.org
-[4]: http://hg.savannah.gnu.org/hgweb/octave/file/tip/doc/interpreter/contributors.in
+[4]: https://hg.savannah.gnu.org/hgweb/octave/file/tip/doc/interpreter/contributors.in
 [5]: https://www.gnu.org/philosophy/free-sw.html
 
 

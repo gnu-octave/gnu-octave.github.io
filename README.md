@@ -1,6 +1,6 @@
 # GNU Octave Website development
 
-This is the [http://www.octave.org][1] website development repository.
+This is the [https://www.octave.org][1] website development repository.
 
 The development and deployment workflow in short:
 
@@ -8,12 +8,12 @@ The development and deployment workflow in short:
 2. Static HTML pages are generated from this [web-octave][2] repository
    and are deployed at the [Savannah CVS][3] repository.
 3. After deploying the static pages, they are visible from
-   [http://www.octave.org][1], that redirects to
+   [https://www.octave.org][1], that redirects to
    [https://www.gnu.org/software/octave][4].
 
-[1]: http://www.octave.org
-[2]: http://hg.octave.org/web-octave
-[3]: http://web.cvs.savannah.gnu.org/viewvc/octave/?root=octave
+[1]: https://www.octave.org
+[2]: https://hg.octave.org/web-octave
+[3]: https://web.cvs.savannah.gnu.org/viewvc/octave/?root=octave
 [4]: https://www.gnu.org/software/octave
 
 
@@ -24,7 +24,7 @@ The development and deployment workflow in short:
 
 Anyone is free to clone this development repository, simply type
 
-    hg clone http://hg.octave.org/web-octave
+    hg clone https://hg.octave.org/web-octave
 
 to get anonymous read access without writing privileges.
 To push your changes, please contact the octave developers at
@@ -54,7 +54,7 @@ framework.  All necessary files are already included inside the
 
 [6]: https://jekyllrb.com/
 [7]: https://rubygems.org/
-[8]: http://foundation.zurb.com/sites/docs/v/5.5.3/
+[8]: https://foundation.zurb.com/sites/docs/v/5.5.3/
 
 
 
@@ -80,7 +80,7 @@ and rebuilds the whole static website automatically, as it monitors any
 file changes.
 
 To build the test page, that can be deployed at some subdirectory, e.g.
-`http://www.octave.org/new`, use
+`https://www.octave.org/new`, use
 
     jekyll build --config _config.yml,_config_test.yml
 

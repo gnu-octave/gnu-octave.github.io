@@ -39,7 +39,7 @@ contribute to its development, either by working on the project
 yourself, or by donating funds.  With sufficient funding, we would
 be able to pay a few developers to work on Octave full time.
 
-[1]: http://hg.savannah.gnu.org/hgweb/octave
+[1]: https://hg.savannah.gnu.org/hgweb/octave
 
 
 # Help

@@ -12,8 +12,8 @@ description: > # this means to ignore newlines until "baseurl:"
   GNU Octave is a programming language for scientific computing.
 baseurl: "/software/octave" # the subpath of your site, e.g. /blog
 url: "https://www.gnu.org" # the base hostname & protocol for your site
-wiki_url: "http://wiki.octave.org"
-faq_url: "http://wiki.octave.org/faq"
+wiki_url: "https://wiki.octave.org"
+faq_url: "https://wiki.octave.org/faq"
 docs_url: "https://www.gnu.org/software/octave/doc/interpreter"
 bugs_url: "https://savannah.gnu.org/bugs/?group=octave"
 sourceforge_url: "https://octave.sourceforge.io"

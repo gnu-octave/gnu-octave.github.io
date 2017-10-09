@@ -32,7 +32,7 @@ will support the development of free software.  For each copy sold $1
 will be donated to the GNU Octave Development Fund.
 
 [3]: {{ site.docs_url }}
-[4]: http://www.octave.org/octave.pdf
+[4]: {{ "octave.pdf" | relative_url }}
 [5]: http://www.network-theory.co.uk/octave/manual
 
 
@@ -104,5 +104,5 @@ Additionally, the wiki contains a list of
 
 [8]: mailto:{{ site.help_email }}
 [9]: https://lists.gnu.org/mailman/listinfo/help-octave
-[10]: http://webchat.freenode.net/?channels=octave&amp;uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda
-[11]: http://freenode.net
+[10]: https://webchat.freenode.net/?channels=octave&amp;uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda
+[11]: https://freenode.net
