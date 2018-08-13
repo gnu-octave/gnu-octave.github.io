@@ -21,19 +21,17 @@ available to you.
 # Documentation
 
 There is an [Online Manual][3] and a [PDF Version][4] of the comprehensive
-~800 page manual.  This full documentation of Octave is generated directly
+~1000 page manual.  This full documentation of Octave is generated directly
 from the Texinfo source files that are distributed along with every copy of
 the Octave source code.  The complete text of the manual is also available
 at the Octave prompt using the `doc` command.
 
-A printed version of the Octave manual may be ordered from
-[Network Theory, Ltd.][5].  Any money raised from the sale of this book
-will support the development of free software.  For each copy sold $1
-will be donated to the GNU Octave Development Fund.
+You can [order printed versions of the Octave manual][5] to support the
+development of GNU Octave.
 
 [3]: {{ site.docs_url }}
 [4]: {{ "octave.pdf" | relative_url }}
-[5]: http://www.network-theory.co.uk/octave/manual
+[5]: {{ site.wiki_url }}/Publications_using_Octave#Printed_manuals
 
 
 # Octave Wiki and FAQ
@@ -43,7 +41,7 @@ things that are not covered in the manual, or other transient topics
 (Google Summer of Code, Octave Conferences, etc.).
 
 Additionally, the wiki contains a list of
-[frequently asked questions (FAQ)][7]
+[frequently asked questions (FAQ)][7].
 
 [6]: {{ site.wiki_url }}
 [7]: {{ site.faq_url }}
