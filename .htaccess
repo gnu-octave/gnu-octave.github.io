@@ -24,6 +24,6 @@ RewriteRule ^contribute.html get-involved.html [L]
 
 # The screenshot URL below is a permalink to a png-file of **exact**
 # dimension 1600x900 pixel, see https://savannah.gnu.org/bugs/?53432.
-RewriteRule ^img/screenshot.png img/GNU_Octave_4-2-2_screenshot_1600x900.png [L]
+RewriteRule ^img/screenshot.png img/GNU_Octave_4-4-0_screenshot_1600x900.png [L]
 
 RewriteRule ^doc/(.*)$ https://www.octave.org/doc/$1 [R=301,L]
