@@ -12,7 +12,7 @@ The development and deployment workflow in short:
    [https://www.gnu.org/software/octave][4].
 
 [1]: https://www.octave.org
-[2]: https://hg.octave.org/web-octave
+[2]: http://hg.octave.org/web-octave
 [3]: https://web.cvs.savannah.gnu.org/viewvc/octave/?root=octave
 [4]: https://www.gnu.org/software/octave
 
@@ -24,7 +24,7 @@ The development and deployment workflow in short:
 
 Anyone is free to clone this development repository, simply type
 
-    hg clone https://hg.octave.org/web-octave
+    hg clone http://hg.octave.org/web-octave
 
 to get anonymous read access without writing privileges.
 To push your changes, please contact the octave developers at
