@@ -1,0 +1,134 @@
+---
+layout: post
+title:  "GNU Octave 4.4.1 Released"
+date:   2018-08-09
+categories: news release
+---
+
+Octave Version 4.4.1 has been released and is now available for [download][1].
+An official [Windows binary installer][2] is also available.
+
+This version is a bug fixing release:
+
+## Improvements
+
+- disable compound binary operator optimization ([bug #54465](https://savannah.gnu.org/bugs/?54465))
+- Fix initial bracketing for fzero ([bug #54445](https://savannah.gnu.org/bugs/?54445)).
+- Fix scrolling command window in Windows 10 ([bug #52496](https://savannah.gnu.org/bugs/?52496)).
+- Produce a single backtrace for global declaration overriding local variable.
+- revive `setstr` ([bug #54417](https://savannah.gnu.org/bugs/?54417))
+- `ode15i.m`: In tests, use unlikely symbol name instead of "foo".
+- `run.m`: In test, use a symbol name that is unlikely to be a function.
+- avoid alignment warning on solaris systems ([bug #54389](https://savannah.gnu.org/bugs/?54389))
+- Improve error message if iconv is not available ([bug #54384](https://savannah.gnu.org/bugs/?54384)).
+- avoid error in gnulib wrapper on systems that don't have fpu control word
+- avoid unused variable warning on some systems
+- avoid fprintf format warning on some systems
+- eliminate unnecessary `sun-utils.h` header file
+- `index.tst`: Make tests case insensitive for `NaN`, `NA`, `Inf` values ([bug #54385](https://savannah.gnu.org/bugs/?54385)).
+- positive value from `uname` can mean success ([bug #54235](https://savannah.gnu.org/bugs/?54235))
+- add some bug numbers to the test suite
+- consider any non-zero return from `uname` to be failure ([bug #54235](https://savannah.gnu.org/bugs/?54235))
+- if freetype detection fails, unset `FT2_*` config variables ([bug #54369](https://savannah.gnu.org/bugs/?54369))
+- Produce same random number stream for `"state"` initialized to `Inf` ([bug #54342](https://savannah.gnu.org/bugs/?54342)).
+- avoid crash when loading classdef objects ([bug #54319](https://savannah.gnu.org/bugs/?54319))
+- `hist.m`: Don't error out if called with identical `Y` values ([bug #54326](https://savannah.gnu.org/bugs/?54326)).
+- Parse empty struct input correctly ([bug #54318](https://savannah.gnu.org/bugs/?54318)).
+- Fix regression in 4.2.0 which disallowed printing with some Ghostscript devices.
+- transform `libiconv.dll.a` to `-liconv` for `mkoctfile` ([bug #53920](https://savannah.gnu.org/bugs/?53920))
+- `trapz.m`: Overhaul function to fix errors with different orientations of X and Y ([bug #54277](https://savannah.gnu.org/bugs/?54277)).
+- Write audio OGG files in smaller chunk sizes ([bug #54280](https://savannah.gnu.org/bugs/?54280)).
+- Use LAPACK `DTGSEN` subrouting for ordered-qz computation ([bug #53761](https://savannah.gnu.org/bugs/?53761))
+- Fix `blkmm` to work with empty matrices ([bug #54261](https://savannah.gnu.org/bugs/?54261)).
+- use octave bat file in pkg install configure/make when in windows ([bug #53938](https://savannah.gnu.org/bugs/?53938)).
+- `repelem.m`: Fix behavior when final repeat count is 0 ([bug #54275](https://savannah.gnu.org/bugs/?54275)).
+- `.hgsub`: Use hg.octave.org instead of hg-new.octave.org
+- move some fortran and dynamic linking configure checks to separate macros
+- `configure.ac`: Reorder tests so that FPICFLAG is correctly set on Solaris ([bug #54235](https://savannah.gnu.org/bugs/?54235)).
+- `eigs.m`: Decrease opts.maxit in UnconvergedEigenvalues BIST ([bug #54179](https://savannah.gnu.org/bugs/?54179)).
+- fix ambiguous overload build error on Solaris ([bug #54217](https://savannah.gnu.org/bugs/?54217))
+- `pkg.m`: Restore ability to use file glob patterns when specifying local pkg files ([bug #54224](https://savannah.gnu.org/bugs/?54224)).
+- Use `%ld` format code in `xerbla printf` ([bug #54206](https://savannah.gnu.org/bugs/?54206)).
+- use `int` instead of `size_t` for `xerbla` string length ([bug #54206](https://savannah.gnu.org/bugs/?54206))
+- Pair `fclose` with all `fopen` and prevent `file-io.cc` test fails ([bug #54180](https://savannah.gnu.org/bugs/?54180)).
+- `fsolve.m`: Return `info=1` when initial guess `x0` is correct ([bug #53991](https://savannah.gnu.org/bugs/?53991)).
+- `fsolve.m`: Add BIST test for [bug #53991](https://savannah.gnu.org/bugs/?53991).
+- `fsolve.m`: exit with `info=-2` when singularity reached ([bug #53991](https://savannah.gnu.org/bugs/?53991)).
+- ensure that Make sees Octave exit status when running make check
+- `interpreter.cc (intialize_xerbla_error_handler, xerbla_abort)`: New functions.
+- improve warnings for global/local variable conflicts ([bug #54052](https://savannah.gnu.org/bugs/?54052))
+- maybe preserve local value when declaring variable global ([bug #54052](https://savannah.gnu.org/bugs/?54052))
+- fix regression in `text` ([bug #54109](https://savannah.gnu.org/bugs/?54109))
+- create valid tmp scope for `who -file` ([bug #54030](https://savannah.gnu.org/bugs/?54030))
+- `polar.m`: Correct axes limits when using negative rho values ([bug #53999](https://savannah.gnu.org/bugs/?53999)).
+- `text.m`: Fix regression when 'String' property is specified ([bug #54067](https://savannah.gnu.org/bugs/?54067)).
+- allow `NULL mxArray*` to be returned as undefined from fcn calls ([bug #54096](https://savannah.gnu.org/bugs/?54096))
+- treat `NULL` as `[]` for `mxSetFieldByNumber` and `mxSetCell` ([bug #54096](https://savannah.gnu.org/bugs/?54096))
+- Properly test Qt offscreen printing during manual figures generation.
+- Avoid segfault with textscan ([bug #53786](https://savannah.gnu.org/bugs/?53786)).
+- add Qt include needed to build against Qt 5.11 ([bug #53978](https://savannah.gnu.org/bugs/?53978))
+- make listing local functions for command completion work again ([bug #53925](https://savannah.gnu.org/bugs/?53925))
+- Stop segfault in debug mode with readline complete ([bug #53925](https://savannah.gnu.org/bugs/?53925)).
+- Remove code to install default colors for qt toolkit from window theme ([bug #53805](https://savannah.gnu.org/bugs/?53805)).
+- back out changes attempting to automatically call handle class destructor
+- `residue.m`: Use a pre-conditioner on final matrix division for numerical stability ([bug #53869](https://savannah.gnu.org/bugs/?53869))
+- track multiple file types `(oct|m|mex)` for private functions ([bug #53856](https://savannah.gnu.org/bugs/?53856))
+- also preserve temporaries in indexing expressions ([bug #53844](https://savannah.gnu.org/bugs/?53844))
+- also update load-path info if private subdir time stamp changes ([bug #53856](https://savannah.gnu.org/bugs/?53856))
+- defer deletion of temporaries in argument lists ([bug #53844](https://savannah.gnu.org/bugs/?53844))
+- improve test for handle class destructor
+- call delete method correctly for handle class objects ([bug #53844](https://savannah.gnu.org/bugs/?53844))
+- use `size_t` for f77 char arg length params with GCC 8 ([bug #53872](https://savannah.gnu.org/bugs/?53872))
+- Fix `lrwork` dimension in svd for complex cases ([bug #53823](https://savannah.gnu.org/bugs/?53823)).
+- `lines.m`: Don't open empty figure or axes if none already exist ([bug #53648](https://savannah.gnu.org/bugs/?53648))
+
+
+## GUI
+
+- gui: fix editor rendering on some displays, disable QScintilla buffered drawing
+
+
+## Build system
+
+- `m4/octave_blas_f77_func.m4`: Restore 64-bit integer BLAS detection ([bug #53853](https://savannah.gnu.org/bugs/?53853)).
+- build: include `inplace_edit.pl` in tarball ([bug #54349](https://savannah.gnu.org/bugs/?54349)).
+- fix test for 8-byte integer BLAS lib on big-endian systems ([bug #53853](https://savannah.gnu.org/bugs/?53853))
+- `OCTAVE_CHECK_LIB`: avoid shell syntax error if not checking for lib
+- build: avoid compiler warning about unused function `abs` ([bug #54237](https://savannah.gnu.org/bugs/?54237))
+- build: Work around bug in perl 5.28.0 ([bug #54202](https://savannah.gnu.org/bugs/?54202)).
+
+
+## Documentation
+
+- doc: Add version number to top title of HTML manual for clarity.
+- `flip.m`: Update docstring.
+- `setdiff.m`: Fix typo in documentation ([bug #54393](https://savannah.gnu.org/bugs/?54393)).
+- doc: Replace instances of realroot (non-existent) with realpow ([bug #54336](https://savannah.gnu.org/bugs/?54336)).
+- `HACKING.md`: Update for recently removed files.
+- remove unused qtinfo source files
+- doc: Remove bad calling convention for warning with a mode struct ([bug #54288](https://savannah.gnu.org/bugs/?54288))
+- Document work-around for disabling OpenGL software rendering ([bug #53845](https://savannah.gnu.org/bugs/?53845)).
+- `xpow.cc (err_nonsquare_matrix)`: Clarify error message ([bug #54248](https://savannah.gnu.org/bugs/?54248)).
+- doc: Miscellaneous documentation fixes all over the manual ([bug #54288](https://savannah.gnu.org/bugs/?54288)).
+- doc: small fixes to `size` and `plot.txi` ([bug #54283](https://savannah.gnu.org/bugs/?54283)).
+- doc: Clarify description of Example 4 for `size` ([bug #54283](https://savannah.gnu.org/bugs/?54283)).
+- doc: Fix malformed URL ([bug #54225](https://savannah.gnu.org/bugs/?54225)).
+- Fix typo in error statement from containers.Map ([bug #54103](https://savannah.gnu.org/bugs/?54103)).
+- doc: Use `qcode` macro to document `fseek` offsets ([bug #51402](https://savannah.gnu.org/bugs/?51402)).
+- Use correct abbreviation UTC for Coordinated Universal Time ([bug #53918](https://savannah.gnu.org/bugs/?53918)).
+- doc: Rewrite section on indexing for clarity ([bug #53675](https://savannah.gnu.org/bugs/?53675)).
+- `md5sum.m`: Fix error in sample code ([bug #53829](https://savannah.gnu.org/bugs/?53829)).
+
+The above list was generated using the following command and some manual
+post-processing and grouping:
+
+{% highlight bash %}
+hg log -r "release-4-4-0:release-4-4-1" -b stable \
+| grep "summary:" | nl | sort -rn | cut -f 2- \
+| sed 's/summary:\s*/- /' \
+| sed 's/\(bug #\)\([0-9]*\)/[\1\2](https:\/\/savannah.gnu.org\/bugs\/?\2)/' \
+| sed 's/\(patch #\)\([0-9]*\)/[\1\2](https:\/\/savannah.gnu.org\/patch\/?\2)/'
+{% endhighlight %}
+
+ [1]: {{ "download.html" | absolute_url }}
+ [2]: https://ftp.gnu.org/gnu/octave/windows
