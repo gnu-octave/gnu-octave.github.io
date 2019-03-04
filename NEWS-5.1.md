@@ -6,10 +6,12 @@ menu: false
 
 February 23, 2019
 
+{::options parse_block_html="true" /}
 <div class="panel callout">
 * TOC
 {:toc}
 </div>
+{::options parse_block_html="false" /}
 
 ### General improvements
 
