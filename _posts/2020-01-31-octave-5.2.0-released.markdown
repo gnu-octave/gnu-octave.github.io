@@ -13,6 +13,8 @@ This version is a bug fixing release:
 
 ## Improvements
 
+- Avoid color changes in MS Windows GUI terminal
+  ([bug #57658](https://savannah.gnu.org/bugs/?57658)).
 - Lock amd and symbfact to avoid segmentation fault with SuiteSparse
   ([bug #57435](https://savannah.gnu.org/bugs/?57435)).
 - Fix segfault when calculating patch vertex normals
@@ -126,6 +128,10 @@ This version is a bug fixing release:
 
 ## Build system / Tests
 
+- fetch upstream gnulib changes using `git fetch`
+- update gnulib archive if requested changeset is not in the local archive
+- eliminate gnulib subrepo
+  ([bug #57044](https://savannah.gnu.org/bugs/?57044)).
 - configure: prevent overlinking when SUNDIALS is disabled
   ([bug #55956](https://savannah.gnu.org/bugs/?55956)).
 - use QtCore and Qt5Gui modules instead of Qt5OpenGL
