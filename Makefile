@@ -8,15 +8,12 @@ CVS_RSH=ssh
 
 export CVS_RSH
 
-CHECK_GEM := $(shell command -v gem 2> /dev/null)
-CHECK_JEKYLL := $(shell command -v jekyll 2> /dev/null)
-CHECK_JEKYLL_VERSION = $(shell jekyll --version | grep ^jekyll | sed 's/^.* //g')
-
-deploy: | $(SAVANNAH_DIR) check_prerequisites
+deploy: | $(SAVANNAH_DIR)
 	#
-	# Build static website into the subdirectory `_site` using Jekyll
+	# Build static website into the subdirectory `_site` using Jekyll via
+	# Bundler
 	#
-	jekyll build
+	bundle exec jekyll build
 	#
 	# vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 	# DANGEROUS STEP, omitted by default.
@@ -56,18 +53,6 @@ deploy: | $(SAVANNAH_DIR) check_prerequisites
 	#
 	# Now everything should be visible to the world.
 	#
-
-check_prerequisites:
-ifndef CHECK_GEM
-	$(error "Command `gem` is not available please install rubygems")
-endif
-ifndef CHECK_JEKYLL
-	$(error "Command `jekyll` is not available. ${CHECK_JEKYLL_VERSION}  Try `gem install jekyll`")
-endif
-ifneq "3.3" "$(word 1, $(sort 3.3 $(CHECK_JEKYLL_VERSION)))"
-	$(error "Detected Jekyll version ${CHECK_JEKYLL_VERSION} (>= 3.3 required).")
-endif
-	@echo "All prerequisites fulfilled."
 
 $(SAVANNAH_DIR):
 	cd .. \

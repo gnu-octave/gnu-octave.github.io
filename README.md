@@ -39,50 +39,52 @@ you should clone the repository using
 
 ### Building requisites
 
-To build the static website, you need to install [Jekyll][6] and a few more
-tools from [Rubygems][7].  Just type
+To build the static website, you need to install [Jekyll][6] and [Bundler][7].
+For Debian/Ubuntu please perform the following setup fist.  For other Linux
+distributions this command might change.
 
-    gem install jekyll pygments.rb
+    sudo apt-get install ruby-full build-essential zlib1g-dev
 
-A small prerequisite check is performed, by Typing
+Then install the required tools
 
-    make check_prerequisites
+    gem install jekyll bundler
+
+From now on, almost everything is handled by Bundler.  Install all required
+dependencies for the static Octave website by running
+
+    bundle install
+
+from within the checked-out [hg development repository][2].
 
 For the responsive webpages, we internally use the [Foundation 5][8]
 framework.  All necessary files are already included inside the
 [hg development repository][2].
 
 [6]: https://jekyllrb.com/
-[7]: https://rubygems.org/
+[7]: https://bundler.io/
 [8]: https://foundation.zurb.com/sites/docs/v/5.5.3/
 
 
 
 ### Building the static website locally
 
-All relevant information for Jekyll to build the static website is located
-in the file `_config.yml`.
+All relevant information for Jekyll and Bundler to build the static website are
+located in the files `_config.yml`, `Gemfile`, and `Gemfile.lock`.
 Typing
 
-    jekyll build
+    bundle exec jekyll build
 
 from the repositories root directory will build a complete static website
 into the subdirectory `_site` using this information (this directory is
 ignored by Mercurial and will be created on first build).
 
 Especially for development, it is beneficial to watch the changes locally
-before pushing any changes.
-Jekyll provides a local webserver by typing
+before pushing any changes.  Jekyll provides a local webserver by typing
 
-    jekyll serve
+    bundle exec jekyll serve
 
 and rebuilds the whole static website automatically, as it monitors any
 file changes.
-
-To build the test page, that can be deployed at some subdirectory, e.g.
-`https://www.octave.org/new`, use
-
-    jekyll build --config _config.yml,_config_test.yml
 
 
 
