@@ -16,10 +16,10 @@ If you would like to have your company listed here, please contact us at the
 [1]: mailto:{{ site.maintainers_email }}
 
 
-- [**John W. Eaton Consulting, Inc.**][2] provides software consulting and support
-  services, primarily for GNU Octave, a free software system for numerical
-  analysis.  Services include help with installing and using the software,
-  as well as prompt responses to problem reports.
+- [**John W. Eaton Consulting, Inc.**][2] provides software consulting and
+  support services, primarily for GNU Octave, a free software system for
+  numerical analysis.  Services include help with installing and using the
+  software, as well as prompt responses to problem reports.
 
   As the original author and current maintainer of GNU Octave, Dr. Eaton is
   uniquely qualified to deliver the most comprehensive solutions for your
@@ -40,5 +40,16 @@ If you would like to have your company listed here, please contact us at the
   evolutive maintenance.  We design GNU Octave based interfaces to free
   software tools for scientific computing.
 
-[2]: http://jweaton.org
-[3]: http://www.moxoff.com/octave
+- [**CoCalc**][4] is an online service that provides GNU Octave via Linux
+  Terminals, Jupyter Notebooks and X11 desktops, with full support for realtime
+  collaboration.  Moreover, CoCalc features a course management system that is
+  tailored for teaching courses online.
+
+  The company Sagemath, Inc. develops and operates CoCalc.  You can start
+  working with the [online service][5] for free and upgrade later for a better
+  experience.  You can also run your own CoCalc on-premises.
+
+[2]: https://jweaton.org
+[3]: https://www.moxoff.com/moxoff-partner-di-octave/
+[4]: https://cocalc.com/doc/octave.html
+[5]: https://cocalc.com
