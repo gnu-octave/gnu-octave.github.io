@@ -16,8 +16,11 @@
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta name="twitter:card" content="summary">
 
-    <link rel="stylesheet" href="{{ "/css/foundation.min.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/css/normalize.css" | relative_url }}">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
+      crossorigin="anonymous">
     <link rel="stylesheet" href="{{ "/css/app.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/css/syntax-highlight.css" | relative_url }}">
     <noscript>
@@ -28,14 +31,14 @@
       </style>
     </noscript>
 
-    <script src="{{ "/js/vendor/modernizr.js" | relative_url }}"></script>
-    <script src="{{ "/js/vendor/jquery.js" | relative_url }}"></script>
-    <script src="{{ "/js/foundation/foundation.js" | relative_url }}"></script>
-    <script src="{{ "/js/foundation/foundation.alert.js" | relative_url }}"></script>
-    <script src="{{ "/js/foundation/foundation.reveal.js" | relative_url }}"></script>
-    <script src="{{ "/js/foundation/foundation.topbar.js" | relative_url }}"></script>
-    <script src="{{ "/js/foundation/foundation.tab.js" | relative_url }}"></script>
-    <script src="{{ "/js/foundation/foundation.dropdown.js" | relative_url }}"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+      integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o="
+      crossorigin="anonymous"></script>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
