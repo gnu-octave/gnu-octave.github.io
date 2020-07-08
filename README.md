@@ -12,7 +12,7 @@ The development and deployment workflow in short:
    [https://www.gnu.org/software/octave][4].
 
 [1]: https://www.octave.org
-[2]: http://hg.octave.org/web-octave
+[2]: https://hg.octave.org/web-octave
 [3]: https://web.cvs.savannah.gnu.org/viewvc/octave/?root=octave
 [4]: https://www.gnu.org/software/octave
 
@@ -24,7 +24,7 @@ The development and deployment workflow in short:
 
 Anyone is free to clone this development repository, simply type
 
-    hg clone http://hg.octave.org/web-octave
+    hg clone https://hg.octave.org/web-octave
 
 to get anonymous read access without writing privileges.
 To push your changes, please contact the octave developers at
@@ -39,17 +39,15 @@ you should clone the repository using
 
 ### Building requisites
 
-To build the static website, you need to install [Jekyll][6] and [Bundler][7].
+To build the static website, you need to install [Ruby][6] and [Bundler][7].
 For Debian/Ubuntu please perform the following setup fist.  For other Linux
 distributions this command might change.
 
     sudo apt-get install ruby-full build-essential zlib1g-dev
 
-Then install the required tools
+    gem install bundler
 
-    gem install jekyll bundler
-
-From now on, almost everything is handled by Bundler.  Install all required
+From now on, everything is handled by Bundler.  Install all required
 dependencies for the static Octave website by running
 
     bundle install
@@ -60,7 +58,7 @@ For the responsive webpages, we internally use the [Foundation 5][8]
 framework.  All necessary files are already included inside the
 [hg development repository][2].
 
-[6]: https://jekyllrb.com/
+[6]: https://www.ruby-lang.org/
 [7]: https://bundler.io/
 [8]: https://foundation.zurb.com/sites/docs/v/5.5.3/
 
@@ -68,9 +66,8 @@ framework.  All necessary files are already included inside the
 
 ### Building the static website locally
 
-All relevant information for Jekyll and Bundler to build the static website are
-located in the files `_config.yml`, `Gemfile`, and `Gemfile.lock`.
-Typing
+All relevant information for Bundler to build the static website are located in
+the files `_config.yml`, `Gemfile`, and `Gemfile.lock`.  Typing
 
     bundle exec jekyll build
 
