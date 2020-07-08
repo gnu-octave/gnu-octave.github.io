@@ -4,86 +4,41 @@ title: Get Involved
 menu: true
 ---
 
-We always need more help improving Octave and there are many ways you can
-contribute.  You can help by fixing bugs, developing new features, answering
-questions on the mailing list or IRC channel, helping to improve the web pages.
+We always need more help improving Octave
+and there are many ways you can contribute.
+You can help by fixing bugs,
+developing new features,
+writing [Octave Forge packages]({{ site.sourceforge_url }}),
+answering questions in Discourse,
+helping to improve the web pages.
+If you are wondering what to work on,
+we have a standard answer:
+**What would you like to work on?**
 
-If you are wondering what to work on, we have a standard answer:
-what would you like to work on?  We try not to tell contributors
-what to work on as most people do their best work when they are
-within their own field of interest.  So, we would love your help,
-but would also love for you to work on what you love.
+For some inspiration,
+we do maintain a [list of possible projects]({{ site.wiki_url }}/Projects)
+and a [Developer FAQ]({{ site.wiki_url }}/Developer_FAQ) on the Octave Wiki.
 
-For some inspiration, we do maintain a [list of possible projects][1]
-on the Wiki.
-
-If you have an idea on what to contribute, then join the
-[`{{ site.maintainers_email }}`][2] mailing list or the IRC
-[`{{ site.irc_channel }}` channel][3] in Freenode and discuss your ideas there.
-That way others can provide input early on, which makes your contribution more
-likely to get accepted.
-
-<div class="row">
-<div class="columns small-12">
-<div class="panel callout">
-Please do <strong>not</strong> send help requests or bug reports to the
-<samp>{{ site.maintainers_email }}</samp> mailing list.  Refer to the
-<a href="{{ "bugs.html" | relative_url }}">bug tracker</a> or other
-<a href="{{ "support.html" | relative_url }}">support options</a> instead.
-</div>
-</div>
-</div>
-
-[1]: {{ site.wiki_url }}/Projects
-[2]: https://lists.gnu.org/mailman/listinfo/octave-maintainers
-[3]: https://webchat.freenode.net/?channels=octave&amp;uio=MT1mYWxzZSYyPXRydWUmMTI9dHJ1ZQda
+If know what to contribute,
+discuss your ideas with us on [Discourse]({{ site.discourse_url }})
+("maintainers" category) or on our IRC
+[Freenode `{{ site.irc_channel }}` channel](https://webchat.freenode.net/#octave).
 
 
-# Using the Development Sources
+### Using the Development Sources
 
-The latest development sources of Octave are also available via
-[Mercurial][4] (hg) archive.
-
-The primary archive address is [https://www.octave.org/hg/octave][5],
-which currently redirects to [https://hg.savannah.gnu.org/hgweb/octave][6].
-
-If you decide to use the development sources from the Mercurial archive,
-please read the file [`etc/HACKING`][7] that is available with the source
-files.
-
-Assuming you have Mercurial and git installed on your machine you may obtain
-the latest development version of Octave sources with the following command:
+The latest development sources of GNU Octave are available via
+[Mercurial](https://www.mercurial-scm.org/) (hg).
+The primary repository address is
+[https://www.octave.org/hg/octave](https://www.octave.org/hg/octave),
+which currently redirects to
+[https://hg.savannah.gnu.org/hgweb/octave](https://hg.savannah.gnu.org/hgweb/octave).
+You obtain the latest development version of Octave sources with the following
+command:
 
 {% highlight text %}
 hg clone https://www.octave.org/hg/octave
 {% endhighlight %}
 
-This will clone *two* repositories, one of which is subrepository of the
-main Octave repository. Once you have these, you can resync with the archive
-by doing from within the cloned directory (`cd octave`):
-
-{% highlight text %}
-hg -v pull
-hg -v update
-{% endhighlight %}
-
-The `-v` option is not required but provides extra information
-about what was pulled and updated.  The Octave manual has more
-information about [contributing to Octave's development][8].
-
-[4]: https://www.mercurial-scm.org/wiki/
-[5]: https://www.octave.org/hg/octave
-[6]: https://hg.savannah.gnu.org/hgweb/octave
-[7]: https://hg.savannah.gnu.org/hgweb/octave/file/tip/etc/HACKING
-[8]: {{ site.wiki_url }}/Developers
-
-
-# Octave Forge
-
-The community-developed [Octave-Forge][9] packages expand Octave's core
-functionality by providing field specific features via Octave's package system.
-For example, image and signal processing, fuzzy logic, instrument control,
-and statistics packages are examples of individual [Octave-Forge packages][10].
-
-[9]: {{ site.sourceforge_url }}
-[10]: {{ site.sourceforge_url }}/packages.php
+The [Developer FAQ]({{ site.wiki_url }}/Developer_FAQ) on the Octave Wiki
+contains more detailed and recent information about Octave development.
