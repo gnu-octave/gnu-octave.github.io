@@ -1,9 +1,0 @@
-# Site settings for deployment under a test URL
-#
-#   https://www.gnu.org/software/octave/new
-#
-# Build with
-#
-#   jekyll build --config _config.yml,_config_test.yml
-#
-baseurl: "/software/octave/new" # the subpath of your site, e.g. /blog
