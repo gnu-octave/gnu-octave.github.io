@@ -4,17 +4,16 @@ title: Donate
 menu: true
 ---
 
-<div class="row ">
-<div class="columns small-6">
-<div class="panel callout">
-Octave development takes a lot of time and expertise.
-Your contributions help to ensure that Octave will continue to improve.
-</div>
-</div>
-<div class="columns small-6">
-{% include donate.html %}
-</div>
-</div>
+> **Octave development takes a lot of time and expertise.**
+> **Your contributions help to ensure that Octave will continue to improve.**
+
+- [FSF Donation Page](https://crm.fsf.org/civicrm/contribute/transact?reset=1&id=10)
+- [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UYHVW7R596RZ8)
+  to John W. Eaton Consulting, Inc. (Octave project leader)
+- [Bitcoin](bitcoin:1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF)
+  (1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF)
+- [Commercial support options]({{ "commercial-support.html" | relative_url }})
+  to implement the specific features
 
 If you are already an Octave user and would like to see it improve more rapidly,
 then please donate so that we can spend more of our time working on Octave.
@@ -28,10 +27,3 @@ If your company has a budget for numerical computing tools,
 consider spending 10% (or more!) of that on Octave.
 Do you expect Octave to improve on a $0 budget
 while the proprietary tools are well-funded by your license fees?
-
-Consider [hiring someone][1] to implement the specific features you need.
-
-Bitcoin donations also accepted at this address: [1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF][2]
-
-[1]: {{ "commercial-support.html" | relative_url }}
-[2]: bitcoin:1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF
