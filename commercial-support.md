@@ -10,11 +10,9 @@ or contact them individually.  This list is provided as a service to the
 community and the support providers.  The Octave project does not provide
 endorsements or recommendations.
 
-If you would like to have your company listed here, please contact us at the
-[`{{ site.maintainers_email }}`][1] mailing list.
-
-[1]: mailto:{{ site.maintainers_email }}
-
+If you would like to have your company listed here,
+please contact us at [Octave Discourse]({{ site.discourse_url }})
+in the "maintainers" category.
 
 - [**John W. Eaton Consulting, Inc.**][2] provides software consulting and
   support services, primarily for GNU Octave, a free software system for
