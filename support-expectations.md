@@ -43,7 +43,7 @@ none of the Octave developers are paid to work on Octave directly.
 If you would like to see Octave moving forward more quickly,
 then contribute to its development,
 either by working on the project yourself,
-or by [donating funds]({{ "donation.html | relative_url }}).
+or by [donating funds]({{ "donation.html" | relative_url }}).
 With sufficient funding,
 the Octave project would be able to pay a few developers to work on it full
 time.
