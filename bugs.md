@@ -35,7 +35,23 @@ or [search for bugs]({{ site.bugs_url }}&func=search).
 
    <p></p>
 
-3. **Make your bug report count**
+3. **Missing function in Octave**
+
+   - If the function is
+     [part of some Octave Forge package]({{ site.sourceforge_url }}/functions_by_alpha.php),
+     this is **not** a bug.
+   - If the function **exists in Matlab**,
+     but **not in core Octave** and **not in Octave Forge packages**,
+     that is a bug.
+
+   <p></p>
+
+   It might take several months or years until for new features to become part
+   of Octave, consider
+   [commercial support]({{ "commercial-support.html" | relative_url }})
+   if you don't want to wait that long).
+
+4. **Make your bug report count**
 
    - **Report all the facts:**<br>
      Include all information that make it possible to fix the bug.
