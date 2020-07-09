@@ -16,9 +16,9 @@ layout: default
             alt="GNU Octave logo">
       GNU Octave
     </h2>
-    <h3>Scientific Programming Language</h3>
+    <h4>Scientific Programming Language</h4>
     <ul>
-      <li>Powerful mathematics-oriented syntax with built-in plotting and visualization tools</li>
+      <li>Powerful mathematics-oriented syntax with built-in 2D/3D plotting and visualization tools</li>
       <li>Free software, runs on GNU/Linux, macOS, BSD, and Microsoft Windows</li>
       <li>Drop-in compatible with many Matlab scripts</li>
     </ul>
@@ -32,7 +32,8 @@ layout: default
 ### Syntax Examples
 
 The Octave syntax is largely compatible with Matlab.
-The Octave interpreter can be run in GUI mode, as a console,
+The Octave interpreter can be run in
+<a href="#" data-open="guiModal">GUI mode</a>, as a console,
 or invoked as part of a shell script.
 More Octave examples can be found in
 [the Octave wiki]({{ site.wiki_url }}/Using_Octave).
