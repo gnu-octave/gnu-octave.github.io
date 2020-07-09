@@ -12,8 +12,10 @@ menu: true
   <a class="button" href="#ms-windows">MS Windows</a>
 </div>
 
-<a id="source">
-### Source
+
+<p id="source">&nbsp;</p>
+
+### Source {#source2}
 
 The latest released version of Octave is always available from
 
@@ -26,8 +28,9 @@ which will redirect automatically to a nearby
 [mirror site](https://www.gnu.org/order/ftp.html).
 
 
-<a id="linux">
-### GNU/Linux
+<p id="linux">&nbsp;</p>
+
+### GNU/Linux {#linux2}
 
 Packaged versions of Octave for GNU/Linux systems are provided by the
 individual distributions described in the
@@ -42,8 +45,9 @@ versions of GNU Octave described in the
 [Octave wiki]({{ site.wiki_url }}/Octave_for_GNU/Linux#Distribution_independent).
 
 
-<a id="macos">
-### macOS
+<p id="macos">&nbsp;</p>
+
+### macOS {#macos2}
 
 The [Octave Wiki]({{ site.wiki_url }}/Octave_for_macOS) has instructions for
 installing Octave on macOS systems.
@@ -51,8 +55,9 @@ Octave is also available in third-party package managers such as
 [Homebrew](https://brew.sh/) and [MacPorts](https://www.macports.org).
 
 
-<a id="bsd">
-### BSD
+<p id="bsd">&nbsp;</p>
+
+### BSD {#bsd2}
 
 Executable versions of Octave for BSD systems are provided by the individual
 distributions.
@@ -62,15 +67,16 @@ These packages are created by volunteers and the Octave project has no control
 over that process.
 
 
-<a id="ms-windows">
-### Microsoft Windows
+<p id="ms-windows">&nbsp;</p>
+
+### Microsoft Windows {#ms-windows2}
 
 <div class="primary callout small" data-closable>
 <b>Note:</b> All installers below bundle several <b>Octave Forge packages</b>
 so they don't have to be installed separately.
 After installation type <code>pkg list</code> to list them.
 <a href="{{ site.wiki_url }}/Octave_for_Microsoft_Windows">Read more.</a>
-<a class="close-button" aria-label="Dismiss alert" type="button" data-close>
+<a href="#ms-windows" class="close-button" aria-label="Dismiss alert" type="button" data-close>
   <span aria-hidden="true">&times;</span>
 </a>
 </div>
