@@ -2,6 +2,16 @@
 layout: default
 ---
 
+<div class="primary callout" data-closable>
+  <h5>
+    Need help? Try out our new user and developer forum
+    <a href="https://octave.discourse.group/">Octave Discourse</a>.
+  </h5>
+  <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
 <div class="grid-x grid-margin-x">
   <div class="cell medium-6">
     <a href="#"  data-open="meshModal">
