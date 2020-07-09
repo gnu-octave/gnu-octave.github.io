@@ -104,25 +104,19 @@ hg clone https://www.octave.org/hg/octave
 [Get involved]({{ "/get-involved.html" | relative_url }}) in Octave development.
 
 
-<div class="grid-x grid-margin-x">
-  <div class="cell small-12">
-    {% assign latest_post = site.posts.first %}
-    {% if latest_post %}
-      <div class="panel callout">
-        <a class="right" href="{{ "/feed.xml" | relative_url }}">
-          <span class="label warning">
-            RSS
-          </span>
-        </a>
-        <h3 class="entry-title">
-          <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
-        </h3>
-        <p class="post-meta">{{ latest_post.date | date: "%b %-d, %Y" }}</p>
-        <div class="entry-content">{{ latest_post.excerpt }}</div>
-      </div>
-    {% endif %}
+{% assign latest_post = site.posts.first %}
+{% if latest_post %}
+  <div class="primary callout">
+      <a class="float-right button tiny warning" href="{{ "/feed.xml" | relative_url }}">
+        RSS
+      </a>
+    <h3 class="entry-title">
+      <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
+    </h3>
+    <p class="post-meta">{{ latest_post.date | date: "%b %-d, %Y" }}</p>
+    <div class="entry-content">{{ latest_post.excerpt }}</div>
   </div>
-</div>
+{% endif %}
 
 <div class="large reveal" id="meshModal" data-reveal>
   <img src="{{ "/img/example-mesh.svg" | relative_url }}" alt="Example mesh">
