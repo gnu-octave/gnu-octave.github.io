@@ -4,15 +4,15 @@ title: Download
 menu: true
 ---
 
-<ul class="tabs">
-  <li class="tab-title"><a href="#source">Source</a></li>
-  <li class="tab-title"><a href="#linux">GNU/Linux</a></li>
-  <li class="tab-title"><a href="#macos">macOS</a></li>
-  <li class="tab-title"><a href="#bsd">BSD</a></li>
-  <li class="tab-title"><a href="#ms-windows">MS Windows</a></li>
-</ul>
+<div class="button-group large expanded stacked-for-small">
+  <a class="button" href="#source">Source</a>
+  <a class="button" href="#linux">GNU/Linux</a>
+  <a class="button" href="#macos">macOS</a>
+  <a class="button" href="#bsd">BSD</a>
+  <a class="button" href="#ms-windows">MS Windows</a>
+</div>
 
-<a name="source">
+<a id="source">
 ### Source
 
 The latest released version of Octave is always available from
@@ -26,7 +26,7 @@ which will redirect automatically to a nearby
 [mirror site](https://www.gnu.org/order/ftp.html).
 
 
-<a name="linux">
+<a id="linux">
 ### GNU/Linux
 
 Packaged versions of Octave for GNU/Linux systems are provided by the
@@ -42,7 +42,7 @@ versions of GNU Octave described in the
 [Octave wiki]({{ site.wiki_url }}/Octave_for_GNU/Linux#Distribution_independent).
 
 
-<a name="macos">
+<a id="macos">
 ### macOS
 
 The [Octave Wiki]({{ site.wiki_url }}/Octave_for_macOS) has instructions for
@@ -51,7 +51,7 @@ Octave is also available in third-party package managers such as
 [Homebrew](https://brew.sh/) and [MacPorts](https://www.macports.org).
 
 
-<a name="bsd">
+<a id="bsd">
 ### BSD
 
 Executable versions of Octave for BSD systems are provided by the individual
@@ -62,7 +62,7 @@ These packages are created by volunteers and the Octave project has no control
 over that process.
 
 
-<a name="ms-windows">
+<a id="ms-windows">
 ### Microsoft Windows
 
 <div data-alert class="alert-box info radius">

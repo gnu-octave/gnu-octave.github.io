@@ -1,64 +1,89 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+/* Custom classes */
 
-.page-content section {
-	padding-top: 1rem;
-	padding-bottom: 2rem;
+.octave-logo a,
+.octave-logo a:hover {
+  color: #FFF;
+  font-weight: bold;
 }
 
-.home-title {
-	color: #0790c0;
-	font-weight: 700;
-	margin: 0 0 1rem 0;
-	font-size: 2.33rem;
+.landing-page-logo {
+  color: #0790c0;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  font-size: 2.33rem;
 }
 
-body {
-	font-family: 'PT Sans';
-	color: '#333';
+/* Foundation 6 modifications */
+
+.title-bar,
+.top-bar,
+.top-bar ul {
+  background: #333;
 }
 
-p {
-	color: "#333";
+.top-bar ul li a {
+  color: #FFF;
 }
 
-li {
-	color: #333;
+.top-bar ul li a:hover {
+  background-color: #585858;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'PT Sans';
-	color: #333;
-	/*font-weight: bold;*/
+.grid-container {
+  margin: 1em auto;
 }
 
-h2 {
-	font-size: 2rem;
+.reveal img {
+  width: 100%;
 }
 
-h3 {
-	font-size: 1.66rem;
-}
+/* Foundation 6 responsive buttons */
 
-h4 {
-	font-size: 1.33rem;
-}
+@media screen and (max-width: 39.9375em) {
+  .button.small-only-expanded {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; } }
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .button.medium-only-expanded {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; } }
+@media screen and (max-width: 63.9375em) {
+  .button.medium-down-expanded {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; } }
+@media print, screen and (min-width: 40em) {
+  .button.medium-expanded {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; } }
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+  .button.large-only-expanded {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; } }
+@media screen and (max-width: 74.9375em) {
+  .button.large-down-expanded {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; } }
+@media print, screen and (min-width: 64em) {
+  .button.large-expanded {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; } }
 
-h4, h5, h6 {
-	font-weight: bold;
-}
 
-div.reveal-modal img {
-	height: auto;
-	width: 100%;
-}
-
-/**
-* Font overrides (do this using SASS when that gets pulled in)
-*/
-
-.button, li, p, .alert, .label, .top-bar-section ul li>a {
-	font-family: inherit;
-}
+/* Syntax highlighter styles */
 
 .highlight code {
 	border: inherit;

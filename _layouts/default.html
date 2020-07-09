@@ -25,9 +25,10 @@
     <link rel="stylesheet" href="{{ "/css/syntax-highlight.css" | relative_url }}">
     <noscript>
       <style>
-      div.no-js { position: relative; }
-      nav.no-js { height: auto; }
-      .tabs-content > div.no-js { display: block; }
+      .no-js .title-bar { display: none; }
+      @media screen and (min-width: 40em) {
+        .no-js .top-bar { display: block; }
+      }
       </style>
     </noscript>
 
@@ -46,66 +47,73 @@
 
   <body>
 
-    <div class="no-js fixed contain-to-grid">
-      <nav class="no-js top-bar" data-topbar role="navigation">
-        <ul class="title-area">
-          <li class="name">
-            <h1>
-              <a href="{{ "/" | relative_url }}" style="height:100%">
-                <img src="{{ "/img/octave-logo.svg" | relative_url }}"
-                    style="width: 32px; height: auto" alt="GNU Octave logo">
-                {{ site.title }}
-              </a>
-            </h1>
-          </li>
-          <!-- Remove the class "menu-icon" to get rid of menu icon.
-               Take out "Menu" to just have icon alone -->
-          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-        </ul>
+    <div data-sticky-container>
+      <div class="no-js" data-sticky data-options="marginTop:0;">
 
-        <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-            {% for page in site.pages %}
-              {% if page.menu %}
-                <li>
-                  <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-                </li>
-              {% endif %}
-            {% endfor %}
-            <li>
-              <a href="{{site.docs_url}}">Docs</a>
-            </li>
-          </ul>
-        </section>
-      </nav>
-    </div>
-
-    <div class="page-content row">
-      <div class="wrapper column">
-        {{ content }}
-      </div>
-
-      <footer class="column">
-        <section>
-        <div class="row">
-          <div class="columns small-12">
-            <div class="text-center">
-              <p>
-                Octave is free software under the
-                <a href="{{ "license.html" | relative_url }}">GNU General Public License.</a>
-              </p>
-              <small>
-                Copyright © 1998-{{ site.time | date: "%Y" }} John W. Eaton.
-                This work is licensed under a
-                <a rel="license" href="https://creativecommons.org/licenses/by-nd/4.0/">
-                Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
-                Get the <a href="http://hg.octave.org/web-octave/file/tip">page sources</a>.
-              </small>
+        <div class="title-bar" data-responsive-toggle="homepage-menu" data-hide-for="large">
+          <!-- title-bar-X is visible in collapsed mode -->
+          <div class="title-bar-left">
+            <div class="title-bar-title octave-logo">
+              <img src="{{ "/img/octave-logo.svg" | relative_url }}"
+                   style="width: 32px; height: auto" alt="GNU Octave logo">
+              <a href="{{ "/" | relative_url }}" style="height:100%">{{ site.title }}</a>
             </div>
           </div>
+          <div class="title-bar-right">
+            <button class="menu-icon" type="button" data-toggle="homepage-menu"></button>
+          </div>
         </div>
-        </section>
+
+        <div class="top-bar" id="homepage-menu">
+          <div class="top-bar-left">
+            <div class="octave-logo">
+              <img src="{{ "/img/octave-logo.svg" | relative_url }}"
+                   style="width: 32px; height: auto" alt="GNU Octave logo">
+              <a href="{{ "/" | relative_url }}" style="height:100%">{{ site.title }}</a>
+            </div>
+          </div>
+          <div class="top-bar-right">
+            <ul class="vertical medium-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
+              {%- for page in site.pages -%}
+                {%- if page.menu -%}
+                  <li>
+                    <a href="{{ page.url | relative_url }}">
+                      <i class="{{ page.icon | default: "fi-list" }}"></i>
+                      <span>{{ page.title }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+              <li>
+                <a href="{{site.docs_url}}">
+                  <i class="fi-arrow-down"></i>
+                  <span>Docs</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="grid-container">
+      {{ content }}
+
+      <footer class="text-center">
+        <p>
+          Octave is free software under the
+          <a href="{{ "license.html" | relative_url }}">GNU General Public License.</a>
+        </p>
+        <small>
+          Copyright © 1998-{{ site.time | date: "%Y" }} John W. Eaton.
+          This work is licensed under a
+          <a rel="license" href="https://creativecommons.org/licenses/by-nd/4.0/">
+          Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+          Get the <a href="http://hg.octave.org/web-octave/file/tip">page sources</a>.
+        </small>
       </footer>
 
       <script>
