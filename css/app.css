@@ -13,12 +13,21 @@
   font-size: 2.33rem;
 }
 
+.dark-background {
+  background: #333;
+}
+
 /* Foundation 6 modifications */
 
 .title-bar,
 .top-bar,
 .top-bar ul {
   background: #333;
+}
+
+.top-bar {
+  max-width: 1200px;
+  margin: auto;
 }
 
 .top-bar ul li a {
@@ -29,12 +38,22 @@
   background-color: #585858;
 }
 
-.grid-container {
+@media screen and (max-width: 1023px) {
+  .top-bar .top-bar-left { display: none; }
+  .top-bar .top-bar-right { margin-left: 0px; }
+}
+
+.grid-container { /* Content */
   margin: 1em auto;
 }
 
 .reveal img {
   width: 100%;
+}
+
+a.button.warning { /* RSS Feed */
+  font-weight: bold;
+  color: #FFF;
 }
 
 /* Foundation 6 responsive buttons */

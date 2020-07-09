@@ -26,6 +26,7 @@
     <noscript>
       <style>
       .no-js .title-bar { display: none; }
+      .no-js .top-bar .top-bar-left { display: block; }
       @media screen and (min-width: 40em) {
         .no-js .top-bar { display: block; }
       }
@@ -48,15 +49,17 @@
   <body>
 
     <div data-sticky-container>
-      <div class="no-js" data-sticky data-options="marginTop:0;">
+      <div class="no-js dark-background" data-sticky data-options="marginTop:0;">
 
         <div class="title-bar" data-responsive-toggle="homepage-menu" data-hide-for="large">
           <!-- title-bar-X is visible in collapsed mode -->
           <div class="title-bar-left">
             <div class="title-bar-title octave-logo">
-              <img src="{{ "/img/octave-logo.svg" | relative_url }}"
-                   style="width: 32px; height: auto" alt="GNU Octave logo">
-              <a href="{{ "/" | relative_url }}" style="height:100%">{{ site.title }}</a>
+              <a href="{{ "/" | relative_url }}">
+                <img src="{{ "/img/octave-logo.svg" | relative_url }}"
+                     style="width: 32px; height: auto" alt="GNU Octave logo">
+                <span>{{ site.title }}</span>
+              </a>
             </div>
           </div>
           <div class="title-bar-right">
@@ -67,9 +70,11 @@
         <div class="top-bar" id="homepage-menu">
           <div class="top-bar-left">
             <div class="octave-logo">
-              <img src="{{ "/img/octave-logo.svg" | relative_url }}"
-                   style="width: 32px; height: auto" alt="GNU Octave logo">
-              <a href="{{ "/" | relative_url }}" style="height:100%">{{ site.title }}</a>
+              <a href="{{ "/" | relative_url }}">
+                <img src="{{ "/img/octave-logo.svg" | relative_url }}"
+                     style="width: 32px; height: auto" alt="GNU Octave logo">
+                <span>{{ site.title }}</span>
+              </a>
             </div>
           </div>
           <div class="top-bar-right">
@@ -77,10 +82,7 @@
               {%- for page in site.pages -%}
                 {%- if page.menu -%}
                   <li>
-                    <a href="{{ page.url | relative_url }}">
-                      <i class="{{ page.icon | default: "fi-list" }}"></i>
-                      <span>{{ page.title }}</span>
-                    </a>
+                    <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
                   </li>
                 {%- endif -%}
               {%- endfor -%}
