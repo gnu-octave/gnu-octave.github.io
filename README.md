@@ -22,13 +22,13 @@ The development and deployment workflow in short:
 
 ### Getting the sources
 
-Anyone is free to clone this development repository, simply type
+Anyone is free to clone this website development repository, simply type
 
     hg clone https://hg.octave.org/web-octave
 
 to get anonymous read access without writing privileges.
 To push your changes, please contact the octave developers at
-`maintainers@octave.org`.
+https://octave.discourse.group/.
 
 If you already have writing permissions for this repository,
 you should clone the repository using
@@ -54,13 +54,13 @@ dependencies for the static Octave website by running
 
 from within the checked-out [hg development repository][2].
 
-For the responsive webpages, we internally use the [Foundation 5][8]
-framework.  All necessary files are already included inside the
+For the responsive webpages, we internally use the [Foundation 6][8]
+framework.  All necessary files are already included inside this
 [hg development repository][2].
 
 [6]: https://www.ruby-lang.org/
 [7]: https://bundler.io/
-[8]: https://foundation.zurb.com/sites/docs/v/5.5.3/
+[8]: https://get.foundation/sites/docs/
 
 
 
@@ -71,9 +71,9 @@ the files `_config.yml`, `Gemfile`, and `Gemfile.lock`.  Typing
 
     bundle exec jekyll build
 
-from the repositories root directory will build a complete static website
-into the subdirectory `_site` using this information (this directory is
-ignored by Mercurial and will be created on first build).
+from the repository root directory will build a complete static website
+into the subdirectory `_site` using this information.  This directory is
+ignored by Mercurial and will be created on first build.
 
 Especially for development, it is beneficial to watch the changes locally
 before pushing any changes.  Jekyll provides a local webserver by typing
@@ -93,8 +93,8 @@ especially the date.
 **Be sure to choose the correct categories!!**
 
 `categories: news release` is reserved for release announcements, those posts
-are also displayed inside the GUI.  Consider choosing another category like
-`categories: news` or alike for less important news.
+are also displayed inside the Octave GUI.  Consider choosing another category
+like `categories: news` or alike for less important news.
 
 
 
