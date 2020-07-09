@@ -65,12 +65,14 @@ over that process.
 <a id="ms-windows">
 ### Microsoft Windows
 
-<div data-alert class="alert-box info radius">
+<div class="primary callout small" data-closable>
 <b>Note:</b> All installers below bundle several <b>Octave Forge packages</b>
 so they don't have to be installed separately.
 After installation type <code>pkg list</code> to list them.
 <a href="{{ site.wiki_url }}/Octave_for_Microsoft_Windows">Read more.</a>
-<a href="#" class="close">&times;</a>
+<a class="close-button" aria-label="Dismiss alert" type="button" data-close>
+  <span aria-hidden="true">&times;</span>
+</a>
 </div>
 
 - Windows-64 (recommended)

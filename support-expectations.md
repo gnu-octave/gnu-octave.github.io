@@ -24,7 +24,7 @@ you are sure to be disappointed.
 You should also not be surprised when your requests for help are ignored.
 
 
-# Development Group
+### Development Group
 
 People sometimes think that Octave is developed by some large team of well-paid
 programmers.
@@ -49,7 +49,7 @@ the Octave project would be able to pay a few developers to work on it full
 time.
 
 
-# Help
+### Help
 
 When asking for help on Discourse or IRC channel,
 or reporting a bug,
@@ -61,7 +61,7 @@ Try to ask clear questions.
 Be precise about the problems you are having.
 
 
-# Bugs
+### Bugs
 
 No software is perfect,
 and Octave is no exception.
@@ -80,7 +80,7 @@ you should consider paying for
 [commercial support]({{ "commercial-support.html" | relative_url }}).
 
 
-# Features
+### Features
 
 When we say that Octave is "mostly compatible" with Matlab,
 we mean that the language that it accepts is similar enough that a substantial
