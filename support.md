@@ -6,12 +6,12 @@ menu: true
 
 #### Contact the **user community**
 
-<small>
-The Octave community is a loosely organized association of **volunteers**.
+<div style="margin-left: 2em;" markdown="1">
+The Octave user community is a loosely organized association of **volunteers**.
 Your interactions with the community will be better if you have the
 [right expectations about the support options]({{ "support-expectations.html" | relative_url }})
 available to you.
-</small>
+</div>
 
 <div style="margin-left: 2em;" markdown="1">
 - [**Discourse**]({{ site.discourse_url }}) &mdash;
