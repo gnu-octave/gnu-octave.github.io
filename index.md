@@ -19,7 +19,7 @@ layout: default
             style="height: 400px; width: auto;" alt="Example mesh">
     </a>
   </div>
-  <div class="cell medium-6">
+  <div class="cell auto">
     <h2 class="landing-page-logo">
       <img src="{{ "/img/octave-logo.svg" | relative_url }}"
             style="float: left; height: 48px; width: auto; padding-right: 0.5rem"
@@ -55,7 +55,7 @@ More Octave examples can be found in
       <strong>vectors</strong> and <strong>matrices</strong>.
     </p>
   </div>
-  <div class="cell medium-8">
+  <div class="cell auto">
 {% highlight octave %}
 b = [4; 9; 2] # Column vector
 A = [ 3 4 5;
@@ -73,7 +73,7 @@ x = A \ b     # Solve the system Ax = b
       in 2D and 3D.
     </p>
   </div>
-  <div class="cell medium-8">
+  <div class="cell auto">
 {% highlight octave %}
 x = -10:0.1:10; # Create an evenly-spaced vector from -10..10
 y = sin (x);    # y is also a vector
