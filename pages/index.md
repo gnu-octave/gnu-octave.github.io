@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: index
 ---
 
 <div class="primary callout" data-closable>
@@ -56,13 +57,16 @@ More Octave examples can be found in
     </p>
   </div>
   <div class="cell auto">
-{% highlight octave %}
+{%- include code1.html -%}
+<!--
+{%- highlight octave -%}
 b = [4; 9; 2] # Column vector
 A = [ 3 4 5;
       1 3 1;
       3 5 9 ]
 x = A \ b     # Solve the system Ax = b
-{% endhighlight %}
+{%- endhighlight -%}
+-->
   </div>
 </div>
 
@@ -74,14 +78,17 @@ x = A \ b     # Solve the system Ax = b
     </p>
   </div>
   <div class="cell auto">
-{% highlight octave %}
+{%- include code2.html -%}
+<!--
+{%- highlight octave -%}
 x = -10:0.1:10; # Create an evenly-spaced vector from -10..10
 y = sin (x);    # y is also a vector
 plot (x, y);
 title ("Simple 2-D Plot");
 xlabel ("x");
 ylabel ("sin (x)");
-{% endhighlight %}
+{%- endhighlight -%}
+-->
     <a href="#" class="button small-only-expanded" data-open="plotModal">Click here to see the plot output</a>
   </div>
 </div>

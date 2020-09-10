@@ -2,6 +2,7 @@
 layout: page
 title: Bugs
 menu: true
+permalink: bugs
 ---
 
 GNU Octave uses the bug tracker at [Savannah]({{ site.bugs_url }}).

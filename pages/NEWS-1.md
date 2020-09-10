@@ -1,12 +1,13 @@
-<!doctype html public "-//IETF//DTD HTML Strict//EN">
-<html>
-<head>
-<title> Changes in Octave version 1 </title>
-</head>
+---
+layout: page
+title: GNU Octave Version 1
+menu: false
+permalink: NEWS-1.html
+---
 
-<body>
-<h1> News for Octave Version 1 </h1>
-<hr>
+## Summary of important user-visible changes
+
+{% include release_news_select.md %}
 
 <h2>Summary of changes for version 1.1.1</h2>
 
@@ -258,7 +259,7 @@
   * The Matlab-style plotting commands have been improved.  They now
     accept line-style arguments, multiple x-y pairs, and other plot
     option flags.  For example,
- 
+
       plot (x, y, "@12", x, y2, x, y3, "4", x, y4, "+")
 
     results in a plot with
@@ -309,7 +310,7 @@
     given set of patterns.
 
   * New functions for manipulating polynomials
-      
+
       compan     -- companion matrix corresponding to polynomial coefficients
       conv       -- convolve two vectors
       deconv     -- deconvolve two vectors
@@ -645,7 +646,7 @@
     in the middle of defining a loop or if statement.
 
   * On AIX systems, Back off on indexing DiagArray via Proxy class to
-    avoid gcc (or possibly AIX assembler?) bug. 
+    avoid gcc (or possibly AIX assembler?) bug.
 
   * Various other bug and portability fixes.
 </pre>
@@ -933,7 +934,7 @@
     used to set Octave's idea of the location of the info file.  It
     will override any value of OCTAVE_INFO_FILE found in the
     environment, but not any INFO_FILE="filename" commands found in
-    the system or user startup files. 
+    the system or user startup files.
 
   * Octave's Info reader will now recognize gzipped files that have
     names ending in `.gz'.
@@ -1066,12 +1067,12 @@
     with the empty matrix symbol, `[]'.  For example:
 
       octave:13> zeros (3, 0)
-      ans = 
+      ans =
 
       [](3x0)
 
     The new variable `print_empty_dimensions' controls this behavior.
-    
+
     See also Carl de Boor, An Empty Exercise, SIGNUM, Volume 25,
     pages 2--6, 1990, or C. N. Nett and W. M. Haddad, A
     System-Theoretic Appropriate Realization of the Empty Matrix
@@ -1125,7 +1126,7 @@
     operation is intended from the context surrounding an operator.
     For example:
 
-    -- In the command 
+    -- In the command
 
          [ 1 - 1 ]
 
@@ -1198,7 +1199,7 @@
       stderr   -- file number corresponding to the standard error stream.
 
     The following may be used as the final (optional) argument for
-    fseek: 
+    fseek:
 
       SEEK_SET -- set position relative to the beginning of the file.
       SEEK_CUR -- set position relative to the current position.
@@ -1393,7 +1394,7 @@
 <pre>
   * New functions:
 
-      eval  -- evaluate a string as a sequence of Octave commands. 
+      eval  -- evaluate a string as a sequence of Octave commands.
       input -- print a prompt and get user input.
 </pre>
 
@@ -1438,7 +1439,7 @@
 
   * Empty matrices can be used in conditionals, but they always
     evaluate to `false'.  With propagate_empty_matrices = 'true', both
-    of the following expressions print 0: 
+    of the following expressions print 0:
 
       if  [], 1, else 0, end
       if ~[], 1, else 0, end
@@ -1478,7 +1479,7 @@
 <pre>
   * The reshape function works again.
 
-  * Octave now converts input like `3.2i' or `3 I' or `2.3e5 j' to be 
+  * Octave now converts input like `3.2i' or `3 I' or `2.3e5 j' to be
     complex constants directly, rather than requiring an expression
     like `3.3 * i' to be evaluated.
 </pre>
@@ -1498,7 +1499,7 @@
 
 <pre>
   * The C-like formatted print functions printf, fprintf, and sprintf
-    finally work. 
+    finally work.
 </pre>
 
 <h2>Summary of changes for version 0.56</h2>
@@ -1562,7 +1563,7 @@
 <pre>
   * Name completion works for function and variable names currently in
     the symbol tables.  Coming soon: completion for names of functions
-    defined in script files but not yet compiled. 
+    defined in script files but not yet compiled.
 
   * The initial value of do_fortran_indexing is now false, and the
     initial value of prefer_column_vectors is now true.  Swap the
@@ -1577,7 +1578,7 @@
     definition will reappear if they are cleared.
 
   * The symbol tables are now implemented with hash tables for faster
-    searching. 
+    searching.
 
   * A small amount of help is now available for most built-in
     operators, keywords and functions.  Coming soon: help for script
@@ -1639,6 +1640,3 @@
 
   * Help is now available at the gnuplot prompt.
 </pre>
-
-</body>
-</html>

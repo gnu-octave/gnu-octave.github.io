@@ -2,6 +2,7 @@
 layout: page
 title: Get Involved
 menu: true
+permalink: get-involved
 ---
 
 We always need more help improving Octave

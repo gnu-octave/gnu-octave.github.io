@@ -1,7 +1,17 @@
-<pre>
-Summary of important user-visible changes for version 4.0:
----------------------------------------------------------
+---
+layout: page
+title: GNU Octave Version 4.0
+menu: false
+permalink: NEWS-4.0.html
+---
 
+## Summary of important user-visible changes
+
+May 23, 2015
+
+{% include release_news_select.md %}
+
+<pre>
  ** A graphical user interface is now the default when running Octave
     interactively.  The start-up option --no-gui will run the familiar
     command line interface, and still allows use of the GUI dialogs and
@@ -148,7 +158,7 @@ Summary of important user-visible changes for version 4.0:
 
  ** The inpolygon function now returns true for points that are within
     the polygon OR on it's edge.  This change was made for Matlab
-    compatibility. 
+    compatibility.
 
  ** The archive family of functions (bzip2, gzip, zip, tar) and their
     unpacking routines (bunzip2, gunzip, unzip, untar, unpack) have

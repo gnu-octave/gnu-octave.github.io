@@ -1,7 +1,17 @@
-<pre>
-Summary of important user-visible changes for version 3.2:
----------------------------------------------------------
+---
+layout: page
+title: GNU Octave Version 3.2
+menu: false
+permalink: NEWS-3.2.html
+---
 
+## Summary of important user-visible changes
+
+June 5, 2009
+
+{% include release_news_select.md %}
+
+<pre>
  ** Compatibility with Matlab graphics has been improved.
 
     The hggroup object and associated listener callback functions have
@@ -23,15 +33,15 @@ Summary of important user-visible changes for version 3.2:
 
  ** New graphics functions:
 
-      addlistener         ezcontour   gcbo         refresh  
+      addlistener         ezcontour   gcbo         refresh
       addproperty         ezcontourf  ginput       refreshdata
       allchild            ezmesh      gtext        specular
       available_backends  ezmeshc     intwarning   surfl
       backend             ezplot      ishghandle   trisurf
       cla                 ezplot3     isocolors    waitforbuttonpress
-      clabel              ezpolar     isonormals  
-      comet               ezsurf      isosurface  
-      dellistener         findall     linkprop   
+      clabel              ezpolar     isonormals
+      comet               ezsurf      isosurface
+      dellistener         findall     linkprop
       diffuse             gcbf        plotmatrix
 
  ** New experimental OpenGL/FLTK based plotting system.
@@ -198,8 +208,8 @@ Summary of important user-visible changes for version 3.2:
     a copy would be made, such as certain array slicing operations or
     conversions between cells, structs and cs-lists.  This usually reduces
     both time and memory consumption.
-    Also, Octave will now attempt to detect and optimize usage of a vector 
-    as a stack, when elements are being repeatedly inserted at/removed from 
+    Also, Octave will now attempt to detect and optimize usage of a vector
+    as a stack, when elements are being repeatedly inserted at/removed from
     the end of the vector.
 
  ** Improved performance for reduction operations.
@@ -208,7 +218,7 @@ Summary of important user-visible changes for version 3.2:
     max and min functions has been significantly improved.
 
  ** Sorting and searching.
-    
+
     The performance of sort has been improved, especially when sorting
     indices are requested. An efficient built-in issorted implementation
     was added. sortrows now uses a more efficient algorithm, especially
@@ -347,34 +357,34 @@ Summary of important user-visible changes for version 3.2:
     The following functions were deprecated in Octave 3.0 and will be
     removed in Octave 3.4 (or whatever version is the second major
     release after 3.0):
-                                           
-      beta_cdf         geometric_pdf        pascal_pdf      
-      beta_inv         geometric_rnd        pascal_rnd      
-      beta_pdf         hypergeometric_cdf   poisson_cdf     
-      beta_rnd         hypergeometric_inv   poisson_inv     
-      binomial_cdf     hypergeometric_pdf   poisson_pdf     
-      binomial_inv     hypergeometric_rnd   poisson_rnd     
-      binomial_pdf     intersection         polyinteg       
-      binomial_rnd     is_bool              setstr          
-      chisquare_cdf    is_complex           struct_contains 
-      chisquare_inv    is_list              struct_elements 
-      chisquare_pdf    is_matrix            t_cdf           
-      chisquare_rnd    is_scalar            t_inv           
-      clearplot        is_square            t_pdf           
-      clg              is_stream            t_rnd           
-      com2str          is_struct            uniform_cdf     
-      exponential_cdf  is_symmetric         uniform_inv     
-      exponential_inv  is_vector            uniform_pdf     
-      exponential_pdf  isstr                uniform_rnd     
-      exponential_rnd  lognormal_cdf        weibcdf         
-      f_cdf            lognormal_inv        weibinv         
-      f_inv            lognormal_pdf        weibpdf         
-      f_pdf            lognormal_rnd        weibrnd         
-      f_rnd            meshdom              weibull_cdf     
-      gamma_cdf        normal_cdf           weibull_inv     
-      gamma_inv        normal_inv           weibull_pdf     
-      gamma_pdf        normal_pdf           weibull_rnd     
-      gamma_rnd        normal_rnd           wiener_rnd      
+
+      beta_cdf         geometric_pdf        pascal_pdf
+      beta_inv         geometric_rnd        pascal_rnd
+      beta_pdf         hypergeometric_cdf   poisson_cdf
+      beta_rnd         hypergeometric_inv   poisson_inv
+      binomial_cdf     hypergeometric_pdf   poisson_pdf
+      binomial_inv     hypergeometric_rnd   poisson_rnd
+      binomial_pdf     intersection         polyinteg
+      binomial_rnd     is_bool              setstr
+      chisquare_cdf    is_complex           struct_contains
+      chisquare_inv    is_list              struct_elements
+      chisquare_pdf    is_matrix            t_cdf
+      chisquare_rnd    is_scalar            t_inv
+      clearplot        is_square            t_pdf
+      clg              is_stream            t_rnd
+      com2str          is_struct            uniform_cdf
+      exponential_cdf  is_symmetric         uniform_inv
+      exponential_inv  is_vector            uniform_pdf
+      exponential_pdf  isstr                uniform_rnd
+      exponential_rnd  lognormal_cdf        weibcdf
+      f_cdf            lognormal_inv        weibinv
+      f_inv            lognormal_pdf        weibpdf
+      f_pdf            lognormal_rnd        weibrnd
+      f_rnd            meshdom              weibull_cdf
+      gamma_cdf        normal_cdf           weibull_inv
+      gamma_inv        normal_inv           weibull_pdf
+      gamma_pdf        normal_pdf           weibull_rnd
+      gamma_rnd        normal_rnd           wiener_rnd
       geometric_cdf    pascal_cdf
       geometric_inv    pascal_inv
 

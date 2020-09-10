@@ -2,6 +2,7 @@
 layout: page
 title: Support Expectations
 menu: false
+permalink: support-expectations
 ---
 
 Octave is a capable free software system for numerical computing developed

@@ -1,11 +1,17 @@
 ---
-layout: default
+layout: page
+title: GNU Octave Version 4.4
+menu: false
+permalink: NEWS-4.4.html
 ---
 
-<pre>
-Summary of important user-visible changes for version 4.4 (2018-04-30):
-----------------------------------------------------------------------
+## Summary of important user-visible changes
 
+April 30, 2018
+
+{% include release_news_select.md %}
+
+<pre>
  ** A graphical Variable Editor has been added to the GUI interface.
     It uses a spreadsheet-like interface for quick, intuitive editing
     of variables.  The Variable Editor is launched by double-clicking

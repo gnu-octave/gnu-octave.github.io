@@ -1,7 +1,17 @@
-<pre>
-Summary of important user-visible changes for version 3.8:
----------------------------------------------------------
+---
+layout: page
+title: GNU Octave Version 3.8
+menu: false
+permalink: NEWS-3.8.html
+---
 
+## Summary of important user-visible changes
+
+December 27, 2013
+
+{% include release_news_select.md %}
+
+<pre>
   ** One of the biggest new features for Octave 3.8 is a graphical user
      interface.  It is the one thing that users have requested most
      often over the last few years and now it is almost ready.  But
@@ -64,7 +74,7 @@ Summary of important user-visible changes for version 3.8:
     nested function.  This makes it possible to have a pseudo-global variable
     which can be seen by a group of functions, but which is not visible in
     the global namespace.
-    
+
     Example:
     function outerfunc (...)
       ...
@@ -106,7 +116,7 @@ Summary of important user-visible changes for version 3.8:
  ** Redundant terminal comma accepted by parser
 
     A redundant terminal comma is now accepted in matrix
-    definitions which allows writing code such as 
+    definitions which allows writing code such as
 
     [a,...
      b,...
@@ -157,7 +167,7 @@ Summary of important user-visible changes for version 3.8:
     With this addition Octave now accepts the entire set of Matlab options
     for regular expressions.  'noemptymatch' is the default, but 'emptymatch'
     has certain uses where you need to match an assertion rather than actual
-    characters.  For example, 
+    characters.  For example,
 
     regexprep ('World', '^', 'Hello ', 'emptymatch')
       => Hello World
@@ -168,7 +178,7 @@ Summary of important user-visible changes for version 3.8:
     functions now process backslash escape sequences in single-quoted pattern
     strings.  In addition, the regexprep function now processes backslash
     escapes in single-quoted replacement strings.  For example,
-    
+
     regexprep (str, '\t', '\n')
 
     would search the variable str for a TAB character (escape sequence \t)
@@ -189,7 +199,7 @@ Summary of important user-visible changes for version 3.8:
     \char        symbol      \beta               Greek symbol beta
     \fontname    font        \fontname{Arial}    set Arial font
     \fontsize    fontsize    \fontsize{16}       set fontsize 16
-    \color[rgb]  fontcolor   \color[rgb]{1 0 1}  set magenta color 
+    \color[rgb]  fontcolor   \color[rgb]{1 0 1}  set magenta color
     \bf          bold        \bfBold Text        bold font
     \it          italic      \itItalic Text      italic font
     \sl          slanted     \slOblique Text     slanted font
@@ -253,18 +263,18 @@ Summary of important user-visible changes for version 3.8:
     Octave's legacy behavior
 
       strsplit ("1 2, 3", ", ")
-      ans = 
+      ans =
       {
        [1,1] = 1
        [1,2] = 2
-       [1,3] = 
+       [1,3] =
        [1,4] = 3
       }
 
     Matlab compatible behavior
 
       strsplit ("1 2, 3", ", ")
-      ans = 
+      ans =
       {
        [1,1] = 1 2
        [1,2] = 3
@@ -288,7 +298,7 @@ Summary of important user-visible changes for version 3.8:
  ** The error function and its derivatives has been extended to accept complex
     arguments.  The following functions now accept complex inputs:
 
-    erf  erfc  erfcx   
+    erf  erfc  erfcx
 
     In addition two new error functions erfi (imaginary error function) and
     dawson (scaled imaginary error function) have been added.
@@ -298,17 +308,17 @@ Summary of important user-visible changes for version 3.8:
     "relax" option has been replaced by the "rtest" option.  The numeric
     values of error codes and of some options have also changed.
 
- ** The kurtosis function has changed definition to be compatible with 
+ ** The kurtosis function has changed definition to be compatible with
     Matlab.  It now returns the base kurtosis instead of the "excess kurtosis".
     The old behavior can be had by changing scripts to normalize with -3.
 
                "excess kurtosis" = kurtosis (x) - 3
 
- ** The moment function has changed definition to be compatible with 
+ ** The moment function has changed definition to be compatible with
     Matlab.  It now returns the central moment instead of the raw moment.
     The old behavior can be had by passing the type argument "r" for raw.
 
- ** The default name of the Octave crash dump file is now 
+ ** The default name of the Octave crash dump file is now
     "octave-workspace" instead of "octave-core".  The exact name can
     always be customized with the octave_core_file_name function.
 
@@ -359,25 +369,25 @@ Summary of important user-visible changes for version 3.8:
 
     The following functions were deprecated in Octave 3.4 and have been
     removed from Octave 3.8.
-                                           
+
       autocor    dispatch              is_global    setstr
       autocov    fstat                 krylovb      strerror
       betai      gammai                perror       values
-      cellidx    glpkmex               replot               
-      cquad      is_duplicate_entry    saveimage            
-      
+      cellidx    glpkmex               replot
+      cquad      is_duplicate_entry    saveimage
+
     The following functions have been deprecated in Octave 3.8 and will
     be removed from Octave 3.12 (or whatever version is the second major
     release after 3.8):
 
-      default_save_options    java_new            
-      gen_doc_cache           java_set                   
+      default_save_options    java_new
+      gen_doc_cache           java_set
       interp1q                java_unsigned_conversion
-      isequalwithequalnans    javafields                
-      java_convert_matrix     javamethods               
+      isequalwithequalnans    javafields
+      java_convert_matrix     javamethods
       java_debug              re_read_readline_init_file
-      java_get                read_readline_init_file   
-      java_invoke             saving_history            
+      java_get                read_readline_init_file
+      java_invoke             saving_history
 
 
     The following keywords have been deprecated in Octave 3.8 and will

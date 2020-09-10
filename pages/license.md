@@ -2,6 +2,7 @@
 layout: page
 title: License
 menu: false
+permalink: license
 ---
 
 The source code for Octave is freely redistributable under the

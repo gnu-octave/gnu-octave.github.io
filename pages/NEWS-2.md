@@ -1,12 +1,13 @@
-<!doctype html public "-//IETF//DTD HTML Strict//EN">
-<html>
-<head>
-<title> Changes in Octave version 2 </title>
-</head>
+---
+layout: page
+title: GNU Octave Version 2
+menu: false
+permalink: NEWS-2.html
+---
 
-<body>
-<h1> News for Octave Version 2 </h1>
-<hr>
+## Summary of important user-visible changes
+
+{% include release_news_select.md %}
 
 <h2>Summary of changes for version 2.0.17</h2>
 
@@ -41,7 +42,7 @@ the Octave 2.1.35 sources or a more recent version.</p>
 	  ;; We have the old custom-library, hack around it!
 	  (defmacro defgroup (&rest args)
 	    nil)
-	  (defmacro defcustom (var value doc &rest args) 
+	  (defmacro defcustom (var value doc &rest args)
 	    (` (defvar (, var) (, value) (, doc))))))
 </pre></li>
 </ul>
@@ -559,7 +560,7 @@ send a string to the gnuplot subprocess
     --index-search option, you should install a newer version of GNU
     Info, which is distributed as part of the GNU Texinfo package.</li>
 
-<li>Running `make check' should work now before you run `make install', 
+<li>Running `make check' should work now before you run `make install',
     even if you build a copy of Octave that depends on shared versions
     of the Octave libraries.</li>
 
@@ -903,7 +904,7 @@ user-visilbe features.</p>
 </pre></li>
 <li>The svd() function no longer computes the left and right singular
     matrices unnecessarily.  This can significantly improve
-    performance for large matrices if you are just looking for the  
+    performance for large matrices if you are just looking for the
     singular values.</li>
 <li>The filter() function is now a built-in function.</li>
 <li>New function randn() returns a pseudo-random number from a normal
@@ -1096,7 +1097,7 @@ user-visilbe features.</p>
 <li>New functions:
 <dl>
 <dt><b>struct_contains (S, NAME)</b></dt>
-<dd>returns 1 if S is a structure with element NAME; otherwise returns 0.</dd> 
+<dd>returns 1 if S is a structure with element NAME; otherwise returns 0.</dd>
 <dt><b>struct_elements (S)</b></dt>
 <dd>returns the names of all elements of structure S in an array of
     strings.</dd>
@@ -1269,6 +1270,3 @@ user-visilbe features.</p>
 <li>Many more bug fixes.</li>
 <li>ChangeLogs are now kept in each subdirectory.</li></li>
 </ul>
-
-</body>
-</html>

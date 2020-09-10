@@ -1,7 +1,17 @@
-<pre>
-Summary of important user-visible changes for version 3.6:
----------------------------------------------------------
+---
+layout: page
+title: GNU Octave Version 3.6
+menu: false
+permalink: NEWS-3.6.html
+---
 
+## Summary of important user-visible changes
+
+January 15, 2012
+
+{% include release_news_select.md %}
+
+<pre>
  ** The PCRE library is now required to build Octave.  If a pre-compiled
     package does not exist for your system, you can find PCRE sources
     at http://www.pcre.org
@@ -147,7 +157,7 @@ Summary of important user-visible changes for version 3.6:
       Octave:empty-list-elements
       Octave:fortran-indexing
       Octave:precedence-change
-      
+
  ** The warning ID Octave:string-concat has been renamed to
     Octave:mixed-string-concat.
 
@@ -181,22 +191,22 @@ Summary of important user-visible changes for version 3.6:
       bicg                       nthargout                   usejava
       is_dq_string               narginchk                   waitbar
       is_sq_string               python                      zscore
-      is_function_handle         register_graphics_toolkit 
-      loaded_graphics_toolkits   recycle                   
+      is_function_handle         register_graphics_toolkit
+      loaded_graphics_toolkits   recycle
 
  ** Deprecated functions.
 
     The following functions were deprecated in Octave 3.2 and have been
     removed from Octave 3.6.
-                                           
-      create_set          spcholinv    splu   
+
+      create_set          spcholinv    splu
       dmult               spcumprod    spmax
       iscommand           spcumsum     spmin
       israwcommand        spdet        spprod
       lchol               spdiag       spqr
       loadimage           spfind       spsum
       mark_as_command     sphcat       spsumsq
-      mark_as_rawcommand  spinv        spvcat 
+      mark_as_rawcommand  spinv        spvcat
       spatan2             spkron       str2mat
       spchol              splchol      unmark_command
       spchol2inv          split        unmark_rawcommand
@@ -207,7 +217,7 @@ Summary of important user-visible changes for version 3.6:
 
       cut                is_duplicate_entry
       cor                polyderiv
-      corrcoef           shell_cmd 
+      corrcoef           shell_cmd
       __error_text__     studentize
       error_text         sylvester_matrix
 </pre>

@@ -1,41 +1,27 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server
-# process.
-
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: GNU Octave
-email: maintainers@octave.org
-description: > # this means to ignore newlines until "baseurl:"
+email: octave-maintainers@gnu.org
+description: >- # this means to ignore newlines until "baseurl:"
   GNU Octave is a programming language for scientific computing.
-baseurl: "/software/octave" # the subpath of your site, e.g. /blog
-url: "https://www.gnu.org" # the base hostname & protocol for your site
+#baseurl: "/software/octave"  # only needed for publication at gnu.org
+url: "https://www.gnu.org"    # the base hostname & protocol for your site
 discourse_url: "https://octave.discourse.group/"
 wiki_url: "https://wiki.octave.org"
 faq_url: "https://wiki.octave.org/faq"
 docs_url: "https://www.gnu.org/software/octave/doc/latest"
 bugs_url: "https://savannah.gnu.org/bugs/?group=octave"
 sourceforge_url: "https://octave.sourceforge.io"
-maintainers_email: "maintainers@octave.org"
-help_email: "help@octave.org"
+maintainers_email: "octave-maintainers@gnu.org"
+help_email: "help-octave@gnu.org"
 irc_channel: "#octave"
 irc_network: "irc.freenode.net"
 timezone: "UTC0"
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 exclude:
   - Makefile

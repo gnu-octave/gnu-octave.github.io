@@ -1,10 +1,15 @@
 ---
 layout: page
-title: Summary of important user-visible changes for version 5
+title: GNU Octave Version 5
 menu: false
+permalink: NEWS-5.1.html
 ---
 
+## Summary of important user-visible changes
+
 February 23, 2019
+
+{% include release_news_select.md %}
 
 {::options parse_block_html="true" /}
 <div class="panel callout">
@@ -316,17 +321,3 @@ and have been removed from Octave 5.
 - `ordeig`
 - `savefig`
 - `uitable`
-
-
-### Old release news
-
-- [Octave 4.4.x](NEWS-4.4.html)
-- [Octave 4.2.x](NEWS-4.2.html)
-- [Octave 4.0.x](NEWS-4.0.html)
-- [Octave 3.8.x](NEWS-3.8.html)
-- [Octave 3.6.x](NEWS-3.6.html)
-- [Octave 3.4.x](NEWS-3.4.html)
-- [Octave 3.2.x](NEWS-3.2.html)
-- [Octave 3.0.x](NEWS-3.html)
-- [Octave 2.x](NEWS-2.html)
-- [Octave 1.x](NEWS-1.html)

@@ -2,6 +2,7 @@
 layout: page
 title: Missing function
 menu: false
+permalink: missing
 ---
 
 If you are reading this page,

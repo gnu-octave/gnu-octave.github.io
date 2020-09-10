@@ -2,6 +2,7 @@
 layout: page
 title: Download
 menu: true
+permalink: download
 ---
 
 <div class="button-group large expanded stacked-for-small">

@@ -2,6 +2,7 @@
 layout: page
 title: About
 menu: true
+permalink: about
 ---
 
 GNU Octave is a high-level language, primarily intended for numerical

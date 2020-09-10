@@ -1,20 +1,17 @@
+---
+layout: page
+title: GNU Octave Version 3.4
+menu: false
+permalink: NEWS-3.4.html
+---
+
+## Summary of important user-visible changes
+
+February 8, 2011
+
+{% include release_news_select.md %}
+
 <pre>
-Summary of important user-visible changes for version 3.4.3:
------------------------------------------------------------
-
- ** Octave 3.4.3 is a bug fixing release.
-
-Summary of important user-visible changes for version 3.4.2:
------------------------------------------------------------
-
- ** Octave 3.2.4 fixes some minor installation problems that affected
-    version 3.4.1.
-
-Summary of important user-visible changes for version 3.4.1:
------------------------------------------------------------
-
- ** Octave 3.4.1 is primarily a bug fixing release.
-
  ** IMPORTANT note about binary incompatibility in this release:
 
     Binary compatibility for all 3.4.x releases was originally planned,
@@ -96,7 +93,7 @@ Summary of important user-visible changes for version 3.4:
     `times', `mtimes', `and', and `or') have been extended to accept
     multiple arguments.  This is especially useful for summing
     (multiplying, etc.) lists of objects (of possibly distinct types):
-   
+
       matrix_sum = plus (matrix_list{:});
 
  ** An FTP object type based on libcurl has been implemented.  These
@@ -123,11 +120,11 @@ Summary of important user-visible changes for version 3.4:
 
  ** The behavior of library functions `ismatrix', `issquare', and
     `issymmetric' has been changed for better consistency.
-    
+
     * The `ismatrix' function now returns true for all numeric,
-      logical and character 2-D or N-D matrices.  Previously, `ismatrix' 
+      logical and character 2-D or N-D matrices.  Previously, `ismatrix'
       returned false if the first or second dimension was zero.
-      Hence, `ismatrix ([])' was false, 
+      Hence, `ismatrix ([])' was false,
       while `ismatrix (zeros (1,2,0))' was true.
 
     * The `issquare' function now returns a logical scalar, and is
@@ -137,12 +134,12 @@ Summary of important user-visible changes for version 3.4:
 
       The dimension is no longer returned.  As a result, `issquare ([])'
       now yields true.
-    
+
     * The `issymmetric' function now checks for symmetry instead of
       Hermitianness.  For the latter, ishermitian was created.  Also,
       logical scalar is returned rather than the dimension, so
       `issymmetric ([])' is now true.
-      
+
  ** Function handles are now aware of overloaded functions.  If a
     function is overloaded, the handle determines at the time of its
     reference which function to call.  A non-overloaded version does not
@@ -163,12 +160,12 @@ Summary of important user-visible changes for version 3.4:
     scalar, then the statement
 
       M += S;
- 
+
     will operate on M's data in-place if it is not shared by another
     variable, usually increasing both time and memory efficiency.
-    
+
     Only selected common combinations are affected, namely:
-    
+
       matrix += matrix
       matrix -= matrix
       matrix .*= matrix
@@ -214,10 +211,10 @@ Summary of important user-visible changes for version 3.4:
 
  ** More efficient matrix division handling.  Octave is now able to
     handle the expressions
-    
+
        M' \ V
        M.' \ V
-       V / M 
+       V / M
 
     (M is a matrix and V is a vector) more efficiently in certain cases.
     In particular, if M is triangular, all three expressions will be
@@ -228,7 +225,7 @@ Summary of important user-visible changes for version 3.4:
  ** More efficient handling of certain mixed real-complex matrix
     operations.  For instance, if RM is a real matrix and CM a complex
     matrix,
-    
+
       RM * CM
 
     can now be evaluated either as
@@ -276,11 +273,11 @@ Summary of important user-visible changes for version 3.4:
     of `strcat' has been vectorized and is now much more efficient when
     many strings are concatenated.  The `strcmpi' and `strncmpi'
     functions are now built-in functions, providing better performance.
- 
+
  ** Matlab-style ignoring input and output function arguments using
     tilde (~) is now supported.  Ignored output arguments may be
     detected from a function using the built-in function `isargout'.
-    For more details, consult the manual. 
+    For more details, consult the manual.
 
  ** The list datatype, deprecated since the introduction of cells, has
     been removed.
@@ -313,9 +310,9 @@ Summary of important user-visible changes for version 3.4:
     consistently use nnz unless you really want to use nzmax (i.e. the
     space allocated for nonzero elements).
 
-    Sparse concatenation is also affected, and concatenating sparse 
-    matrices, especially larger collections, is now significantly more 
-    efficient.  This applies to both the [] operator and the 
+    Sparse concatenation is also affected, and concatenating sparse
+    matrices, especially larger collections, is now significantly more
+    efficient.  This applies to both the [] operator and the
     cat/vertcat/horzcat functions.
 
  ** It is now possible to optionally employ the xGESDD LAPACK drivers
@@ -325,33 +322,33 @@ Summary of important user-visible changes for version 3.4:
     singular vectors are requested, but is reported to be somewhat less
     robust on highly ill-conditioned matrices.
 
- ** Configuration pseudo-variables, such as page_screen_output or 
-    confirm_recursive_rmdir (or the above mentioned svd_driver), now 
-    accept a "local" option as second argument, requesting the change 
+ ** Configuration pseudo-variables, such as page_screen_output or
+    confirm_recursive_rmdir (or the above mentioned svd_driver), now
+    accept a "local" option as second argument, requesting the change
     to be undone when the current function returns:
-        
+
     function [status, msg] = rm_rf (dir)
       confirm_recursive_rmdir (false, "local");
       [status, msg] = rmdir (dir, "s");
       ...
     endfunction
-    
-    Upon return, confirm_recursive_rmdir will be restored to the value 
-    it had on entry to the function, even if there were subsequent 
+
+    Upon return, confirm_recursive_rmdir will be restored to the value
+    it had on entry to the function, even if there were subsequent
     changes to the variable in function rm_rf or any of the functions
     it calls.
 
  ** pkg now accepts a -forge option for downloading and installing
-    packages from Octave Forge automatically.  For example, 
-    
+    packages from Octave Forge automatically.  For example,
+
       pkg install -forge general
-    
+
     will automatically download the latest release of the general
     package and attempt to install it. No automatic resolving of
     dependencies is provided.  Further,
 
       pkg list -forge
-    
+
     can be used to list all available packages.
 
   ** The internal data representation of structs has been completely
@@ -376,15 +373,15 @@ Summary of important user-visible changes for version 3.4:
 
   ** The following functions are new in Octave 3.4:
 
-       accumdim    erfcx        nfields      pqpnonneg  uigetdir 
-       bitpack     fileread     nth_element  quadcc     uigetfile  
-       bitunpack   fminbnd      onCleanup    randi      uiputfile    
-       blkmm       fskipl       pbaspect     repelems   uimenu  
+       accumdim    erfcx        nfields      pqpnonneg  uigetdir
+       bitpack     fileread     nth_element  quadcc     uigetfile
+       bitunpack   fminbnd      onCleanup    randi      uiputfile
+       blkmm       fskipl       pbaspect     repelems   uimenu
        cbrt        ifelse       pie3         reset      whitebg
-       curl        ishermitian  powerset     rsf2csf    
-       chop        isindex      ppder        saveas          
-       daspect     luupdate     ppint        strread          
-       divergence  merge        ppjumps      textread 
+       curl        ishermitian  powerset     rsf2csf
+       chop        isindex      ppder        saveas
+       daspect     luupdate     ppint        strread
+       divergence  merge        ppjumps      textread
 
   ** Using the image function to view images with external programs such
      as display, xv, and xloadimage is no longer supported.  The
@@ -393,13 +390,13 @@ Summary of important user-visible changes for version 3.4:
   ** The behavior of struct assignments to non-struct values has been
      changed.  Previously, it was possible to overwrite an arbitrary
      value:
-      
+
         a = 1;
         a.x = 2;
 
      This is no longer possible unless a is an empty matrix or cell
      array.
-  
+
   ** The dlmread function has been extended to allow specifying a custom
      value for empty fields.
 
@@ -410,7 +407,7 @@ Summary of important user-visible changes for version 3.4:
      anonymous function handle, if the function simply calls another
      function or handle with some of its parameters bound to certain
      values.  Example:
-     
+
        f = @(x) sum (x, 1);
 
      When f is called, the call is forwarded to @sum with the constant 1
@@ -421,34 +418,34 @@ Summary of important user-visible changes for version 3.4:
 
     The following functions were deprecated in Octave 3.0 and have been
     removed from Octave 3.4.
-                                           
-      beta_cdf         geometric_pdf        pascal_pdf      
-      beta_inv         geometric_rnd        pascal_rnd      
-      beta_pdf         hypergeometric_cdf   poisson_cdf     
-      beta_rnd         hypergeometric_inv   poisson_inv     
-      binomial_cdf     hypergeometric_pdf   poisson_pdf     
-      binomial_inv     hypergeometric_rnd   poisson_rnd     
-      binomial_pdf     intersection         polyinteg       
-      binomial_rnd     is_bool              setstr          
-      chisquare_cdf    is_complex           struct_contains 
-      chisquare_inv    is_list              struct_elements 
-      chisquare_pdf    is_matrix            t_cdf           
-      chisquare_rnd    is_scalar            t_inv           
-      clearplot        is_square            t_pdf           
-      clg              is_stream            t_rnd           
-      com2str          is_struct            uniform_cdf     
-      exponential_cdf  is_symmetric         uniform_inv     
-      exponential_inv  is_vector            uniform_pdf     
-      exponential_pdf  isstr                uniform_rnd     
-      exponential_rnd  lognormal_cdf        weibcdf         
-      f_cdf            lognormal_inv        weibinv         
-      f_inv            lognormal_pdf        weibpdf         
-      f_pdf            lognormal_rnd        weibrnd         
-      f_rnd            meshdom              weibull_cdf     
-      gamma_cdf        normal_cdf           weibull_inv     
-      gamma_inv        normal_inv           weibull_pdf     
-      gamma_pdf        normal_pdf           weibull_rnd     
-      gamma_rnd        normal_rnd           wiener_rnd      
+
+      beta_cdf         geometric_pdf        pascal_pdf
+      beta_inv         geometric_rnd        pascal_rnd
+      beta_pdf         hypergeometric_cdf   poisson_cdf
+      beta_rnd         hypergeometric_inv   poisson_inv
+      binomial_cdf     hypergeometric_pdf   poisson_pdf
+      binomial_inv     hypergeometric_rnd   poisson_rnd
+      binomial_pdf     intersection         polyinteg
+      binomial_rnd     is_bool              setstr
+      chisquare_cdf    is_complex           struct_contains
+      chisquare_inv    is_list              struct_elements
+      chisquare_pdf    is_matrix            t_cdf
+      chisquare_rnd    is_scalar            t_inv
+      clearplot        is_square            t_pdf
+      clg              is_stream            t_rnd
+      com2str          is_struct            uniform_cdf
+      exponential_cdf  is_symmetric         uniform_inv
+      exponential_inv  is_vector            uniform_pdf
+      exponential_pdf  isstr                uniform_rnd
+      exponential_rnd  lognormal_cdf        weibcdf
+      f_cdf            lognormal_inv        weibinv
+      f_inv            lognormal_pdf        weibpdf
+      f_pdf            lognormal_rnd        weibrnd
+      f_rnd            meshdom              weibull_cdf
+      gamma_cdf        normal_cdf           weibull_inv
+      gamma_inv        normal_inv           weibull_pdf
+      gamma_pdf        normal_pdf           weibull_rnd
+      gamma_rnd        normal_rnd           wiener_rnd
       geometric_cdf    pascal_cdf
       geometric_inv    pascal_inv
 
@@ -456,14 +453,14 @@ Summary of important user-visible changes for version 3.4:
     be removed from Octave 3.6 (or whatever version is the second major
     release after 3.2):
 
-      create_set          spcholinv    splu   
+      create_set          spcholinv    splu
       dmult               spcumprod    spmax
       iscommand           spcumsum     spmin
       israwcommand        spdet        spprod
       lchol               spdiag       spqr
       loadimage           spfind       spsum
       mark_as_command     sphcat       spsumsq
-      mark_as_rawcommand  spinv        spvcat 
+      mark_as_rawcommand  spinv        spvcat
       spatan2             spkron       str2mat
       spchol              splchol      unmark_command
       spchol2inv          split        unmark_rawcommand

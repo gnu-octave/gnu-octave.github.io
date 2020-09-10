@@ -1,12 +1,15 @@
-<!doctype html public "-//IETF//DTD HTML Strict//EN">
-<html>
-<head>
-<title>Notable Changes in Octave version 3</title>
-<link rel="stylesheet" type="text/css" href="octave.css" />
-</head>
+---
+layout: page
+title: GNU Octave Version 3
+menu: false
+permalink: NEWS-3.html
+---
 
-<body>
-<div id="title"><h1>News for Octave Version 3</h1></div>
+## Summary of important user-visible changes
+
+December 21, 2007
+
+{% include release_news_select.md %}
 
 <ul>
 <li>Compatibility with Matlab graphics is much better.  We now
@@ -66,7 +69,7 @@
       Additionally, these functions no longer have any effect on plots
       created with the Matlab-style plot commands
       (<tt>plot</tt>, <tt>line</tt>, <tt>mesh</tt>, <tt>semilogx</tt>,
-      etc.). 
+      etc.).
 
 <li>  Plot property values are not extensively checked.  Specifying
       invalid property values may produce unpredictible results.</li>
@@ -217,6 +220,3 @@
     distributions using the standard scale factor rather than one over
     the scale factor.
 </ul>
-
-</body>
-</html>

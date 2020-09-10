@@ -2,6 +2,7 @@
 layout: page
 title: Donate
 menu: true
+permalink: donate
 ---
 
 > **Octave development takes a lot of time and expertise.**

@@ -1,13 +1,17 @@
 ---
-layout: default
+layout: page
+title: GNU Octave Version 4.2
+menu: false
+permalink: NEWS-4.2.html
 ---
 
+## Summary of important user-visible changes
+
+November 13, 2016
+
+{% include release_news_select.md %}
+
 <pre>
-
-
-Summary of important user-visible changes for version 4.2:
----------------------------------------------------------
-
  ** The parser has been extended to accept, but ignore, underscore
     characters in numbers.  This facilitates writing more legible code
     by using '_' as a thousands separator or to group nibbles into bytes

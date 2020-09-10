@@ -2,6 +2,7 @@
 layout: page
 title: Support/Help
 menu: true
+permalink: support
 ---
 
 #### Contact the **user community**
