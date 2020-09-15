@@ -34,7 +34,8 @@ kramdown:
 include: []
 
 exclude:
-  - Makefile
   - Gemfile
   - Gemfile.lock
+  - Makefile
+  - README.md
   - .htaccess  # Needed for GNU Savannah
