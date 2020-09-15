@@ -1,7 +1,6 @@
 ---
 layout: page
 title: GNU Octave Version 2
-menu: false
 permalink: NEWS-2.html
 ---
 

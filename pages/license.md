@@ -1,7 +1,6 @@
 ---
 layout: page
 title: License
-menu: false
 permalink: license
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Copyright
-menu: false
 permalink: /copyright/
 ---
 

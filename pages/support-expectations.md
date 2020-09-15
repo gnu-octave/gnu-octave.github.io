@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Support Expectations
-menu: false
 permalink: support-expectations
 ---
 

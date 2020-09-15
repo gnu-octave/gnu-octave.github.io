@@ -1,7 +1,6 @@
 ---
 layout: page
 title: GNU Octave Version 3.8
-menu: false
 permalink: NEWS-3.8.html
 ---
 
