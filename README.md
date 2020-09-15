@@ -1,47 +1,74 @@
 # GNU Octave Website development
 
-This is the [https://www.octave.org][1] website development repository.
+This is the <https://www.octave.org> website development repository.
 
 The development and deployment workflow in short:
 
-1. The website is developed in this [web-octave][2] Mercurial repository.
-2. Static HTML pages are generated from this [web-octave][2] repository
-   and are deployed at the [Savannah CVS][3] repository.
-3. After deploying the static pages, they are visible from
-   [https://www.octave.org][1], that redirects to
-   [https://www.gnu.org/software/octave][4].
+1. The website is developed at two synchronized locations:
+   - <https://hg.octave.org/web-octave> (Mercurial)
+   - <https://github.com/gnu-octave/gnu-octave.github.io> (Git)
 
-[1]: https://www.octave.org
-[2]: https://hg.octave.org/web-octave
-[3]: https://web.cvs.savannah.gnu.org/viewvc/octave/?root=octave
-[4]: https://www.gnu.org/software/octave
+2. Static HTML pages are generated from these repositories
+   and deployed at
+   - <https://web.cvs.savannah.gnu.org/viewvc/octave/?root=octave> (Savannah)
+   - <https://gnu-octave.github.io/> (GitHub Pages)
+
+3. The deployment to GitHub Pages happens automatically by pushing to the
+   respective repository.  The deployment on Savannah is more complicated and
+   described below in detail and is visible at <https://www.octave.org> that
+   redirects to <https://www.gnu.org/software/octave>.
 
 
-
-## Development
-
-### Getting the sources
+## Simple website changes / contributions
 
 Anyone is free to clone this website development repository, simply type
 
-    hg clone https://hg.octave.org/web-octave
+    git clone https://github.com/gnu-octave/gnu-octave.github.io.git
+    hg  clone https://hg.octave.org/web-octave
 
 to get anonymous read access without writing privileges.
-To push your changes, please contact the octave developers at
-https://octave.discourse.group/.
 
-If you already have writing permissions for this repository,
-you should clone the repository using
+If you want submit changes/additions, please create a
+[**pull request**](https://docs.github.com/en/github/getting-started-with-github/github-glossary#pull-request)
+on GitHub or contact the Octave developers at <https://octave.discourse.group/>.
+
+> **Note:** Changes made to the GitHub page repository are only visible there.
+> To change <https://www.octave.org>, the Savannah CVS repository must be
+> updated (see below).
+
+
+### Add a new RSS post
+
+Duplicate another post in the subdirectory `_posts` and adjust the filename,
+especially the date.
+
+**Be sure to choose the correct categories!!**
+
+`categories: news release` is reserved for release announcements, those posts
+are also displayed inside the Octave GUI.  Consider choosing another category
+like `categories: news` or alike for less important news.
+
+
+## Advanced development
+
+### Synchronize Mercurial and GitHub repositories
+
+You need writing permissions to the Mercurial repository
 
     hg clone ssh://gnuoctave@octave.org/hg/web-octave
 
+Add to `.hg/hgrc`
+
+    [paths]
+    default = ssh://gnuoctave@hg-new.octave.org/hg/web-octave
+    github = git+ssh://git@github.com:gnu-octave/gnu-octave.github.io.git
 
 
 ### Building requisites
 
-To build the static website, you need to install [Ruby][6] and [Bundler][7].
-For Debian/Ubuntu please perform the following setup fist.  For other Linux
-distributions this command might change.
+To build the static website offline, you need to install [Ruby][] and
+[Bundler][].  For Debian/Ubuntu please perform the following setup fist.
+For other Linux distributions this command might change.
 
     sudo apt-get install ruby-full build-essential zlib1g-dev
 
@@ -52,19 +79,19 @@ dependencies for the static Octave website by running
 
     bundle install
 
-from within the checked-out [hg development repository][2].
+from within the checked-out website development repository (Mercurial or
+GitHub).
 
-For the responsive webpages, we internally use the [Foundation 6][8]
-framework.  All necessary files are already included inside this
-[hg development repository][2].
+For the responsive webpages, we internally use the [Foundation 6][Foundation]
+framework.  All necessary files are already included inside this website
+development repository.
 
-[6]: https://www.ruby-lang.org/
-[7]: https://bundler.io/
-[8]: https://get.foundation/sites/docs/
+[Ruby]: https://www.ruby-lang.org/
+[Bundler]: https://bundler.io/
+[Foundation]: https://get.foundation/sites/docs/
 
 
-
-### Building the static website locally
+### Building the static website offline
 
 All relevant information for Bundler to build the static website are located in
 the files `_config.yml`, `Gemfile`, and `Gemfile.lock`.  Typing
@@ -84,23 +111,9 @@ and rebuilds the whole static website automatically, as it monitors any
 file changes.
 
 
+### Deploying the static website online at Savannah CVS
 
-### Add a new RSS post
-
-Duplicate another post in the subdirectory `_posts` and adjust the filename,
-especially the date.
-
-**Be sure to choose the correct categories!!**
-
-`categories: news release` is reserved for release announcements, those posts
-are also displayed inside the Octave GUI.  Consider choosing another category
-like `categories: news` or alike for less important news.
-
-
-
-### Deploying the static website online
-
-For this step you need to have writing permissions to the [Savannah CVS][3]
+For this step you need to have writing permissions to the Savannah CVS
 repository.  Usually, it should suffice to type
 
     make deploy
