@@ -1,5 +1,10 @@
 /* Custom classes */
 
+footer {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 .octave-logo a,
 .octave-logo a:hover {
   color: #FFF;
