@@ -8,7 +8,15 @@ permalink: NEWS-1.html
 
 {% include release_news_select.md %}
 
-<h2>Summary of changes for version 1.1.1</h2>
+{::options parse_block_html="true" /}
+<div class="panel callout">
+* TOC
+{:toc}
+</div>
+{::options parse_block_html="false" /}
+
+
+### Version 1.1.1
 
 <pre>
   * New built-in variables, default_return_value and
@@ -62,7 +70,7 @@ permalink: NEWS-1.html
   * More bug fixes.
 </pre>
 
-<h2>Summary of changes for version 1.1.0</h2>
+### Version 1.1.0
 
 <pre>
   * Octave now requires g++ 2.6.3 or later.  This change is necessary
@@ -596,27 +604,25 @@ permalink: NEWS-1.html
   * Lots of bug fixes.
 </pre>
 
-<h2>Summary of changes for version 1.0</h2>
+### Version 1.0
 
-<pre>
-  * C-style I/O functions now handle files referenced by name or by
-    number more consistently.
-</pre>
+- C-style I/O functions now handle files referenced by name or by
+  number more consistently.
 
-<h2>Summary of changes for version 0.83</h2>
 
-<pre>
-  * Loading global symbols should work now.
+### Version 0.83
 
-  * Clearing the screen doesn't reprint the prompt unnecessarily.
+- Loading global symbols should work now.
 
-  * The operations <complex scalar> OP <real matrix> for OP == +, -,
-    *, or ./ no longer crash Octave.
+- Clearing the screen doesn't reprint the prompt unnecessarily.
 
-  * More portability and configuration fixes.
-</pre>
+- The operations `<complex scalar> OP <real matrix>` for `OP == +, -, *, or ./`
+  no longer crash Octave.
 
-<h2>Summary of changes for version 0.82</h2>
+- More portability and configuration fixes.
+
+
+### Version 0.82
 
 <pre>
   * Octave now comes with a reference card.
@@ -650,7 +656,7 @@ permalink: NEWS-1.html
   * Various other bug and portability fixes.
 </pre>
 
-<h2>Summary of changes for version 0.81</h2>
+### Version 0.81
 
 <pre>
   * Octave no longer dumps core if you try to define a function in
@@ -670,7 +676,7 @@ permalink: NEWS-1.html
     at all.
 </pre>
 
-<h2>Summary of changes for version 0.80</h2>
+### Version 0.80
 
 <pre>
   * I have started working on a manual for the C++ classes.  At this
@@ -809,7 +815,7 @@ permalink: NEWS-1.html
     the compiler command line.
 </pre>
 
-<h2>Summary of changes for version 0.79</h2>
+### Version 0.79
 
 <pre>
   * New control systems functions:
@@ -824,7 +830,7 @@ permalink: NEWS-1.html
     value as a second return value.
 </pre>
 
-<h2>Summary of changes for version 0.78</h2>
+### Version 0.78
 
 <pre>
   * Octave's handling of global variables has been completely
@@ -949,7 +955,7 @@ permalink: NEWS-1.html
   * Line and column information is included in more error messages.
 </pre>
 
-<h2>Summary of changes for version 0.77</h2>
+### Version 0.77
 
 <pre>
   * Improved help.  The command `help -i topic' now uses the GNU Info
@@ -959,7 +965,7 @@ permalink: NEWS-1.html
   * New function: chol -- Cholesky factorization.
 </pre>
 
-<h2>Summary of changes for version 0.76</h2>
+### Version 0.76
 
 <pre>
   * Better run-time error messages.  Many now include line and column
@@ -981,7 +987,7 @@ permalink: NEWS-1.html
   * Long options (--help, --version, etc.) are supported.
 </pre>
 
-<h2>Summary of changes for version 0.75</h2>
+### Version 0.75
 
 <pre>
   * The documentation is much more complete, but still could use a lot
@@ -1028,7 +1034,7 @@ permalink: NEWS-1.html
       tzero           -- Compute the transmission zeros of [A,B,C,D].
 </pre>
 
-<h2>Summary of changes for version 0.74</h2>
+### Version 0.74
 
 <pre>
   * Formal parameters to functions are now always considered to be
@@ -1050,7 +1056,7 @@ permalink: NEWS-1.html
     will work correctly.
 </pre>
 
-<h2>Summary of changes for version 0.73</h2>
+### Version 0.73
 
 <pre>
   * Saving and loading global variables works correctly now.
@@ -1091,7 +1097,7 @@ permalink: NEWS-1.html
                 (with others to possibly be added later).
 
   * Octave now prints a warning if it finds anything other than
-    whitespace or comments after the final `end' or `endfunction'
+    whitespace or comments after the final `end` or `endfunction`
     statement.
 
   * The bodies of functions, and the for, while, and if commands are
@@ -1103,7 +1109,7 @@ permalink: NEWS-1.html
     about where to find QPSOL and NPSOL are in the file README.NLP.
 </pre>
 
-<h2>Summary of changes for version 0.72</h2>
+### Version 0.72
 
 <pre>
   * For numeric output, columns are now lined up on the decimal point.
@@ -1246,7 +1252,7 @@ permalink: NEWS-1.html
 
 </pre>
 
-<h2>Summary of changes for version 0.71</h2>
+### Version 0.71
 
 <pre>
   * Much improved plotting facility.  With this release, Octave does
@@ -1320,7 +1326,7 @@ permalink: NEWS-1.html
   * Use of clear inside functions is now a parse error.
 </pre>
 
-<h2>Summary of changes for version 0.70</h2>
+### Version 0.70
 
 <pre>
   * Better parse error diagnostics.  For interactive input, you get
@@ -1357,7 +1363,7 @@ permalink: NEWS-1.html
     evaluating expressions.
 </pre>
 
-<h2>Summary of changes for version 0.69</h2>
+### Version 0.69
 
 <pre>
   * Multiple assignments are now possible, so statements like
@@ -1388,7 +1394,7 @@ permalink: NEWS-1.html
     library for those systems that don't have them.
 </pre>
 
-<h2>Summary of changes for version 0.68</h2>
+### Version 0.68
 
 <pre>
   * New functions:
@@ -1397,7 +1403,7 @@ permalink: NEWS-1.html
       input -- print a prompt and get user input.
 </pre>
 
-<h2>Summary of changes for version 0.67</h2>
+### Version 0.67
 
 <pre>
   * New functions:
@@ -1450,7 +1456,7 @@ permalink: NEWS-1.html
     I, j, or J.
 </pre>
 
-<h2>Summary of changes for version 0.66</h2>
+### Version 0.66
 
 <pre>
   * Logical unary not operator (~ or !) now works for complex.
@@ -1473,7 +1479,7 @@ permalink: NEWS-1.html
     possible to have more than one version of the interpreter installed.
 </pre>
 
-<h2>Summary of changes for version 0.63</h2>
+### Version 0.63
 
 <pre>
   * The reshape function works again.
@@ -1483,7 +1489,7 @@ permalink: NEWS-1.html
     like `3.3 * i' to be evaluated.
 </pre>
 
-<h2>Summary of changes for version 0.61</h2>
+### Version 0.61
 
 <pre>
   * Octave has been successfully compiled using gcc 2.3.3 and libg++ 2.3.
@@ -1494,14 +1500,14 @@ permalink: NEWS-1.html
     System V systems).
 </pre>
 
-<h2>Summary of changes for version 0.57</h2>
+### Version 0.57
 
 <pre>
   * The C-like formatted print functions printf, fprintf, and sprintf
     finally work.
 </pre>
 
-<h2>Summary of changes for version 0.56</h2>
+### Version 0.56
 
 <pre>
   * By default, octave prints a short disclaimer when it starts.
@@ -1521,7 +1527,7 @@ permalink: NEWS-1.html
       logm -- matrix logarithm.
 </pre>
 
-<h2>Summary of changes for version 0.55</h2>
+### Version 0.55
 
 <pre>
   * The following (C-style) backslash escape sequences work in quoted
@@ -1557,7 +1563,7 @@ permalink: NEWS-1.html
     value for this variable is 'false'.
 </pre>
 
-<h2>Summary of changes for version 0.52</h2>
+### Version 0.52
 
 <pre>
   * Name completion works for function and variable names currently in
@@ -1594,15 +1600,14 @@ permalink: NEWS-1.html
     built-in or currently compiled functions.
 </pre>
 
-<h2>Summary of changes for version 0.51</h2>
+### Version 0.51
 
-<pre>
-  * Major overhaul of array indexing.
+- Major overhaul of array indexing.
 
-  * The colloc function actually works now.
-</pre>
+- The colloc function actually works now.
 
-<h2>Summary of changes for version 0.50</h2>
+
+### Version 0.50
 
 <pre>
   * The lsode and dassl functions now return the states only,

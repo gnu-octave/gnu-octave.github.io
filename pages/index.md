@@ -4,10 +4,8 @@ permalink: index
 ---
 
 <div class="primary callout" data-closable>
-  <h5>
-    Need help? Try out our new user and developer forum
-    <a href="https://octave.discourse.group/">Octave Discourse</a>.
-  </h5>
+  Need help? Try out our new user and developer forum
+  <a href="https://octave.discourse.group/">Octave Discourse</a>.
   <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
     <span aria-hidden="true">&times;</span>
   </button>
@@ -27,7 +25,7 @@ permalink: index
             alt="GNU Octave logo">
       GNU Octave
     </h2>
-    <h4>Scientific Programming Language</h4>
+    <p><b>Scientific Programming Language</b></p>
     <ul>
       <li>Powerful mathematics-oriented syntax with built-in 2D/3D plotting and visualization tools</li>
       <li>Free software, runs on GNU/Linux, macOS, BSD, and Microsoft Windows</li>
@@ -39,6 +37,7 @@ permalink: index
     </div>
   </div>
 </div>
+
 
 ### Syntax Examples
 

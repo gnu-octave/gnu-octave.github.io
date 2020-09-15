@@ -10,6 +10,14 @@ January 15, 2012
 
 {% include release_news_select.md %}
 
+{::options parse_block_html="true" /}
+<div class="panel callout">
+* TOC
+{:toc}
+</div>
+{::options parse_block_html="false" /}
+
+
 <pre>
  ** The PCRE library is now required to build Octave.  If a pre-compiled
     package does not exist for your system, you can find PCRE sources

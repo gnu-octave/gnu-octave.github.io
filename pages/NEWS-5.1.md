@@ -17,6 +17,7 @@ February 23, 2019
 </div>
 {::options parse_block_html="false" /}
 
+
 ### General improvements
 
 - The Octave plotting system now supports high resolution screens,
@@ -296,7 +297,7 @@ and have been removed from Octave 5.
   `text`      | `erasemode`       |
 
 
-### Alphabetical list of new functions added in 5
+### Alphabetical list of new functions added in Octave 5
 
 - `clearvars`
 - `isfile`

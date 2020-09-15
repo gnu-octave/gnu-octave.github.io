@@ -10,6 +10,14 @@ February 8, 2011
 
 {% include release_news_select.md %}
 
+{::options parse_block_html="true" /}
+<div class="panel callout">
+* TOC
+{:toc}
+</div>
+{::options parse_block_html="false" /}
+
+
 <pre>
  ** IMPORTANT note about binary incompatibility in this release:
 

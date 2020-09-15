@@ -10,6 +10,14 @@ June 5, 2009
 
 {% include release_news_select.md %}
 
+{::options parse_block_html="true" /}
+<div class="panel callout">
+* TOC
+{:toc}
+</div>
+{::options parse_block_html="false" /}
+
+
 <pre>
  ** Compatibility with Matlab graphics has been improved.
 

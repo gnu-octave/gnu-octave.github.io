@@ -8,45 +8,54 @@ permalink: NEWS-2.html
 
 {% include release_news_select.md %}
 
-<h2>Summary of changes for version 2.0.17</h2>
+{::options parse_block_html="true" /}
+<div class="panel callout">
+* TOC
+{:toc}
+</div>
+{::options parse_block_html="false" /}
 
-<p>This will probably be the last release in the 2.0.x series.  There are
-a few bug fixes, but the major change is to print a message saying
-that Octave 2.0.x cannot be compiled with gcc 3.0.x or gcc 2.96.  If
-you want to build Octave 2.0.x, you will need to use gcc 2.95.x.  If
-you want to use gcc 3.0.x or some later version, you should be using
-the Octave 2.1.35 sources or a more recent version.</p>
 
-<h2>Summary of changes for version 2.0.16</h2>
+### Version 2.0.17
 
-<p>This is primarily a bug-fixing release.</p>
+- This will probably be the last release in the 2.0.x series.  There are
+  a few bug fixes, but the major change is to print a message saying
+  that Octave 2.0.x cannot be compiled with gcc 3.0.x or gcc 2.96.  If
+  you want to build Octave 2.0.x, you will need to use gcc 2.95.x.  If
+  you want to use gcc 3.0.x or some later version, you should be using
+  the Octave 2.1.35 sources or a more recent version.
 
-<h2>Summary of changes for version 2.0.15</h2>
 
-<p>This is primarily a bug-fixing release.</p>
+### Version 2.0.16
 
-<ul>
-<li>If you are using GNU Emacs 19.34 or earlier, you will need to add
-    the following code to your ~/.emacs file in order to use Emacs
-    Octave mode:
-<pre>
-      ;; Set up the custom library.
-      ;; taken from http://www.dina.kvl.dk/~abraham/custom/
-      (eval-and-compile
-	(condition-case ()
-	    (require 'custom)
-	  (error nil))
-	(if (and (featurep 'custom) (fboundp 'custom-declare-variable))
-	    nil ;; We've got what we needed
-	  ;; We have the old custom-library, hack around it!
-	  (defmacro defgroup (&rest args)
-	    nil)
-	  (defmacro defcustom (var value doc &rest args)
-	    (` (defvar (, var) (, value) (, doc))))))
-</pre></li>
-</ul>
+- This is primarily a bug-fixing release.
 
-<h2>Summary of changes for version 2.0.14</h2>
+
+### Version 2.0.15
+
+- This is primarily a bug-fixing release.
+
+- If you are using GNU Emacs 19.34 or earlier, you will need to add
+  the following code to your `~/.emacs` file in order to use Emacs
+  Octave mode:
+  ```
+  ;; Set up the custom library.
+  ;; taken from http://www.dina.kvl.dk/~abraham/custom/
+  (eval-and-compile
+    (condition-case ()
+        (require 'custom)
+      (error nil))
+    (if (and (featurep 'custom) (fboundp 'custom-declare-variable))
+        nil ;; We've got what we needed
+      ;; We have the old custom-library, hack around it!
+      (defmacro defgroup (&rest args)
+        nil)
+      (defmacro defcustom (var value doc &rest args)
+        (` (defvar (, var) (, value) (, doc))))))
+  ```
+
+
+### Version 2.0.14
 
 This release fixes numerous bugs and adds the following new features:
 
@@ -526,13 +535,15 @@ send a string to the gnuplot subprocess
 
 <li>The mkoctfile script now accepts -DDEF options and passes them on
     to the C and C++ compilers.</li>
-</ul
->
-<h2>Summary of changes for version 2.0.13</h2>
+</ul>
 
-<p>This is a bug-fixing release.  There are no new user-visible features.</p>
 
-<h2>Summary of changes for version 2.0.12</h2>
+### Version 2.0.13
+
+- This is a bug-fixing release.  There are no new user-visible features.
+
+
+### Version 2.0.12
 
 <ul>
 <li>Tilde expansion is once again performed on the directories listed
@@ -575,20 +586,20 @@ send a string to the gnuplot subprocess
     solution.  If anyone has a better idea, I'd love to hear it.</li>
 </ul>
 
-<h2>Summary of changes for version 2.0.11</h2>
 
-<ul>
-<li>There are two new built-in variables that control how global
-    variables are initialized.  If `initialize_global_variables' is
-    nonzero, global variables are initialized to the value of the
-    variable `default_global_variable_value'.  The default value of
-    `initialize_global_variables' is 0 (1 if you use --traditional)
-    and `default_global_variable_value' is undefined (the empty matrix
-    if you use --traditional).  The default settings are compatible
-    with versions of Octave before 2.0.10.</li>
-</ul>
+### Version 2.0.11
 
-<h2>Summary of changes for version 2.0.10</h2>
+- There are two new built-in variables that control how global
+  variables are initialized.  If `initialize_global_variables` is
+  nonzero, global variables are initialized to the value of the
+  variable `default_global_variable_value`.  The default value of
+  `initialize_global_variables` is 0 (1 if you use `--traditional`)
+  and `default_global_variable_value` is undefined (the empty matrix
+  if you use `--traditional`).  The default settings are compatible
+  with versions of Octave before 2.0.10.
+
+
+### Version 2.0.10
 
 <ul>
 <li>The built-in variable `PWD' has been removed.  If you need to get
@@ -654,10 +665,10 @@ send a string to the gnuplot subprocess
     libstdc++ is included with the compiler distribution.</li>
 </ul>
 
-<h2>Summary of changes for version 2.0.9</h2>
 
-<p>This is a bug-fixing release, but there is one new user-visible
-feature:</p>
+### Version 2.0.9
+
+- This is a bug-fixing release, but there is one new user-visible feature:
 
 <ul>
 <li>It is now possible to specify a label for lines in the plot key
@@ -669,7 +680,8 @@ feature:</p>
     the line in the key to be `sin(x)'</li>
 </ul>
 
-<h2>Summary of changes for version 2.0.8</h2>
+
+### Version 2.0.8
 
 <p>This is a bug-fixing release.  There are only a few new user-visible
 features.</p>
@@ -682,11 +694,13 @@ features.</p>
     files from multiple source and object files.</li>
 </ul>
 
-<h2>Summary of changes for version 2.0.7</h2>
 
-<p>This is a bug-fixing release.  There are no new user-visible features.</p>
+### Version 2.0.7
 
-<h2>Summary of changes for version 2.0.6</h2>
+- This is a bug-fixing release.  There are no new user-visible features.
+
+
+### Version 2.0.6
 
 <p>This is primarily a bug-fixing release.  There are only a few new
 user-visilbe features.</p>
@@ -701,7 +715,8 @@ user-visilbe features.</p>
     because they are not free software.</li>
 </ul>
 
-<h2>Summary of changes for version 2.0.5</h2>
+
+### Version 2.0.5
 
 <ul>
 <li>A `switch' statement is now available.  See the Statements chapter
@@ -711,7 +726,8 @@ user-visilbe features.</p>
 <li>More tests.</li>
 </ul>
 
-<h2>Summary of changes for version 2.0.4</h2>
+
+### Version 2.0.4
 
 <ul>
 <li>It is now possible to use commands like ls, save, and cd as simple
@@ -723,7 +739,8 @@ user-visilbe features.</p>
     normal functions (for example, load ("foo", "x", "y", "z")).</li>
 </ul>
 
-<h2>Summary of changes for version 2.0.3</h2>
+
+### Version 2.0.3
 
 <ul>
 <li>The manual has been completely revised and now corresponds much
@@ -751,9 +768,10 @@ user-visilbe features.</p>
     Binary Distributions section of the manual for more details.</li>
 </ul>
 
-<h2>Summary of changes for version 2.0.2</h2>
 
-<ul></li>
+### Version 2.0.2
+
+<ul>
 <li>Octave now stops executing commands from a script file if an error
     is encountered.</li>
 <li>The return, and break commands now cause Octave to quit executing
@@ -769,14 +787,14 @@ user-visilbe features.</p>
 <dd>pause execution for a specified number of microseconds</dd>
 </dl></li>
 </ul>
-</pre>
 
-<h2>Summary of changes for version 2.0.1</h2>
 
-<p>Other than bug fixes, there were no user-visible changes in version
-2.0.1.
+### Version 2.0.1
 
-<h2>Summary of changes for version 2.0</h2>
+- Other than bug fixes, there were no user-visible changes in version 2.0.1.
+
+
+### Version 2.0
 
 <p><ul>
 <li>The set and show commands for setting and displaying gnuplot
@@ -1078,7 +1096,7 @@ user-visilbe features.</p>
 <dd>convert to lower case</dd>
 <dt><b>toupper</b></dt>
 <dd>convert to upper case</dd>
-</dl></li>
+</dl>
 <li>New function, fgetl.  Both fgetl and fgets accept an optional
     second argument that specifies a maximum number of characters to
     read, and the function fgets is now compatible with Matlab.</li>
@@ -1267,5 +1285,5 @@ user-visilbe features.</p>
 <li>There is a new script, mkoctfile, that can be used to create .oct
     files suitable for dynamic linking.</li>
 <li>Many more bug fixes.</li>
-<li>ChangeLogs are now kept in each subdirectory.</li></li>
+<li>ChangeLogs are now kept in each subdirectory.</li>
 </ul>

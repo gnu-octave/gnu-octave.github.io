@@ -10,6 +10,14 @@ November 13, 2016
 
 {% include release_news_select.md %}
 
+{::options parse_block_html="true" /}
+<div class="panel callout">
+* TOC
+{:toc}
+</div>
+{::options parse_block_html="false" /}
+
+
 <pre>
  ** The parser has been extended to accept, but ignore, underscore
     characters in numbers.  This facilitates writing more legible code

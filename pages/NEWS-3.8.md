@@ -10,6 +10,14 @@ December 27, 2013
 
 {% include release_news_select.md %}
 
+{::options parse_block_html="true" /}
+<div class="panel callout">
+* TOC
+{:toc}
+</div>
+{::options parse_block_html="false" /}
+
+
 <pre>
   ** One of the biggest new features for Octave 3.8 is a graphical user
      interface.  It is the one thing that users have requested most

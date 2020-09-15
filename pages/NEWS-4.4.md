@@ -10,6 +10,16 @@ April 30, 2018
 
 {% include release_news_select.md %}
 
+{::options parse_block_html="true" /}
+<div class="panel callout">
+* TOC
+{:toc}
+</div>
+{::options parse_block_html="false" /}
+
+
+### General improvements
+
 <pre>
  ** A graphical Variable Editor has been added to the GUI interface.
     It uses a spreadsheet-like interface for quick, intuitive editing
@@ -130,6 +140,14 @@ April 30, 2018
     Java objects.  The latter change was made for Matlab compatibility.
     Use ishghandle or isgraphics if it is important not to include Java
     objects.
+
+ ** The "Octave:undefined-return-values" warning ID is obsolete.  Octave
+    now throws an error for any attempts to assign undefined values that
+    might be returned from functions.
+
+ ** The header file oct-alloc.h has been removed along with the macros
+    that it defined (DECLARE_OCTAVE_ALLOCATOR, DEFINE_OCTAVE_ALLOCATOR,
+    and DEFINE_OCTAVE_ALLOCATOR2).
 
  ** The pkg command now accepts a URL as an argument, allowing a valid
     Octave package to be installed from any remote host with one command,
@@ -267,124 +285,119 @@ April 30, 2018
 
       ntsc2rgb
       rgb2ntsc
-
- ** Other new functions added in 4.4:
-
-      bounds
-      camlookat
-      camorbit
-      campos
-      camroll
-      camtarget
-      camup
-      camva
-      camzoom
-      corrcoef
-      cosint
-      decic
-      erase
-      gammaincinv
-      getframe
-      groot
-      gsvd
-      hgtransform
-      humps
-      integral
-      integral2
-      integral3
-      isgraphics
-      isstring
-      mad
-      ode15i
-      ode15s
-      openvar
-      quad2d
-      repelem
-      rgb2gray
-      rticks
-      sinint
-      tfqmr
-      thetaticks
-      vecnorm
-      winqueryreg
-      xticklabels
-      xticks
-      yticklabels
-      yticks
-      zticklabels
-      zticks
-
- ** Deprecated functions.
-
-    The following functions have been deprecated in Octave 4.4 and will
-    be removed from Octave 6 (or whatever version is the second major
-    release after 4.4):
-
-      Function             | Replacement
-      ---------------------|------------------
-      chop                 | sprintf for visual results
-      desktop              | isguirunning
-      tmpnam               | tempname
-      toascii              | double
-      java2mat             | __java2mat__
-
-
- ** The following functions were deprecated in Octave 4.0 and have been
-    removed from Octave 4.4.
-
-      allow_noninteger_range_as_index
-      bicubic
-      delaunay3
-      do_braindead_shortcircuit_evaluation
-      dump_prefs
-      find_dir_in_path
-      finite
-      fmod
-      fnmatch
-      gmap40
-      loadaudio
-      luinc
-      mouse_wheel_zoom
-      nfields
-      octave_tmp_file_name
-      playaudio
-      saveaudio
-      setaudio
-      syl
-      usage
-
- ** The "Octave:undefined-return-values" warning ID is obsolete.  Octave
-    now throws an error for any attempts to assign undefined values that
-    might be returned from functions.
-
- ** Deprecated graphics properties.
-
-    The following properties or allowed corresponding values have been
-    deprecated in Octave 4.4 and will be removed from Octave 6 (or whatever
-    version is the second major release after 4.4):
-
-      Object               | Property                | Value
-      ---------------------|-------------------------|-------------------
-      figure               | doublebuffer            |
-                           | mincolormap             |
-                           | wvisual                 |
-                           | wvisualmode             |
-                           | xdisplay                |
-                           | xvisual                 |
-                           | xvisualmode             |
-      axes                 | drawmode                |
-      annotation           | edgecolor ("rectangle") |
-      text                 | fontweight              | "demi" and "light"
-      uicontrol            | fontweight              | "demi" and "light"
-      uipanel              | fontweight              | "demi" and "light"
-      uibuttongroup        | fontweight              | "demi" and "light"
-
- ** The rectangle and ellipse annotation property "edgecolor" has been
-    deprecated and will be removed from Octave 6 (or whatever version
-    is the second major release after 4.4).  Use the property "color"
-    instead.
-
- ** The header file oct-alloc.h has been removed along with the macros
-    that it defined (DECLARE_OCTAVE_ALLOCATOR, DEFINE_OCTAVE_ALLOCATOR,
-    and DEFINE_OCTAVE_ALLOCATOR2).
 </pre>
+
+
+### Deprecated functions and properties
+
+The following functions and properties have been deprecated in Octave 4.4
+and will be removed from Octave 6 (or whatever version is the second major
+release after 4.4):
+
+- Functions
+
+  Function             | Replacement
+  ---------------------|-----------------------------
+  `chop`               | `sprintf` for visual results
+  `desktop`            | `isguirunning`
+  `tmpnam`             | `tempname`
+  `toascii`            | `double`
+  `java2mat`           | `__java2mat__`
+
+
+- Graphics properties
+
+  Object               | Property                | Value
+  ---------------------|-------------------------|-------------------
+  figure               | doublebuffer            |
+                       | mincolormap             |
+                       | wvisual                 |
+                       | wvisualmode             |
+                       | xdisplay                |
+                       | xvisual                 |
+                       | xvisualmode             |
+  axes                 | drawmode                |
+  annotation           | edgecolor ("rectangle") |
+  text                 | fontweight              | "demi" and "light"
+  uicontrol            | fontweight              | "demi" and "light"
+  uipanel              | fontweight              | "demi" and "light"
+  uibuttongroup        | fontweight              | "demi" and "light"
+
+- The `rectangle` and `ellipse` annotation property `"edgecolor"` has been
+  deprecated and will be removed from Octave 6 (or whatever version
+  is the second major release after 4.4).  Use the property `"color"`
+  instead.
+
+
+### Removed functions
+
+The following functions were deprecated in Octave 4.0 and have been
+removed from Octave 4.4.
+
+- `allow_noninteger_range_as_index`
+- `bicubic`
+- `delaunay3`
+- `do_braindead_shortcircuit_evaluation`
+- `dump_prefs`
+- `find_dir_in_path`
+- `finite`
+- `fmod`
+- `fnmatch`
+- `gmap40`
+- `loadaudio`
+- `luinc`
+- `mouse_wheel_zoom`
+- `nfields`
+- `octave_tmp_file_name`
+- `playaudio`
+- `saveaudio`
+- `setaudio`
+- `syl`
+- `usage`
+
+
+### Alphabetical list of new functions added in Octave 4.4
+
+- `bounds`
+- `camlookat`
+- `camorbit`
+- `campos`
+- `camroll`
+- `camtarget`
+- `camup`
+- `camva`
+- `camzoom`
+- `corrcoef`
+- `cosint`
+- `decic`
+- `erase`
+- `gammaincinv`
+- `getframe`
+- `groot`
+- `gsvd`
+- `hgtransform`
+- `humps`
+- `integral`
+- `integral2`
+- `integral3`
+- `isgraphics`
+- `isstring`
+- `mad`
+- `ode15i`
+- `ode15s`
+- `openvar`
+- `quad2d`
+- `repelem`
+- `rgb2gray`
+- `rticks`
+- `sinint`
+- `tfqmr`
+- `thetaticks`
+- `vecnorm`
+- `winqueryreg`
+- `xticklabels`
+- `xticks`
+- `yticklabels`
+- `yticks`
+- `zticklabels`
+- `zticks`

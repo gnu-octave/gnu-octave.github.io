@@ -1,5 +1,13 @@
 /* Custom classes */
 
+h3, h4 {
+  margin-top: 1em;
+}
+
+h3.entry-title {
+  margin-top: 0em;
+}
+
 footer {
   margin-top: 2em;
   margin-bottom: 2em;

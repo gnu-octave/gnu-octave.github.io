@@ -10,6 +10,14 @@ May 23, 2015
 
 {% include release_news_select.md %}
 
+{::options parse_block_html="true" /}
+<div class="panel callout">
+* TOC
+{:toc}
+</div>
+{::options parse_block_html="false" /}
+
+
 <pre>
  ** A graphical user interface is now the default when running Octave
     interactively.  The start-up option --no-gui will run the familiar

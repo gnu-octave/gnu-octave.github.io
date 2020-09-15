@@ -10,6 +10,14 @@ December 21, 2007
 
 {% include release_news_select.md %}
 
+{::options parse_block_html="true" /}
+<div class="panel callout">
+* TOC
+{:toc}
+</div>
+{::options parse_block_html="false" /}
+
+
 <ul>
 <li>Compatibility with Matlab graphics is much better.  We now
     have some graphics features that work like Matlab's Handle
