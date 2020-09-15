@@ -2,7 +2,7 @@
 layout: page
 title: News
 menu: true
-permalink: news
+permalink: news.html
 ---
 
 {% for post in site.posts %}
