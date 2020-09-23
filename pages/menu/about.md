@@ -64,7 +64,7 @@ Since then, Octave has been through several major revisions,
 is included with [Debian GNU/Linux](https://www.debian.org/),
 [openSUSE](https://www.opensuse.org/),
 and many other GNU/Linux distributions.
-Octave was reviewed in the in the July, 1997 issue of the
+Octave was reviewed in the July, 1997 issue of the
 [Linux Journal](http://www.linuxjournal.com/article/1225).
 
 Clearly,
