@@ -58,13 +58,13 @@ More Octave examples can be found in
   <div class="cell auto">
 {%- include code1.html -%}
 <!--
-{%- highlight octave -%}
+```octave
 b = [4; 9; 2] # Column vector
 A = [ 3 4 5;
       1 3 1;
       3 5 9 ]
 x = A \ b     # Solve the system Ax = b
-{%- endhighlight -%}
+```
 -->
   </div>
 </div>
@@ -79,14 +79,14 @@ x = A \ b     # Solve the system Ax = b
   <div class="cell auto">
 {%- include code2.html -%}
 <!--
-{%- highlight octave -%}
+```octave
 x = -10:0.1:10; # Create an evenly-spaced vector from -10..10
 y = sin (x);    # y is also a vector
 plot (x, y);
 title ("Simple 2-D Plot");
 xlabel ("x");
 ylabel ("sin (x)");
-{%- endhighlight -%}
+```
 -->
     <a href="#" class="button small-only-expanded" data-open="plotModal">Click here to see the plot output</a>
   </div>
@@ -114,9 +114,9 @@ Octave is free software licensed under the
 Assuming you have Mercurial installed on your machine you may obtain the latest
 development version of Octave sources with the following command:
 
-{% highlight text %}
+```
 hg clone https://www.octave.org/hg/octave
-{% endhighlight %}
+```
 
 [Get involved]({{ "/get-involved.html" | relative_url }}) in Octave development.
 

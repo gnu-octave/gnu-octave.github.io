@@ -39,10 +39,10 @@ or [search for bugs]({{ site.bugs_url }}&func=search).
 3. **Missing function in Octave**
 
    - If the function is
-     [part of some Octave Forge package]({{ site.sourceforge_url }}/functions_by_alpha.php),
+     [part of an Octave package]({{ site.sourceforge_url }}/functions_by_alpha.php),
      this is **not** a bug.
    - If the function **exists in Matlab**,
-     but **not in core Octave** and **not in Octave Forge packages**,
+     but **not in core Octave** and **not in an Octave package**,
      that is a bug.
 
    <p></p>

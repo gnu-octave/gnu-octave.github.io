@@ -15,7 +15,7 @@ we have not achieved 100% compatibility.
 This is what you can do now:
 
 - Check if the function is
-  [part of some Octave Forge package]({{ site.sourceforge_url }}/functions_by_alpha.php)
+  [part of some Octave package]({{ site.sourceforge_url }}/functions_by_alpha.php)
 - [Report a bug]({{ "bugs.html" | relative_url }})
 - [Implement the feature yourself]({{ "get-involved.html" | relative_url }})
 - [Get commercial support]({{ "commercial-support.html" | relative_url }})

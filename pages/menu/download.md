@@ -73,9 +73,9 @@ over that process.
 ### Microsoft Windows {#ms-windows2}
 
 <div class="primary callout small" data-closable>
-<b>Note:</b> All installers below bundle several <b>Octave Forge packages</b>
+<b>Note:</b> All installers below bundle several <b>Octave packages</b>
 so they don't have to be installed separately.
-After installation type <code>pkg list</code> to list them.
+After installation type <code>pkg list</code> to list them.<br>
 <a href="{{ site.wiki_url }}/Octave_for_Microsoft_Windows">Read more.</a>
 <a href="#ms-windows" class="close-button" aria-label="Dismiss alert" type="button" data-close>
   <span aria-hidden="true">&times;</span>

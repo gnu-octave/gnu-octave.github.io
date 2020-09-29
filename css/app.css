@@ -120,7 +120,8 @@ a.button.warning { /* RSS Feed */
 	padding: 0;
 }
 
-.highlight {
+div.highlight,
+figure.highlight {
 	margin: 0 0 1.5rem 0;
 	border: 1px solid #ccc;
 	padding: 0.5em;
