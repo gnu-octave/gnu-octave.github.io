@@ -93,18 +93,12 @@ ylabel ("sin (x)");
 </div>
 
 
-### Octave Forge
+### Octave Packages
 
-[Octave Forge]({{ site.sourceforge_url }}) is a collection of high quality
-packages for GNU Octave, similar to Matlab's toolboxes.
-To install a package, use the `pkg` command from the Octave prompt by typing:
-
-{% highlight text %}
-pkg install -forge package_name
-pkg load package_name
-{% endhighlight %}
-
-<a href="{{ site.sourceforge_url }}/packages.php" class="button small-only-expanded">Browse Packages</a>
+GNU Octave can be extended by packages, similar to Matlab's toolboxes.
+Find packages at:
+- [Octave Forge]({{ site.sourceforge_url }})
+- [Package extensions index]({{ site.pkg_index_url }})
 
 
 ### Development
