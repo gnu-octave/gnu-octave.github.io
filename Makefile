@@ -35,6 +35,10 @@ deploy: | $(SAVANNAH_DIR)
 	#
 	cp -a _site/. $(SAVANNAH_DIR)
 	#
+	# Avoid multiple key authentications for the next step
+	#
+	ssh-add
+	#
 	# Add all potential new directories to CVS
 	#
 	cd $(SAVANNAH_DIR) \
@@ -49,7 +53,7 @@ deploy: | $(SAVANNAH_DIR)
 	#
 	# Commit the changes to get online.
 	#
-	cd $(SAVANNAH_DIR) && cvs commit
+	cd $(SAVANNAH_DIR) && cvs commit -m "Update website."
 	#
 	# Now everything should be visible to the world.
 	#
