@@ -83,28 +83,28 @@ After installation type <code>pkg list</code> to list them.<br>
 </div>
 
 - Windows-64 (recommended)
-  - [octave-5.2.0_1-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64-installer.exe)
+  - [octave-6.1.0-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64-installer.exe)
     (~ 300 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64-installer.exe.sig)
-  - [octave-5.2.0_1-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64.7z)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64-installer.exe.sig)
+  - [octave-6.1.0-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64.7z)
     (~ 300 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64.7z.sig)
-  - [octave-5.2.0_1-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64.zip)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64.7z.sig)
+  - [octave-6.1.0-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64.zip)
     (~ 530 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64.zip.sig)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64.zip.sig)
 
 <p></p>
 
 - Windows-32 (old computers)
-  - [octave-5.2.0_1-w32-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w32-installer.exe)
+  - [octave-6.1.0-w32-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w32-installer.exe)
     (~ 275 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w32-installer.exe.sig)
-  - [octave-5.2.0_1-w32.7z](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w32.7z)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w32-installer.exe.sig)
+  - [octave-6.1.0-w32.7z](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w32.7z)
     (~ 258 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w32.7z.sig)
-  - [octave-5.2.0_1-w32.zip](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w32.zip)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w32.7z.sig)
+  - [octave-6.1.0-w32.zip](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w32.zip)
     (~ 447 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w32.zip.sig)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w32.zip.sig)
 
 <p></p>
 
@@ -117,15 +117,15 @@ After installation type <code>pkg list</code> to list them.<br>
   version above.
   </small>
 
-  - [octave-5.2.0_1-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64-64-installer.exe)
+  - [octave-6.1.0-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64-64-installer.exe)
     (~ 286 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64-64-installer.exe.sig)
-  - [octave-5.2.0_1-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64-64.7z)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64-64-installer.exe.sig)
+  - [octave-6.1.0-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64-64.7z)
     (~ 279 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64-64.7z.sig)
-  - [octave-5.2.0_1-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64-64.zip)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64-64.7z.sig)
+  - [octave-6.1.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64-64.zip)
     (~ 490 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-5.2.0_1-w64-64.zip.sig)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-6.1.0-w64-64.zip.sig)
 
 All Windows binaries with corresponding source code can be downloaded from
 [https://ftpmirror.gnu.org/octave/windows/](https://ftpmirror.gnu.org/octave/windows/).
