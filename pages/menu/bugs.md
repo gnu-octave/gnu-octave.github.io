@@ -50,7 +50,7 @@ or [search for bugs]({{ site.bugs_url }}&func=search).
    It might take several months or years until for new features to become part
    of Octave, consider
    [commercial support]({{ "commercial-support.html" | relative_url }})
-   if you don't want to wait that long).
+   if you don't want to wait that long.
 
 4. **Make your bug report count**
 
@@ -62,7 +62,7 @@ or [search for bugs]({{ site.bugs_url }}&func=search).
    - **Give a short, specific, complete example:**<br>
      Avoid: pseudocode, uninitialized variables,
      calls to unattached scripts or functions.
-   - **Justify your exectations briefly:**<br>
+   - **Justify your expectations briefly:**<br>
      Although it might seem obvious to you,
      someone examining the problem might not know what result you consider
      correct.
