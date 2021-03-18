@@ -12,7 +12,7 @@ permalink: download
   &nbsp;
   (Release Notes:
   <a href="{{ "/NEWS-6.1.html" | relative_url }}">6.1.0</a>,
-  <a href="{% post_url "2021-02-20-octave-6.2.0-released" | relative_url %}">6.2.0</a>)
+  <a href="{{ site.baseurl }}{% post_url 2021-02-20-octave-6.2.0-released %}">6.2.0</a>)
 </div>
 
 <div class="button-group large expanded stacked-for-small">
