@@ -1,11 +1,27 @@
 ---
 layout: page
-title: Support/Help
+title: Support
+icon: <i class="fas fa-book-medical"></i>
 menu: true
 permalink: support
 ---
 
-#### Contact the **user community**
+#### <i class="fas fa-book"></i> Read the **GNU Octave Manual**
+
+<div style="margin-left: 2em;" markdown="1">
+- [<i class="fas fa-globe-americas"></i> Web version]({{ site.docs_url }})
+- [<i class="fas fa-file-pdf"></i> PDF version]({{ "octave.pdf" | relative_url }})
+- Type `doc` inside Octave
+</div>
+
+
+#### <i class="fab fa-wikipedia-w"></i> [Octave Wiki]({{ site.wiki_url }})
+
+<div style="margin-left: 2em;" markdown="1">
+Find [Frequently Asked Questions (FAQ)]({{ site.faq_url }})
+</div>
+
+#### <i class="fas fa-users"></i> User community
 
 <div style="margin-left: 2em;" markdown="1">
 The Octave user community is a loosely organized association of **volunteers**.
@@ -15,34 +31,18 @@ available to you.
 </div>
 
 <div style="margin-left: 2em;" markdown="1">
-- [**Discourse**]({{ site.discourse_url }}) &mdash;
-  the main chat portal for Octave users and developers.
-- **IRC**: Chat with users and developers on the
-  [Freenode `{{ site.irc_channel }}` channel](https://webchat.freenode.net/#octave).
-- Browse the
+- [<i class="fab fa-discourse"></i> **Discourse**]({{ site.discourse_url }}) --
+  the major communication platform for Octave users and developers.
+- <i class="far fa-comments"></i> **IRC**: Chat with users and developers on the
+  [Freenode {{ site.irc_channel }} channel](https://webchat.freenode.net/#octave).
+- <i class="far fa-envelope"></i> Browse the old
   [**mailing list archives**](https://lists.gnu.org/archive/html/help-octave/).
 </div>
 
 
-#### Get [**commercial support**]({{ "commercial-support.html" | relative_url }})
+#### <i class="fas fa-comment-dollar"></i> [Commercial support]({{ "commercial-support.html" | relative_url }})
 
 <div style="margin-left: 2em;" markdown="1">
 - Setup assistance
 - Custom feature implementation
-</div>
-
-
-#### Read the **GNU Octave Manual**
-
-<div style="margin-left: 2em;" markdown="1">
-- [Web version]({{ site.docs_url }})
-- [PDF version]({{ "octave.pdf" | relative_url }})
-- Type `doc` inside Octave
-</div>
-
-
-#### Browse the [Octave Wiki]({{ site.wiki_url }})
-
-<div style="margin-left: 2em;" markdown="1">
-- Read [Frequently Asked Questions (FAQ)]({{ site.faq_url }})
 </div>

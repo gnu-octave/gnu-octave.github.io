@@ -1,22 +1,32 @@
 ---
 layout: page
 title: Download
+icon: <i class="fas fa-download"></i>
 menu: true
 permalink: download
 ---
 
+<div class="primary callout">
+  <i class="fas fa-info-circle" style="color:#1779ba;"></i>
+  <strong>GNU Octave 6.2.0</strong> is the latest stable release.
+  &nbsp;
+  (Release Notes:
+  <a href="{{ "/NEWS-6.1.html" | relative_url }}">6.1.0</a>,
+  <a href="{% post_url 2021-02-20-octave-6.2.0-released %}">6.2.0</a>)
+</div>
+
 <div class="button-group large expanded stacked-for-small">
-  <a class="button" href="#source">Source</a>
-  <a class="button" href="#linux">GNU/Linux</a>
-  <a class="button" href="#macos">macOS</a>
-  <a class="button" href="#bsd">BSD</a>
-  <a class="button" href="#ms-windows">MS Windows</a>
+  <a class="button" href="#source"><i class="fas fa-code"></i> Source</a>
+  <a class="button" href="#linux"><i class="fab fa-linux"></i> GNU/Linux</a>
+  <a class="button" href="#bsd"><i class="fab fa-freebsd"></i> BSD</a>
+  <a class="button" href="#macos"><i class="fab fa-apple"></i> macOS</a>
+  <a class="button" href="#ms-windows"><i class="fab fa-windows"></i> MS Windows</a>
 </div>
 
 
 <p id="source">&nbsp;</p>
 
-### Source {#source2}
+### <i class="fas fa-code"></i> Source {#source2}
 
 The latest released version of Octave is always available from
 
@@ -31,7 +41,7 @@ which will redirect automatically to a nearby
 
 <p id="linux">&nbsp;</p>
 
-### GNU/Linux {#linux2}
+### <i class="fab fa-linux"></i> GNU/Linux {#linux2}
 
 Packaged versions of Octave for GNU/Linux systems are provided by the
 individual distributions described in the
@@ -46,19 +56,9 @@ versions of GNU Octave described in the
 [Octave wiki]({{ site.wiki_url }}/Octave_for_GNU/Linux#Distribution_independent).
 
 
-<p id="macos">&nbsp;</p>
-
-### macOS {#macos2}
-
-The [Octave Wiki]({{ site.wiki_url }}/Octave_for_macOS) has instructions for
-installing Octave on macOS systems.
-Octave is also available in third-party package managers such as
-[Homebrew](https://brew.sh/) and [MacPorts](https://www.macports.org).
-
-
 <p id="bsd">&nbsp;</p>
 
-### BSD {#bsd2}
+### <i class="fab fa-freebsd"></i> BSD {#bsd2}
 
 Executable versions of Octave for BSD systems are provided by the individual
 distributions.
@@ -68,9 +68,19 @@ These packages are created by volunteers and the Octave project has no control
 over that process.
 
 
+<p id="macos">&nbsp;</p>
+
+### <i class="fab fa-apple"></i> macOS {#macos2}
+
+The [Octave Wiki]({{ site.wiki_url }}/Octave_for_macOS) has instructions for
+installing Octave on macOS systems.
+Octave is also available in third-party package managers such as
+[Homebrew](https://brew.sh/) and [MacPorts](https://www.macports.org).
+
+
 <p id="ms-windows">&nbsp;</p>
 
-### Microsoft Windows {#ms-windows2}
+### <i class="fab fa-windows"></i> Microsoft Windows {#ms-windows2}
 
 <div class="primary callout small" data-closable>
 <b>Note:</b> All installers below bundle several <b>Octave packages</b>

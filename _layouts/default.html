@@ -21,17 +21,12 @@
       href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
       integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
       crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous">
     <link rel="stylesheet" href="{{ "/css/app.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/css/syntax-highlight.css" | relative_url }}">
-    <noscript>
-      <style>
-      .no-js .title-bar { display: none; }
-      .no-js .top-bar .top-bar-left { display: block; }
-      @media screen and (min-width: 40em) {
-        .no-js .top-bar { display: block; }
-      }
-      </style>
-    </noscript>
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
@@ -49,57 +44,33 @@
   <body>
 
     <div data-sticky-container>
-      <div class="no-js dark-background" data-sticky data-options="marginTop:0;">
-
-        <div class="title-bar" data-responsive-toggle="homepage-menu" data-hide-for="large">
-          <!-- title-bar-X is visible in collapsed mode -->
-          <div class="title-bar-left">
-            <div class="title-bar-title octave-logo">
-              <a href="{{ "/" | relative_url }}">
-                <img src="{{ "/img/octave-logo.svg" | relative_url }}"
-                     style="width: 32px; height: auto" alt="GNU Octave logo">
-                <span>{{ site.title }}</span>
-              </a>
-            </div>
-          </div>
-          <div class="title-bar-right">
-            <button class="menu-icon" type="button" data-toggle="homepage-menu"></button>
-          </div>
-        </div>
-
-        <div class="top-bar" id="homepage-menu">
-          <div class="top-bar-left">
-            <div class="octave-logo">
-              <a href="{{ "/" | relative_url }}">
-                <img src="{{ "/img/octave-logo.svg" | relative_url }}"
-                     style="width: 32px; height: auto" alt="GNU Octave logo">
-                <span>{{ site.title }}</span>
-              </a>
-            </div>
+      <div class="dark-background" data-sticky data-options="marginTop:0;">
+        <div class="top-bar">
+          <div class="top-bar-left octave-logo">
+            <a href="{{ "/" | relative_url }}">
+              <img src="{{ "/img/octave-logo.svg" | relative_url }}"
+                    style="width: 32px; height: auto" alt="GNU Octave logo">
+              <span>{{ site.title }}</span>
+            </a>
           </div>
           <div class="top-bar-right">
-            <ul class="vertical medium-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
+            <ul class="dropdown menu" data-dropdown-menu>
               {%- for page in site.pages -%}
-                {%- if page.menu -%}
-                  <li>
-                    <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-                  </li>
-                {%- endif -%}
-              {%- endfor -%}
+              {%- if page.menu -%}
               <li>
-                <a href="{{site.docs_url}}">
-                  <i class="fi-arrow-down"></i>
-                  <span>Docs</span>
+                <a href="{{ page.url | relative_url }}">{{ page.icon }}
+                  {{ page.title }}
                 </a>
               </li>
+              {%- endif -%}
+              {%- endfor -%}
             </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="grid-container">
-      <p></p>
+    <div class="grid-container grid-container-mod">
 
       {{ content }}
 

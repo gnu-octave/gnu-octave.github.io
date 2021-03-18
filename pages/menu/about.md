@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+icon: <i class="fas fa-info-circle"></i>
 menu: true
 permalink: about
 ---
@@ -35,7 +36,7 @@ more useful by writing and contributing additional functions for it,
 and by reporting any problems you may have.
 
 
-## History
+## <i class="fas fa-landmark"></i> History
 
 Octave was originally conceived (in about 1988) to be companion software for an
 undergraduate-level textbook on chemical reactor design being written by James

@@ -3,6 +3,7 @@ layout: default
 permalink: index
 ---
 
+<!--
 <div class="primary callout" data-closable>
   Need help? Try out our new user and developer forum
   <a href="https://octave.discourse.group/">Octave Discourse</a>.
@@ -10,12 +11,13 @@ permalink: index
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
+-->
 
 <div class="grid-x grid-margin-x">
-  <div class="cell medium-6">
+  <div class="cell medium-4 align-top">
     <a href="#"  data-open="meshModal">
       <img src="{{ "/img/example-mesh.svg" | relative_url }}"
-            style="height: 400px; width: auto;" alt="Example mesh">
+            style="max-height: 250px; width: auto;" alt="Example mesh">
     </a>
   </div>
   <div class="cell auto">
@@ -31,10 +33,6 @@ permalink: index
       <li>Free software, runs on GNU/Linux, macOS, BSD, and Microsoft Windows</li>
       <li>Drop-in compatible with many Matlab scripts</li>
     </ul>
-    <div class="button-group stacked">
-      <a href="{{ "download.html" | relative_url }}" class="button">Download</a>
-      <a href="{{ site.docs_url }}" class="button">Documentation</a>
-    </div>
   </div>
 </div>
 
@@ -93,15 +91,14 @@ ylabel ("sin (x)");
 </div>
 
 
-### Octave Packages
+### <i class="fas fa-box"></i> Octave Packages
 
-GNU Octave can be extended by packages, similar to Matlab's toolboxes.
-Find packages at:
+GNU Octave can be extended by packages.  Find them at:
 - [Octave Forge]({{ site.sourceforge_url }})
 - [Package extensions index]({{ site.pkg_index_url }})
 
 
-### Development
+### <i class="fas fa-tools"></i> Development
 
 Octave is free software licensed under the
 [GNU General Public License (GPL)]({{ "license.html" | relative_url }}).
@@ -112,19 +109,18 @@ development version of Octave sources with the following command:
 hg clone https://www.octave.org/hg/octave
 ```
 
-[Get involved]({{ "/get-involved.html" | relative_url }}) in Octave development.
-
+### <i class="fas fa-rss"></i> [News]({{ "/news.html" | relative_url }})
 
 {% assign latest_post = site.posts.first %}
 {% if latest_post %}
   <div class="primary callout">
-      <a class="float-right button tiny warning" href="{{ "/feed.xml" | relative_url }}">
-        RSS
-      </a>
-    <h3 class="entry-title">
-      <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
-    </h3>
-    <p class="post-meta">{{ latest_post.date | date: "%b %-d, %Y" }}</p>
+    <a class="float-right button tiny warning" href="{{ "/feed.xml" | relative_url }}">
+      RSS
+    </a>
+    <p>
+      <strong><a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a></strong>
+      &ndash; {{ latest_post.date | date: "%b %-d, %Y" }}
+    </p>
     <div class="entry-content">{{ latest_post.excerpt }}</div>
   </div>
 {% endif %}

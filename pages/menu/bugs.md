@@ -1,26 +1,23 @@
 ---
 layout: page
 title: Bugs
+icon: <i class="fas fa-bug"></i>
 menu: true
 permalink: bugs
 ---
 
-GNU Octave uses the bug tracker at [Savannah]({{ site.bugs_url }}).
-There you can [report a new bug]({{ site.bugs_url }}&func=additem),
-[browse recent bugs]({{ site.bugs_url }}),
-or [search for bugs]({{ site.bugs_url }}&func=search).
+GNU Octave uses the bug tracker at [GNU Savannah]({{ site.bugs_url }}).
+There you can
+[<i class="far fa-plus-square"></i> report a new bug](https://savannah.gnu.org/bugs/?group=octave&func=additem),
+[<i class="far fa-list-alt"></i> browse recent bugs]({{ site.bugs_url }}),
+or [<i class="fas fa-search"></i> search for bugs](https://savannah.gnu.org/bugs/?group=octave&func=search).
 
 ### Guidelines for reporting a new bug
 
 1. **Is the bug already known?**
 
-   - [Search for already reported bugs at the bug tracker]({{ site.bugs_url }}&func=search),
-   - look at the
-     [list of known causes of trouble]({{ site.docs_url }}/Trouble.html)
-     in the Octave manual.
-
-   <p></p>
-
+   [<i class="fas fa-search"></i> Search for already reported bugs](https://savannah.gnu.org/bugs/?group=octave&func=search)
+   at the bug tracker first.
    If you your problem **does not appear** to be known,
    then you should report the problem.
 
@@ -49,7 +46,7 @@ or [search for bugs]({{ site.bugs_url }}&func=search).
 
    It might take several months or years until for new features to become part
    of Octave, consider
-   [commercial support]({{ "commercial-support.html" | relative_url }})
+   [<i class="fas fa-comment-dollar"></i> commercial support]({{ "commercial-support.html" | relative_url }})
    if you don't want to wait that long.
 
 4. **Make your bug report count**
