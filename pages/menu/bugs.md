@@ -35,18 +35,17 @@ or [<i class="fas fa-search"></i> search for bugs](https://savannah.gnu.org/bugs
 
 3. **Missing function in Octave**
 
-   - If the function is
-     [part of an Octave package]({{ site.sourceforge_url }}/functions_by_alpha.php),
-     this is **not** a bug.
-   - If the function **exists in Matlab**,
-     but **not in core Octave** and **not in an Octave package**,
-     that is a bug.
+   If a function exists in Matlab, but not in Octave, this is **not** a bug.
+
+   - The function might already be
+     [part of an Octave package]({{ site.sourceforge_url }}/functions_by_alpha.php).
+   - You may file a **feature request** for it on the bug tracker.
 
    <p></p>
 
-   It might take several months or years until for new features to become part
-   of Octave, consider
-   [<i class="fas fa-comment-dollar"></i> commercial support]({{ "commercial-support.html" | relative_url }})
+   Please be aware that it might take **several months**
+   until for new features become part of Octave.
+   Consider [<i class="fas fa-comment-dollar"></i> commercial support]({{ "commercial-support.html" | relative_url }})
    if you don't want to wait that long.
 
 4. **Make your bug report count**

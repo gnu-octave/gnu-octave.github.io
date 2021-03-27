@@ -37,7 +37,7 @@ permalink: index
 </div>
 
 
-### Syntax Examples
+### <i class="fas fa-code"></i> Syntax Examples
 
 The Octave syntax is largely compatible with Matlab.
 The Octave interpreter can be run in
