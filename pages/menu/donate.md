@@ -13,14 +13,11 @@ Your contributions help to ensure that Octave will continue to improve.
 
 - [FSF Donation Page](https://crm.fsf.org/civicrm/contribute/transact?reset=1&id=10)
   -- The Free Software Foundation (FSF) is a 501(c)(3) nonprofit organization based in Boston, MA, USA
-- [<i class="fab fa-paypal"></i> PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UYHVW7R596RZ8)
-  -- receiver [John W. Eaton Consulting, Inc.](https://jweaton.org/)
-  (Octave project leader)
 - [<i class="fab fa-bitcoin"></i> Bitcoin](bitcoin:1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF)
   (1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF)
 
 Any questions?
-Please contact [John W. Eaton &lt;jwe@jweaton.org&gt;](mailto:jwe@jweaton.org)
+Please contact [John W. Eaton &lt;jwe@octave.org&gt;](mailto:jwe@octave.org)
 by email.
 
 See also
