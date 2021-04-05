@@ -14,6 +14,11 @@ or [<i class="fas fa-search"></i> search for bugs](https://savannah.gnu.org/bugs
 
 ### Guidelines for reporting a new bug
 
+<a href="{{ "/img/savannah_bug_report.png" | relative_url }}">
+  <img src="{{ "/img/savannah_bug_report.png" | relative_url }}"
+        style="max-height: 250px; width: auto;" alt="Savannah bug report">
+</a>
+
 1. **Is the bug already known?**
 
    [<i class="fas fa-search"></i> Search for already reported bugs](https://savannah.gnu.org/bugs/?group=octave&func=search)
