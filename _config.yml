@@ -19,8 +19,6 @@ sourceforge_url: "https://octave.sourceforge.io"
 packages_url: "https://gnu-octave.github.io/packages/"
 maintainers_email: "octave-maintainers@gnu.org"
 help_email: "help-octave@gnu.org"
-irc_channel: "#octave"
-irc_network: "irc.freenode.net"
 timezone: "UTC0"
 
 # Build settings

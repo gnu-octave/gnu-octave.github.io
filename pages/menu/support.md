@@ -34,7 +34,7 @@ available to you.
 - [<i class="fab fa-discourse"></i> **Discourse**]({{ site.discourse_url }}) --
   the major communication platform for Octave users and developers.
 - <i class="far fa-comments"></i> **IRC**: Chat with users and developers on the
-  [Freenode {{ site.irc_channel }} channel](https://webchat.freenode.net/#octave).
+  [Libera `#octave` channel](https://web.libera.chat/#octave).
 - <i class="far fa-envelope"></i> Browse the old
   [**mailing list archives**](https://lists.gnu.org/archive/html/help-octave/).
 </div>

@@ -24,7 +24,7 @@ and a [Developer FAQ]({{ site.wiki_url }}/Developer_FAQ).
 
 Discuss your ideas with us on [Discourse]({{ site.discourse_url }})
 ("maintainers" category) or on our IRC
-[Freenode `{{ site.irc_channel }}` channel](https://webchat.freenode.net/#octave).
+[Libera `#octave` channel](https://web.libera.chat/#octave).
 
 
 ### Get the Development Sources
