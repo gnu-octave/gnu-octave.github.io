@@ -13,7 +13,7 @@ deploy: | $(SAVANNAH_DIR)
 	# Build static website into the subdirectory `_site` using Jekyll via
 	# Bundler
 	#
-	bundle exec jekyll build
+	bundle exec jekyll build --config _config_Savannah.yml
 	#
 	# vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 	# DANGEROUS STEP, omitted by default.
