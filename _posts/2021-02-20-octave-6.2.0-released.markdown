@@ -52,8 +52,6 @@ This version is a bug fixing release:
 - Fix regression with superclass lookup in classdef constructors ([bug #59602](https://savannah.gnu.org/bugs/?59602)).
 - Allow Octave class `execution_exception` to catch `std::exception` objects ([bug #59592](https://savannah.gnu.org/bugs/?59592)).
 
-
-
 ## GUI
 
 - Fix restoring editor session after having closed all tabs ([bug #60051](https://savannah.gnu.org/bugs/?60051)).
