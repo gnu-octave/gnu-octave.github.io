@@ -91,7 +91,7 @@ ylabel ("sin (x)");
 </div>
 
 
-### <i class="fas fa-box"></i> Octave Packages
+### <i class="fas fa-cubes"></i> Octave Packages
 
 GNU Octave can be extended by packages.  Find them at:
 - [Octave Packages]({{ site.packages_url }})
