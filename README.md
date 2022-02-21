@@ -120,3 +120,33 @@ repository.  Usually, it should suffice to type
 
 if anything doesn't work as expected, look at the provided `Makefile` and
 perform the steps on your own manually, if necessary.
+
+
+## License
+
+### Website Design and Code
+
+Copyright (c) 2016-2022 The Octave Project Developers.
+Copyright (c) 2015-2016 Alex Krolick.
+
+See the file LICENSE in the top-level directory of this distribution or
+<https://octave.org/copyright/>.
+
+The Octave website is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your option)
+any later version.
+
+The Octave website is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License
+along with the Octave website; see the file COPYING.  If not, see
+<https://www.gnu.org/licenses/>.
+
+### Website Content
+
+The website content is licensed under a
+[Creative Commons Attribution-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nd/4.0/).
