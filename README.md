@@ -126,8 +126,8 @@ perform the steps on your own manually, if necessary.
 
 ### Website Design and Code
 
-Copyright (c) 2016-2022 The Octave Project Developers.
-Copyright (c) 2015-2016 Alex Krolick.
+- Copyright (c) 2016-2022 The Octave Project Developers.
+- Copyright (c) 2015-2016 Alex Krolick.
 
 See the file LICENSE in the top-level directory of this distribution or
 <https://octave.org/copyright/>.
