@@ -109,6 +109,12 @@ development version of Octave sources with the following command:
 hg clone https://www.octave.org/hg/octave
 ```
 
+### <i class="fas fa-donate"></i> Sponsors
+
+We thank our sponsors for making GNU Octave possible:
+
+{% include sponsors.md %}
+
 ### <i class="fas fa-rss"></i> [News]({{ "/news.html" | relative_url }})
 
 {% assign latest_post = site.posts.first %}

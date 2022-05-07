@@ -45,5 +45,5 @@ You can start working with the [online service](https://cocalc.com) for free
 and upgrade later for a better experience.
 You can also run your own CoCalc on-premises.
 
-[MOXOFF]: https://www.moxoff.com/moxoff-partner-di-octave/
-[CoCalc]: https://cocalc.com/doc/octave.html
+[MOXOFF]: https://blog.moxoff.com/it/magazine/moxoff-partner-di-octave
+[CoCalc]: https://cocalc.com/features/octave
