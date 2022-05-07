@@ -61,12 +61,10 @@ and begin using it confidently in just a few hours.
 Full-time development began in the Spring of 1992.
 The first alpha release was January 4, 1993, and version 1.0 was released
 February 17, 1994.
-Since then, Octave has been through several major revisions,
-is included with [Debian GNU/Linux](https://www.debian.org/),
-[openSUSE](https://www.opensuse.org/),
-and many other GNU/Linux distributions.
-Octave was reviewed in the July, 1997 issue of the
-[Linux Journal](http://www.linuxjournal.com/article/1225).
+Since then, Octave has been through several major revisions and is included
+with many GNU/Linux distributions.
+Octave was first reviewed in the July, 1997 issue of the
+[Linux Journal](https://web.archive.org/web/20211107141537/https://www.linuxjournal.com/article/1225).
 
 Clearly,
 Octave is now much more than just another courseware package with limited
