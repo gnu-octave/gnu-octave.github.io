@@ -1,7 +1,20 @@
 /* Custom classes*/
 
+body { background-color: #333; }
+div.white {
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 h3, h4 { margin-top: 1em; }
-footer { margin-top: 2em; }
+footer {
+  color: #FFF;
+  background-color: #333;
+}
 
 .octave-logo { min-width: 160px; }
 .octave-logo a,
@@ -34,8 +47,13 @@ h2.landing-page-logo {
   margin: auto;
 }
 
-.top-bar ul li a { color: #FFF; }
-.top-bar ul li a:hover { background-color: #585858; }
+.top-bar ul li a,
+footer ul li a { color: #FFF; }
+.top-bar ul li a:hover,
+footer ul li a:hover {
+  color: #FFF;
+  background-color: #585858;
+}
 
 .reveal img { width: 100%; }
 

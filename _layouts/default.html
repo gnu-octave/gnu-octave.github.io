@@ -70,29 +70,40 @@
       </div>
     </div>
 
-    <div class="grid-container grid-container-mod">
+    <div class="white">
+      <div class="grid-container grid-container-mod">
 
-      {{ content }}
+        {{ content }}
 
-      <footer class="text-center">
+        <script>
+          $(document).foundation();
+        </script>
+      </div>
+    </div>
+
+    <footer>
+      <div class="grid-container grid-container-mod">
+        <ul class="dropdown menu" data-dropdown-menu>
+          {%- for page in site.pages -%}
+          {%- if page.footer -%}
+          <li>
+            <a href="{{ page.url | relative_url }}">{{ page.icon }}
+              {{ page.title }}
+            </a>
+          </li>
+          {%- endif -%}
+          {%- endfor -%}
+        </ul>
+        &nbsp;
         <p>
-          Octave is free software under the
-          <a href="{{ "license.html" | relative_url }}">GNU General Public License.</a>
-        </p>
-        <small>
           Copyright © 1998-{{ site.time | date: "%Y" }} John W. Eaton.
           This work is licensed under a
           <a rel="license" href="https://creativecommons.org/licenses/by-nd/4.0/">
           Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
           Get the <a href="http://hg.octave.org/web-octave/file/tip">page sources</a>.
-        </small>
-        <p></p>
-      </footer>
-
-      <script>
-        $(document).foundation();
-      </script>
-    </div>
+        </p>
+      </div>
+    </footer>
 
   </body>
 

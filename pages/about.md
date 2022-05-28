@@ -35,8 +35,7 @@ Because Octave is [free software](https://www.gnu.org/philosophy/free-sw.html) y
 more useful by writing and contributing additional functions for it,
 and by reporting any problems you may have.
 
-
-## <i class="fas fa-landmark"></i> History
+### <i class="fas fa-landmark"></i> History
 
 Octave was originally conceived (in about 1988) to be companion software for an
 undergraduate-level textbook on chemical reactor design being written by James

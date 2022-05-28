@@ -2,7 +2,7 @@
 layout: page
 title: News
 icon: <i class="fas fa-rss"></i>
-permalink: news.html
+permalink: news
 ---
 
 {% for post in site.posts %}

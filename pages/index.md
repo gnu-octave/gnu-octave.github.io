@@ -109,11 +109,11 @@ development version of Octave sources with the following command:
 hg clone https://www.octave.org/hg/octave
 ```
 
-### <i class="fas fa-donate"></i> Sponsors
+### <i class="fas fa-heart" style="color:#ff7070;"></i> [Sponsors]({{ "/donate.html" | relative_url }})
 
-We thank our regular sponsors:
-
+&nbsp;
 {% include sponsors.md %}
+&nbsp;
 
 ### <i class="fas fa-rss"></i> [News]({{ "/news.html" | relative_url }})
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Copyright
+icon: <i class="fas fa-landmark"></i>
+footer: true
 permalink: /copyright/
 ---
 
@@ -513,4 +515,5 @@ Copyright:
 
 
 See also the list of contributors in the Octave manual (the file
-doc/interpreter/contributors.in in the sources).
+[doc/interpreter/contributors.in](https://hg.savannah.gnu.org/hgweb/octave/file/tip/doc/interpreter/contributors.in)
+in the sources).

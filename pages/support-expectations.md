@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Support Expectations
+icon: <i class="fas fa-book-medical"></i>
 permalink: support-expectations
 ---
 
