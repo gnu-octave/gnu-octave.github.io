@@ -8,9 +8,11 @@ permalink: donate
 
 Octave is **free software**
 used in countless research and production environments around the globe.
-We are proud to develop and distribute this high-quality software
-with the help of a growing community of volunteers
-without restricting or charging our users.
+
+All what Octave has become in the past
+[30 years]({{ "about.html" | relative_url }}) is thanks to the effort of
+[over 400 volunteers](https://hg.savannah.gnu.org/hgweb/octave/file/tip/doc/interpreter/contributors.in),
+and private donations.
 
 **Your contribution helps to ensure that Octave will continue to improve.**
 
@@ -19,13 +21,13 @@ without restricting or charging our users.
 - [<i class="fab fa-bitcoin"></i> Bitcoin](bitcoin:1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF)
   (1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF)
 - Please contact [John W. Eaton &lt;jwe@octave.org&gt;](mailto:jwe@octave.org)
-  by email, for additional options.
+  by email, for additional information.
 
 See also
 [<i class="fas fa-comment-dollar"></i> commercial support]({{ "commercial-support.html" | relative_url }})
 options to implement the specific features.
 
 
-### We thank our sponsors:
+### We thank our regular sponsors:
 
 {% include sponsors.md %}

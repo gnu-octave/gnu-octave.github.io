@@ -111,7 +111,7 @@ hg clone https://www.octave.org/hg/octave
 
 ### <i class="fas fa-donate"></i> Sponsors
 
-We thank our sponsors for making GNU Octave possible:
+We thank our regular sponsors:
 
 {% include sponsors.md %}
 
