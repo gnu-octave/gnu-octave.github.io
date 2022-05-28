@@ -1,14 +1,7 @@
 /* Custom classes*/
 
 body { background-color: #333; }
-div.white {
-  background-color: #FFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
+div.white { background-color: #FFF; }
 div.vertical-stretch { min-height: 70vh; }
 
 h3, h4 { margin-top: 1em; }
