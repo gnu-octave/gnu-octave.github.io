@@ -9,6 +9,7 @@ div.white {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+div.vertical-stretch { min-height: 70vh; }
 
 h3, h4 { margin-top: 1em; }
 footer {
