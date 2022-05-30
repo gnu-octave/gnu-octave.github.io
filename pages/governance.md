@@ -40,7 +40,7 @@ both individuals and corporations have the opportunity to
 
 Despite the free usage of the FSF infrastructure for distributing
 the GNU Octave source code,
-the project does not receive any direct or indirect
+the Octave project does not receive any direct or indirect
 monetary funding by the FSF.
 
 ### Related organizations with no governance role
@@ -48,13 +48,8 @@ monetary funding by the FSF.
 There are organizations that people sometimes mistakenly believe
 have some kind of official control over the GNU Octave project.
 This section details three of them,
-but please note that neither has any official relationship
-to the GNU Octave project,
-nor any governance capacity with respect to the project.
-Individuals who have some control over the project
-and happen to belong to these organizations,
-have that control as individuals and not as members of those organizations.
-Those individuals take the separation of those roles quite seriously.
+but please note that they have neither any official relationship
+nor any governance capacity with the GNU Octave project.
 
 #### Octave Forge and Octave Packages
 
@@ -78,7 +73,7 @@ The GitHub Organization <https://github.com/gnu-octave/>
 was established around 2020.
 It is a loose connection of currently
 [27 members](https://github.com/orgs/gnu-octave/people)
-(10 active and 14 dormant)
+(10 active and 17 dormant)
 developing software intended to be used with GNU Octave
 (including **Octave Packages**),
 but not the source code of GNU Octave itself.
