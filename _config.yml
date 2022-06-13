@@ -1,14 +1,9 @@
 title: GNU Octave
-email: octave-maintainers@gnu.org
+email: webmaster@octave.org
 description: >- # this means to ignore newlines until "baseurl:"
   GNU Octave is a programming language for scientific computing.
 
-# For GNU Savannah <https://www.gnu.org/software/octave>
-#url: "https://www.gnu.org"  # the base hostname & protocol for your site
-#baseurl: "/software/octave"
-
-# For GitHub pages
-url: "https://gnu-octave.github.io"
+url: "https://octave.org"
 
 discourse_url: "https://octave.discourse.group/"
 wiki_url: "https://wiki.octave.org"
@@ -28,13 +23,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# Empty 'include' list overrides the default setting `include: [".htaccess"]`.
-# See <https://github.com/jekyll/jekyll/issues/3958>.
-include: []
-
 exclude:
   - Gemfile
   - Gemfile.lock
-  - Makefile
   - README.md
-  - .htaccess  # Needed for GNU Savannah
