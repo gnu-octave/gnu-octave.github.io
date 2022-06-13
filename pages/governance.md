@@ -27,8 +27,32 @@ The communal nature of open-source makes it difficult to precisely define
 where the GNU Octave project ends and the greater community begins,
 which is exactly how we like it.
 Finally,
-most development and donation spending decisions are made by or agreed with
+most development decisions are made by or agreed with
 John W. Eaton.
+
+#### Contributor Agreement
+
+By submitting patches to the  **GNU Octave** project,
+you agree to the following conditions:
+
+1. Your contribution will be released under the terms of the GNU GPL,
+   version 3 or any later version.
+2. Your contribution must be an independent work or derived from code
+   that may be released under the terms of the GPL.
+   Under no circumstances may it be based on code from Matlab
+   or other non-free code that you may have access to view.
+3. In the Octave source code, all files are marked with a copyright statement
+   that says
+
+   > Copyright (C) YYYY-YYYY The Octave Project Developers.
+
+   This copyright notice is used to ease the burden of maintaining copyright
+   information in the source files,
+   not to diminish or remove credit for contributions.
+   Detailed information about what changes have been made and who has made them
+   is maintained in the revision history of the Octave sources.
+
+   If you wish, you will be credited as a contributor in the Octave documentation.
 
 ### Free Software Foundation (FSF)
 
@@ -37,6 +61,8 @@ promoting computer user freedom.
 With the help of the FSF,
 both individuals and corporations have the opportunity to
 [donate to the GNU Octave project](https://my.fsf.org/civicrm/contribute/transact?reset=1&id=10).
+How donations are spent is decided by Octave core deveopers
+led by John W. Eaton.
 
 Despite the free usage of the FSF infrastructure for distributing
 the GNU Octave source code,
@@ -81,7 +107,7 @@ but not the source code of GNU Octave itself.
 ### Questions
 
 If you have any questions about GNU Octave's governance structure,
-please reach out via email to [John W. Eaton &lt;jwe@octave.org&gt;](mailto:jwe@octave.org).
+please reach out via email to [&lt;governance@octave.org&gt;](mailto:governance@octave.org).
 
 
 This page is inspired by the [JuliaLang project](https://julialang.org/governance/).
