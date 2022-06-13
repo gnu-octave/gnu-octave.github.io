@@ -1,22 +1,19 @@
 # GNU Octave Website development
 
-This is the <https://www.octave.org> website development repository.
+This is the <https://octave.org> website development repository.
 
 The development and deployment workflow in short:
 
-1. The website is developed at two synchronized locations:
-   - <https://hg.octave.org/web-octave> (Mercurial)
-   - <https://github.com/gnu-octave/gnu-octave.github.io> (Git)
+1. The website development repository is located at:
+   - <https://github.com/gnu-octave/gnu-octave.github.io>
 
 2. Static HTML pages are generated from these repositories
    and deployed at
-   - <https://web.cvs.savannah.gnu.org/viewvc/octave/?root=octave> (Savannah)
-   - <https://gnu-octave.github.io/> (GitHub Pages)
+   - <https://octave.org> (FossHost)
+   - <https://gnu-octave.github.io> (GitHub Pages)
 
 3. The deployment to GitHub Pages happens automatically by pushing to the
-   respective repository.  The deployment on Savannah is more complicated and
-   described below in detail and is visible at <https://www.octave.org> that
-   redirects to <https://www.gnu.org/software/octave>.
+   respective repository.  The deployment on FossHost has to be done manually.
 
 
 ## Simple website changes / contributions
@@ -24,7 +21,6 @@ The development and deployment workflow in short:
 Anyone is free to clone this website development repository, simply type
 
     git clone https://github.com/gnu-octave/gnu-octave.github.io.git
-    hg  clone https://hg.octave.org/web-octave
 
 to get anonymous read access without writing privileges.
 
@@ -33,8 +29,7 @@ If you want submit changes/additions, please create a
 on GitHub or contact the Octave developers at <https://octave.discourse.group/>.
 
 > **Note:** Changes made to the GitHub page repository are only visible there.
-> To change <https://www.octave.org>, the Savannah CVS repository must be
-> updated (see below).
+> To change <https://octave.org>, the updates must be deployed manually on FossHost.
 
 
 ### Add a new RSS post
@@ -51,42 +46,25 @@ like `categories: news` or alike for less important news.
 
 ## Advanced development
 
-### Synchronize Mercurial and GitHub repositories
-
-You need writing permissions to the Mercurial repository
-
-    hg clone ssh://gnuoctave@octave.org/hg/web-octave
-
-Add to `.hg/hgrc`
-
-    [paths]
-    default = ssh://gnuoctave@hg-new.octave.org/hg/web-octave
-    github = git+ssh://git@github.com:gnu-octave/gnu-octave.github.io.git
-
-
 ### Building requisites
 
-To build the static website offline, you need to install [Ruby][] and
-[Bundler][].  For Debian/Ubuntu please perform the following setup fist.
+To build the static website offline, you need to install [Bundler][].
+For Debian/Ubuntu please perform the following setup fist.
 For other Linux distributions this command might change.
 
-    sudo apt-get install ruby-full build-essential zlib1g-dev
-
-    gem install bundler
+    sudo apt-get install bundler
 
 From now on, everything is handled by Bundler.  Install all required
 dependencies for the static Octave website by running
 
     bundle install
 
-from within the checked-out website development repository (Mercurial or
-GitHub).
+from within the checked-out website development repository.
 
 For the responsive webpages, we internally use the [Foundation 6][Foundation]
 framework.  All necessary files are already included inside this website
 development repository.
 
-[Ruby]: https://www.ruby-lang.org/
 [Bundler]: https://bundler.io/
 [Foundation]: https://get.foundation/sites/docs/
 
@@ -109,17 +87,6 @@ before pushing any changes.  Jekyll provides a local webserver by typing
 
 and rebuilds the whole static website automatically, as it monitors any
 file changes.
-
-
-### Deploying the static website online at Savannah CVS
-
-For this step you need to have writing permissions to the Savannah CVS
-repository.  Usually, it should suffice to type
-
-    make deploy
-
-if anything doesn't work as expected, look at the provided `Makefile` and
-perform the steps on your own manually, if necessary.
 
 
 ## License
