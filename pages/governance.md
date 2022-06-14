@@ -61,7 +61,7 @@ promoting computer user freedom.
 With the help of the FSF,
 both individuals and corporations have the opportunity to
 [donate to the GNU Octave project](https://my.fsf.org/civicrm/contribute/transact?reset=1&id=10).
-How donations are spent is decided by Octave core deveopers
+How donations are spent is decided by Octave core developers
 led by John W. Eaton.
 
 Despite the free usage of the FSF infrastructure for distributing
