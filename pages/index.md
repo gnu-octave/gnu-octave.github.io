@@ -106,7 +106,7 @@ Assuming you have Mercurial installed on your machine you may obtain the latest
 development version of Octave sources with the following command:
 
 ```
-hg clone https://www.octave.org/hg/octave
+hg clone https://hg.octave.org/octave
 ```
 
 ### <i class="fas fa-heart" style="color:#ff7070;"></i> [Sponsors]({{ "/donate.html" | relative_url }})

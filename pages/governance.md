@@ -13,7 +13,7 @@ This page should clarify about the various entities and actors around the GNU Oc
 The **GNU Octave** project was initialized 1992 by
 [John W. Eaton &lt;jwe@octave.org&gt;](mailto:jwe@octave.org).
 It consists of a
-[software source code repository](https://www.octave.org/hg/octave)
+[software source code repository](https://hg.octave.org/octave)
 and a community of people who work on that code.
 The most clear cut line that can be drawn is that there is a
 [set of people](https://savannah.gnu.org/project/memberlist.php?group=octave)

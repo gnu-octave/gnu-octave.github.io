@@ -32,13 +32,13 @@ Discuss your ideas with us on [Discourse]({{ site.discourse_url }})
 The latest development sources of GNU Octave are available via
 [Mercurial](https://www.mercurial-scm.org/) (hg).
 The primary repository address is
-[https://www.octave.org/hg/octave](https://www.octave.org/hg/octave),
-which currently redirects to
-[https://hg.savannah.gnu.org/hgweb/octave](https://hg.savannah.gnu.org/hgweb/octave).
+[https://hg.savannah.gnu.org/hgweb/octave](https://hg.savannah.gnu.org/hgweb/octave)
+and is mirrored to
+[https://hg.octave.org/octave](https://hg.octave.org/octave).
 You obtain the latest development version of Octave sources with the following
 command:
 ```
-hg clone https://www.octave.org/hg/octave
+hg clone https://hg.octave.org/octave
 ```
 The [Developer FAQ]({{ site.wiki_url }}/Developer_FAQ) on the Octave wiki
 contains more detailed and recent information about Octave development.
