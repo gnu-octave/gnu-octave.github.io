@@ -84,7 +84,7 @@ or [<i class="fas fa-search"></i> search for bugs](https://savannah.gnu.org/bugs
    If a function exists in Matlab, but not in Octave, this is **not** a bug.
 
    - The function might already be
-     [part of an Octave package]({{ site.sourceforge_url }}/functions_by_alpha.php).
+     [part of an Octave package](https://octave.sourceforge.io/functions_by_alpha.php).
    - You may file a **feature request** for it on the bug tracker.
 
    <p></p>
