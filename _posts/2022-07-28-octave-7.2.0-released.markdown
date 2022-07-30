@@ -1,0 +1,89 @@
+---
+layout: post
+title:  "GNU Octave 7.2.0 Released"
+date:   2022-07-28
+categories: news release
+---
+
+Octave Version 7.2.0 has been released and is now available for [download][1].
+An official [Windows binary installer][2] is also available.
+For [macOS][3] see the installation instructions in the wiki.
+
+This version is a bug fixing release:
+
+## Improvements and fixes
+
+- Avoid out-of-bounds indexing when checking for broadcastable inplace operators ([bug #38466](https://savannah.gnu.org/bugs/?38466)).
+- `hdl2struct.m`: Fix saving of `uibuttongroups` ([bug #62266](https://savannah.gnu.org/bugs/?62266)).
+- `isprime.m` and `__isprimelarge__.cc`: Minor performance tweaks.
+- `factor.m`: Performance tweak to avoid division in certain cases.
+- `nchoosek.m`: Fix freeze-up for certain integer inputs ([bug #62319](https://savannah.gnu.org/bugs/?62319)).
+- `nchoosek.m`: Restore fast path code for floating point inputs ([bug #62319](https://savannah.gnu.org/bugs/?62319)).
+- `betainc.m`: Use sophisticated technique for calculating exponents to avoid inaccuracies ([bug #62329](https://savannah.gnu.org/bugs/?62329)).
+- `ls.m`: Fix handling of `\` on UNIX platforms ([bug #62282](https://savannah.gnu.org/bugs/?62282)).
+- `ls.m`: with glob patterns on Windows ([bug #62282](https://savannah.gnu.org/bugs/?62282)).
+- `findobj.m`: Fix input validation of graphics handles ([bug #62378](https://savannah.gnu.org/bugs/?62378)).
+- `newplot.m`: Backed out changeset fdd58773ac02 ([bug #61945](https://savannah.gnu.org/bugs/?61945)).
+- `__print_parse_opts__.m`: Initialize variables in all cases for print warnings ([bug #62287](https://savannah.gnu.org/bugs/?62287)).
+- `datenum.m`: Correctly handle arrays with leading singleton dimensions ([bug #62407](https://savannah.gnu.org/bugs/?62407)).
+- Stop incorrect error when `reset()` called on `uimenu` handle ([bug #62425](https://savannah.gnu.org/bugs/?62425)).
+- Emit more informative error message on empty input when setting axis limits ([bug #62541](https://savannah.gnu.org/bugs/?62541)).
+- `msgbox.m`: Allow "custom" `cdata` for icon ([bug #62445](https://savannah.gnu.org/bugs/?62445)).
+- Fix memory leak with nested functions and anonymous functions ([bug #62459](https://savannah.gnu.org/bugs/?62459)).
+- `__wglob__`: Retain trailing file separator on Windows ([bug #62414](https://savannah.gnu.org/bugs/?62414)).
+- `__wglob__`: Correctly handle `.` and `..` in patterns on Windows ([bug #62414](https://savannah.gnu.org/bugs/?62414)).
+- `__wglob__`: Handle patterns with UNC paths on Windows ([bug #62576](https://savannah.gnu.org/bugs/?62576)).
+- `mkoctfile.m`: Trim whitespace (newline) around system output.
+- `subplot.m`: Avoid error when mixing `rcn` and `"position"` calling form ([bug #62526](https://savannah.gnu.org/bugs/?62526)).
+- `plot`: Deprecate using numbers to select line colors ([bug #62470](https://savannah.gnu.org/bugs/?62470)).
+- Don't shut down interpreter immediately on `execute` ([bug #62308](https://savannah.gnu.org/bugs/?62308)).
+- Change wording of error message when using a variable as function ([bug #62552](https://savannah.gnu.org/bugs/?62552)).
+- `inputParser.m`: Adapt for interpreter changes regarding number of output arguments ([bug #62420](https://savannah.gnu.org/bugs/?62420)).
+- `inputParser.m`: Correctly handle cell default values for optional parameters ([bug #62639](https://savannah.gnu.org/bugs/?62639)).
+- Store token ID, not keyword ID when parsing keywords ([bug #62587](https://savannah.gnu.org/bugs/?62587)).
+- `canonicalize_file_name`: Do not translate mapped network drive to UNC path ([bug #62576](https://savannah.gnu.org/bugs/?62576)).
+- Fix regression with `\color[rgb]` TeX pattern ([bug #62668](https://savannah.gnu.org/bugs/?62668)).
+- `regexp`: Check pattern length before accessing it ([bug #62704](https://savannah.gnu.org/bugs/?62704)).
+- `randmtzig.cc`: Add missing `#include <ctime>` ([bug #62750](https://savannah.gnu.org/bugs/?62750)).
+
+## GUI
+
+- Fix removing trailing spaces on closing a modified file ([bug #62271](https://savannah.gnu.org/bugs/?62271)).
+- Replace use of deprecated `QDesktopWidget` in GUI.
+- Fix display in Variable Editor when `fixed_point_format` is on ([bug #62544](https://savannah.gnu.org/bugs/?62544)).
+- Fix file length when saving shorter content in editor ([bug #62588](https://savannah.gnu.org/bugs/?62588)).
+
+## Package tool
+
+- `pkg`: Create directory before saving file ([bug #62303](https://savannah.gnu.org/bugs/?62303)).
+- `pkg`: Avoid error when unlinking non-existent files ([bug #62436](https://savannah.gnu.org/bugs/?62436)).
+- `pkg`: Create `PREFIX` and `ARCHPREFIX` directories ([bug #62681](https://savannah.gnu.org/bugs/?62681)).
+- `pkg`: Replace `OCTAVE_HOME` in `PREFIX` and `ARCHPREFIX` independently ([bug #62681](https://savannah.gnu.org/bugs/?62681)).
+- `pkg`: Fix formatting of `copyfile` message ([bug #62769](https://savannah.gnu.org/bugs/?62769)).
+- `pkg`: Escape special characters in `OCTAVE_HOME` for `regexprep` ([bug #62681](https://savannah.gnu.org/bugs/?62681)).
+
+## Build system / Tests
+
+- `addpref.m`: Recode test to work with multiple running instances of Octave.
+- Don't leak build directories in installed directories ([bug #62295](https://savannah.gnu.org/bugs/?62295)).
+- Import `hash-buffer` modules from gnulib ([bug #62416](https://savannah.gnu.org/bugs/?62416)).
+- Remove `.dirstamp` files from `test/` directory with `maintainer-clean` target.
+- Add tests for `__FILE__` and `__LINE__` ([bug #52587](https://savannah.gnu.org/bugs/?52587)).
+
+## Documentation
+
+- `datestr.m`: Fix minor typo.
+- `ls.m`: Improve wording in docstring ([bug #62282](https://savannah.gnu.org/bugs/?62282)).
+- `dir.m`: Clarify wildcard behavior on Windows in docstring ([bug #62282](https://savannah.gnu.org/bugs/?62282)).
+- `memory.m`: Redo documentation to be formatted correctly in Info output.
+- Document contracted `format` arguments ([bug #62417](https://savannah.gnu.org/bugs/?62417)).
+- `humps.m`: Fix mismatch between TeX docstring and non-TeX docstring.
+- `warning_ids.m`: Add new warning ID `"Octave:deprecated-option"`.
+- `primes.m`: Move code examples before math theory.
+- `primes.m`: Mark variables in docstring with `@var{}` macro.
+- Rewrite section on automatic type conversions ([bug #62283](https://savannah.gnu.org/bugs/?62283)).
+- `subsasgn`: Correct example code ([bug #33221](https://savannah.gnu.org/bugs/?33221)).
+
+[1]: {{ "download.html" | absolute_url }}
+[2]: https://ftpmirror.gnu.org/octave/windows
+[3]: {{ site.wiki_url }}/Octave_for_macOS
