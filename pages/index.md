@@ -3,15 +3,16 @@ layout: default
 permalink: index
 ---
 
-<!--
+
 <div class="primary callout" data-closable>
-  Need help? Try out our new user and developer forum
-  <a href="https://octave.discourse.group/">Octave Discourse</a>.
+  We are
+  <a href="https://octave.discourse.group/t/fosshost-domains-down/3477">experiencing troubles with hosting</a>,
+  please forgive broken links.
   <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
--->
+
 
 <div class="grid-x grid-margin-x">
   <div class="cell medium-4 align-top">
