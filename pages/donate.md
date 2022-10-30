@@ -23,11 +23,13 @@ and many private or corporate donations.
   by email, for additional information.
 
 
+<!--
 ### Sponsors:
 
 &nbsp;
 {% include sponsors.md %}
 &nbsp;
+-->
 
 Please contact [John W. Eaton &lt;jwe@octave.org&gt;](mailto:jwe@octave.org)
 to get listed here.
