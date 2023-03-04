@@ -5,7 +5,7 @@ permalink: index
 
 <div class="primary callout" data-closable>
   GNU Octave is a
-  <a href="https://wiki.octave.org/gsoc">mentoring organization for GSoC 2023.</a>.
+  <a href="https://wiki.octave.org/gsoc">mentoring organization for GSoC 2023</a>.
   <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
     <span aria-hidden="true">&times;</span>
   </button>
