@@ -11,7 +11,7 @@ permalink: download
   <strong>GNU Octave 8.1.0</strong> is the latest stable release.
   &nbsp;
   (Release Notes:
-  <a href="{{ "/NEWS-7.html" | relative_url }}">8.1.0</a>)
+  <a href="{{ "/NEWS-8.html" | relative_url }}">8.1.0</a>)
 </div>
 
 <div class="button-group large expanded stacked-for-small">
