@@ -1,4 +1,5 @@
 News for version&nbsp;
+[8  ]({{ 'NEWS-8.html'   | relative_url }}) &nbsp;
 [7  ]({{ 'NEWS-7.html'   | relative_url }}) &nbsp;
 [6  ]({{ 'NEWS-6.1.html' | relative_url }}) &nbsp;
 [5  ]({{ 'NEWS-5.1.html' | relative_url }}) &nbsp;
