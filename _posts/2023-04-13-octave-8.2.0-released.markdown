@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "GNU Octave 8.2.0 Released"
+date:   2023-04-13
+categories: news release
+---
+
+Octave Version 8.2.0 has been released and is now available for [download][1].
+An official [Windows binary installer][2] is also available.
+For [macOS][3] see the installation instructions in the wiki.
+
+This version is a bug fixing release:
+
+## Improvements and fixes
+
+- `fopen`: Use "UTF-8" as default encoding for `fopen` ([bug #63930](https://savannah.gnu.org/bugs/?63930)).
+- `fopen`, `unicode2native`: Fix converting the encoding of short char arrays with invalid UTF-8 ([bug #63930](https://savannah.gnu.org/bugs/?63930)).
+- `fopen`: Try to gather complete UTF-8 surrogates when converting encoding ([bug #63930](https://savannah.gnu.org/bugs/?63930)).
+- `fopen`: Do not convert encoding for file streams with libc++ ([bug #63930](https://savannah.gnu.org/bugs/?63930)).
+- `pr-output.cc`: Fix output for `format native-bit` ([bug #63940](https://savannah.gnu.org/bugs/?63940)).
+- Fix evaluation of `&` and `|` expressions in conditional contexts ([bug #63935](https://savannah.gnu.org/bugs/?63935)).
+- Avoid clang warning about very unlikely buffer overflow.
+- `mpoles.m`: Overhaul function and use absolute tolerance for zero poles ([bug #63937](https://savannah.gnu.org/bugs/?63937)).
+- `perms.m`: Change `"unique"` output order to reverse lexicographic to match non-unique order ([bug #63962](https://savannah.gnu.org/bugs/?63962)).
+- Remove trailing `'\r'` from curl dir list ([bug #63851](https://savannah.gnu.org/bugs/?63851)).
+- Fix display of scalar complex variables with mixed `Inf`/`NaN` and floating point values ([bug #63961](https://savannah.gnu.org/bugs/?63961)).
+- Don't use encoding facet when writing bytes to stream ([bug #63931](https://savannah.gnu.org/bugs/?63931)).
+
+## GUI
+
+- Speedup loading and saving preferences dialog ([bug #63909](https://savannah.gnu.org/bugs/?63909)).
+
+## Build system / Tests
+
+- `inpolygon.m`: Fix demo code ([bug #63865](https://savannah.gnu.org/bugs/?63865)).
+- `if.tst`: New test for ([bug #63935](https://savannah.gnu.org/bugs/?63935)).
+- `acinclude.m4`: Correct typo in `#define PCRE2_CODE_UNIT_WIDTH`.
+- `lu`: Add self-test with complex valued input.
+- Disable visibility flags by default ([bug #61855](https://savannah.gnu.org/bugs/?61855), [bug #63916](https://savannah.gnu.org/bugs/?63916)).
+- Check whether using STL from LLVM or Apple ([bug #63930](https://savannah.gnu.org/bugs/?63930)).
+
+## Documentation
+
+- Improve documentation for `linspace` and `logspace` functions.
+- Correct and improve documentation for `sparse()` function.
+
+[1]: {{ "download.html" | absolute_url }}
+[2]: https://ftpmirror.gnu.org/octave/windows
+[3]: {{ site.wiki_url }}/Octave_for_macOS
