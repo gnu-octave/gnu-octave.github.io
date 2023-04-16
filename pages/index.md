@@ -3,6 +3,7 @@ layout: default
 permalink: index
 ---
 
+<!--
 <div class="primary callout" data-closable>
   GNU Octave is a
   <a href="https://wiki.octave.org/gsoc">mentoring organization for GSoC 2023</a>.
@@ -10,6 +11,7 @@ permalink: index
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
+-->
 
 <div class="grid-x grid-margin-x">
   <div class="cell medium-4 align-top">
