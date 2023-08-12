@@ -1,0 +1,56 @@
+---
+layout: post
+title:  "GNU Octave 8.3.0 Released"
+date:   2023-08-08
+categories: news release
+---
+
+Octave Version 8.3.0 has been released and is now available for [download][1].
+An official [Windows binary installer][2] is also available.
+For [macOS][3] see the installation instructions in the wiki.
+
+This version is a bug fixing release:
+
+## Improvements and fixes
+
+- `undo_string_escapes`: Return `'\0'` for `NUL` byte input ([bug #64051](https://savannah.gnu.org/bugs/?64051)).
+- Stop excessive memory usage for minor grid ticks ([bug #64017](https://savannah.gnu.org/bugs/?64017)).
+- Include needed headers in installed `.cc` files ([bug #63922](https://savannah.gnu.org/bugs/?63922)).
+- Fix floating point exception when sparse array reshaped to `0x0` ([bug #64080](https://savannah.gnu.org/bugs/?64080)).
+- `unicode2native`: Fix conversion to UTF-16 ([bug #64139](https://savannah.gnu.org/bugs/?64139)).
+- `memory`: Fix execution on Cygwin.
+- `uniconv-wrappers`: Avoid freeing uninitialized pointer ([bug #64182](https://savannah.gnu.org/bugs/?64182)).
+- `lo-regexp.cc`: Only include PCRE2/PCRE headers if feature test succeeded ([bug #64172](https://savannah.gnu.org/bugs/?64172)).
+- Fix segfault when `saveobj()` used with old-style class files ([bug #64220](https://savannah.gnu.org/bugs/?64220)).
+- Fix restoring breakpoints from `dbstatus` breakpoint structure ([bug #64271](https://savannah.gnu.org/bugs/?64271)).
+- `colorbar.m`: Fix undefined variable `d` ([bug #64287](https://savannah.gnu.org/bugs/?64287)).
+- Reset all axes properties except `'Units'` and `'Position'` with `cla ('reset')`.
+- `unicode2native.m`: Restore support for one input parameter ([bug #64331](https://savannah.gnu.org/bugs/?64331)).
+- `native2unicode`, `unicode2native`: Support empty second argument ([bug #64331](https://savannah.gnu.org/bugs/?64331)).
+- `fullfile.m`: Return empty cell for input with empty cell ([bug #64377](https://savannah.gnu.org/bugs/?64377)).
+- `audioplayer.m`: Emit error if input data `Y` is empty ([bug #64379](https://savannah.gnu.org/bugs/?64379)).
+- Remove obsolete callback constructor code for `@audioplayer` and `@audiorecorder` ([bug #64379](https://savannah.gnu.org/bugs/?64379)).
+- Avoid false detection of "non-real pivot" in `ichol()` ([bug #63785](https://savannah.gnu.org/bugs/?63785)).
+- Fix building against SuiteSparse 7.1.0 when SPQR is disabled ([bug #64446](https://savannah.gnu.org/bugs/?64446)).
+- `ellipsoid.m`: Avoid returning geometry data unless it is explicitly requested to avoid overwriting `ans`.
+- `subsasgn`: Avoid panic on invalid field names ([bug #64213](https://savannah.gnu.org/bugs/?64213)).
+- `lex.ll`: Remove `$` as a valid character for identifiers.
+- `fileparts.m`: Allow for relative path on different drive on Windows ([bug #64462](https://savannah.gnu.org/bugs/?64462)).
+- `datevec.m`: Add some ISO 8601 conform formats ([patch #9964](https://savannah.gnu.org/patch/?9964)).
+
+## Build system / Tests
+
+- `betaincinv.m`: Slightly increase test tolerance (for macOS 13).
+- `colorbar.m`: Add tests ([bug #64287](https://savannah.gnu.org/bugs/?64287)).
+- `sparse-qr.cc`: Fix compatibility with SuiteSparse 7.1.0 / CXSparse 4.0.4.
+- `pcg.m`: Use eps tolerance in test for `ishermitian` ([bug #63787](https://savannah.gnu.org/bugs/?63787)).
+- `fileparts.m`: Overhaul BISTs.
+
+## Documentation
+
+- Return documentation for `help properties` ([bug #64067](https://savannah.gnu.org/bugs/?64067)).
+- Add note to `isprime.m` on inputs over 2^64.
+
+[1]: {{ "download.html" | absolute_url }}
+[2]: https://ftpmirror.gnu.org/octave/windows
+[3]: {{ site.wiki_url }}/Octave_for_macOS
