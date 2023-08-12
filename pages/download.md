@@ -13,7 +13,7 @@ permalink: download
   (Release Notes:
   <a href="{{ "/NEWS-8.html" | relative_url }}">8.1.0</a>,
   <a href="{{ site.baseurl }}{% post_url 2023-04-13-octave-8.2.0-released %}">8.2.0</a>,
-  <a href="">8.3.0</a>)
+  <a href="{{ site.baseurl }}{% post_url 2023-08-08-octave-8.3.0-released %}">8.3.0</a>)
 </div>
 
 <div class="button-group large expanded stacked-for-small">
