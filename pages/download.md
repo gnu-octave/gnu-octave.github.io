@@ -8,12 +8,13 @@ permalink: download
 
 <div class="primary callout">
   <i class="fas fa-info-circle" style="color:#1779ba;"></i>
-  <strong>GNU Octave 8.3.0</strong> is the latest stable release.
+  <strong>GNU Octave 8.4.0</strong> is the latest stable release.
   &nbsp;
   (Release Notes:
   <a href="{{ "/NEWS-8.html" | relative_url }}">8.1.0</a>,
   <a href="{{ site.baseurl }}{% post_url 2023-04-13-octave-8.2.0-released %}">8.2.0</a>,
-  <a href="{{ site.baseurl }}{% post_url 2023-08-08-octave-8.3.0-released %}">8.3.0</a>)
+  <a href="{{ site.baseurl }}{% post_url 2023-08-08-octave-8.3.0-released %}">8.3.0</a>,
+  <a href="{{ site.baseurl }}{% post_url 2023-11-05-octave-8.4.0-released %}">8.4.0</a>)
 </div>
 
 <div class="button-group large expanded stacked-for-small">
@@ -94,28 +95,28 @@ After installation type <code>pkg list</code> to list them.<br>
 </div>
 
 - Windows-64 (recommended)
-  - [octave-8.3.0-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64-installer.exe)
+  - [octave-8.4.0-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64-installer.exe)
     (~ 380 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64-installer.exe.sig)
-  - [octave-8.3.0-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64.7z)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64-installer.exe.sig)
+  - [octave-8.4.0-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64.7z)
     (~ 375 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64.7z.sig)
-  - [octave-8.3.0-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64.zip)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64.7z.sig)
+  - [octave-8.4.0-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64.zip)
     (~ 660 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64.zip.sig)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64.zip.sig)
 
 <p></p>
 
 - Windows-32 (old computers)
-  - [octave-8.3.0-w32-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w32-installer.exe)
+  - [octave-8.4.0-w32-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32-installer.exe)
     (~ 380 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w32-installer.exe.sig)
-  - [octave-8.3.0-w32.7z](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w32.7z)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32-installer.exe.sig)
+  - [octave-8.4.0-w32.7z](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32.7z)
     (~ 375 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w32.7z.sig)
-  - [octave-8.3.0-w32.zip](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w32.zip)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32.7z.sig)
+  - [octave-8.4.0-w32.zip](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32.zip)
     (~ 650 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w32.zip.sig)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32.zip.sig)
 
 <p></p>
 
@@ -128,15 +129,15 @@ After installation type <code>pkg list</code> to list them.<br>
   version above.
   </small>
 
-  - [octave-8.3.0-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64-64-installer.exe)
+  - [octave-8.4.0-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64-64-installer.exe)
     (~ 380 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64-64-installer.exe.sig)
-  - [octave-8.3.0-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64-64.7z)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64-64-installer.exe.sig)
+  - [octave-8.4.0-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64-64.7z)
     (~ 375 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64-64.7z.sig)
-  - [octave-8.3.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64-64.zip)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64-64.7z.sig)
+  - [octave-8.4.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64-64.zip)
     (~ 660 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.3.0-w64-64.zip.sig)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64-64.zip.sig)
 
 All Windows binaries with corresponding source code can be downloaded from
 [https://ftpmirror.gnu.org/octave/windows/](https://ftpmirror.gnu.org/octave/windows/).

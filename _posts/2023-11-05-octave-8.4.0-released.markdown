@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "GNU Octave 8.4.0 Released"
+date:   2023-11-05
+categories: news release
+---
+
+Octave Version 8.4.0 has been released and is now available for [download][1].
+An official [Windows binary installer][2] is also available.
+For [macOS][3] see the installation instructions in the wiki.
+
+This version is a bug fixing release:
+
+### Improvements and fixes
+
+- `mkoctfile`: Skip parsing for less flags ([bug #64590](https://savannah.gnu.org/bugs/?64590)).
+- Fix getting number of non-zero elements in SuiteSparse matrices.
+- `delaunayn`: Avoid erroneous simplex removal for integer inputs ([bug #64658](https://savannah.gnu.org/bugs/?64658)).
+- `delaunayn`: Add precision loss warning for large int inputs ([bug #64658](https://savannah.gnu.org/bugs/?64658)).
+- `delaunayn`: Also warn for negative integers with large magnitude ([bug #64658](https://savannah.gnu.org/bugs/?64658)).
+- Correctly load all-zero sparse matrices from text files ([bug #64696](https://savannah.gnu.org/bugs/?64696)).
+- Allocate correct storage for interleaved complex mxArray objects ([bug #64687](https://savannah.gnu.org/bugs/?64687)).
+- `mkoctfile`: Prefer parsing over passing on argument after unknown argument ([bug #64725](https://savannah.gnu.org/bugs/?64725)).
+- `fft`: Avoid segmentation fault with ND-arrays ([bug #64729](https://savannah.gnu.org/bugs/?64729)).
+- `fft`: Avoid overwriting input for inplace operations ([bug #64733](https://savannah.gnu.org/bugs/?64733)).
+- `intersect.m`: Correct third output with `"stable"` flag ([bug #60347](https://savannah.gnu.org/bugs/?60347)).
+- Avoid use-after-free issue in parser ([bug #60882](https://savannah.gnu.org/bugs/?60882)).
+- `betainc.m`: Improve integer input logic and validation ([bug #64726](https://savannah.gnu.org/bugs/?64726)).
+- `webread`: Apply timeout also for initial connection ([bug #64826](https://savannah.gnu.org/bugs/?64826)).
+
+## Build system / Tests
+
+- `mkpp.m`: Remove stray text causing error with demo code.
+- Ensure that new test for saving sparse matrices writes a text file.
+- Search for tests in and install octave-value template sources ([bug #64696](https://savannah.gnu.org/bugs/?64696)).
+
+### Documentation
+
+- Correct variable name typo in documentation of `slice()`.
+- Expand documentation for `gcd()` and `lcm()`.
+- `datevec`: Clarify that heuristics are used to detect the format of a date string ([bug #64563](https://savannah.gnu.org/bugs/?64563)).
+- `datenum`: Add help text that inputs can be arrays, add examples ([bug #54679](https://savannah.gnu.org/bugs/?54679)).
+- `datevec`: Add help text that inputs can be arrays ([bug #54679](https://savannah.gnu.org/bugs/?54679)).
+- Describe various pitfalls with floating point ranges ([bug #64692](https://savannah.gnu.org/bugs/?64692)).
+- Add range example and some copyedits.
+
+[1]: {{ "download.html" | absolute_url }}
+[2]: https://ftpmirror.gnu.org/octave/windows
+[3]: {{ site.wiki_url }}/Octave_for_macOS
