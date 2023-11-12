@@ -107,19 +107,6 @@ After installation type <code>pkg list</code> to list them.<br>
 
 <p></p>
 
-- Windows-32 (old computers)
-  - [octave-8.4.0-w32-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32-installer.exe)
-    (~ 380 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32-installer.exe.sig)
-  - [octave-8.4.0-w32.7z](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32.7z)
-    (~ 375 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32.7z.sig)
-  - [octave-8.4.0-w32.zip](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32.zip)
-    (~ 650 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w32.zip.sig)
-
-<p></p>
-
 - Windows-64 (64-bit linear algebra for large data)
   <br><small>
   Unless your computer has more than ~32GB of memory
@@ -138,6 +125,14 @@ After installation type <code>pkg list</code> to list them.<br>
   - [octave-8.4.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64-64.zip)
     (~ 660 MB)
     [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-8.4.0-w64-64.zip.sig)
+
+<p></p>
+
+The **32-bit Windows binaries** formerly distributed by the Octave project are no longer supported.
+The download link has been removed from here but old installers are still available from the FTP mirrors.
+Patches for known issues are still welcome.
+An alternative source for 32-bit Windows binaries of Octave is
+[MSYS2](https://wiki.octave.org/Octave_for_Microsoft_Windows#GNU_Octave_in_MSYS2).
 
 All Windows binaries with corresponding source code can be downloaded from
 [https://ftpmirror.gnu.org/octave/windows/](https://ftpmirror.gnu.org/octave/windows/).
