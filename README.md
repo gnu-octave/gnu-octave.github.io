@@ -9,11 +9,11 @@ The development and deployment workflow in short:
 
 2. Static HTML pages are generated from these repositories
    and deployed at
-   - <https://octave.org> (FossHost)
+   - <https://octave.org> (Digital Ocean)
    - <https://gnu-octave.github.io> (GitHub Pages)
 
 3. The deployment to GitHub Pages happens automatically by pushing to the
-   respective repository.  The deployment on FossHost has to be done manually.
+   respective repository.  The deployment on Digital Ocean has to be done manually.
 
 
 ## Simple website changes / contributions
@@ -29,7 +29,7 @@ If you want submit changes/additions, please create a
 on GitHub or contact the Octave developers at <https://octave.discourse.group/>.
 
 > **Note:** Changes made to the GitHub page repository are only visible there.
-> To change <https://octave.org>, the updates must be deployed manually on FossHost.
+> To change <https://octave.org>, the updates must be deployed manually on Digital Ocean.
 
 
 ### Add a new RSS post
@@ -93,7 +93,7 @@ file changes.
 
 ### Website Design and Code
 
-- Copyright (c) 2016-2022 The Octave Project Developers.
+- Copyright (c) 2016-2023 The Octave Project Developers.
 - Copyright (c) 2015-2016 Alex Krolick.
 
 See the file LICENSE in the top-level directory of this distribution or
