@@ -77,8 +77,8 @@ Today, thousands of people worldwide are using Octave in teaching,
 research, and commercial applications.
 
 Just about everyone thinks that the name Octave has something to do with music,
-but it is actually the name of one of the author's former professor
-[Octave Levenspiel](https://en.wikipedia.org/wiki/Octave_Levenspiel)
+but is actually the name of one of the author's former professors,
+[Octave Levenspiel](https://en.wikipedia.org/wiki/Octave_Levenspiel),
 who wrote a famous textbook on chemical reaction engineering,
 and who was also well known for his ability to do quick "back of the envelope"
 calculations.
