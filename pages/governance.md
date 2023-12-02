@@ -56,7 +56,7 @@ you agree to the following conditions:
 
 ### NumFOCUS
 
-Since 2022 the GNU Octave project receives donations
+Since 2023 the GNU Octave project receives donations
 from both individuals and corporations with the kind support from
 [NumFOCUS](https://numfocus.org/project/gnu-octave),
 a 501(c)(3) public charity in the United States of America.
@@ -75,7 +75,7 @@ the GNU Octave source code,
 the Octave project does not receive any direct or indirect
 monetary funding by the FSF.
 
-Before 2022 the FSF helped the GNU Octave project
+Before 2023 the FSF helped the GNU Octave project
 to receive donations from both individuals and corporations.
 
 ### Related organizations with no governance role

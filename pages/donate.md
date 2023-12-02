@@ -17,7 +17,7 @@ and many private and corporate donations.
 
 - **Please donate here: <https://numfocus.org/donate-for-gnu-octave>**
   
-  Since 2022 the GNU Octave project receives donations
+  Since 2023 the GNU Octave project receives donations
   from both individuals and corporations with the kind support from
   [NumFOCUS](https://numfocus.org/project/gnu-octave),
   a 501(c)(3) public charity in the United States of America.
