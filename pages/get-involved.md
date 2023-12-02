@@ -11,10 +11,10 @@ permalink: get-involved
 We always need more help improving Octave
 and there are many ways you can contribute.
 You can help by:
-- answering questions on [Discourse]({{ site.discourse_url }}),
-- fixing [Octave bugs]({{ site.bugs_url }}),
-- developing new features,
-- writing Octave packages,
+- answering questions on [Discourse]({{ site.discourse_url }})
+- fixing [Octave bugs]({{ site.bugs_url }})
+- developing new features
+- writing Octave packages
 - ...
 
 For more inspiration,
