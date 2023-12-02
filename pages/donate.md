@@ -8,20 +8,23 @@ permalink: donate
 
 Octave is **free software**
 used in countless research and production environments around the world.
-The Octave project grew and improved for
-[30 years]({{ "about.html" | relative_url }}) thanks to the effort of
+The Octave project has grown and improved for over
+[30 years]({{ "about.html" | relative_url }}) thanks to the efforts of
 [more than 400 volunteers](https://hg.savannah.gnu.org/hgweb/octave/file/tip/doc/interpreter/contributors.in),
-and many private or corporate donations.
+and many private and corporate donations.
 
 **Your contribution helps to ensure that Octave will continue to improve.**
 
-- [FSF Donation Page](https://crm.fsf.org/civicrm/contribute/transact?reset=1&id=10)
-  -- The Free Software Foundation (FSF) is a 501(c)(3) nonprofit organization based in Boston, MA, USA
-- [<i class="fab fa-bitcoin"></i> Bitcoin](bitcoin:1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF)
-  (1E6HchBMX1EfiJQhSUanuF4VYKk552tEHF)
-- Please contact [John W. Eaton &lt;jwe@octave.org&gt;](mailto:jwe@octave.org)
-  by email, for additional information.
-
+- **Please donate here: <https://numfocus.org/donate-for-gnu-octave>**
+  
+  Since 2022 the GNU Octave project receives donations
+  from both individuals and corporations with the kind support from
+  [NumFOCUS](https://numfocus.org/project/gnu-octave),
+  a 501(c)(3) public charity in the United States of America.
+  
+  For full transparency about collected donations
+  and how they helped improving the GNU Octave project,
+  please visit <https://opencollective.com/gnu-octave>.
 
 <!--
 ### Sponsors:
@@ -32,7 +35,7 @@ and many private or corporate donations.
 -->
 
 Please contact [John W. Eaton &lt;jwe@octave.org&gt;](mailto:jwe@octave.org)
-to get listed here.
+to get listed as sponsor here.
 See also
 [<i class="fas fa-comment-dollar"></i> commercial support]({{ "commercial-support.html" | relative_url }})
 options to implement the specific features.

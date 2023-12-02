@@ -54,20 +54,29 @@ you agree to the following conditions:
 
    If you wish, you will be credited as a contributor in the Octave documentation.
 
-### Free Software Foundation (FSF)
+### NumFOCUS
 
-The FSF <https://www.fsf.org/> is a US 501(c)(3) nonprofit organization
-promoting computer user freedom.
-With the help of the FSF,
-both individuals and corporations have the opportunity to
-[donate to the GNU Octave project](https://my.fsf.org/civicrm/contribute/transact?reset=1&id=10).
+Since 2022 the GNU Octave project receives donations
+from both individuals and corporations with the kind support from
+[NumFOCUS](https://numfocus.org/project/gnu-octave),
+a 501(c)(3) public charity in the United States of America.
+
 How donations are spent is decided by Octave core developers
 led by John W. Eaton.
+
+For full transparency about collected donations
+and how they helped improving the GNU Octave project,
+please visit <https://opencollective.com/gnu-octave>.
+
+### Free Software Foundation (FSF)
 
 Despite the free usage of the FSF infrastructure for distributing
 the GNU Octave source code,
 the Octave project does not receive any direct or indirect
 monetary funding by the FSF.
+
+Before 2022 the FSF helped the GNU Octave project
+to receive donations from both individuals and corporations.
 
 ### Related organizations with no governance role
 
