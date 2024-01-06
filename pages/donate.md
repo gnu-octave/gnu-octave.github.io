@@ -15,7 +15,7 @@ and many private and corporate donations.
 
 **Your contribution helps to ensure that Octave will continue to improve.**
 
-- **Please donate here: <https://numfocus.org/donate-for-gnu-octave>**
+- **Please donate here: <https://opencollective.com/gnu-octave>**
   
   Since 2023 the GNU Octave project receives donations
   from both individuals and corporations with the kind support from
