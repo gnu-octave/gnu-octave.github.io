@@ -9,9 +9,10 @@ permalink: support
 #### <i class="fas fa-book"></i> Read the **GNU Octave Manual**
 
 <div style="margin-left: 2em;" markdown="1">
+- Type `doc` inside Octave
 - [<i class="fas fa-globe-americas"></i> Web version]({{ site.docs_url }})
 - [<i class="fas fa-file-pdf"></i> PDF version]({{ "octave.pdf" | relative_url }})
-- Type `doc` inside Octave
+- [<i class="far fa-file-code"></i> Doxygen](https://docs.octave.org/doxygen/)
 </div>
 
 
