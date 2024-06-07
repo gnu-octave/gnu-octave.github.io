@@ -8,10 +8,10 @@ permalink: download
 
 <div class="primary callout">
   <i class="fas fa-info-circle" style="color:#1779ba;"></i>
-  <strong>GNU Octave 9.1.0</strong> is the latest stable release.
+  <strong>GNU Octave 9.2.0</strong> is the latest stable release.
   &nbsp;
   (Release Notes:
-  <a href="{{ "/NEWS-9.html" | relative_url }}">9.1.0</a>)
+  <a href="{{ "/NEWS-9.html" | relative_url }}">9.2.0</a>)
 </div>
 
 <div class="button-group large expanded stacked-for-small">
@@ -92,15 +92,15 @@ After installation type <code>pkg list</code> to list them.<br>
 </div>
 
 - Windows-64 (recommended)
-  - [octave-9.1.0-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64-installer.exe)
+  - [octave-9.2.0-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64-installer.exe)
     (~ 380 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64-installer.exe.sig)
-  - [octave-9.1.0-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64.7z)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64-installer.exe.sig)
+  - [octave-9.2.0-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64.7z)
     (~ 375 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64.7z.sig)
-  - [octave-9.1.0-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64.zip)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64.7z.sig)
+  - [octave-9.2.0-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64.zip)
     (~ 660 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64.zip.sig)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64.zip.sig)
 
 <p></p>
 
@@ -113,15 +113,15 @@ After installation type <code>pkg list</code> to list them.<br>
   version above.
   </small>
 
-  - [octave-9.1.0-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64-64-installer.exe)
+  - [octave-9.2.0-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64-64-installer.exe)
     (~ 380 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64-64-installer.exe.sig)
-  - [octave-9.1.0-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64-64.7z)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64-64-installer.exe.sig)
+  - [octave-9.2.0-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64-64.7z)
     (~ 375 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64-64.7z.sig)
-  - [octave-9.1.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64-64.zip)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64-64.7z.sig)
+  - [octave-9.2.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64-64.zip)
     (~ 660 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.1.0-w64-64.zip.sig)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-9.2.0-w64-64.zip.sig)
 
 <p></p>
 

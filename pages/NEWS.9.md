@@ -117,7 +117,7 @@ March 14, 2024
 
 - `cov` now processes the input form cov(x,y) with two separate data arrays x
   and y, as cov(x(:),y(:)) to maintain Matlab compatibility.  It also accepts a
-  NANFLAG option to allow ignoring NaN entries in input data (bug #c) and
+  NANFLAG option to allow ignoring NaN entries in input data ([bug #50571](https://savannah.gnu.org/bugs/?50571)) and
   produces Matlab compatible outputs for empty inputs ([bug #50583](https://savannah.gnu.org/bugs/?50583)).  `corr` and
   `corrcoef` internal code has been adapted to the new `cov` behavior with no
   change to user interface.  Packages using the octave core's `cov` that rely
@@ -246,8 +246,8 @@ Octave 9.
   `LDFLAGS` rather than `LFLAGS`.  `LFLAGS` was deprecated in Octave 6 and has
   been removed.
 
-Summary of bugs fixed for version 9.1.0:
-----------------------------------------
+Summary of bugs fixed for version 9.1.0 (2024-03-12):
+----------------------------------------------------
 
 - Bugfixes to `whos -file`, `urlread`, `mat2cell`, `set`, `savepath`,
   `loadpath`, `griddata`, and the general interpreter stack-handling.
@@ -277,3 +277,102 @@ Summary of bugs fixed for version 9.1.0:
 - Performance and stability improvements: avoid unnecessary string
   construction, use static casts instead of dynamic casts where possible,
   eliminate various isolated crash conditions.
+
+Summary of bugs fixed for version 9.2.0 (2024-06-01):
+-----------------------------------------------------
+
+### Improvements and fixes
+
+- `hist.m`: Add input validation for `Y` restricting it to 2-D array
+  ([bug #65478](https://savannah.gnu.org/bugs/?65478)).  Avoid error when `Y` value range is very small ([bug #65714](https://savannah.gnu.org/bugs/?65714)).
+- `cross.m`: Add input validation for `dim` restricting it to a numeric
+  integer valued scalar ([bug #65544](https://savannah.gnu.org/bugs/?65544), bug [#65527](https://savannah.gnu.org/bugs/?65527)).
+- `getframe.m`: Respect pixel ratio (high DPI) of screen with figure
+  ([bug #65540](https://savannah.gnu.org/bugs/?65540)).
+- `legend.m`: Fix error if root property `"showhiddenhandles"` is `"on"`
+  ([bug #65442](https://savannah.gnu.org/bugs/?65442))
+- `savepath.m`: Correctly handle packages without binaries ([bug #65559](https://savannah.gnu.org/bugs/?65559)).
+- Correctly scale figure position on screen with DPI scaling (high DPI).
+- `profile ('on')` now clears any existing profile data as the documentation
+  states ([bug #65595](https://savannah.gnu.org/bugs/?65595)).
+- Fix segmentation fault when trying to set breakpoint in non-existent method
+  of `classdef` class ([bug #65610](https://savannah.gnu.org/bugs/?65610)).
+- Improve default display of `classdef` properties ([bug #62432](https://savannah.gnu.org/bugs/?62432)).
+- Avoid crash with Qt6 6.7.0 ([bug #65605](https://savannah.gnu.org/bugs/?65605)).
+- `bar.m`: Catch input number validation error.
+- Prevent OOM crash or segmentation fault in `sort ()` when `dim` equals `Inf`
+  ([bug #65712](https://savannah.gnu.org/bugs/?65712)).
+- `legend.m`: Avoid setting more colors than coordinates for `patch` objects
+  ([bug #65632](https://savannah.gnu.org/bugs/?65632)).
+- `inputParser.m`: Allow default classdef objects which overload `struct`
+  ([bug #65667](https://savannah.gnu.org/bugs/?65667)).
+- Preserve `"position"` property of figure when object is `reset()`
+  ([bug #65750](https://savannah.gnu.org/bugs/?65750)).
+- `hist.m`: Avoid error when `y` value range is very small ([bug #65714](https://savannah.gnu.org/bugs/?565714)).
+- `barh`: Add input validation check for `nargin < 1`.
+
+### GUI
+
+- Use first word for options in right-click menu of command window widget
+  ([bug #65518](https://savannah.gnu.org/bugs/?65518)).
+- Set `DontUseNativeDialog` flag as first property in `QFileDialog`.
+- Explicitly raise non-modal message boxes ensuring visibility.
+- Save and restore splitter state of documentation widget.
+- Allow executing new files from built-in editor with F5 ([bug #65548](https://savannah.gnu.org/bugs/?65548)).
+- Allow unbinding GUI shortcuts ([bug #65580](https://savannah.gnu.org/bugs/?65580)).
+- Fix restoring headers in file browser and workspace view ([bug #65030](https://savannah.gnu.org/bugs/?65030)).
+- File dialogs of the built-in editor are now modal.
+- Fix dragging editor from main window into floating state ([bug #65725](https://savannah.gnu.org/bugs/?65725)).
+
+### Build system / Tests
+
+- Avoid overriding `save_*` variables from outer scope ([bug #65476](https://savannah.gnu.org/bugs/?65476)).
+  This fixes an error that might have lead to overlinking of shared libraries
+  (e.g., `.oct` files). Consider rebuilding shared libraries that have been
+  built with Octave 9.1.0.
+- Add BIST for `is_valid_file_id.m` ([bug #65543](https://savannah.gnu.org/bugs/?65543)).
+- Update metainfo.xml with new fields for AppStream 1.0 ([bug #65355](https://savannah.gnu.org/bugs/?65355)).
+- Show result of check for `std::pmr::polymorphic_allocator` in configure
+  summary.
+- Run test program for polymorphic allocators if possible instead of a simple
+  build check.
+- Speed up BIST for the central part of `convn` with `'full'` shape.
+- Require Qt Widgets module when building the GUI ([bug #65625](https://savannah.gnu.org/bugs/?65625)).
+- `bug-53027.tst`: Delete temporary file after test is done ([bug #53027](https://savannah.gnu.org/bugs/?53027)).
+- Avoid build error with GCC 14 when targeting Windows.
+- Try to clean up after BIST also in case test failed ([bug #53027](https://savannah.gnu.org/bugs/?53027)).
+- `bar.m`, `barh.m`: Add plotting BISTs ([bug #65671](https://savannah.gnu.org/bugs/?65671)).
+- Check if C and Fortran compilers accept `-fexceptions` flag ([bug #65767](https://savannah.gnu.org/bugs/?65767)).
+  This affects building Octave itself from sources and also how .mex or .oct
+  files are built by `mex` and `mkoctfile`.
+
+### Documentation
+
+- Describe shape of outputs for `hist` ([bug #65471](https://savannah.gnu.org/bugs/?65471)).
+- Simplify programming notes for `patch` objects ([bug #65421](https://savannah.gnu.org/bugs/?65421)).
+- `vecnorm.m`: Add missing parenthesis to equation in docstring.
+- Add example to Minimizers section on using anonymous functions to pass
+  additional arguments to functions called by minimizer functions
+  (`fminsearch`, `fminbnd`, `fminunc`).
+- Add application notes in `fminsearch`, `fminbnd`, `fminunc` indicating the
+  preferred way to pass parameters is through anonymous functions.
+- Update remaining copyright statements to 2024.
+- Minor fix for `setappdata.m`.
+- Section "Assignment Expressions": Use `@emph` rather than `@i` macro for
+  better rendering in plaintext formats.
+- Section "Running Octave": Tell new users how to start Octave on their
+  computers.
+- `tsearch`: Add programming note about expected performance.
+
+### Deprecated functions, properties, and operators
+
+- `fminsearch` parameter passing:  A legacy, undocumented, and only partially
+  supported syntax for passing parameters to the minimized function `fcn`
+  called by `fminsearch` by appending them to the input argument list has
+  functioned intermittently since Octave 4.4.0.  Due to conflicts with other
+  compatibility-required input methods the documentation of this syntax was
+  removed in Octave 5.1.0, and the remaining functionality will be completely
+  removed in Octave 10.  The preferred method of passing parameters to any of
+  the minimization functions (including `fminsearch`, `fminbnd`, and `fminunc`)
+  is through the use of anonymous functions.  Specific examples of this can be
+  found in the "Minimizers" section of the GNU Octave manual.
