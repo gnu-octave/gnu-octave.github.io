@@ -10,11 +10,25 @@ The development and deployment workflow in short:
 2. Static HTML pages are generated from these repositories
    and deployed at
    - <https://octave.org> (Digital Ocean)
-   - <https://gnu-octave.github.io> (GitHub Pages)
+   - <https://gnu-octave.github.io> (GitHub Pages for testing)
 
-3. The deployment to GitHub Pages happens automatically by pushing to the
-   respective repository.  The deployment on Digital Ocean has to be done manually.
+3. For testing changes,
+   updates to GitHub Pages happen automatically by pushing to the respective repository.
 
+4. The deployment on Digital Ocean <https://octave.org> has to be done manually.
+   1. Login to the Digital Ocean server with root permissions.
+   2. ```
+      cd /var/www/www.octave.org/
+      rvm use 3.3.1
+      git pull
+      bundle install
+      bundle exec jekyll build
+      chown -R root:www-data *
+      chown -R root:www-data .*
+      ```
+   3. Changes are now live on <https://octave.org>.
+      The static website is build to the `/var/www/www.octave.org/_site` directory
+      and served from there to <https://octave.org>.
 
 ## Simple website changes / contributions
 
