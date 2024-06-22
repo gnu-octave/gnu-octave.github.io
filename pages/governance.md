@@ -92,23 +92,24 @@ nor any governance capacity with the GNU Octave project.
 of software packages, that can be easily installed and used with GNU Octave.
 The Octave SourceForge project was initiated in 2000
 and active development stopped in 2018.
-New packages are not accepted, but existing packages are still maintained.
-The project lists [56 members](https://sourceforge.net/p/octave/_members/)
-(10 active and 46 dormant) maintaining existing Octave packages,
+New packages are not accepted, but a few existing packages are still maintained.
+The project lists [58 members](https://sourceforge.net/p/octave/_members/)
+(5 active and 53 dormant) maintaining existing Octave packages,
 but not the source code of GNU Octave itself.
 
 **Octave Packages** <https://gnu-octave.github.io/packages/> is another
 collection of Octave packages and intended successor of **Octave Forge**.
 New packages are accepted here and the development of Octave packages
-is independent of GNU Octave itself.
+is independent of GNU Octave itself and maintained by the
+Octave GitHub Organization.
 
-#### GitHub Organization
+#### Octave GitHub Organization
 
 The GitHub Organization <https://github.com/gnu-octave/>
 was established around 2020.
 It is a loose connection of currently
-[27 members](https://github.com/orgs/gnu-octave/people)
-(10 active and 17 dormant)
+[46 members](https://github.com/orgs/gnu-octave/people)
+(20 active and 26 dormant)
 developing software intended to be used with GNU Octave
 (including **Octave Packages**),
 but not the source code of GNU Octave itself.
