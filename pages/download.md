@@ -9,9 +9,7 @@ permalink: download
 <div class="primary callout">
   <i class="fas fa-info-circle" style="color:#1779ba;"></i>
   <strong>GNU Octave 9.2.0</strong> is the latest stable release.
-  &nbsp;
-  (Release Notes:
-  <a href="{{ "/NEWS-9.html" | relative_url }}">9.2.0</a>)
+  (<a href="{{ "/NEWS-9.html" | relative_url }}">Release Notes</a>)
 </div>
 
 <div class="button-group large expanded stacked-for-small">
