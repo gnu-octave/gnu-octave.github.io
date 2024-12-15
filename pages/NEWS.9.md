@@ -426,7 +426,7 @@ Octave 9.
 
 ### Documentation
 
-- `load`: Correct documentation of `-v7.3` and `-hdf5` options (bug #42530).
+- `load`: Correct documentation of `-v7.3` and `-hdf5` options ([bug #42530](https://savannah.gnu.org/bugs/?42530)).
 - `interp2`, `interp3`, `interpn`: Specify that inputs need to be numeric
   ([bug #66086](https://savannah.gnu.org/bugs/?66086)).
 - `error`: Document the `ID` argument ([bug #66015](https://savannah.gnu.org/bugs/?66015)).
