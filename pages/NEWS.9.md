@@ -411,7 +411,7 @@ Octave 9.
 
 ### GUI
 
-- Update Brazilian Portugese translation file ([bug #66337](https://savannah.gnu.org/bugs/?66337)).
+- Update Brazilian and Portuguese translation file ([bug #66337](https://savannah.gnu.org/bugs/?66337)).
 - Fix some missing white spaces in documentation viewer ([bug #66459](https://savannah.gnu.org/bugs/?66459)).
 
 ### Build system / Tests
