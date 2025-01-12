@@ -24,7 +24,7 @@ along with Octave; see the file COPYING.  If not, see
 Copyright:
 
 - 1987-1988, 1991-1997, 2003-2018  Free Software Foundation
-- 1992-2020  John W. Eaton
+- 1992-2024  John W. Eaton
 - 1993  Fook Fah Yap
 - 1993  Friedrich Leisch
 - 1993  Gerhard Kircher
@@ -78,7 +78,7 @@ Copyright:
 - 2000, 2003, 2005  Mats Jansson
 - 2000, 2003, 2007-2008  Gabriele Pannocchia
 - 2000, 2004, 2006  Etienne Grossmann
-- 2000, 2005  James R. Van Zandt
+- 2000, 2005, 2021  James R. Van Zandt
 - 2000-2001  Matthew W. Roberts
 - 2000-2002  Cai Jianming
 - 2000-2002, 2007-2011  Kai Habel
@@ -90,7 +90,7 @@ Copyright:
 - 2001  Ondrej Popp
 - 2001  Ross Lippert
 - 2001  Thomas Stuart
-- 2001, 2005-2009, 2012-2016  Rafael Laboissiere
+- 2001, 2005-2009, 2012-2016, 2022  Rafael Laboissiere
 - 2001, 2007  Jean-Francois Cardoso
 - 2001-2003  Python Software Foundation
 - 2002  David Billinghurst
@@ -166,7 +166,7 @@ Copyright:
 - 2005  Walter Landry
 - 2005  cctsim
 - 2005, 2007  Michael Zeising
-- 2005, 2007-2009, 2012-2018  Daniel J. Sebald
+- 2005, 2007-2009, 2012-2018, 2020  Daniel J. Sebald
 - 2005, 2010  Ben Barrowes
 - 2005-2006  Jorge Barros de Abreu
 - 2005-2006  William Poetra Yoga Hadisoeseno
@@ -227,13 +227,13 @@ Copyright:
 - 2007  Vittoria Rezzonico
 - 2007  Zhi Wang
 - 2007, 2009  Joel Keay
-- 2007, 2009-2015, 2017-2018  Olaf Till
+- 2007, 2009-2015, 2017-2018, 2022  Olaf Till
 - 2007-2008  Muthiah Annamalai
 - 2007-2009  Brian Gough
 - 2007-2009  Jason Riedy
-- 2007-2013, 2015-2019  Marco Caliari
+- 2007-2013, 2015-2019, 2023  Marco Caliari
 - 2007-2013, 2018  John P. Swensen
-- 2007-2016, 2018-2019  Carlo de Falco
+- 2007-2016, 2018-2020  Carlo de Falco
 - 2007-2016, 2019  Ben Abbott
 - 2008  Emil Lucretiu
 - 2008  G. (Gert) van Antwerpen
@@ -299,7 +299,7 @@ Copyright:
 - 2009-2010, 2012  Martin Helm
 - 2009-2011  David Grundberg
 - 2009-2011  Petr Mikulik
-- 2009-2020  Rik Wehbring
+- 2009-2024  Rik Wehbring
 - 2010  Brad Froehle
 - 2010  Christos Dimitrakakis
 - 2010  Daisuke TAKAGO
@@ -338,9 +338,9 @@ Copyright:
 - 2011-2012  John Hunt
 - 2011-2012, 2014, 2016  Daniel Kraft
 - 2011-2013  Júlio Hoffimann Mendes
-- 2011-2018  Carnë Draug
-- 2011-2019  Philip Nienhuis
-- 2011-2020  Torsten Lilge
+- 2011-2018, 2020  Carnë Draug
+- 2011-2023  Philip Nienhuis
+- 2011-2025  Torsten Lilge
 - 2012  Alexander Graf
 - 2012  Alexander Hansen
 - 2012  Corbin Champion
@@ -358,7 +358,7 @@ Copyright:
 - 2012  Stefan Husmann
 - 2012  Sunghyun Cho
 - 2012  Vivek Dogra
-- 2012, 2014-2019  Colin Macdonald
+- 2012, 2014-2019, 2022  Colin Macdonald
 - 2012-2013  Axel Mathéi
 - 2012-2013  Ed Meyer
 - 2012-2013  Erik Kjellson
@@ -366,16 +366,16 @@ Copyright:
 - 2012-2013  Muhali
 - 2012-2013  Richard Crozier
 - 2012-2013  Thorsten Liebig
-- 2012-2016, 2018-2019  Juan Pablo Carbajal
-- 2012-2019  Pantxo Diribarne
-- 2012-2020  Mike Miller
+- 2012-2016, 2018-2019, 2024  Juan Pablo Carbajal
+- 2012-2024  Pantxo Diribarne
+- 2012-2021  Mike Miller
 - 2013  Adam H Aitkenhead
 - 2013  Amod Mulay
 - 2013  Andre da Costa Barros
 - 2013  Andy Register
 - 2013  Artem Krosheninnikov
-- 2013  Arun Giridhar
-- 2013  Ben Kurtz
+- 2013, 2021-2025  Arun Giridhar
+- 2013, 2023  Ben Kurtz
 - 2013  Carl Osterwisch
 - 2013  Catalin Codreanu
 - 2013  Clemens Buchacher
@@ -393,21 +393,21 @@ Copyright:
 - 2013  Rüdiger Sonderfeld
 - 2013  Serhiy Zahoriya
 - 2013  Vytautas Jančauskas
-- 2013, 2015-2019  Sébastien Villemot
+- 2013, 2015-2019, 2023-2024  Sébastien Villemot
 - 2013, 2016  Sander van Rijn
-- 2013, 2018  Valentin Ortega
+- 2013, 2018, 2020  Valentin Ortega
 - 2013-2014  Kyle Guinn
 - 2013-2014  LYH
 - 2013-2014  Markus Appel
 - 2013-2014  Mike Sander
 - 2013-2014  Philipp Kutin
 - 2013-2014  PrasannaKumar Muralidharan
-- 2013-2014, 2016-2017  Nir Krakauer
-- 2013-2014, 2016-2019  Julien Bect
+- 2013-2014, 2016-2017, 2022  Nir Krakauer
+- 2013-2014, 2016-2019, 2022  Julien Bect
 - 2013-2015  Stefan Mahr
-- 2013-2015, 2018  Felipe G. Nievinski
-- 2013-2019  Kai T. Ohlhus
-- 2013-2020  John Donoghue
+- 2013-2015, 2018, 2022  Felipe G. Nievinski
+- 2013-2022  Kai T. Ohlhus
+- 2013-2020, 2022-2023  John Donoghue
 - 2014  Ahsan Ali Shahid
 - 2014  Branden Archer
 - 2014  Colin Foster
@@ -448,7 +448,7 @@ Copyright:
 - 2015  Ethan Biery
 - 2015  Ilya Kurdyukov
 - 2015  Johannes Leuschner
-- 2015  Ken Marek
+- 2015, 2022  Ken Marek
 - 2015  Michele Zaffalon
 - 2015  Rafael Monteiro
 - 2015  Sahil Badyal
@@ -457,13 +457,13 @@ Copyright:
 - 2015, 2017  Piotr Held
 - 2015-2016  Dmitry Roshchin
 - 2015-2016  Jacapo Corno
-- 2015-2016  José Luis García Pallero
+- 2015-2016, 2021-2023  José Luis García Pallero
 - 2015-2016  Oliver Heimlich
 - 2015-2016, 2018  Sebastian Schöps
 - 2015-2016, 2019  Hartmut Gimpel
 - 2015-2017  Avinoam Kalma
 - 2015-2017  Lachlan Andrew
-- 2015-2019  Nicholas R. Jankowski
+- 2015-2025  Nicholas R. Jankowski
 - 2016  Abhinav Tripathi
 - 2016  Andrew Thornton
 - 2016  Atri Bhattacharya
@@ -473,46 +473,81 @@ Copyright:
 - 2016  Garrett Euler
 - 2016  Joakim Andén
 - 2016  NVS Abhilash
-- 2016  Robert Jenssen
+- 2016, 2021  Robert Jenssen
 - 2016  Stephen Montgomery-Smith
 - 2016-2017  Ernst Reissner
-- 2016-2019  Lars Kindermann
-- 2016-2019  Markus Mützel
+- 2016-2020, 2022  Lars Kindermann
+- 2016-2025  Markus Mützel
 - 2017  Brad Kennedy
-- 2017  Georg Wiora
+- 2017, 2022  Georg Wiora
 - 2017  Hugo Raguet
 - 2017  Lasse Kliemann
 - 2017  Richard Zweig
 - 2017  Tejaswi D Prakash
 - 2017  Victor Norton
-- 2017-2019  Alexander Wilms
-- 2017-2019  Guillaume Flandin
-- 2017-2019  Michael Leitner
-- 2017-2019  Michele Ginesi
+- 2017-2019, 2023  Alexander Wilms
+- 2017-2023  Guillaume Flandin
+- 2017-2019, 2021-2022  Michael Leitner
+- 2017-2019, 2021  Michele Ginesi
 - 2017-2019  Sahil Yadav
 - 2018  Avlas
 - 2018  Cristiano Dorigo
 - 2018  Dildar Sk
-- 2018  Gene Harvey
+- 2018, 2021  Gene Harvey
 - 2018  Joe Winegarden
 - 2018  Maor Shutman
 - 2018  Ronny Standtke
 - 2018  Stefan Schlögl
 - 2018  Stevie Schraudner
-- 2018-2019  A.R. Burgers
-- 2018-2019  Andrew Janke
-- 2018-2019  Jun Wang
+- 2018-2024  Antonius R. Burgers
+- 2018-2021  Andrew Janke
+- 2018-2019, 2022-2023  Jun Wang
 - 2019  Anthony Morast
 - 2019  Bill Greene
-- 2019  Christian Himpe
+- 2019, 2021  Christian Himpe
 - 2019  Daniel Davis
 - 2019  Eddy Xiao
 - 2019  Juho Iipponen
-- 2019  Nguy?n Gia Phong
+- 2019  Nguyễn Gia Phong
 - 2019  Tomi Pannila
 - 2019  William Greene
-- 2019-2020  Markus Meisinger
-
+- 2019-2021, 2024  Markus Meisinger
+- 2020-2021  Abdallah Elshamy
+- 2020  Dmitry Astankov
+- 2020-2024  Fernando Alvarruiz
+- 2020  Marcel Jacobse
+- 2020  Martin Köhler
+- 2020  Michael Witten
+- 2020  Simon Hau
+- 2020  Valdas
+- 2021-2022  Stefan Brüns
+- 2021, 2023-2024  Petter Tomner
+- 2021, 2023  Óvári
+- 2021, 2023  Serkan Önder
+- 2021  Stefano Guidoni
+- 2021  Steven Waldrip
+- 2022-2023  Reinhard Resch
+- 2022  Adam Dodd
+- 2022  Andreas Bertsatos
+- 2022  Christof Kaufmann
+- 2022  Farid Partonia
+- 2022  Gaël Bonithon
+- 2022  Kasper H. Filtenborg
+- 2022  Luis Eduardo Ribeiro Guerra
+- 2022  Maged Rifaat
+- 2022  Remi Thebault
+- 2022  Shreya Gupta
+- 2022  Tommi Höynälänmaa
+- 2023-2024  Hendrik Koerner
+- 2023  Johannes Pfeifer
+- 2023  Leonardo
+- 2023  Linton Miller
+- 2023  paulo
+- 2023  Peter Konowski
+- 2024  David Miguel Susano Pinto
+- 2024  "dependabot[bot]"
+- 2024  Helmut Podhaisky
+- 2024  Jörg Sommrey
 
 See also the list of contributors in the Octave manual (the file
 [doc/interpreter/contributors.in](https://hg.savannah.gnu.org/hgweb/octave/file/tip/doc/interpreter/contributors.in)
