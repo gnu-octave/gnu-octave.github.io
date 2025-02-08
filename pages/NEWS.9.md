@@ -434,3 +434,26 @@ Octave 9.
   ([bug #66421](https://savannah.gnu.org/bugs/?66421)).
 - Eliminate double period at end of "mode" graphics property documentation.
 - Fix makeinfo errors for comment block keywords ([bug #66428](https://savannah.gnu.org/bugs/?66428)).
+
+
+## Summary of bugs fixed for version 9.4.0 (2025-02-05):
+
+### Improvements and fixes
+
+- Fix error in calculation of file timestamp on Windows ([bug #31080](https://savannah.gnu.org/bugs/?31080)).
+
+### GUI
+
+- Update Spanish translation file ([bug #66616](https://savannah.gnu.org/bugs/?66616)).
+- Update Brazilian Portuguese translation file ([bug #66554](https://savannah.gnu.org/bugs/?66554)).
+
+### Build system / Tests
+
+- `cellfun`: Add test for function failing to return requested output
+  ([bug #66642](https://savannah.gnu.org/bugs/?66642)).
+- `arrayfun`:  Add test for function failing to return requested output
+  ([bug #66642](https://savannah.gnu.org/bugs/?66642)).
+
+### Documentation
+
+- Clarify default editor difference between CLI and GUI ([bug #66703](https://savannah.gnu.org/bugs/?66703)).
