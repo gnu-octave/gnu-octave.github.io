@@ -6,7 +6,7 @@ permalink: NEWS-10.html
 
 ## Summary of important user-visible changes
 
-March 25, 2025
+March 28, 2025
 
 {% include release_news_select.md %}
 
@@ -49,7 +49,7 @@ March 25, 2025
   used.
 
 - Support setting breakpoints in `set` or `get` methods of `classdef`
-  properties (([bug #65610](https://savannah.gnu.org/bugs/?65610))).
+  properties ([bug #65610](https://savannah.gnu.org/bugs/?65610)).
 
 - `.mex` files now link to the new library `liboctmex` (instead of to
   `liboctinterp` and `liboctave`).  The `SOVERSION` of this new library is
@@ -74,7 +74,7 @@ March 25, 2025
   `'rtick'` by the function `rticks` will only include the center tick mark
   value if it is specified.
 
-- `view` correctly interprets Cartesian viewpoints on main axes (([bug #65641](https://savannah.gnu.org/bugs/?65641))).
+- `view` correctly interprets Cartesian viewpoints on main axes ([bug #65641](https://savannah.gnu.org/bugs/?65641)).
 
 - `plot3` now draws a single marker if only one data point is given.
   Previously the plot was blank (`marker` = `"none"`) which was confusing.
@@ -100,7 +100,7 @@ March 25, 2025
 - `iqr` now provides compatible output for empty inputs.
 
 - `cross` now produces row vector outputs when the inputs are a mix of row and
-  column vectors (([bug #61295](https://savannah.gnu.org/bugs/?61295))).
+  column vectors ([bug #61295](https://savannah.gnu.org/bugs/?61295)).
 
 - `rat` now accepts complex inputs.
 
@@ -123,8 +123,8 @@ March 25, 2025
   The `SamplePoints` option has been implemented for both functions.
   Non-numeric input array handling has been improved.  These changes affect all
   moving window functions (`movmad`, `movmax`, `movmean`, `movmedian`,
-  `movmin`, `movprod`, `movstd`, `movsum`, and `movvar`) (([bug #65928](https://savannah.gnu.org/bugs/?65928)),
-  ([bug #66025](https://savannah.gnu.org/bugs/?66025))).
+  `movmin`, `movprod`, `movstd`, `movsum`, and `movvar`) ([bug #65928](https://savannah.gnu.org/bugs/?65928),
+  [bug #66025](https://savannah.gnu.org/bugs/?66025)).
 
 - `movfun`: The `nancond` property has been fully implemented and made
   Matlab-compatible.  The `omitnan` option will ignore `NaN` and `NA` values
@@ -136,25 +136,25 @@ March 25, 2025
   calculating function.  `omitmissing` and `includemissing` are now accepted as
   aliases for `omitnan` and `includenan`.  These changes affect all moving
   window functions (`movmad`, `movmax`, `movmean`, `movmedian`, `movmin`,
-  `movprod`, `movstd`, `movsum`, and `movvar`) (([bug #66156](https://savannah.gnu.org/bugs/?66156))).
+  `movprod`, `movstd`, `movsum`, and `movvar`) ([bug #66156](https://savannah.gnu.org/bugs/?66156)).
 
 - `movmin` and `movmax`: These functions now have their default behavior set to
   `omitnan`.  `NaN` and `NA` values will be ignored unless a moving window
   contains only `NaN` or `NA` values, in which case the function will return
-  `NaN` for that element (([bug #66156](https://savannah.gnu.org/bugs/?66156))).
+  `NaN` for that element ([bug #66156](https://savannah.gnu.org/bugs/?66156)).
 
 - `movsum`: When called with option `omitnan`, any windows containing only
-  `NaN` and `NA` values will return 0 (([bug #66156](https://savannah.gnu.org/bugs/?66156))).
+  `NaN` and `NA` values will return 0 ([bug #66156](https://savannah.gnu.org/bugs/?66156)).
 
 - `movprod`: When called with option `omitnan`, any windows containing only
-  `NaN` and `NA` values will return 1 (([bug #66156](https://savannah.gnu.org/bugs/?66156))).
+  `NaN` and `NA` values will return 1 ([bug #66156](https://savannah.gnu.org/bugs/?66156)).
 
 - `movmad`: The function now defaults to calculating median absolute deviation.
   Before Octave 10, the function calculated mean absolute deviation.  A new
   `method` property has been provided that takes values of either `"mean"` or
   `"median"` to allow the user to select which option to use.  This property
   should not be expected to function in code used outside of Octave.
-  (([bug #66256](https://savannah.gnu.org/bugs/?66256))).
+  ([bug #66256](https://savannah.gnu.org/bugs/?66256)).
 
 - `symbfact`: outputs `count`, `parent`, and `post` are now row vectors rather
   than column vectors.
@@ -236,7 +236,7 @@ from Octave 10.
   with GNU extensions).
 
 - The location of the list of packages installed site-wide for all users
-  (`pkg global_list`) has changed (([bug #66831](https://savannah.gnu.org/bugs/?66831))).  The file `octave_packages` is
+  (`pkg global_list`) has changed ([bug #66831](https://savannah.gnu.org/bugs/?66831)).  The file `octave_packages` is
   now installed at `octave-config -p LOCALAPIPKGDIR`.  There will be no
   disruption if you are upgrading to version 10.1 of Octave and then installing
   packages.  If you want to use previously installed packages that you *know*
@@ -249,95 +249,95 @@ from Octave 10.
   `pkg global_list`.
 
 
-Summary of bugs fixed for version 10.1.0 (2025-03-25):
-----------------------------------------------------
+Summary of bugs fixed for version 10.1.0 (2025-03-28):
+-----------------------------------------------------
 
-- ([bug #66753](https://savannah.gnu.org/bugs/?66753)): `hist.m`: Test for equal bin spacing using a numeric tolerance.
-- ([bug #66753](https://savannah.gnu.org/bugs/?66753)): `hist.m`: Fix regression in determining equal bin spacing.
-- ([bug #66753](https://savannah.gnu.org/bugs/?66753)): Fix thinko in cset be1d0c816788
-- ([bug #66647](https://savannah.gnu.org/bugs/?66647)): Silence unexpected `Octave:mixed-string-concat` warning in
+- [bug #66753](https://savannah.gnu.org/bugs/?66753): `hist.m`: Test for equal bin spacing using a numeric tolerance.
+- [bug #66753](https://savannah.gnu.org/bugs/?66753): `hist.m`: Fix regression in determining equal bin spacing.
+- [bug #66753](https://savannah.gnu.org/bugs/?66753): Fix thinko in cset be1d0c816788
+- [bug #66647](https://savannah.gnu.org/bugs/?66647): Silence unexpected `Octave:mixed-string-concat` warning in
   `num2str.m`.
-- ([bug #66642](https://savannah.gnu.org/bugs/?66642)): Code beautification for cset 2c2301104caf
-- ([bug #66642](https://savannah.gnu.org/bugs/?66642)): Check for undefined outputs in `cellfun` and `arrayfun`.
-- ([bug #66642](https://savannah.gnu.org/bugs/?66642)): Add `cellfun` BIST for function failing to return requested
+- [bug #66642](https://savannah.gnu.org/bugs/?66642): Code beautification for cset 2c2301104caf
+- [bug #66642](https://savannah.gnu.org/bugs/?66642): Check for undefined outputs in `cellfun` and `arrayfun`.
+- [bug #66642](https://savannah.gnu.org/bugs/?66642): Add `cellfun` BIST for function failing to return requested
   output.
-- ([bug #66642](https://savannah.gnu.org/bugs/?66642)): Add `arrayfun` BIST for function failing to return requested
+- [bug #66642](https://savannah.gnu.org/bugs/?66642): Add `arrayfun` BIST for function failing to return requested
   output.
-- ([bug #66617](https://savannah.gnu.org/bugs/?66617)): Avoid error for `struct2cell` with function without output
+- [bug #66617](https://savannah.gnu.org/bugs/?66617): Avoid error for `struct2cell` with function without output
   arguments.
-- ([bug #66617](https://savannah.gnu.org/bugs/?66617)): Add self-tests for `structfun` with function without output
+- [bug #66617](https://savannah.gnu.org/bugs/?66617): Add self-tests for `structfun` with function without output
   arguments.
-- ([bug #66558](https://savannah.gnu.org/bugs/?66558)): Translate shortcuts and descriptions in settings dialog.
-- ([bug #66521](https://savannah.gnu.org/bugs/?66521)): `symbfact`: Return row vectors for Matlab compatibility.
-- ([bug #66511](https://savannah.gnu.org/bugs/?66511)): `sparseqr`: Support permutation output with CXSparse.
-- ([bug #66511](https://savannah.gnu.org/bugs/?66511)): Emit error when `qr()` is called with permutation output and
+- [bug #66558](https://savannah.gnu.org/bugs/?66558): Translate shortcuts and descriptions in settings dialog.
+- [bug #66521](https://savannah.gnu.org/bugs/?66521): `symbfact`: Return row vectors for Matlab compatibility.
+- [bug #66511](https://savannah.gnu.org/bugs/?66511): `sparseqr`: Support permutation output with CXSparse.
+- [bug #66511](https://savannah.gnu.org/bugs/?66511): Emit error when `qr()` is called with permutation output and
   CXSparse library is used.
-- ([bug #66488](https://savannah.gnu.org/bugs/?66488)): `qr (sparse, 0)` isn't equal to `qr (sparse, 'econ', 'vector')`.
-- ([bug #66477](https://savannah.gnu.org/bugs/?66477)): Avoid ASAN error with `path (_)` manipulations.
-- ([bug #66466](https://savannah.gnu.org/bugs/?66466)): `legend` and `bar` cause ASAN to crash Octave.
-- ([bug #66451](https://savannah.gnu.org/bugs/?66451)): Ctrl-C kills Octave 10.0.0.
-- ([bug #66448](https://savannah.gnu.org/bugs/?66448)): File encoding conversion errors on macOS 14.
-- ([bug #66399](https://savannah.gnu.org/bugs/?66399)): `fseek` and `ftell` functions don't always work correctly on
+- [bug #66488](https://savannah.gnu.org/bugs/?66488): `qr (sparse, 0)` isn't equal to `qr (sparse, 'econ', 'vector')`.
+- [bug #66477](https://savannah.gnu.org/bugs/?66477): Avoid ASAN error with `path (_)` manipulations.
+- [bug #66466](https://savannah.gnu.org/bugs/?66466): `legend` and `bar` cause ASAN to crash Octave.
+- [bug #66451](https://savannah.gnu.org/bugs/?66451): Ctrl-C kills Octave 10.0.0.
+- [bug #66448](https://savannah.gnu.org/bugs/?66448): File encoding conversion errors on macOS 14.
+- [bug #66399](https://savannah.gnu.org/bugs/?66399): `fseek` and `ftell` functions don't always work correctly on
   Windows with filesizes >2GB.
-- ([bug #66315](https://savannah.gnu.org/bugs/?66315)): `menu()` throws an error when Qt dialogs are not available.
-- ([bug #66256](https://savannah.gnu.org/bugs/?66256)): `movmad` uses 'mean absolute deviation' while Matlab uses 'median
+- [bug #66315](https://savannah.gnu.org/bugs/?66315): `menu()` throws an error when Qt dialogs are not available.
+- [bug #66256](https://savannah.gnu.org/bugs/?66256): `movmad` uses 'mean absolute deviation' while Matlab uses 'median
   absolute deviation'.
-- ([bug #66156](https://savannah.gnu.org/bugs/?66156)): Implement `nanflag` option for moving window functions.
-- ([bug #66025](https://savannah.gnu.org/bugs/?66025)): `movfun`: Implement `SamplePoints` option.
-- ([bug #66010](https://savannah.gnu.org/bugs/?66010)): Function `glpk` produces incorrect output.
-- ([bug #65964](https://savannah.gnu.org/bugs/?65964)): `nthargout` does not propagate error ID.
-- ([bug #65928](https://savannah.gnu.org/bugs/?65928)): `movfun` dimension constraints: Shouldn't error for
+- [bug #66156](https://savannah.gnu.org/bugs/?66156): Implement `nanflag` option for moving window functions.
+- [bug #66025](https://savannah.gnu.org/bugs/?66025): `movfun`: Implement `SamplePoints` option.
+- [bug #66010](https://savannah.gnu.org/bugs/?66010): Function `glpk` produces incorrect output.
+- [bug #65964](https://savannah.gnu.org/bugs/?65964): `nthargout` does not propagate error ID.
+- [bug #65928](https://savannah.gnu.org/bugs/?65928): `movfun` dimension constraints: Shouldn't error for
   `dim > ndims(x)`, or `wlen > size(x, dim)`, or `wlen=1`.
-- ([bug #65876](https://savannah.gnu.org/bugs/?65876)): Error retrieving data from `struct` values in `containers.Map`.
-- ([bug #65768](https://savannah.gnu.org/bugs/?65768)): Segmentation fault on default branch.
-- ([bug #65753](https://savannah.gnu.org/bugs/?65753)): Strip leading/trailing whitespace from "Function Index" search
+- [bug #65876](https://savannah.gnu.org/bugs/?65876): Error retrieving data from `struct` values in `containers.Map`.
+- [bug #65768](https://savannah.gnu.org/bugs/?65768): Segmentation fault on default branch.
+- [bug #65753](https://savannah.gnu.org/bugs/?65753): Strip leading/trailing whitespace from "Function Index" search
   expression.
-- ([bug #65753](https://savannah.gnu.org/bugs/?65753)): Documentation window: Function Index: Search box respects
+- [bug #65753](https://savannah.gnu.org/bugs/?65753): Documentation window: Function Index: Search box respects
   trailing spaces.
-- ([bug #65730](https://savannah.gnu.org/bugs/?65730)): Some remaining cases of silent conversion of fractional inputs.
-- ([bug #65683](https://savannah.gnu.org/bugs/?65683)): `issorted`: enable `'monotonic'` and `'strict...'` sort modes.
-- ([bug #65674](https://savannah.gnu.org/bugs/?65674)): `axes` `'colormap'` property being set over `figure` `'colormap'`
+- [bug #65730](https://savannah.gnu.org/bugs/?65730): Some remaining cases of silent conversion of fractional inputs.
+- [bug #65683](https://savannah.gnu.org/bugs/?65683): `issorted`: enable `'monotonic'` and `'strict...'` sort modes.
+- [bug #65674](https://savannah.gnu.org/bugs/?65674): `axes` `'colormap'` property being set over `figure` `'colormap'`
   property.
-- ([bug #65665](https://savannah.gnu.org/bugs/?65665)): Input validation for `system()`.
-- ([bug #65645](https://savannah.gnu.org/bugs/?65645)): Execute FIXME of `perms.cc`: Use `constexpr` instead of template
+- [bug #65665](https://savannah.gnu.org/bugs/?65665): Input validation for `system()`.
+- [bug #65645](https://savannah.gnu.org/bugs/?65645): Execute FIXME of `perms.cc`: Use `constexpr` instead of template
   specialisation.
-- ([bug #65641](https://savannah.gnu.org/bugs/?65641)): `view` produces incorrect viewpoint when given a vector aligned
+- [bug #65641](https://savannah.gnu.org/bugs/?65641): `view` produces incorrect viewpoint when given a vector aligned
   with the primary axes.
-- ([bug #65637](https://savannah.gnu.org/bugs/?65637)): `short_disp` doesn't show ellipsis at end of long arrays.
-- ([bug #65617](https://savannah.gnu.org/bugs/?65617)): <F9> clears editor setting 'Always show debug breakpoints and
+- [bug #65637](https://savannah.gnu.org/bugs/?65637): `short_disp` doesn't show ellipsis at end of long arrays.
+- [bug #65617](https://savannah.gnu.org/bugs/?65617): <F9> clears editor setting 'Always show debug breakpoints and
   pointers...'.
-- ([bug #65577](https://savannah.gnu.org/bugs/?65577)): Feature request: Editor right-click to run test without needing
+- [bug #65577](https://savannah.gnu.org/bugs/?65577): Feature request: Editor right-click to run test without needing
   to clear `%!` first.
-- ([bug #65538](https://savannah.gnu.org/bugs/?65538)): `xint_value` does not work the way it is intended.
-- ([bug #65531](https://savannah.gnu.org/bugs/?65531)): `iqr` handling of empty inputs is not compatible.
-- ([bug #65499](https://savannah.gnu.org/bugs/?65499)): Use separate GUI settings for Octave releases.
-- ([bug #65495](https://savannah.gnu.org/bugs/?65495)): `nchoosek` error 'gcd: all values must be integers'
-- ([bug #65459](https://savannah.gnu.org/bugs/?65459)): `uifigure ('visible', 'off')` temporarily creates a visible
+- [bug #65538](https://savannah.gnu.org/bugs/?65538): `xint_value` does not work the way it is intended.
+- [bug #65531](https://savannah.gnu.org/bugs/?65531): `iqr` handling of empty inputs is not compatible.
+- [bug #65499](https://savannah.gnu.org/bugs/?65499): Use separate GUI settings for Octave releases.
+- [bug #65495](https://savannah.gnu.org/bugs/?65495): `nchoosek` error 'gcd: all values must be integers'
+- [bug #65459](https://savannah.gnu.org/bugs/?65459): `uifigure ('visible', 'off')` temporarily creates a visible
   figure window.
-- ([bug #65447](https://savannah.gnu.org/bugs/?65447)): `jsonencode` does not accept integer values larger than 999999.
-- ([bug #65441](https://savannah.gnu.org/bugs/?65441)): `nextpow2` incorrect for some inputs slightly larger than powers
+- [bug #65447](https://savannah.gnu.org/bugs/?65447): `jsonencode` does not accept integer values larger than 999999.
+- [bug #65441](https://savannah.gnu.org/bugs/?65441): `nextpow2` incorrect for some inputs slightly larger than powers
   of two.
-- ([bug #65238](https://savannah.gnu.org/bugs/?65238)): Improve `nchoosek.m` algorithm to prevent numerical issues.
-- ([bug #65221](https://savannah.gnu.org/bugs/?65221)): `movfun`: Create `inputParser` only once.
-- ([bug #65176](https://savannah.gnu.org/bugs/?65176)): `unique.m`: Enable third output with option `'stable'`.
-- ([bug #65134](https://savannah.gnu.org/bugs/?65134)): `griddata`: Output size inconsistent for vector input
+- [bug #65238](https://savannah.gnu.org/bugs/?65238): Improve `nchoosek.m` algorithm to prevent numerical issues.
+- [bug #65221](https://savannah.gnu.org/bugs/?65221): `movfun`: Create `inputParser` only once.
+- [bug #65176](https://savannah.gnu.org/bugs/?65176): `unique.m`: Enable third output with option `'stable'`.
+- [bug #65134](https://savannah.gnu.org/bugs/?65134): `griddata`: Output size inconsistent for vector input
   interpolation points.
-- ([bug #65030](https://savannah.gnu.org/bugs/?65030)): Column width in browser pane not retained between restarts of
+- [bug #65030](https://savannah.gnu.org/bugs/?65030): Column width in browser pane not retained between restarts of
   Octave.
-- ([bug #65010](https://savannah.gnu.org/bugs/?65010)): Compatibility: Colormaps now default to 256 colors in Matlab.
-- ([bug #64995](https://savannah.gnu.org/bugs/?64995)): Implement `height` and `width` as aliases for `rows` and
+- [bug #65010](https://savannah.gnu.org/bugs/?65010): Compatibility: Colormaps now default to 256 colors in Matlab.
+- [bug #64995](https://savannah.gnu.org/bugs/?64995): Implement `height` and `width` as aliases for `rows` and
   `columns` for Matlab compatibility.
-- ([bug #64991](https://savannah.gnu.org/bugs/?64991)): `polar` doesn't populate `'rtick'` with center tick value.
-- ([bug #62928](https://savannah.gnu.org/bugs/?62928)): Error sourcing file message when script with embedded '.' in
+- [bug #64991](https://savannah.gnu.org/bugs/?64991): `polar` doesn't populate `'rtick'` with center tick value.
+- [bug #62928](https://savannah.gnu.org/bugs/?62928): Error sourcing file message when script with embedded '.' in
   filename has syntax error.
-- ([bug #61295](https://savannah.gnu.org/bugs/?61295)): `cross()`: Dimensions inconsistent with Matlab when using
+- [bug #61295](https://savannah.gnu.org/bugs/?61295): `cross()`: Dimensions inconsistent with Matlab when using
   mismatched input vector dimensions.
-- ([bug #60797](https://savannah.gnu.org/bugs/?60797)): `sqrtm`: Returns `NaN` for matrix of ones with rows and columns
+- [bug #60797](https://savannah.gnu.org/bugs/?60797): `sqrtm`: Returns `NaN` for matrix of ones with rows and columns
   >=4.
-- ([bug #60726](https://savannah.gnu.org/bugs/?60726)): Fix `nargout` for `subsref` when returned value may be a cs-list.
-- ([bug #56690](https://savannah.gnu.org/bugs/?56690)): Support displaying lazy index objects in variable editor.
-- ([bug #55961](https://savannah.gnu.org/bugs/?55961)): `properties` function does not preserve order.
-- ([bug #55198](https://savannah.gnu.org/bugs/?55198)): `rat()` should support complex numbers.
-- ([bug #41028](https://savannah.gnu.org/bugs/?41028)): `lastwarn`: Save warning info for disabled warnings.
-- ([bug #41028](https://savannah.gnu.org/bugs/?41028)): Modify built-in self-tests to pass with Matlab-compatible
+- [bug #60726](https://savannah.gnu.org/bugs/?60726): Fix `nargout` for `subsref` when returned value may be a cs-list.
+- [bug #56690](https://savannah.gnu.org/bugs/?56690): Support displaying lazy index objects in variable editor.
+- [bug #55961](https://savannah.gnu.org/bugs/?55961): `properties` function does not preserve order.
+- [bug #55198](https://savannah.gnu.org/bugs/?55198): `rat()` should support complex numbers.
+- [bug #41028](https://savannah.gnu.org/bugs/?41028): `lastwarn`: Save warning info for disabled warnings.
+- [bug #41028](https://savannah.gnu.org/bugs/?41028): Modify built-in self-tests to pass with Matlab-compatible
   `lastwarn()` behavior.
