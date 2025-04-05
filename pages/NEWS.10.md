@@ -332,7 +332,8 @@ Summary of bugs fixed for version 10.1.0 (2025-03-28):
   filename has syntax error.
 - [bug #61295](https://savannah.gnu.org/bugs/?61295): `cross()`: Dimensions inconsistent with Matlab when using
   mismatched input vector dimensions.
-- [bug #60797](https://savannah.gnu.org/bugs/?60797): `sqrtm`: Returns `NaN` for matrix of ones with rows and columns >=4.
+- [bug #60797](https://savannah.gnu.org/bugs/?60797): `sqrtm`: Returns `NaN` for
+  matrix of ones with rows and columns >=4.
 - [bug #60726](https://savannah.gnu.org/bugs/?60726): Fix `nargout` for `subsref` when returned value may be a cs-list.
 - [bug #56690](https://savannah.gnu.org/bugs/?56690): Support displaying lazy index objects in variable editor.
 - [bug #55961](https://savannah.gnu.org/bugs/?55961): `properties` function does not preserve order.
