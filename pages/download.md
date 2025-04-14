@@ -91,13 +91,13 @@ After installation type <code>pkg list</code> to list them.<br>
 
 - Windows-64 (recommended)
   - [octave-10.1.0-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64-installer.exe)
-    (~ 380 MB)
+    (~ 510 MB)
     [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64-installer.exe.sig)
   - [octave-10.1.0-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64.7z)
-    (~ 375 MB)
+    (~ 425 MB)
     [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64.7z.sig)
   - [octave-10.1.0-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64.zip)
-    (~ 660 MB)
+    (~ 760 MB)
     [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64.zip.sig)
 
 <p></p>
@@ -112,13 +112,13 @@ After installation type <code>pkg list</code> to list them.<br>
   </small>
 
   - [octave-10.1.0-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64-64-installer.exe)
-    (~ 380 MB)
+    (~ 510 MB)
     [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64-64-installer.exe.sig)
   - [octave-10.1.0-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64-64.7z)
-    (~ 375 MB)
+    (~ 425 MB)
     [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64-64.7z.sig)
   - [octave-10.1.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64-64.zip)
-    (~ 660 MB)
+    (~ 760 MB)
     [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.1.0-w64-64.zip.sig)
 
 <p></p>
@@ -126,7 +126,8 @@ After installation type <code>pkg list</code> to list them.<br>
 The **32-bit Windows binaries** formerly distributed by the Octave project are no longer supported.
 The download link has been removed from here but old installers are still available from the FTP mirrors.
 Patches for known issues are still welcome.
-An alternative source for 32-bit Windows binaries of Octave is
+
+An alternative source for Windows binaries of Octave is
 [MSYS2](https://wiki.octave.org/Octave_for_Microsoft_Windows#GNU_Octave_in_MSYS2).
 
 All Windows binaries with corresponding source code can be downloaded from
