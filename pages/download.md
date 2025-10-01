@@ -8,7 +8,7 @@ permalink: download
 
 <div class="primary callout">
   <i class="fas fa-info-circle" style="color:#1779ba;"></i>
-  <strong>GNU Octave 10.2.0</strong> is the latest stable release.
+  <strong>GNU Octave 10.3.0</strong> is the latest stable release.
   (<a href="{{ "/NEWS-10.html" | relative_url }}">Release Notes</a>)
 </div>
 
@@ -90,15 +90,15 @@ After installation type <code>pkg list</code> to list them.<br>
 </div>
 
 - Windows-64 (recommended)
-  - [octave-10.2.0-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64-installer.exe)
+  - [octave-10.3.0-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-installer.exe)
     (~ 510 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64-installer.exe.sig)
-  - [octave-10.2.0-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64.7z)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-installer.exe.sig)
+  - [octave-10.3.0-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64.7z)
     (~ 425 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64.7z.sig)
-  - [octave-10.2.0-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64.zip)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64.7z.sig)
+  - [octave-10.3.0-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64.zip)
     (~ 760 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64.zip.sig)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64.zip.sig)
 
 <p></p>
 
@@ -111,15 +111,15 @@ After installation type <code>pkg list</code> to list them.<br>
   version above.
   </small>
 
-  - [octave-10.2.0-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64-64-installer.exe)
+  - [octave-10.3.0-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64-installer.exe)
     (~ 510 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64-64-installer.exe.sig)
-  - [octave-10.2.0-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64-64.7z)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64-installer.exe.sig)
+  - [octave-10.3.0-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64.7z)
     (~ 425 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64-64.7z.sig)
-  - [octave-10.2.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64-64.zip)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64.7z.sig)
+  - [octave-10.3.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64.zip)
     (~ 760 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.2.0-w64-64.zip.sig)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64.zip.sig)
 
 <p></p>
 
