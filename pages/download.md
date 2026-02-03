@@ -34,7 +34,23 @@ Please download from
 [https://ftpmirror.gnu.org/octave](https://ftpmirror.gnu.org/octave),
 which will redirect automatically to a nearby
 [mirror site](https://www.gnu.org/order/ftp.html).
-
+ 
+Users are encouraged to verify the Octave installation file they download
+(such as `octave-10.3.0.tar.xz`) as follows:
+* First, ensure that you are downloading from the official Octave website, or
+from a GNU mirror linked from the official Octave website.
+* Next, download the corresponding signature file for the installation file
+you downloaded, for example if you intend to install `octave-10.3.0.tar.xz` then
+download the signature `octave-10.3.0.tar.xz.sig`.
+* Next, run the command `gpg --keyserver hkp://keys.gnupg.net --recv-keys 5D36644B`
+to import a public key (this needs to be done only once).
+* And verify the integrity of the file you downloaded with a command like
+`gpg --verify octave-10.3.0.tar.xz.sig`.
+* If all is well, then the output should say `gpg: Good signature from "John W. Eaton <jwe@gnu.org>`,
+and you can install Octave from that file.
+* If the file you downloaded was corrupted or changed by anyone else, then
+the output will say `gpg: BAD signature from "John W. Eaton <jwe@gnu.org>"`.
+You should not install from that file, but should start over.
 
 <p id="linux">&nbsp;</p>
 
