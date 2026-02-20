@@ -42,10 +42,10 @@ from a GNU mirror linked from the official Octave website.
 * Next, download the corresponding signature file for the installation file
 you downloaded, for example if you intend to install `octave-10.3.0.tar.xz` then
 download the signature `octave-10.3.0.tar.xz.sig`.
-* Next, run the following command to import a public key (this needs to be done
-  only once).
+* Next, run the following command to import John W. Eaton's public key (this
+  needs to be done only once).
   ```
-  gpg --keyserver hkp://keys.gnupg.net --recv-keys 5D36644B
+  gpg --keyserver hkps://keys.gnupg.net --recv-keys B05F05B75D36644B
   ```
 * Finally, verify the integrity of the file you downloaded with a command like
   ```
@@ -57,7 +57,7 @@ download the signature `octave-10.3.0.tar.xz.sig`.
   ```
   in which case you can install Octave from that file.
 * If the file you downloaded was corrupted or changed by anyone else, then
-the output will say
+  the output will say
   ```
   gpg: BAD signature from "John W. Eaton <jwe@gnu.org>".
   ```
