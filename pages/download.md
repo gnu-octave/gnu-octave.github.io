@@ -35,19 +35,19 @@ Please download from
 which will redirect automatically to a nearby
 [mirror site](https://www.gnu.org/order/ftp.html).
 
-Users are encouraged to verify the Octave installation file they download
+Users are encouraged to verify the integrity of the files they download
 (such as `octave-10.3.0.tar.xz`) as follows:
-* First, ensure that you are downloading from the official Octave website, or
-from a GNU mirror linked from the official Octave website.
-* Next, download the corresponding signature file for the installation file
-you downloaded, for example if you intend to install `octave-10.3.0.tar.xz` then
-download the signature `octave-10.3.0.tar.xz.sig`.
-* Next, run the following command to import John W. Eaton's public key (this
-  needs to be done only once).
+* Ensure that you are downloading from the Octave website, or from an official
+  GNU mirror linked from the Octave website.
+* Download the corresponding signature file. For example, if you like to check
+  the integrity of `octave-10.3.0.tar.xz`, download the signature file
+  `octave-10.3.0.tar.xz.sig`.
+* Run the following command to import John W. Eaton's public key (this needs to
+  be done only once).
   ```
   gpg --keyserver hkps://keys.gnupg.net --recv-keys B05F05B75D36644B
   ```
-* Finally, verify the integrity of the file you downloaded with a command like
+* Verify the integrity of the file you downloaded with a command like
   ```
   gpg --verify octave-10.3.0.tar.xz.sig
   ```
@@ -55,13 +55,12 @@ download the signature `octave-10.3.0.tar.xz.sig`.
   ```
   gpg: Good signature from "John W. Eaton <jwe@gnu.org>
   ```
-  in which case you can install Octave from that file.
-* If the file you downloaded was corrupted or changed by anyone else, then
-  the output will say
+  which indicates the downloaded file matches the signature.
+* If the signature does not match the file you downloaded, the output might say
   ```
   gpg: BAD signature from "John W. Eaton <jwe@gnu.org>".
   ```
-  in which case you should not install from that file, but should start over.
+  in which case you should delete the file, and try to download it again.
 
 <p id="linux">&nbsp;</p>
 
