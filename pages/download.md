@@ -34,7 +34,7 @@ Please download from
 [https://ftpmirror.gnu.org/octave](https://ftpmirror.gnu.org/octave),
 which will redirect automatically to a nearby
 [mirror site](https://www.gnu.org/order/ftp.html).
- 
+
 Users are encouraged to verify the Octave installation file they download
 (such as `octave-10.3.0.tar.xz`) as follows:
 * First, ensure that you are downloading from the official Octave website, or
