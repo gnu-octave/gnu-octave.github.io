@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GNU Octave Version 10
+title: GNU Octave Version 11
 permalink: NEWS-11.html
 ---
 
