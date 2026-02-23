@@ -8,8 +8,8 @@ permalink: download
 
 <div class="primary callout">
   <i class="fas fa-info-circle" style="color:#1779ba;"></i>
-  <strong>GNU Octave 10.3.0</strong> is the latest stable release.
-  (<a href="{{ "/NEWS-10.html" | relative_url }}">Release Notes</a>)
+  <strong>GNU Octave 11.1.0</strong> is the latest stable release.
+  (<a href="{{ "/NEWS-11.html" | relative_url }}">Release Notes</a>)
 </div>
 
 <div class="button-group large expanded stacked-for-small">
@@ -36,12 +36,12 @@ which will redirect automatically to a nearby
 [mirror site](https://www.gnu.org/order/ftp.html).
 
 Users are encouraged to verify the integrity of the files they download
-(such as `octave-10.3.0.tar.xz`) as follows:
+(such as `octave-11.1.0.tar.xz`) as follows:
 * Ensure that you are downloading from the Octave website, or from an official
   GNU mirror linked from the Octave website.
 * Download the corresponding signature file. For example, if you like to check
-  the integrity of `octave-10.3.0.tar.xz`, download the signature file
-  `octave-10.3.0.tar.xz.sig`.
+  the integrity of `octave-11.1.0.tar.xz`, download the signature file
+  `octave-11.1.0.tar.xz.sig`.
 * Run the following command to import John W. Eaton's public key (this needs to
   be done only once).
   ```
@@ -49,7 +49,7 @@ Users are encouraged to verify the integrity of the files they download
   ```
 * Verify the integrity of the file you downloaded with a command like
   ```
-  gpg --verify octave-10.3.0.tar.xz.sig
+  gpg --verify octave-11.1.0.tar.xz.sig
   ```
 * If all is well, then the output should say
   ```
@@ -116,15 +116,15 @@ After installation type <code>pkg list</code> to list them.<br>
 </div>
 
 - Windows-64 (recommended)
-  - [octave-10.3.0-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-installer.exe)
-    (~ 510 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-installer.exe.sig)
-  - [octave-10.3.0-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64.7z)
-    (~ 425 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64.7z.sig)
-  - [octave-10.3.0-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64.zip)
-    (~ 760 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64.zip.sig)
+  - [octave-11.1.0-w64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64-installer.exe)
+    (~ 540 MB)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64-installer.exe.sig)
+  - [octave-11.1.0-w64.7z](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64.7z)
+    (~ 460 MB)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64.7z.sig)
+  - [octave-11.1.0-w64.zip](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64.zip)
+    (~ 820 MB)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64.zip.sig)
 
 <p></p>
 
@@ -137,15 +137,15 @@ After installation type <code>pkg list</code> to list them.<br>
   version above.
   </small>
 
-  - [octave-10.3.0-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64-installer.exe)
-    (~ 510 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64-installer.exe.sig)
-  - [octave-10.3.0-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64.7z)
-    (~ 425 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64.7z.sig)
-  - [octave-10.3.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64.zip)
-    (~ 760 MB)
-    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-10.3.0-w64-64.zip.sig)
+  - [octave-11.1.0-w64-64-installer.exe](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64-64-installer.exe)
+    (~ 540 MB)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64-64-installer.exe.sig)
+  - [octave-11.1.0-w64-64.7z](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64-64.7z)
+    (~ 460 MB)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64-64.7z.sig)
+  - [octave-11.1.0-w64-64.zip](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64-64.zip)
+    (~ 820 MB)
+    [[signature]](https://ftpmirror.gnu.org/octave/windows/octave-11.1.0-w64-64.zip.sig)
 
 <p></p>
 
