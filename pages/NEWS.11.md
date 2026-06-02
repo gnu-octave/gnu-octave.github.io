@@ -375,3 +375,14 @@ from Octave 11.
 - Set Texinfo `@exampleindent` for better visual appearance.
 - `linsolve.m`: Update documentation ([bug #68283](https://savannah.gnu.org/bugs/?68283)).
 - Update all man pages with new information and modern `groff` syntax.
+
+
+## Summary of bugs fixed for version 11.3.0 (2025-06-01):
+
+This version brings only minor changes compared to Octave 11.2.0.  Most
+importantly, it fixes the SOVERSION of the `liboctinterp` library.
+
+### Improvements and fixes
+
+- Fix returning reciprocal condition number as second output from `det` for
+  triangular dense matrices.
