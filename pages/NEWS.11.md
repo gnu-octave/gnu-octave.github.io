@@ -21,9 +21,7 @@ February 18, 2026
 ### General improvements
 
 - The internal interface to Java has been updated to be more memory-efficient
-  (faster culling of unused objects).  Building Octave from source code with
-  Java support now requires JDK 1.9 or newer.  Distributed, precompiled
-  versions of Octave will run with any JVM.
+  (faster culling of unused objects).  Octave now requires JDK 1.9 or newer.
 
 - The `pkg` command has these user-visible changes:
   * The package installation command `pkg install foo` now automatically
@@ -303,6 +301,10 @@ major release after 11):
     * `f_fc_Mapper`
     * `fc_fc_Mapper`
 
+Input to the functions `any` and `all` that is non-numeric and non-logical has
+been deprecated in Octave 11 and will throw an error in Octave 12 (or whatever
+version is the first major release after Octave 11).
+
 The following features were deprecated in Octave 9 and have been removed
 from Octave 11.
 
@@ -319,3 +321,68 @@ from Octave 11.
 
   - The `octave_value (const Array<octave_value>& a)` constructor was
     deprecated in Octave 10 and was removed after only one major version.
+
+
+## Summary of bugs fixed for version 11.2.0 (2025-05-28):
+
+> **_Note:_** The SOVERSION of the `liboctinterp` library is incorrect in this
+> version.  Update to Octave 11.3.0 instead.
+
+### Improvements and fixes
+
+- Speed up `pkg install` and provide more output with `-verbose`.
+- `cmach-info.h`: Add visibility attribute to function declarations.
+- Re-implement `weboptions` and affected functions `webread`, `webwrite`
+  ([bug #68079](https://savannah.gnu.org/bugs/?68079)).
+- Remove semicolon after function definitions.
+- Fix possible out-of-bound indexing in N-D Array assignment.
+- Allow classdef constructor to return a classdef array of itself ([bug #59775](https://savannah.gnu.org/bugs/?59775)).
+- Fix pager in CLI on Windows and disable it in the GUI ([bug #68112](https://savannah.gnu.org/bugs/?68112)).
+- Deprecate `all` and `any` for non-numeric/non-logical types ([bug #68172](https://savannah.gnu.org/bugs/?68172)).
+- Silence compiler warning about possible use of uninitialized variable.
+- Fix input validation of `permB` input to `eigs()`.
+- Check floating point subscripts before converting to `octave_idx_type`
+  ([bug #68167](https://savannah.gnu.org/bugs/?68167)).  Reject non-finite, non-integer, and out-of-range
+  floating-point index values before casting them to `octave_idx_type`.
+- Fix `norm (S, 2)` for all-zero sparse matrices ([bug #68254](https://savannah.gnu.org/bugs/?68254)).
+- `colorbar.m`: Change `%!demo #3` to use new syntax with `"location"` first.
+- `max`: Avoid potential integer overflow.
+
+### GUI
+
+- Remove accidental double spaces in language translation files.
+- Use form of "bearbeiten" instead of "editieren" in German translation.
+- Do not hide window of processes started with "system" on Windows.
+- Include missing .svg icon in GUI resources ([bug #68389](https://savannah.gnu.org/bugs/?68389)).
+- Use mouse cursor shape from Qt if possible or SVG ([bug #68389](https://savannah.gnu.org/bugs/?68389)).
+
+### Build system / Tests
+
+- Create Info documentation in build directory, not source directory.
+- Fix Qt help generator for Texinfo 7.3 Function-Index output.
+- Fix `run-octave` to locate documentation in either `srcdir` or `builddir`.
+- `system`: Silence output of self-test.
+- Disable delete warning locally in BISTs as part of cset e17e4e419245.
+
+### Documentation
+
+- Update documentation for `arguments` keyword and add to manual.
+- Format plaintext documentation output to 80 characters.
+- Redo documentation for Appendix F "Grammar and Parser".
+- Use Texinfo commands for better spacing after period used in abbrevation.
+- `genpropdoc.m`: Fix incorrect documentation for `"zdir"` property.
+- Rename some `@node`, `@subsection` entries for clarity and consistency.
+- Set Texinfo `@exampleindent` for better visual appearance.
+- `linsolve.m`: Update documentation ([bug #68283](https://savannah.gnu.org/bugs/?68283)).
+- Update all man pages with new information and modern `groff` syntax.
+
+
+## Summary of bugs fixed for version 11.3.0 (2025-06-01):
+
+This version brings only minor changes compared to Octave 11.2.0.  Most
+importantly, it fixes the SOVERSION of the `liboctinterp` library.
+
+### Improvements and fixes
+
+- Fix returning reciprocal condition number as second output from `det` for
+  triangular dense matrices.
