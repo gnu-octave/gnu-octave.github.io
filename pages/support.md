@@ -52,7 +52,8 @@ available to you.
 
 GNU Octave uses the bug tracker at [GNU Savannah]({{ site.bugs_url }}).
 There you can
-[<i class="far fa-plus-square"></i> report a new bug](https://savannah.gnu.org/bugs/?group=octave&func=additem),
+[<i class="far fa-plus-square"></i> report new bugs](https://savannah.gnu.org/bugs/?group=octave&func=additem)
+(including potentially security relevant issues),
 [<i class="far fa-list-alt"></i> browse recent bugs]({{ site.bugs_url }}),
 or [<i class="fas fa-search"></i> search for bugs](https://savannah.gnu.org/bugs/?group=octave&func=search).
 
