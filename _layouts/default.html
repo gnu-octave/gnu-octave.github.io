@@ -43,13 +43,44 @@
 
   <body>
 
+    {%- comment -%} Inline SVG icon sprite (navigation icons, no webfont) {%- endcomment -%}
+    <svg class="nav-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+      <symbol id="i-download" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v12"/><path d="M8 11l4 4 4-4"/>
+        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="8" r="3.2"/>
+        <path d="M3 20v-1c0-3 2.7-5 6-5s6 2 6 5v1"/>
+        <path d="M16 5.2a3 3 0 0 1 0 5.6"/>
+        <path d="M18 20v-1c0-1.9-1-3.5-2.5-4.4"/>
+      </symbol>
+      <symbol id="i-info" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/><path d="M12 11v5"/>
+        <circle cx="12" cy="7.6" r="1.2" fill="currentColor" stroke="none"/>
+      </symbol>
+      <symbol id="i-support" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2V4z"/>
+        <path d="M5 18a2 2 0 0 1 2-2h11"/>
+        <path d="M11.5 8.5v4M9.5 10.5h4"/>
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20s-7-4.4-9.3-9C1.2 8 2.6 5 5.5 5c1.9 0 3.2 1.1 4 2.3l.5.7.5-.7c.8-1.2 2.1-2.3 4-2.3 2.9 0 4.3 3 2.8 6-2.3 4.6-9.3 9-9.3 9z"/>
+      </symbol>
+    </svg>
+
     <div data-sticky-container>
       <div class="dark-background" data-sticky data-options="marginTop:0;">
         <div class="top-bar">
           <div class="top-bar-left octave-logo">
             <a href="{{ "/" | relative_url }}">
-              <img src="{{ "/img/octave-logo.svg" | relative_url }}"
-                    style="width: 32px; height: auto" alt="GNU Octave logo">
+              <img class="nav-logo" src="{{ "/img/octave-logo.svg" | relative_url }}"
+                    alt="GNU Octave logo">
               <span>{{ site.title }}</span>
             </a>
           </div>
@@ -58,8 +89,16 @@
               {%- for page in site.pages -%}
               {%- if page.menu -%}
               <li>
-                <a href="{{ page.url | relative_url }}">{{ page.icon }}
-                  {{ page.title }}
+                <a href="{{ page.url | relative_url }}">
+                  {%- case page.title -%}
+                  {%- when 'Download' -%}<svg class="nav-icon" aria-hidden="true"><use href="#i-download"></use></svg>
+                  {%- when 'Contribute' -%}<svg class="nav-icon" aria-hidden="true"><use href="#i-users"></use></svg>
+                  {%- when 'About' -%}<svg class="nav-icon" aria-hidden="true"><use href="#i-info"></use></svg>
+                  {%- when 'Support' -%}<svg class="nav-icon" aria-hidden="true"><use href="#i-support"></use></svg>
+                  {%- when 'Donate' -%}<svg class="nav-icon nav-icon-heart" aria-hidden="true"><use href="#i-heart"></use></svg>
+                  {%- else -%}{{ page.icon }}
+                  {%- endcase -%}
+                  <span class="nav-label">{{ page.title }}</span>
                 </a>
               </li>
               {%- endif -%}
