@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Get Involved
+title: Contribute
 icon: <i class="fas fa-users"></i>
 menu: true
 permalink: get-involved
@@ -27,7 +27,32 @@ Discuss your ideas with us on [Discourse]({{ site.discourse_url }})
 [Libera `#octave` channel](https://web.libera.chat/#octave).
 
 
-### Get the Development Sources
+### <i class="fas fa-users"></i> Community &amp; development
+
+- [Documentation]({{ site.docs_url }})
+- [Packages]({{ site.packages_url }})
+- [Bug tracker]({{ site.bugs_url }})
+- [Source code](https://hg.octave.org/octave)
+- [Wiki]({{ site.wiki_url }})
+- [Discourse forum]({{ site.discourse_url }})
+
+
+### <i class="fas fa-book"></i> Developer documentation
+
+Everything you need to start developing Octave:
+
+- [Developer FAQ]({{ site.wiki_url }}/Developer_FAQ) &ndash; building Octave,
+  coding style, and the development workflow.
+- [List of possible projects]({{ site.wiki_url }}/Projects) &ndash; ideas to
+  work on, from beginner to advanced.
+- [Bug tracker]({{ site.bugs_url }}) &ndash; report, track, and fix issues.
+- [Octave packages]({{ site.packages_url }}) &ndash; extend Octave with add-on
+  packages.
+- Octave is free software licensed under the
+  [GNU General Public License (GPL)]({{ "license.html" | relative_url }}).
+
+
+### <i class="fas fa-code-branch"></i> Get the Development Sources
 
 The latest development sources of GNU Octave are available via
 [Mercurial](https://www.mercurial-scm.org/) (hg).
@@ -41,4 +66,5 @@ command:
 hg clone https://hg.octave.org/octave
 ```
 The [Developer FAQ]({{ site.wiki_url }}/Developer_FAQ) on the Octave wiki
-contains more detailed and recent information about Octave development.
+contains more detailed and recent information about Octave development,
+including how to build Octave from source.
