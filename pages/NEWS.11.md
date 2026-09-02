@@ -323,7 +323,7 @@ from Octave 11.
     deprecated in Octave 10 and was removed after only one major version.
 
 
-## Summary of bugs fixed for version 11.2.0 (2025-05-28):
+## Summary of bugs fixed for version 11.2.0 (2026-05-28):
 
 > **_Note:_** The SOVERSION of the `liboctinterp` library is incorrect in this
 > version.  Update to Octave 11.3.0 instead.
@@ -377,7 +377,7 @@ from Octave 11.
 - Update all man pages with new information and modern `groff` syntax.
 
 
-## Summary of bugs fixed for version 11.3.0 (2025-06-01):
+## Summary of bugs fixed for version 11.3.0 (2026-06-01):
 
 This version brings only minor changes compared to Octave 11.2.0.  Most
 importantly, it fixes the SOVERSION of the `liboctinterp` library.
